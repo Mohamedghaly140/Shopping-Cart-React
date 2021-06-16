@@ -71,8 +71,8 @@ class Footer extends Component {
 								</Col>
 								<Col>
 									<ul>
-										{socialMedia.map(link => (
-											<li key={link.title}>
+										{socialMedia.map((link, index) => (
+											<li key={index}>
 												<Image src={link.icon} fluid className="mr-1" />{' '}
 												<a href=":javascript;">{link.title}</a>
 											</li>
