@@ -1,0 +1,21 @@
+.search__container {
+	width: 280px;
+	height: 48px;
+	border-radius: 24px;
+	padding: 12px 16px;
+	border: 0.5004362463951111px solid #d8d8d8;
+	background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.search {
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	outline: none;
+
+	&:focus {
+		border: none;
+		outline: none;
+	}
+}

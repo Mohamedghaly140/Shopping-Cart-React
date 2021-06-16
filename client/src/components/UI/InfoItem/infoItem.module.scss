@@ -1,0 +1,19 @@
+.info__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	span {
+		display: inline-block;
+		text-align: left;
+		color: #000000;
+		font-size: 14px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}

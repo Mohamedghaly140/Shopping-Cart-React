@@ -1,0 +1,42 @@
+.bottom__nav {
+	height: 48px;
+	box-shadow: 0px 0.87px 2px #00000040;
+	background: #000000 0% 0% no-repeat padding-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.links__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.list__item {
+	color: #fff;
+	font-size: 16px;
+
+	&.active {
+		color: #f11133;
+	}
+}
+
+.nav__link {
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:hover {
+		color: #999;
+		text-decoration: none;
+	}
+}
+
+.active {
+	color: #f11133;
+}

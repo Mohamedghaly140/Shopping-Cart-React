@@ -1,0 +1,18 @@
+.offer {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	p {
+		font-size: 14px;
+		color: black;
+		margin-inline: 8px;
+
+		span {
+			cursor: pointer;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+	}
+}
