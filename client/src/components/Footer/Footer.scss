@@ -1,0 +1,30 @@
+.footer {
+	background: #3c3c3b 0% 0% no-repeat padding-box;
+	padding-block: 45px 30px;
+	color: #fff;
+
+	h3 {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	ul {
+		margin-top: 25px;
+		list-style: none;
+		padding: 0;
+
+		li {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				color: #fff;
+				font-size: 16px;
+				text-transform: capitalize;
+			}
+		}
+	}
+}
