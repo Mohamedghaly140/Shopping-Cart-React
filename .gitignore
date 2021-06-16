@@ -7,13 +7,13 @@ client/.pnp
 .pnp.js
 
 # testing
-/coverage
+client/coverage
 
 # production
-/build
+client/build
 
 # misc
-server/.env
+server/config/.env
 client/.env
 client/.DS_Store
 client/.env.local

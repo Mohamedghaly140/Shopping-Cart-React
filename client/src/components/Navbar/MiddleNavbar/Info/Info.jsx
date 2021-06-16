@@ -3,13 +3,13 @@ import classes from './Info.module.scss';
 
 // Import Components
 import InfoItem from '../../../UI/InfoItem/InfoItem';
+import Cart from '../../../UI/Cart/Cart';
 
 class Info extends Component {
 	state = {
 		infoLinks: [
-			{ id: 1, icon: '/images/shopping_bag.svg', link: 'Cart' },
-			{ id: 2, icon: '/images/favourite.svg', link: 'Wishlist' },
-			{ id: 3, icon: '/images/user.svg', link: 'Login' },
+			{ id: 1, icon: '/images/favourite.svg', link: 'Wishlist' },
+			{ id: 2, icon: '/images/user.svg', link: 'Login' },
 		],
 	};
 
@@ -18,6 +18,7 @@ class Info extends Component {
 
 		return (
 			<div className={classes.info}>
+				<Cart icon="/images/shopping_bag.svg" link="Cart" cartItems={0} />
 				{infoLinks.map(item => (
 					<InfoItem key={item.id} icon={item.icon} link={item.link} />
 				))}
