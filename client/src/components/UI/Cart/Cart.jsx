@@ -5,10 +5,10 @@ import classes from './Cart.module.scss';
 
 class Cart extends Component {
 	render() {
-		const { icon, link, cartItems } = this.props;
+		const { icon, link, cartItems, toggleCart } = this.props;
 
 		return (
-			<div className={classes.cart}>
+			<div className={classes.cart} onClick={toggleCart}>
 				<span className="icon mr-2 position-relative">
 					<Image src={icon} fluid />
 					<span className={classes.cart__items}>{cartItems}</span>

@@ -10,7 +10,7 @@ export class Navbar extends Component {
 		return (
 			<header>
 				<UpperNavbar />
-				<MiddleNavbar />
+				<MiddleNavbar toggleCart={this.props.toggleCart} />
 				<BottomNavbar />
 			</header>
 		);
