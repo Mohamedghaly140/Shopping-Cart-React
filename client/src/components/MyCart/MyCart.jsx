@@ -20,9 +20,11 @@ export class MyCart extends Component {
 					<h2 className="title text-center mb-3">My Cart</h2>
 					<p className="summary">Cart Summary</p>
 					<div className="d-flex align-items-center justify-content-center flex-column">
-						{cart.map(item => (
-							<CartItem key={item.id} product={item} />
-						))}
+						{cart.length === 0 ? (
+							<p className="my-4">You have no items yet..</p>
+						) : (
+							cart.map(item => <CartItem key={item.id} product={item} />)
+						)}
 					</div>
 					<p className="total">
 						Total:{' '}
