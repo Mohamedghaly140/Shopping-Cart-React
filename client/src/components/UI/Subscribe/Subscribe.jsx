@@ -8,7 +8,7 @@ class Subscribe extends Component {
 			<div className="subscribe">
 				<input type="email" placeholder="Enter Your Mail" />
 				<button className="send">
-					Subscribe <Image className="ml-1" src="/images/send.svg" fluid />
+					Subscribe <Image className="ml-1" src="images/send.svg" fluid />
 				</button>
 			</div>
 		);

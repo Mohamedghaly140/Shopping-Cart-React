@@ -14,7 +14,7 @@ export class MyCart extends Component {
 				<div className={`my__cart ${openCart ? 'open' : 'close'}`}>
 					<div className="d-flex align-items-center justify-content-end mb-2">
 						<div onClick={toggleCart}>
-							<Image className="close" src="/images/close.svg" fluid />
+							<Image className="close" src="images/close.svg" fluid />
 						</div>
 					</div>
 					<h2 className="title text-center mb-3">My Cart</h2>

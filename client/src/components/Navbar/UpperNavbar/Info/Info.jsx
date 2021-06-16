@@ -7,9 +7,9 @@ import InfoItem from '../../../UI/InfoItem/InfoItem';
 class Info extends Component {
 	state = {
 		infoLinks: [
-			{ id: 1, icon: '/images/phone.svg', link: 'Contact Us' },
-			{ id: 2, icon: '/images/shopping_cart.svg', link: 'Track Order' },
-			{ id: 3, icon: '/images/location.svg', link: 'Find A Store' },
+			{ id: 1, icon: 'images/phone.svg', link: 'Contact Us' },
+			{ id: 2, icon: 'images/shopping_cart.svg', link: 'Track Order' },
+			{ id: 3, icon: 'images/location.svg', link: 'Find A Store' },
 		],
 	};
 

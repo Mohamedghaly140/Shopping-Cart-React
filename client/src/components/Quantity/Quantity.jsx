@@ -34,11 +34,11 @@ class Quantity extends Component {
 			<div>
 				<div className={classes.counter}>
 					<button className={classes.btn} onClick={this.minusQtyHandler}>
-						<Image src="/images/minus.svg" fluid />
+						<Image src="images/minus.svg" fluid />
 					</button>
 					<span>{qty}</span>
 					<button className={classes.btn} onClick={this.addQtyHandler}>
-						<Image src="/images/plus.svg" fluid />
+						<Image src="images/plus.svg" fluid />
 					</button>
 				</div>
 				<div className="actions mt-4">

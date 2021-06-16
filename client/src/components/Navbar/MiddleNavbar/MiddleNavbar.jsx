@@ -13,7 +13,7 @@ export class MiddleNavbar extends Component {
 				<Container>
 					<div className={classes.inner}>
 						<Search />
-						<Image src="/images/adidas.svg" fluid />
+						<Image src="images/adidas.svg" fluid />
 						<Info
 							toggleCart={this.props.toggleCart}
 							cartItems={this.props.cartItems}

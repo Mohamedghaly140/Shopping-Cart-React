@@ -17,10 +17,10 @@ class Footer extends Component {
 		];
 
 		const socialMedia = [
-			{ title: '/YESHTERY', icon: '/images/facebook.svg' },
-			{ title: '/YESHTERY', icon: '/images/linkedin.svg' },
-			{ title: '/YESHTERY', icon: '/images/instagram.svg' },
-			{ title: '/YESHTERY', icon: '/images/twitter.svg' },
+			{ title: '/YESHTERY', icon: 'images/facebook.svg' },
+			{ title: '/YESHTERY', icon: 'images/linkedin.svg' },
+			{ title: '/YESHTERY', icon: 'images/instagram.svg' },
+			{ title: '/YESHTERY', icon: 'images/twitter.svg' },
 		];
 
 		return (
@@ -31,7 +31,7 @@ class Footer extends Component {
 							<div>
 								<Image
 									className="mb-4"
-									src="/images/brand_logo_yellow.svg"
+									src="images/brand_logo_yellow.svg"
 									fluid
 								/>
 								<p>

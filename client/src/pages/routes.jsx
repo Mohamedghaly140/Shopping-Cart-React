@@ -1,5 +1,5 @@
 import { Component, Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import Home from './Home';
 const ProductDetails = lazy(() => import('./ProductDetails'));
@@ -7,7 +7,7 @@ const ProductDetails = lazy(() => import('./ProductDetails'));
 class AppRouter extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Suspense fallback="...loading">
@@ -17,7 +17,7 @@ class AppRouter extends Component {
 					</Suspense>
 					<Redirect to="/" />
 				</Switch>
-			</BrowserRouter>
+			</HashRouter>
 		);
 	}
 }

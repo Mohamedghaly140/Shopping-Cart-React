@@ -32,13 +32,13 @@ export class ProductDetail extends Component {
 						<div className={classes.main__image}>
 							<Image src={imageUrl.large} fluid />
 							<span>
-								<Image src="/images/360@2x.svg" fluid />
+								<Image src="images/360@2x.svg" fluid />
 							</span>
 						</div>
 						<PreviewImages />
 					</Col>
 					<Col lg={6}>
-						<Image className="mb-3" src="/images/adidas.svg" fluid />
+						<Image className="mb-3" src="images/adidas.svg" fluid />
 						<p className="description">{description}</p>
 						<p style={{ color: '#a7a9ac' }}>Men</p>
 						<div className="d-flex align-items-center justify-content-start">

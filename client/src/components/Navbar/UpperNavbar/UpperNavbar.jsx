@@ -13,9 +13,9 @@ export class UpperNavbar extends Component {
 				<Container>
 					<div className={classes.inner}>
 						<span className={classes.menu}>
-							<Image src="/images/menu_icon.svg" fluid />
+							<Image src="images/menu_icon.svg" fluid />
 						</span>
-						<Image src="/images/brand_logo_black.svg" fluid />
+						<Image src="images/brand_logo_black.svg" fluid />
 						<Offer />
 						<Info />
 					</div>

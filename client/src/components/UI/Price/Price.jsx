@@ -28,7 +28,7 @@ export default class Price extends Component {
 				</div>
 				{!inline && (
 					<div>
-						<Image fluid src="/images/adidas.svg" />
+						<Image fluid src="images/adidas.svg" />
 					</div>
 				)}
 			</div>

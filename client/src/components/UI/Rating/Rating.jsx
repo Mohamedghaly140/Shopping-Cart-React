@@ -16,17 +16,17 @@ export class Rating extends Component {
 			<div className={classes.rating}>
 				{rates.map((item, index) => (
 					<Fragment key={index}>
-						{item ? (
+						{item.star ? (
 							<Image
 								fluid
 								className={classes.rating__item}
-								src="/images/star.svg"
+								src="images/star.svg"
 							/>
 						) : (
 							<Image
 								fluid
 								className={classes.rating__item}
-								src="/images/empty_star.svg"
+								src="images/empty_star.svg"
 							/>
 						)}
 					</Fragment>
