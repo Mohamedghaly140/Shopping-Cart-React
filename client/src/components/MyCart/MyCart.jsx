@@ -32,7 +32,8 @@ export class MyCart extends Component {
 									prevValue + curValue.qty * curValue.price,
 								0
 							)
-							.toFixed(3)}
+							.toFixed(3)}{' '}
+						L.E
 					</p>
 					<div className="d-flex align-items-center justify-content-between">
 						<button className="review">Review Cart</button>
