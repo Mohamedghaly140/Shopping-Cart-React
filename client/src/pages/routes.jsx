@@ -11,7 +11,9 @@ class AppRouter extends Component {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Suspense fallback="...loading">
-						<Route path="/product/:id" component={ProductDetails} />
+						<Route path="/product/:id">
+							<ProductDetails addToCart={this.props.addToCart} />
+						</Route>
 					</Suspense>
 					<Redirect to="/" />
 				</Switch>

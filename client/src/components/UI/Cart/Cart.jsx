@@ -11,7 +11,12 @@ class Cart extends Component {
 			<div className={classes.cart} onClick={toggleCart}>
 				<span className="icon mr-2 position-relative">
 					<Image src={icon} fluid />
-					<span className={classes.cart__items}>{cartItems}</span>
+					<span className={classes.cart__items}>
+						{cartItems.reduce(
+							(prevValue, curValue) => prevValue + curValue.qty,
+							0
+						)}
+					</span>
 				</span>
 				<span className="link">{link}</span>
 			</div>

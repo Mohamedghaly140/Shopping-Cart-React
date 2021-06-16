@@ -36,6 +36,11 @@
 	text-transform: capitalize;
 	border: none;
 	outline: none;
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
 }
 
 .pick__up {

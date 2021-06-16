@@ -1,0 +1,46 @@
+.CartItem {
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 0.75px solid #ececec;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	margin-bottom: 14px;
+}
+
+.imageContainer {
+	margin-right: 14px;
+}
+
+.description {
+	color: #1d1d1b;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+
+.quantity {
+	color: #3c3c3b;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+
+.price {
+	color: #542e90;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.remove {
+	background: #fff200 0% 0% no-repeat padding-box;
+	border-radius: 12px;
+	border: none;
+	outline: none;
+	color: #3c3c3b;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 5px 18px;
+}

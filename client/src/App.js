@@ -7,9 +7,10 @@ import MyCart from './components/MyCart/MyCart';
 class App extends Component {
 	state = {
 		openCart: false,
+		cart: [],
 	};
 
-	toggleCart = () => {
+	toggleCartHandler = () => {
 		this.setState(prevState => {
 			return {
 				openCart: !prevState.openCart,
@@ -17,15 +18,27 @@ class App extends Component {
 		});
 	};
 
+	addToCartHandler = product => {
+		this.setState(prevState => {
+			return {
+				cart: [...prevState.cart, product],
+			};
+		});
+	};
+
 	render() {
-		const { openCart } = this.state;
+		const { openCart, cart } = this.state;
 
 		return (
 			<Fragment>
-				<Navbar toggleCart={this.toggleCart} />
+				<Navbar toggleCart={this.toggleCartHandler} cartItems={cart} />
 				<main className="py-5">
-					<AppRouter />
-					<MyCart openCart={openCart} toggleCart={this.toggleCart} />
+					<AppRouter addToCart={this.addToCartHandler} />
+					<MyCart
+						cart={cart}
+						openCart={openCart}
+						toggleCart={this.toggleCartHandler}
+					/>
 				</main>
 				<Footer />
 			</Fragment>

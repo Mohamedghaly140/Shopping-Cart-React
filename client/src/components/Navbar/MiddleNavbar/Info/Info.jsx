@@ -21,7 +21,7 @@ class Info extends Component {
 				<Cart
 					icon="/images/shopping_bag.svg"
 					link="Cart"
-					cartItems={0}
+					cartItems={this.props.cartItems}
 					toggleCart={this.props.toggleCart}
 				/>
 				{infoLinks.map(item => (

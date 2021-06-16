@@ -67,7 +67,10 @@ export class ProductDetail extends Component {
 						<hr style={{ border: '0.5px solid #D9D9D9' }} />
 						<div className="my-3">
 							<h4 className={classes.title}>Quantity</h4>
-							<Quantity />
+							<Quantity
+								addToCart={this.props.addToCart}
+								product={this.props.product}
+							/>
 						</div>
 					</Col>
 				</Row>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Container, Image } from 'react-bootstrap';
 import classes from './UpperNavbar.module.scss';
 

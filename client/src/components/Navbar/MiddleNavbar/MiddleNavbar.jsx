@@ -14,7 +14,10 @@ export class MiddleNavbar extends Component {
 					<div className={classes.inner}>
 						<Search />
 						<Image src="/images/adidas.svg" fluid />
-						<Info toggleCart={this.props.toggleCart} />
+						<Info
+							toggleCart={this.props.toggleCart}
+							cartItems={this.props.cartItems}
+						/>
 					</div>
 				</Container>
 			</nav>
