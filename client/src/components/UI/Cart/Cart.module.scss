@@ -23,11 +23,13 @@
 	background-size: cover;
 	border-radius: 10px;
 	padding: 2px;
-	text-align: center;
+	text-align: center !important;
 	position: absolute;
 	top: 0;
-	left: 0;
-	transform: translate(50%, -75%);
-	width: 20px;
-	height: 22px;
+	right: 0;
+	transform: translate(30%, -30%);
+	width: 15px;
+	height: 15px;
+	font-size: 11px !important;
+	line-height: 13px;
 }
