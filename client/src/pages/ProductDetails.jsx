@@ -15,7 +15,7 @@ class ProductDetails extends Component {
 		this.setState({ loading: true });
 		(async () => {
 			const { data } = await httpClient.get(
-				`https://react-cart-node.herokuapp.com/api/products/${this.props.match.params.id}`
+				`/api/products/${this.props.match.params.id}`
 			);
 			this.setState({ product: data.product, loading: false });
 		})();
@@ -26,7 +26,7 @@ class ProductDetails extends Component {
 			this.setState({ loading: true });
 			(async () => {
 				const { data } = await httpClient.get(
-					`https://react-cart-node.herokuapp.com/api/products/${this.props.match.params.id}`
+					`/api/products/${this.props.match.params.id}`
 				);
 				this.setState({ product: data.product, loading: false });
 			})();

@@ -14,9 +14,7 @@ class SimilarProducts extends Component {
 	componentDidMount() {
 		this.setState({ loading: true });
 		(async () => {
-			const { data } = await httpClient.get(
-				'https://react-cart-node.herokuapp.com/api/products'
-			);
+			const { data } = await httpClient.get('/api/products');
 			this.setState({ products: data.products, loading: false });
 		})();
 	}
