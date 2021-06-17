@@ -13,7 +13,7 @@ client/coverage
 client/build
 
 # misc
-config/.env
+server/config/.env
 client/.env
 client/.DS_Store
 client/.env.local
