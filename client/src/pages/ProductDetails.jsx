@@ -11,18 +11,8 @@ class ProductDetails extends Component {
 		loading: false,
 	};
 
-	componentDidMount() {
-		this.setState({ loading: true });
-		(async () => {
-			const { data } = await httpClient.get(
-				`/api/products/${this.props.match.params.id}`
-			);
-			this.setState({ product: data.product, loading: false });
-		})();
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-		if (+prevProps.match.params.id !== +this.props.match.params.id) {
+	fetchAndSetProduct() {
+		try {
 			this.setState({ loading: true });
 			(async () => {
 				const { data } = await httpClient.get(
@@ -30,6 +20,19 @@ class ProductDetails extends Component {
 				);
 				this.setState({ product: data.product, loading: false });
 			})();
+		} catch (err) {
+			console.log(err.response.data.message);
+			this.setState({ loading: false, product: null });
+		}
+	}
+
+	componentDidMount() {
+		this.fetchAndSetProduct();
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		if (+prevProps.match.params.id !== +this.props.match.params.id) {
+			this.fetchAndSetProduct();
 		}
 	}
 
