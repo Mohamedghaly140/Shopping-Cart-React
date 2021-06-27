@@ -25,9 +25,7 @@ export class Product extends Component {
       <div className={classes.product}>
         <div className={classes.image__container}>
           <Image fluid src={imageUrl.small} />
-          <div className={classes.floating__icon}>
-            <Image fluid src="/images/360.svg" />
-          </div>
+          <div className={classes.floating__icon} />
         </div>
         <div className={classes.product__content}>
           <p className={classes.description}>{description}</p>
