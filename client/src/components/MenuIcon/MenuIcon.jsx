@@ -13,7 +13,7 @@ export class MenuIcon extends Component {
         }`}
         style={{ marginRight }}
       >
-        <Image src="images/menu_icon.svg" fluid />
+        <Image src="/images/menu_icon.svg" fluid />
       </span>
     );
   }

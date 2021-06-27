@@ -15,7 +15,7 @@ export class MiddleNavbar extends Component {
           <div className={classes.inner}>
             <MenuIcon isVisible marginRight="16px" />
             <Search />
-            <Image src="images/adidas.svg" fluid />
+            <Image src="/images/adidas.svg" fluid />
             <div className={classes.spacer} />
             <Info
               toggleCart={this.props.toggleCart}
