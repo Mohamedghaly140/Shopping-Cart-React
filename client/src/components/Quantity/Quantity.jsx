@@ -4,7 +4,7 @@ import classes from "./Quantity.module.scss";
 
 class Quantity extends Component {
   state = {
-    qty: 0,
+    qty: 1,
   };
 
   addQtyHandler = () => {
