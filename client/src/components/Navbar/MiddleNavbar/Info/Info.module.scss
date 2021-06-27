@@ -1,5 +1,13 @@
 .info {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search__icon {
+  display: none;
+
+  @media (max-width: 575.98px) {
+    display: block;
+  }
 }

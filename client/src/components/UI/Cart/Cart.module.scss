@@ -1,35 +1,40 @@
 .cart {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+  cursor: pointer;
 
-	&:last-child {
-		margin-right: 0;
-	}
+  &:last-child {
+    margin-right: 0;
+  }
 
-	span {
-		display: inline-block;
-		color: #000000;
-		font-size: 14px;
-		font-weight: bold;
-		cursor: pointer;
-	}
+  span.link {
+    display: inline-block;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
 }
 
 .cart__items {
-	display: block;
-	background: url('../../../images/badge.svg') center center no-repeat;
-	background-size: cover;
-	border-radius: 10px;
-	padding: 2px;
-	text-align: center !important;
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(30%, -30%);
-	width: 15px;
-	height: 15px;
-	font-size: 11px !important;
-	line-height: 13px;
+  display: block;
+  background: url("../../../images/badge.svg") center center no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  width: 15px;
+  height: 15px;
+  font-size: 11px !important;
+  line-height: 13px;
 }

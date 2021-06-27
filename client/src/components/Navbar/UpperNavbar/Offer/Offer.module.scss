@@ -1,18 +1,37 @@
 .offer {
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-	p {
-		font-size: 14px;
-		color: black;
-		margin-inline: 8px;
+  p {
+    font-size: 14px;
+    color: black;
+    margin-inline: 8px;
 
-		span {
-			cursor: pointer;
-			font-weight: bold;
-			text-decoration: underline;
-		}
-	}
+    span {
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: none;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    display: none;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    display: none;
+  }
 }

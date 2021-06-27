@@ -1,6 +1,10 @@
 .info {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }

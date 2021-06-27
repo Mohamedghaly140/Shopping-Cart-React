@@ -4,6 +4,7 @@ import { Component } from 'react';
 import UpperNavbar from './UpperNavbar/UpperNavbar';
 import MiddleNavbar from './MiddleNavbar/MiddleNavbar';
 import BottomNavbar from './BottomNavbar/BottomNavbar';
+import BreadCrumb from './BreadCrumb/BreadCrumb';
 
 export class Navbar extends Component {
 	render() {
@@ -15,6 +16,7 @@ export class Navbar extends Component {
 					cartItems={this.props.cartItems}
 				/>
 				<BottomNavbar />
+				<BreadCrumb />
 			</header>
 		);
 	}
