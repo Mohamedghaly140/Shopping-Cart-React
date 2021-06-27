@@ -1,17 +1,26 @@
-@import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Montserrat', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.pickup__info {
+  height: 12px;
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    margin-top: 12px;
+  }
 }
