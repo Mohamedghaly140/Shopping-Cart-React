@@ -7,11 +7,41 @@
   cursor: pointer;
   border-radius: 0;
   width: 190px;
+  height: 100%;
+  text-align: center;
+
+  @media (max-width: 320.98px) {
+    width: 117px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    width: 117px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
 }
 
 .active {
   border-bottom: 3px solid #542e90;
   cursor: pointer;
+
+  @media (max-width: 320.98px) {
+    label {
+      color: #fff !important;
+    }
+    border: none;
+    background: #542e90 0% 0% no-repeat padding-box;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    label {
+      color: #fff !important;
+    }
+    border: none;
+    background: #542e90 0% 0% no-repeat padding-box;
+  }
 }
 
 .tab__link {
@@ -20,6 +50,14 @@
   color: #000000;
   text-transform: capitalize;
   font-weight: bold;
+
+  @media (max-width: 320.98px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    font-size: 12px;
+  }
 }
 
 .selectinput {

@@ -15,4 +15,52 @@
   &::-webkit-scrollbar-thumb {
     border: 3px solid #575756;
   }
+
+  @media (max-width: 320.98px) {
+    overflow: initial;
+    height: auto;
+    padding: 24px 8px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    overflow: initial;
+    height: auto;
+    padding: 24px 8px;
+  }
+}
+
+.btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view__all {
+  display: none;
+
+  @media (max-width: 320.98px) {
+    display: block;
+    width: 100px;
+    height: 32px;
+    background: #fff200 0% 0% no-repeat padding-box;
+    border-radius: 16px;
+    color: #000;
+    font-size: 9px;
+    font-weight: bold;
+    border: none;
+    margin: auto;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    display: block;
+    width: 100px;
+    height: 32px;
+    background: #fff200 0% 0% no-repeat padding-box;
+    border-radius: 16px;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    margin: auto;
+  }
 }

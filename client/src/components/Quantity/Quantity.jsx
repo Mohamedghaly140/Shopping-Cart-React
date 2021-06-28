@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./Quantity.module.scss";
+import Plus from "../Icons/Plus";
+import Minus from "../Icons/Minus";
 
 class Quantity extends Component {
   state = {
@@ -16,7 +17,7 @@ class Quantity extends Component {
   };
 
   minusQtyHandler = () => {
-    if (this.state.qty <= 0) {
+    if (this.state.qty <= 1) {
       return;
     }
     this.setState((prevState) => {
@@ -34,14 +35,14 @@ class Quantity extends Component {
       <div>
         <div className={classes.counter}>
           <button className={classes.btn} onClick={this.minusQtyHandler}>
-            <Image src="/images/minus.svg" fluid />
+            <Minus />
           </button>
           <span>{qty}</span>
           <button className={classes.btn} onClick={this.addQtyHandler}>
-            <Image src="/images/plus.svg" fluid />
+            <Plus />
           </button>
         </div>
-        <div className="actions mt-4">
+        <div className={classes.actions}>
           <button
             disabled={qty === 0}
             className={classes.add_to_cart}

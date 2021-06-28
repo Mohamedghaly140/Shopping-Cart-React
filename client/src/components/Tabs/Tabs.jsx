@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import classes from "./Tabs.module.scss";
 import Tab from "../UI/Tab/Tab";
+
+import classes from "./Tabs.module.scss";
 
 class Tabs extends Component {
   render() {

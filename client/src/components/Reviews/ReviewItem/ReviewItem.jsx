@@ -6,6 +6,8 @@ import classes from "./ReviewItem.module.scss";
 
 class ReviewItem extends Component {
   render() {
+    const { title, description, user } = this.props;
+
     return (
       <div className={classes.reviewItem}>
         <div className={classes.rating}>
@@ -26,16 +28,12 @@ class ReviewItem extends Component {
               <EmptyStar />
             </span>
           </span>
-          <span className={classes.title}>I Like it!</span>
+          <span className={classes.title}>{title}</span>
         </div>
-        <p className={classes.review}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad veniam, quis nos
-        </p>
+        <p className={classes.review}>{description}</p>
         <div className={classes.review__data}>
           <span className={classes.review__date}>17-3-2020</span>
-          <span className={classes.review__user}>By {"John Doe"}</span>
+          <span className={classes.review__user}>By {user}</span>
         </div>
       </div>
     );

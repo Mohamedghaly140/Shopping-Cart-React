@@ -20,7 +20,7 @@
     height: 8px;
   }
 
-  @media (max-width: 575.98px) {
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
     margin-left: 2.25px;
     width: 9px;
     height: 8px;

@@ -7,6 +7,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 320.98px) {
+    width: 150px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    width: 100%;
+  }
 }
 
 .progress__bar {
