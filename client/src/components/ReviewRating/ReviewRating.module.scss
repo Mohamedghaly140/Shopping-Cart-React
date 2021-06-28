@@ -3,13 +3,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-right: 0.5px solid #b2b2b2;
 }
 
-.rate {
-  text-align: center;
-  letter-spacing: 3px;
-  color: #000000;
-  font-size: 60px;
-  font-weight: bold;
+.container {
+  border-right: 0.5px solid #b2b2b2;
+  margin-block: 32px;
 }

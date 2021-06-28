@@ -1,0 +1,45 @@
+.rate__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    margin-left: 8px;
+  }
+}
+
+.bar {
+  width: 100%;
+  margin-inline: 32px;
+}
+
+.rates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: #575756;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+  }
+}
+
+.rates span:first-child {
+  margin-right: 6px;
+}

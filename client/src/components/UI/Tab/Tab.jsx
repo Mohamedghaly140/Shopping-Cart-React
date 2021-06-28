@@ -3,10 +3,10 @@ import classes from "./Tab.module.scss";
 
 class Tab extends Component {
   render() {
-    const { title } = this.props;
+    const { title, active } = this.props;
 
     return (
-      <div className={classes.tab}>
+      <div className={`${classes.tab} ${active && classes.active}`}>
         <label className={classes.tab__link}>
           {title}
           <input type="radio" className={classes.selectinput} value={title} />

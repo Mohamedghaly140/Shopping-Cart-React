@@ -1,6 +1,5 @@
 .tab {
   background: #ffffff 0% 0% no-repeat padding-box;
-  border-bottom: 0.5px solid #d9d9d9;
   border-right: 0.5px solid #d9d9d9;
   padding-bottom: 11px;
   padding-top: 20px;
@@ -10,7 +9,7 @@
   width: 190px;
 }
 
-.tab .active {
+.active {
   border-bottom: 3px solid #542e90;
   cursor: pointer;
 }

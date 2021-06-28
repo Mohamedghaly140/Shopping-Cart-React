@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px;
+  border-right: 0.5px solid #b2b2b2;
+}
