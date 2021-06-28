@@ -9,6 +9,7 @@ class Reviews extends Component {
       <div className={classes.reviews}>
         <ReviewItem />
         <ReviewItem />
+        <ReviewItem />
       </div>
     );
   }
