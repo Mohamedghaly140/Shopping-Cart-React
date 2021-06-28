@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Product from "../Product/Product";
 import httpClient from "../../services/httpClient";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import classes from "./SimilarProducts.module.scss";
 
 class SimilarProducts extends Component {
   state = {
@@ -37,14 +38,14 @@ class SimilarProducts extends Component {
         <p style={{ color: "#575756", fontSize: "22px" }}>
           You may like these products also
         </p>
-        <section>
+        <section className={classes.scroll}>
           {products.length === 0 ? (
             <div className="m-auto">
               <h3>There is no products yet</h3>
             </div>
           ) : (
-            <Row>
-              {products.slice(0, 4).map((product) => (
+            <Row className="flex-nowrap">
+              {products.slice(0, 6).map((product) => (
                 <Col
                   key={product.id}
                   className="mb-4"

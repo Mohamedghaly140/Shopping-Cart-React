@@ -17,6 +17,10 @@
   @media (max-width: 320.98px) {
     font-size: 10px;
   }
+
+  @media (max-width: 575.98px) {
+    font-size: 10px;
+  }
 }
 
 .discount__price {
@@ -28,6 +32,10 @@
   display: flex;
 
   @media (max-width: 320.98px) {
+    font-size: 7.3px;
+  }
+
+  @media (max-width: 575.98px) {
     font-size: 7.3px;
   }
 }

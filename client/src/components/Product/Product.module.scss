@@ -72,6 +72,18 @@
     top: 4px;
     left: 4px;
   }
+
+  @media (max-width: 575.98px) {
+    background: #ffffff 0% 0% no-repeat padding-box
+      url("../../images/360@xs.svg");
+    background-position: center center;
+    box-shadow: 0px 0px 0.51px #00000040;
+    border-radius: 7px;
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    left: 4px;
+  }
 }
 
 .product__content {
@@ -96,6 +108,11 @@
     font-size: 9.4px;
     margin-bottom: 0;
   }
+
+  @media (max-width: 575.98px) {
+    font-size: 9.4px;
+    margin-bottom: 0;
+  }
 }
 
 .rating__container {
@@ -112,6 +129,10 @@
   margin-left: 5px;
 
   @media (max-width: 320.98px) {
+    font-size: 7.3px;
+  }
+
+  @media (max-width: 575.98px) {
     font-size: 7.3px;
   }
 }
