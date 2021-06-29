@@ -36,7 +36,8 @@ export class Product extends Component {
             discount_percent={discount_percent}
           />
           <div className={classes.rating__container}>
-            <Rating /> <span className={classes.rate}>{rate} of 5</span>
+            <Rating rating={4.2} />{" "}
+            <span className={classes.rate}>{rate} of 5</span>
           </div>
         </div>
         <PickupInfo pickup_place={pickup_place} pickup_info={pickup_info} />

@@ -37,6 +37,14 @@
   outline: none;
   text-align: center;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  img {
+    height: 100%;
+  }
 
   @media (max-width: 320.98px) {
     padding: 3px 13px;
