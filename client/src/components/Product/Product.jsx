@@ -22,7 +22,7 @@ export class Product extends Component {
     } = this.props.product;
 
     return (
-      <div className={classes.product}>
+      <div className={`${classes.product} product`}>
         <div className={classes.image__container}>
           <Image fluid src={imageUrl.small} />
           <div className={classes.floating__icon} />

@@ -5,6 +5,7 @@ import Spinner from "../components/UI/Spinner/Spinner";
 import ProductDetail from "../components/ProductDetail/ProductDetail";
 import SimilarProducts from "../components/SimilarProducts/SimilarProducts";
 import ProductReview from "../components/ProductReview/ProductReview";
+import FrequentlyBought from "../components/FrequentlyBought/FrequentlyBought";
 
 class ProductDetails extends Component {
   state = {
@@ -49,6 +50,11 @@ class ProductDetails extends Component {
           <ProductDetail product={product} addToCart={addToCart} />
         )}
         <ProductReview />
+        {loading && !product ? (
+          <Spinner />
+        ) : (
+          <FrequentlyBought product={product} addToCart={addToCart} />
+        )}
         <SimilarProducts />
       </div>
     );

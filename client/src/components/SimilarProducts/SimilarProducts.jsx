@@ -61,8 +61,8 @@ class SimilarProducts extends Component {
                   key={product.id}
                   className="mb-4"
                   xs={6}
-                  sm={3}
-                  md={3}
+                  sm={6}
+                  md={6}
                   lg={3}
                 >
                   <Link to={`/product/${product.id}`}>
