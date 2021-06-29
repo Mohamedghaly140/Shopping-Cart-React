@@ -412,4 +412,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

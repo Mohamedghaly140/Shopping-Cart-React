@@ -25,6 +25,17 @@
     opacity: 1;
     padding: 4px 3.5px 2.3px 3.5px;
   }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 220px;
+    height: 400px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 0.6px solid #ececec;
+    border-radius: 10px;
+    opacity: 1;
+    padding: 4px 3.5px 2.3px 3.5px;
+    border-radius: 25px;
+  }
 }
 
 .image__container {
