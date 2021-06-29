@@ -4,12 +4,21 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  width: 100%;
 
   @media (max-width: 320.98px) {
     width: 100%;
   }
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
+    width: 100%;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
     width: 100%;
   }
 }
@@ -40,6 +49,10 @@
   @media (min-width: 321.98px) and (max-width: 575.98px) {
     margin-inline: 12px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-inline: 14px;
+  }
 }
 
 .rates {
@@ -61,6 +74,10 @@
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
     width: 85px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 90px;
   }
 }
 

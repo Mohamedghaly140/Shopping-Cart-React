@@ -26,4 +26,14 @@
       height: 0;
     }
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
 }

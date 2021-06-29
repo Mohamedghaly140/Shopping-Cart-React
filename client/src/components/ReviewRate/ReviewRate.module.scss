@@ -20,6 +20,12 @@
     padding-top: 26px;
     padding-bottom: 8px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding-inline: 0;
+    padding-top: 26px;
+    padding-bottom: 8px;
+  }
 }
 
 .rating {
@@ -47,6 +53,10 @@
   @media (min-width: 321.98px) and (max-width: 575.98px) {
     margin-bottom: 10px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-bottom: 12px;
+  }
 }
 
 .rates {
@@ -62,5 +72,9 @@
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-bottom: 22px;
   }
 }

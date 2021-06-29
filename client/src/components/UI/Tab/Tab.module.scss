@@ -21,6 +21,13 @@
     padding-top: 16px;
     padding-bottom: 14px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 187px;
+    padding-top: 18px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
 }
 
 .active {
@@ -42,6 +49,14 @@
     border: none;
     background: #542e90 0% 0% no-repeat padding-box;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    label {
+      color: #fff !important;
+    }
+    border: none;
+    background: #542e90 0% 0% no-repeat padding-box;
+  }
 }
 
 .tab__link {
@@ -50,6 +65,7 @@
   color: #000000;
   text-transform: capitalize;
   font-weight: bold;
+  margin-bottom: 0;
 
   @media (max-width: 320.98px) {
     font-size: 12px;
@@ -57,6 +73,10 @@
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
     font-size: 12px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 18px;
   }
 }
 

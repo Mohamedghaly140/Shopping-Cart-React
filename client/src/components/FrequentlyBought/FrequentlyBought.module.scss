@@ -84,6 +84,18 @@
       height: 16px;
     }
   }
+
+  @media (min-width: 991.98px) and (max-width: 1200.98px) {
+    display: flex;
+    max-width: 70%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .products .product {

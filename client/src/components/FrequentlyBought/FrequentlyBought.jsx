@@ -21,10 +21,10 @@ export class FrequentlyBought extends Component {
           </p>
           <div className="row mx-0">
             <div
-              className={`${classes.products} row col-12 col-md-12 col-lg-9 px-3 px-lg-0 px-md-0`}
+              className={`${classes.products} row col-12 col-md-12 col-lg-9 col-xl-9 px-3 px-lg-0 px-md-0`}
             >
               <div
-                className={`${classes.product__container} col-6 col-md-5 col-lg-4 px-0 px-md-0 px-lg-0`}
+                className={`${classes.product__container} col-6 col-md-5 col-lg-5 col-xl-4 px-0 px-md-0 px-lg-0`}
               >
                 <Product product={product} />
               </div>
@@ -32,7 +32,7 @@ export class FrequentlyBought extends Component {
                 <Plus />
               </div>
               <div
-                className={`${classes.product__container} col-6 col-md-5 col-lg-4 px-0 px-md-0 px-lg-0`}
+                className={`${classes.product__container} col-6 col-md-5 col-lg-5 col-xl-4 px-0 px-md-0 px-lg-0`}
               >
                 <Product product={product} />
               </div>
@@ -40,13 +40,13 @@ export class FrequentlyBought extends Component {
                 <Plus />
               </div>
               <div
-                className={`${classes.product__container} col-6 col-md-5 col-lg-4 px-0 px-md-0 px-lg-0`}
+                className={`${classes.product__container} col-6 col-md-5 col-lg-5 col-xl-4 px-0 px-md-0 px-lg-0`}
               >
                 <Product product={product} />
               </div>
             </div>
             <div
-              className={`${classes.buy} col-12 col-md-12 col-lg-3 px-lg-0 px-md-0`}
+              className={`${classes.buy} col-12 col-md-12 col-lg-3 col-xl-3 px-lg-0 px-md-0`}
             >
               <div className={classes.details}>
                 <h4 className={classes.buy__all}>Buy all of them for</h4>
