@@ -57,19 +57,21 @@
   align-items: center;
   justify-content: center;
 
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
   @media (max-width: 320.98px) {
     width: 24px;
     height: 24px;
+    padding: 6px;
   }
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
+    padding: 8px;
     width: 28px;
     height: 28px;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
   }
 }
 

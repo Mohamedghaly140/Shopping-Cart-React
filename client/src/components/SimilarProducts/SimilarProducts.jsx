@@ -55,7 +55,7 @@ class SimilarProducts extends Component {
               <h3>There is no products yet</h3>
             </div>
           ) : (
-            <Row className="flex-nowrap">
+            <Row className={classes.row__container}>
               {products.slice(0, 5).map((product) => (
                 <Col
                   key={product.id}

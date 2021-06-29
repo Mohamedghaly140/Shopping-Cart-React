@@ -30,8 +30,13 @@
 }
 
 .scroll {
-  overflow-x: auto;
   position: relative;
+}
+
+.row__container {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-right: 14px;
 
   &::-webkit-scrollbar {
     height: 5px;
@@ -48,10 +53,6 @@
   }
 }
 
-.scroll__container {
-  flex-wrap: nowrap;
-}
-
 .left__arrow {
   width: 55px;
   background: 0% 0% no-repeat padding-box;
@@ -61,7 +62,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: 95%;
+  height: 94%;
   z-index: 2;
   cursor: pointer;
 
@@ -98,7 +99,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  height: 95%;
+  height: 94%;
   z-index: 2;
   cursor: pointer;
 
