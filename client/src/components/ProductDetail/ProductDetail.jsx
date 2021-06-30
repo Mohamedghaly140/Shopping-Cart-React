@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Spinner from "../UI/Spinner/Spinner";
-import Rating from "../UI/Rating/Rating";
+import Rating from "../UI/ProductDetailsRating/Rating";
 import Price from "../UI/Price/Price";
 import Sizes from "../Sizes/Sizes";
 import Colors from "../Colors/Colors";
@@ -28,6 +28,21 @@ export class ProductDetail extends Component {
     return (
       <Container className={classes.product__details}>
         <Row>
+          <Col
+            xs={12}
+            className="d-block d-sm-block d-md-none d-lg-none d-xl-none"
+          >
+            <div>
+              <Image className="mb-3" src="/images/adidas.svg" fluid />
+              <p className={classes.description}>{description}</p>
+              <p className={classes.product__type}>Men</p>
+              <div className={classes.rate__container}>
+                <Rating rating={4.2} />{" "}
+                <span className={classes.rating}>4.2 of 5</span>
+                <span className={classes.rates}>{rates} Rates</span>
+              </div>
+            </div>
+          </Col>
           <Col lg={6}>
             <div className={classes.main__image}>
               <Image src={imageUrl.large} fluid />
@@ -38,12 +53,15 @@ export class ProductDetail extends Component {
             <PreviewImages />
           </Col>
           <Col lg={6}>
-            <Image className="mb-3" src="/images/adidas.svg" fluid />
-            <p className="description">{description}</p>
-            <p style={{ color: "#a7a9ac" }}>Men</p>
-            <div className="d-flex align-items-center justify-content-start">
-              <Rating /> <span className={classes.rating}>4.2 of 5</span>
-              <span className={classes.rates}>{rates} Rates</span>
+            <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
+              <Image className="mb-3" src="/images/adidas.svg" fluid />
+              <p className={classes.description}>{description}</p>
+              <p className={classes.product__type}>Men</p>
+              <div className={classes.rate__container}>
+                <Rating rating={4.2} />{" "}
+                <span className={classes.rating}>4.2 of 5</span>
+                <span className={classes.rates}>{rates} Rates</span>
+              </div>
             </div>
             <div className="my-3">
               <Price

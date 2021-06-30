@@ -1,17 +1,23 @@
-import { Component } from 'react';
-import classes from './SizeItem.module.scss';
+import { Component } from "react";
+import classes from "./SizeItem.module.scss";
 
 class SizeItem extends Component {
-	render() {
-		return (
-			<div
-				style={{ backgroundColor: this.props.selected ? '#ECECEC' : '#fff' }}
-				className={classes.size__item}
-			>
-				<span>{this.props.size}</span>
-			</div>
-		);
-	}
+  render() {
+    const { onSelectSize, value, size } = this.props;
+
+    return (
+      <div
+        style={{ backgroundColor: this.props.selected ? "#ECECEC" : "#fff" }}
+        className={classes.size__item}
+        onClick={() => onSelectSize(value)}
+      >
+        <label>
+          {size}
+          <input className={classes.select__size} type="radio" value={value} />
+        </label>
+      </div>
+    );
+  }
 }
 
 export default SizeItem;
