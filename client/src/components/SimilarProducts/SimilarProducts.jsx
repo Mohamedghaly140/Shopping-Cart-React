@@ -12,7 +12,7 @@ import classes from "./SimilarProducts.module.scss";
 class SimilarProducts extends Component {
   constructor(props) {
     super(props);
-    this.leftRef = React.createRef();
+    this.sliderRef = React.createRef();
   }
 
   state = {
@@ -28,6 +28,20 @@ class SimilarProducts extends Component {
     })();
   }
 
+  slideLeftHandler = () => {
+    this.sliderRef.current.scrollBy({
+      left: -50,
+      behavior: "smooth",
+    });
+  };
+
+  slideRightHandler = () => {
+    this.sliderRef.current.scrollBy({
+      left: +50,
+      behavior: "smooth",
+    });
+  };
+
   render() {
     const { loading, products } = this.state;
 
@@ -40,12 +54,15 @@ class SimilarProducts extends Component {
         <h2 className={classes.title}>SimilarProducts</h2>
         <p className={classes.sub__title}>You may like these products also</p>
         <section className={classes.scroll}>
-          <div className={classes.left__arrow} ref={this.leftRef}>
+          <div className={classes.left__arrow} onClick={this.slideLeftHandler}>
             <span>
               <ArrowLeft />
             </span>
           </div>
-          <div className={classes.right__arrow}>
+          <div
+            className={classes.right__arrow}
+            onClick={this.slideRightHandler}
+          >
             <span>
               <ArrowRight />
             </span>
@@ -55,7 +72,7 @@ class SimilarProducts extends Component {
               <h3>There is no products yet</h3>
             </div>
           ) : (
-            <Row className={classes.row__container}>
+            <Row className={classes.row__container} ref={this.sliderRef}>
               {products.slice(0, 5).map((product) => (
                 <Col
                   key={product.id}

@@ -84,7 +84,7 @@ class Footer extends Component {
               </Row>
             </Col>
           </Row>
-          <hr className="my-2" style={{ border: "0.2px solid #999" }} />
+          <hr className="mt-2 mb-4" style={{ border: "0.2px solid #999" }} />
           <Copyright />
         </Container>
       </footer>
