@@ -5,6 +5,8 @@ import classes from "./Tabs.module.scss";
 
 class Tabs extends Component {
   render() {
+    const { onChangeTab, selectedTab } = this.props;
+
     const tabs = [
       { title: "reviews", active: true },
       { title: "specifications", active: false },
@@ -14,8 +16,13 @@ class Tabs extends Component {
 
     return (
       <div className={classes.tabs}>
-        {tabs.map((tab) => (
-          <Tab key={tab.title} title={tab.title} active={tab.active} />
+        {tabs.map(tab => (
+          <Tab
+            key={tab.title}
+            title={tab.title}
+            active={selectedTab === tab.title}
+            onTab={onChangeTab}
+          />
         ))}
       </div>
     );

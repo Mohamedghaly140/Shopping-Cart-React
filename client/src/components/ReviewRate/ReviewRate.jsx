@@ -14,7 +14,11 @@ class ReviewRate extends Component {
     return (
       <Fragment>
         <div className={classes.rate}>{rating}</div>
-        <div className={classes.rating}>{rate.map(item => item)}</div>
+        <div className={classes.rating}>
+          {rate.map((item, index) => (
+            <Fragment key={index}>{item}</Fragment>
+          ))}
+        </div>
         <div className={classes.rateOf}>{rating} of 5</div>
         <div className={classes.rates}>22 Rates</div>
       </Fragment>
