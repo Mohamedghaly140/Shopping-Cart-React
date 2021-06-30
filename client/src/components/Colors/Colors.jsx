@@ -6,7 +6,7 @@ export class Colors extends Component {
     selected: "black",
   };
 
-  colorSelectHandler = (value) => {
+  colorSelectHandler = value => {
     this.setState({ selected: value });
   };
 
@@ -18,7 +18,7 @@ export class Colors extends Component {
 
     return (
       <div className="d-flex align-items-center justify-content-start">
-        {colors.map((item) => (
+        {colors.map(item => (
           <ColorItem
             key={item.id}
             image={item.color}

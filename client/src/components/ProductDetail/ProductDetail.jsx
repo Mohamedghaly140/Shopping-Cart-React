@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Spinner from "../UI/Spinner/Spinner";
 import Rating from "../UI/ProductDetailsRating/Rating";
-import Price from "../UI/Price/Price";
+import Price from "../UI/ProductDetailsPrice/ProductDetailsPrice";
 import Sizes from "../Sizes/Sizes";
 import Colors from "../Colors/Colors";
 import Quantity from "../Quantity/Quantity";
@@ -10,6 +10,15 @@ import PreviewImages from "./PreviewImages";
 import classes from "./ProductDetail.module.scss";
 
 export class ProductDetail extends Component {
+  state = {
+    imageUrl: null,
+    loading: false,
+  };
+
+  previewImageHandler = imageUrl => {
+    this.setState({ imageUrl });
+  };
+
   render() {
     if (!this.props.product) {
       return <Spinner />;
@@ -43,16 +52,25 @@ export class ProductDetail extends Component {
               </div>
             </div>
           </Col>
-          <Col lg={6}>
+          <Col md={12} lg={6} className={classes.preview}>
             <div className={classes.main__image}>
-              <Image src={imageUrl.large} fluid />
+              {this.state.loading ? (
+                <Spinner />
+              ) : (
+                <Image
+                  src={
+                    this.state.imageUrl ? this.state.imageUrl : imageUrl.large
+                  }
+                  fluid
+                />
+              )}
               <span>
                 <Image src="/images/360@2x.svg" fluid />
               </span>
             </div>
-            <PreviewImages />
+            <PreviewImages onPreviewImage={this.previewImageHandler} />
           </Col>
-          <Col lg={6}>
+          <Col md={12} lg={6}>
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
               <Image className="mb-3" src="/images/adidas.svg" fluid />
               <p className={classes.description}>{description}</p>
@@ -63,7 +81,7 @@ export class ProductDetail extends Component {
                 <span className={classes.rates}>{rates} Rates</span>
               </div>
             </div>
-            <div className="my-3">
+            <div className="mb-3">
               <Price
                 price={price}
                 discount={discount}

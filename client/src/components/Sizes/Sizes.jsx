@@ -6,7 +6,7 @@ export class Sizes extends Component {
     selected: "xLarge",
   };
 
-  selectSizeHandler = (value) => {
+  selectSizeHandler = value => {
     this.setState({ selected: value });
   };
 
@@ -21,7 +21,7 @@ export class Sizes extends Component {
 
     return (
       <div className="d-flex align-items-center justify-content-start">
-        {sizes.map((item) => (
+        {sizes.map(item => (
           <SizeItem
             key={item.id}
             size={item.size}
