@@ -15,7 +15,11 @@ export class PreviewImages extends Component {
 
     return (
       <div className={classes.slider}>
-        <Image src="/images/arrow_left@2x.svg" fluid />
+        <Image
+          className={classes.arrow_left}
+          src="/images/arrow_left@2x.svg"
+          fluid
+        />
         <div className={classes.images__container}>
           {previewImages.map(item => (
             <div key={item.id} className={classes.image__container}>
@@ -27,7 +31,11 @@ export class PreviewImages extends Component {
             </div>
           ))}
         </div>
-        <Image src="/images/arrow_right@2x.svg" fluid />
+        <Image
+          className={classes.arrow_right}
+          src="/images/arrow_right@2x.svg"
+          fluid
+        />
       </div>
     );
   }

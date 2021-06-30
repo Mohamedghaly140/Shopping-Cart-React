@@ -19,6 +19,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
+    "deploy:netlify": "rm -rf build && yarn build && netlify deploy --prod",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
