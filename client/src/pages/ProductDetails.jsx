@@ -40,7 +40,7 @@ class ProductDetails extends Component {
 
   render() {
     const { loading, product } = this.state;
-    const { addToCart } = this.props;
+    const { addToCart, loadingProducts, products } = this.props;
 
     return (
       <div>
@@ -55,7 +55,7 @@ class ProductDetails extends Component {
         ) : (
           <FrequentlyBought product={product} addToCart={addToCart} />
         )}
-        <SimilarProducts />
+        <SimilarProducts loading={loadingProducts} products={products} />
       </div>
     );
   }

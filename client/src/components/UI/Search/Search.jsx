@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./Search.module.scss";
 
 class Search extends Component {
@@ -14,7 +13,7 @@ class Search extends Component {
   render() {
     return (
       <div className={classes.search__container}>
-        <Image src="/images/search.svg" className="mr-2" fluid />
+        <img alt="search" src="/images/search.svg" className="mr-2 img-fluid" />
         <input
           className={classes.search}
           type="text"

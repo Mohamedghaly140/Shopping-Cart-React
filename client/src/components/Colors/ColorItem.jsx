@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./ColorItem.module.scss";
 
 class ColorItem extends Component {
@@ -12,7 +11,7 @@ class ColorItem extends Component {
         className={classes.color__item}
         onClick={() => onSelectColor(value)}
       >
-        <Image src={image} fluid />
+        <img className="img-fluid" alt="color" src={image} />
       </button>
     );
   }

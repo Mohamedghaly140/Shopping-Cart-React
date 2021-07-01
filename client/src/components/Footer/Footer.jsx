@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Subscribe from "../UI/Subscribe/Subscribe";
 import Copyright from "./Copyright";
 import "./Footer.scss";
@@ -29,10 +29,10 @@ class Footer extends Component {
           <Row>
             <Col md={6}>
               <div>
-                <Image
-                  className="mb-4"
+                <img
+                  className="mb-4 img-fluid"
                   src="/images/brand_logo_yellow.svg"
-                  fluid
+                  alt="brand_logo_yellow"
                 />
                 <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -75,7 +75,12 @@ class Footer extends Component {
                   <ul>
                     {socialMedia.map((link, index) => (
                       <li key={index}>
-                        <Image src={link.icon} fluid className="mr-1" />{" "}
+                        <img
+                          src={link.icon}
+                          fluid
+                          className="mr-1 img-fluid"
+                          alt={link.title}
+                        />{" "}
                         <a href=":javascript;">{link.title}</a>
                       </li>
                     ))}

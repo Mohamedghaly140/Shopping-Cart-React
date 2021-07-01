@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./Product.module.scss";
 
 // Import Components
@@ -25,7 +24,7 @@ export class Product extends Component {
     return (
       <div className={`${classes.product} product`}>
         <div className={classes.image__container}>
-          <Image fluid src={imageUrl.small} />
+          <img className="img-fluid" alt="product" src={imageUrl.small} />
           <div className={classes.floating__icon} />
         </div>
         <div className={classes.product__content}>

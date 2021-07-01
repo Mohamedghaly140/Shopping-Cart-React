@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./MenuIcon.module.scss";
 
 export class MenuIcon extends Component {
@@ -13,7 +12,11 @@ export class MenuIcon extends Component {
         }`}
         style={{ marginRight }}
       >
-        <Image src="/images/menu_icon.svg" fluid />
+        <img
+          className="img-fluid"
+          src="/images/menu_icon.svg"
+          alt="menu_icon"
+        />
       </span>
     );
   }

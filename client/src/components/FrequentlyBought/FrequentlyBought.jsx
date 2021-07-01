@@ -58,7 +58,7 @@ export class FrequentlyBought extends Component {
                         {product.discount_price} LE
                       </span>
                       <span className={classes.percent}>
-                        {product.discount_percent} Off
+                        {product.discount_percent}% Off
                       </span>
                     </p>
                   )}

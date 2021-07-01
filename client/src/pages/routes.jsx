@@ -7,13 +7,21 @@ const ProductDetails = lazy(() => import("./ProductDetails"));
 
 class AppRouter extends Component {
   render() {
+    const { addToCart, loading, products } = this.props;
+
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/">
+            <Home loading={loading} products={products} />
+          </Route>
           <Suspense fallback={<Spinner />}>
             <Route path="/product/:id">
-              <ProductDetails addToCart={this.props.addToCart} />
+              <ProductDetails
+                products={products}
+                addToCart={addToCart}
+                loadingProducts={loading}
+              />
             </Route>
           </Suspense>
           <Redirect to="/" />

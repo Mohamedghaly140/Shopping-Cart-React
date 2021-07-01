@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Image } from "react-bootstrap";
 
 import classes from "./Rating.module.scss";
 
@@ -14,10 +13,10 @@ export class Rating extends Component {
     return (
       <div className={classes.rating}>
         {rates.map((rateUrl, index) => (
-          <Image
+          <img
             key={index}
-            fluid
-            className={classes.rating__item}
+            alt="star rating"
+            className={`${classes.rating__item} "img-fluid"`}
             src={rateUrl}
           />
         ))}

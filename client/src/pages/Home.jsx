@@ -1,26 +1,12 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Product from "../components/Product/Product";
-import httpClient from "../services/httpClient";
 import Spinner from "../components/UI/Spinner/Spinner";
 
 class Home extends Component {
-  state = {
-    products: [],
-    loading: false,
-  };
-
-  componentDidMount() {
-    this.setState({ loading: true });
-    (async () => {
-      const { data } = await httpClient.get("/api/products");
-      this.setState({ products: data.products, loading: false });
-    })();
-  }
-
   render() {
-    const { loading, products } = this.state;
+    const { loading, products } = this.props;
 
     if (loading) {
       return <Spinner />;
@@ -36,7 +22,7 @@ class Home extends Component {
             </div>
           ) : (
             <Row>
-              {products.map((product) => (
+              {products.map(product => (
                 <Col
                   key={product.id}
                   className="mb-4"
@@ -58,4 +44,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withRouter(Home);

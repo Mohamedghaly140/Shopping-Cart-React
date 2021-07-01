@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./ProductDetail.module.scss";
 
-export class PreviewImages extends Component {
+class PreviewImages extends Component {
   render() {
     const { onPreviewImage } = this.props;
 
@@ -15,26 +14,27 @@ export class PreviewImages extends Component {
 
     return (
       <div className={classes.slider}>
-        <Image
-          className={classes.arrow_left}
+        <img
+          className={`${classes.arrow_left} 'img-fluid'`}
           src="/images/arrow_left@2x.svg"
-          fluid
+          alt="arrow_left"
         />
         <div className={classes.images__container}>
           {previewImages.map(item => (
             <div key={item.id} className={classes.image__container}>
-              <Image
-                fluid
+              <img
+                alt="preview images"
+                className="img-fluid"
                 src={item.imageUrl}
                 onClick={() => onPreviewImage(item.imageUrl)}
               />
             </div>
           ))}
         </div>
-        <Image
-          className={classes.arrow_right}
+        <img
+          className={`${classes.arrow_right} 'img-fluid'`}
           src="/images/arrow_right@2x.svg"
-          fluid
+          alt="arrow_right"
         />
       </div>
     );

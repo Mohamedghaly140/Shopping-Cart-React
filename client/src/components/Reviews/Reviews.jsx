@@ -1,34 +1,8 @@
 import React, { Component } from "react";
 import ReviewItem from "./ReviewItem/ReviewItem";
-
 import classes from "./Reviews.module.scss";
 
-const reviews = [
-  {
-    title: "I Like it!",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad veniam, quis nos",
-    user: "John Doe",
-  },
-  {
-    title: "Very Good Product",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad veniam, quis nos",
-    user: "John Doe",
-  },
-  {
-    title: "",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad veniam, quis nos",
-    user: "John Doe",
-  },
-  {
-    title: "I Like it!",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad veniam, quis nos",
-    user: "John Doe",
-  },
-];
+import reviewsData from "../../services/reviews.json";
 
 class Reviews extends Component {
   state = {
@@ -44,7 +18,7 @@ class Reviews extends Component {
 
     return (
       <div className={classes.reviews}>
-        {reviews.slice(0, viewAll ? 2 : Infinity).map((item, index) => (
+        {reviewsData.slice(0, viewAll ? 2 : Infinity).map((item, index) => (
           <ReviewItem
             key={index}
             description={item.description}

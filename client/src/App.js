@@ -3,12 +3,28 @@ import AppRouter from "./pages/routes";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import MyCart from "./components/MyCart/MyCart";
+import httpClient from "./services/httpClient";
 
 class App extends Component {
   state = {
     openCart: false,
     cart: [],
+    products: [],
+    loading: false,
   };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+    try {
+      (async () => {
+        const { data } = await httpClient.get("/api/products");
+        this.setState({ products: data.products });
+      })();
+    } catch (err) {
+      console.log(err.response.data.message);
+    }
+    this.setState({ loading: false });
+  }
 
   toggleCartHandler = () => {
     this.setState(prevState => {
@@ -27,13 +43,17 @@ class App extends Component {
   };
 
   render() {
-    const { openCart, cart } = this.state;
+    const { openCart, cart, loading, products } = this.state;
 
     return (
       <Fragment>
         <Navbar toggleCart={this.toggleCartHandler} cartItems={cart} />
         <main className="py-4 py-md-5">
-          <AppRouter addToCart={this.addToCartHandler} />
+          <AppRouter
+            addToCart={this.addToCartHandler}
+            loading={loading}
+            products={products}
+          />
           <MyCart
             cart={cart}
             openCart={openCart}

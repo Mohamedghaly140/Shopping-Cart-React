@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./Subscribe.module.scss";
 
 class Subscribe extends Component {
@@ -12,7 +11,12 @@ class Subscribe extends Component {
           placeholder="Enter Your Mail"
         />
         <button className={classes.send}>
-          Subscribe <Image className="ml-1" src="/images/send.svg" fluid />
+          Subscribe{" "}
+          <img
+            className="ml-1 img-fluid"
+            src="/images/send.svg"
+            alt="Subscribe"
+          />
         </button>
       </div>
     );

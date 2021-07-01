@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Spinner from "../UI/Spinner/Spinner";
 import Rating from "../UI/ProductDetailsRating/Rating";
 import Price from "../UI/ProductDetailsPrice/ProductDetailsPrice";
@@ -44,7 +44,7 @@ export class ProductDetail extends Component {
             className="d-block d-sm-block d-md-none d-lg-none d-xl-none"
           >
             <div>
-              <Image className="mb-3" src={brand} fluid />
+              <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
               <p className={classes.product__type}>Men</p>
               <div className={classes.rate__container}>
@@ -59,22 +59,23 @@ export class ProductDetail extends Component {
               {this.state.loading ? (
                 <Spinner />
               ) : (
-                <Image
+                <img
+                  className="img-fluid"
+                  alt=""
                   src={
                     this.state.imageUrl ? this.state.imageUrl : imageUrl.large
                   }
-                  fluid
                 />
               )}
               <span>
-                <Image src="/images/360@2x.svg" fluid />
+                <img className="img-fluid" src="/images/360@2x.svg" alt="360" />
               </span>
             </div>
             <PreviewImages onPreviewImage={this.previewImageHandler} />
           </Col>
           <Col md={12} lg={6}>
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
-              <Image className="mb-3" src={brand} fluid />
+              <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
               <p className={classes.product__type}>Men</p>
               <div className={classes.rate__container}>

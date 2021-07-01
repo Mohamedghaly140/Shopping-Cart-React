@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import classes from "./MiddleNavbar.module.scss";
 
@@ -15,7 +15,7 @@ export class MiddleNavbar extends Component {
           <div className={classes.inner}>
             <MenuIcon isVisible marginRight="16px" />
             <Search />
-            <Image src="/images/adidas.svg" fluid />
+            <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
             <div className={classes.spacer} />
             <Info
               toggleCart={this.props.toggleCart}

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import classes from "./Price.module.scss";
 
 export default class Price extends Component {
@@ -21,7 +20,7 @@ export default class Price extends Component {
           )}
         </div>
         <div className={classes.brand__container}>
-          <Image fluid src={brand} />
+          <img className="img-fluid" alt="brand" fluid src={brand} />
         </div>
       </div>
     );

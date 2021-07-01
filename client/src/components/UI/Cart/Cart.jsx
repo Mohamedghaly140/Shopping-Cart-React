@@ -1,6 +1,5 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import { Image } from "react-bootstrap";
 import classes from "./Cart.module.scss";
 
 class Cart extends Component {
@@ -10,7 +9,7 @@ class Cart extends Component {
     return (
       <div className={classes.cart} onClick={toggleCart}>
         <span className="icon mr-2 position-relative">
-          <Image src={icon} fluid />
+          <img className="img-fluid" src={icon} alt="cart" />
           <span className={classes.cart__items}>
             {cartItems.reduce(
               (prevValue, curValue) => prevValue + curValue.qty,

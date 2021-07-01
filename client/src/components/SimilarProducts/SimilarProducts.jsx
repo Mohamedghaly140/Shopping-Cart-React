@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Product from "../Product/Product";
-import httpClient from "../../services/httpClient";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import ArrowRight from "../Icons/ArrowRight";
 import ArrowLeft from "../Icons/ArrowLeft";
@@ -15,35 +14,22 @@ class SimilarProducts extends Component {
     this.sliderRef = React.createRef();
   }
 
-  state = {
-    products: [],
-    loading: false,
-  };
-
-  componentDidMount() {
-    this.setState({ loading: true });
-    (async () => {
-      const { data } = await httpClient.get("/api/products");
-      this.setState({ products: data.products, loading: false });
-    })();
-  }
-
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -280,
+      left: -285,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +280,
+      left: +285,
       behavior: "smooth",
     });
   };
 
   render() {
-    const { loading, products } = this.state;
+    const { loading, products } = this.props;
 
     if (loading) {
       return <Spinner />;
@@ -73,7 +59,7 @@ class SimilarProducts extends Component {
             </div>
           ) : (
             <Row className={classes.row__container} ref={this.sliderRef}>
-              {products.slice(0, 5).map(product => (
+              {products.slice(0, 6).map(product => (
                 <Col
                   key={product.id}
                   className="mb-4"

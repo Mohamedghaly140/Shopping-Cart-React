@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import classes from "./UpperNavbar.module.scss";
 
@@ -14,7 +14,11 @@ export class UpperNavbar extends Component {
         <Container>
           <div className={classes.inner}>
             <MenuIcon />
-            <Image src="/images/brand_logo_black.svg" fluid />
+            <img
+              className="img-fluid"
+              src="/images/brand_logo_black.svg"
+              alt="brand_logo_black"
+            />
             <Offer />
             <Info />
           </div>
