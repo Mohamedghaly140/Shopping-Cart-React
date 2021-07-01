@@ -51,11 +51,17 @@ export class FrequentlyBought extends Component {
               <div className={classes.details}>
                 <h4 className={classes.buy__all}>Buy all of them for</h4>
                 <div className={classes.price__container}>
-                  <p className={classes.price}>9,999 LE</p>
-                  <p className={classes.discount__price}>
-                    <span className={classes.discount}>9,999 LE</span>
-                    <span className={classes.percent}>30% Off</span>
-                  </p>
+                  <p className={classes.price}>{product.price} LE</p>
+                  {product.discount_price && (
+                    <p className={classes.discount__price}>
+                      <span className={classes.discount}>
+                        {product.discount_price} LE
+                      </span>
+                      <span className={classes.percent}>
+                        {product.discount_percent} Off
+                      </span>
+                    </p>
+                  )}
                 </div>
               </div>
               <div className={classes.actions}>

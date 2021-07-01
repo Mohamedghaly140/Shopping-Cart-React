@@ -19,6 +19,7 @@ export class Product extends Component {
       price,
       rate,
       pickup_info,
+      brand,
     } = this.props.product;
 
     return (
@@ -30,13 +31,14 @@ export class Product extends Component {
         <div className={classes.product__content}>
           <p className={classes.description}>{description}</p>
           <Price
+            brand={brand}
             price={price}
             discount={discount}
             discount_price={discount_price}
             discount_percent={discount_percent}
           />
           <div className={classes.rating__container}>
-            <Rating rating={4.2} />{" "}
+            <Rating rating={rate} />{" "}
             <span className={classes.rate}>{rate} of 5</span>
           </div>
         </div>

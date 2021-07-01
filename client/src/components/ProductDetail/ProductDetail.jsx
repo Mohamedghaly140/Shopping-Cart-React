@@ -29,6 +29,8 @@ export class ProductDetail extends Component {
       description,
       rates,
       price,
+      rate,
+      brand,
       discount,
       discount_price,
       discount_percent,
@@ -42,12 +44,12 @@ export class ProductDetail extends Component {
             className="d-block d-sm-block d-md-none d-lg-none d-xl-none"
           >
             <div>
-              <Image className="mb-3" src="/images/adidas.svg" fluid />
+              <Image className="mb-3" src={brand} fluid />
               <p className={classes.description}>{description}</p>
               <p className={classes.product__type}>Men</p>
               <div className={classes.rate__container}>
-                <Rating rating={4.2} />{" "}
-                <span className={classes.rating}>4.2 of 5</span>
+                <Rating rating={rate} />{" "}
+                <span className={classes.rating}>{rate} of 5</span>
                 <span className={classes.rates}>{rates} Rates</span>
               </div>
             </div>
@@ -72,12 +74,12 @@ export class ProductDetail extends Component {
           </Col>
           <Col md={12} lg={6}>
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
-              <Image className="mb-3" src="/images/adidas.svg" fluid />
+              <Image className="mb-3" src={brand} fluid />
               <p className={classes.description}>{description}</p>
               <p className={classes.product__type}>Men</p>
               <div className={classes.rate__container}>
-                <Rating rating={4.2} />{" "}
-                <span className={classes.rating}>4.2 of 5</span>
+                <Rating rating={rate} />{" "}
+                <span className={classes.rating}>{rate} of 5</span>
                 <span className={classes.rates}>{rates} Rates</span>
               </div>
             </div>
@@ -87,7 +89,6 @@ export class ProductDetail extends Component {
                 discount={discount}
                 discount_price={discount_price}
                 discount_percent={discount_percent}
-                inline
               />
             </div>
             <hr style={{ border: "0.5px solid #D9D9D9" }} />

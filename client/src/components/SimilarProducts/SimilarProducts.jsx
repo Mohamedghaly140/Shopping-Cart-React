@@ -30,14 +30,14 @@ class SimilarProducts extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -50,
+      left: -280,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +50,
+      left: +280,
       behavior: "smooth",
     });
   };
@@ -73,7 +73,7 @@ class SimilarProducts extends Component {
             </div>
           ) : (
             <Row className={classes.row__container} ref={this.sliderRef}>
-              {products.slice(0, 5).map((product) => (
+              {products.slice(0, 5).map(product => (
                 <Col
                   key={product.id}
                   className="mb-4"
