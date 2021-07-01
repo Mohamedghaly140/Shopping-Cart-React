@@ -24,7 +24,7 @@ class Home extends Component {
               {products.map(product => (
                 <div
                   key={product.id}
-                  className="mb-4 col-6 col-sm-6 col-md-4 col-lg-3"
+                  className="mb-4 col-6 col-sm-6 col-md-4 col-lg-3 justify-content-center"
                 >
                   <Link to={`/product/${product.id}`}>
                     <Product product={product} />

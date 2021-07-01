@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 import Product from "../Product/Product";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import ArrowRight from "../Icons/ArrowRight";
@@ -36,7 +35,7 @@ class SimilarProducts extends Component {
     }
 
     return (
-      <Container className="pt-4">
+      <div className="container pt-4">
         <h2 className={classes.title}>SimilarProducts</h2>
         <p className={classes.sub__title}>You may like these products also</p>
         <section className={classes.scroll}>
@@ -58,25 +57,24 @@ class SimilarProducts extends Component {
               <h3>There is no products yet</h3>
             </div>
           ) : (
-            <Row className={classes.row__container} ref={this.sliderRef}>
+            <div
+              className={`${classes.row__container} row`}
+              ref={this.sliderRef}
+            >
               {products.slice(0, 6).map(product => (
-                <Col
+                <div
                   key={product.id}
-                  className="mb-4"
-                  xs={6}
-                  sm={6}
-                  md={6}
-                  lg={3}
+                  className="mb-4 me-lg-2 me-xl-2 me-xxl-2 col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 justify-content-center"
                 >
                   <Link to={`/product/${product.id}`}>
                     <Product product={product} />
                   </Link>
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           )}
         </section>
-      </Container>
+      </div>
     );
   }
 }

@@ -48,7 +48,13 @@
     transform: translateX(50%);
   }
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 410.98px) {
+    right: -30%;
+    font-size: 11px;
+    transform: translate(50%, 40%);
+  }
+
+  @media (min-width: 410) and (max-width: 575.98px) {
     right: -50%;
     font-size: 11px;
     transform: translate(50%, 40%);
@@ -62,7 +68,13 @@
 }
 
 .breadcrumb__item:first-child::after {
-  @media (max-width: 575.98px) {
+  @media (max-width: 410.98px) {
+    right: -40%;
+    font-size: 11px;
+    transform: translate(50%, 40%);
+  }
+
+  @media (min-width: 410) and (max-width: 575.98px) {
     right: -75%;
     font-size: 11px;
     transform: translate(50%, 40%);
@@ -76,13 +88,19 @@
 }
 
 .breadcrumb__item:nth-of-type(2):after {
-  @media (max-width: 575.98px) {
+  @media (max-width: 410.98px) {
+    right: -25%;
+    font-size: 11px;
+    transform: translate(50%, 40%);
+  }
+
+  @media (min-width: 410) and (max-width: 575.98px) {
     right: -45%;
     font-size: 11px;
     transform: translate(50%, 40%);
   }
 
-  @media (max-width: 321.98px) {
+  @media (min-width: 410) and (max-width: 321.98px) {
     right: -9%;
     font-size: 10px;
     transform: translate(50%, 40%);
@@ -90,7 +108,13 @@
 }
 
 .breadcrumb__item:nth-of-type(3):after {
-  @media (max-width: 575.98px) {
+  @media (max-width: 410.98px) {
+    right: -45%;
+    font-size: 11px;
+    transform: translate(50%, 40%);
+  }
+
+  @media (min-width: 410) and (max-width: 575.98px) {
     right: -75%;
     font-size: 11px;
     transform: translate(50%, 40%);

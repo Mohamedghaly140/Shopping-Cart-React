@@ -38,7 +38,7 @@ export class ProductDetail extends Component {
     return (
       <div className={`${classes.product__details} container`}>
         <div className="row">
-          <div className="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none">
+          <div className="col-md-6 d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
             <div>
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
@@ -50,7 +50,9 @@ export class ProductDetail extends Component {
               </div>
             </div>
           </div>
-          <div className={`${classes.preview} 'col-md-12 col-lg-6'`}>
+          <div
+            className={`${classes.preview} 'col-md-6 col-lg-6 col-xl-6 col-xxl-6'`}
+          >
             <div className={classes.main__image}>
               {this.state.loading ? (
                 <Spinner />
@@ -69,8 +71,8 @@ export class ProductDetail extends Component {
             </div>
             <PreviewImages onPreviewImage={this.previewImageHandler} />
           </div>
-          <div className="col-md-12 col-lg-6">
-            <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
+          <div className="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
               <p className={classes.product__type}>Men</p>

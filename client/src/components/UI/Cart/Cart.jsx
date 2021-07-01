@@ -8,7 +8,7 @@ class Cart extends Component {
 
     return (
       <div className={classes.cart} onClick={toggleCart}>
-        <span className="icon mr-2 position-relative">
+        <span className="icon me-2 position-relative">
           <img className="img-fluid" src={icon} alt="cart" />
           <span className={classes.cart__items}>
             {cartItems.reduce(

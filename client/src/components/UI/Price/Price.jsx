@@ -20,7 +20,7 @@ export default class Price extends Component {
           )}
         </div>
         <div className={classes.brand__container}>
-          <img className="img-fluid" alt="brand" fluid src={brand} />
+          <img className="img-fluid" alt="brand" src={brand} />
         </div>
       </div>
     );

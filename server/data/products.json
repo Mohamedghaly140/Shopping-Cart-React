@@ -2,10 +2,10 @@
   {
     "id": 1,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product2.png",
-      "large": "http://localhost:5000/public/images/product2@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product2.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product2@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -18,10 +18,10 @@
   {
     "id": 2,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product3.png",
-      "large": "http://localhost:5000/public/images/product3@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product3.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product3@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": false,
@@ -38,10 +38,10 @@
   {
     "id": 3,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product4.png",
-      "large": "http://localhost:5000/public/images/product4@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product4.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product4@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -54,10 +54,10 @@
   {
     "id": 4,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product5.png",
-      "large": "http://localhost:5000/public/images/product5@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product5.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product5@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -74,10 +74,10 @@
   {
     "id": 5,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product4.png",
-      "large": "http://localhost:5000/public/images/product4@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product4.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product4@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -90,10 +90,10 @@
   {
     "id": 6,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product5.png",
-      "large": "http://localhost:5000/public/images/product5@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product5.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product5@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -110,10 +110,10 @@
   {
     "id": 7,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product3.png",
-      "large": "http://localhost:5000/public/images/product3@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product3.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product3@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": false,
@@ -130,10 +130,10 @@
   {
     "id": 8,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/product2.png",
-      "large": "http://localhost:5000/public/images/product2@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product2.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product2@2x.png"
     },
-    "brand": "http://localhost:5000/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,

@@ -13,7 +13,7 @@ class Subscribe extends Component {
         <button className={classes.send}>
           Subscribe{" "}
           <img
-            className="ml-1 img-fluid"
+            className="ms-1 img-fluid"
             src="/images/send.svg"
             alt="Subscribe"
           />

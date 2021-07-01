@@ -13,7 +13,7 @@ class Search extends Component {
   render() {
     return (
       <div className={classes.search__container}>
-        <img alt="search" src="/images/search.svg" className="mr-2 img-fluid" />
+        <img alt="search" src="/images/search.svg" className="me-2 img-fluid" />
         <input
           className={classes.search}
           type="text"

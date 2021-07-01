@@ -8,7 +8,7 @@ class InfoItem extends Component {
 
     return (
       <div className={classes.info__item}>
-        <span className="icon mr-2">
+        <span className="icon me-2">
           <img className="img-fluid" src={icon} alt="icon" />
         </span>
         <span className={classes.link}>{link}</span>

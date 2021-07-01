@@ -76,8 +76,7 @@ class Footer extends Component {
                       <li key={index}>
                         <img
                           src={link.icon}
-                          fluid
-                          className="mr-1 img-fluid"
+                          className="me-1 img-fluid"
                           alt={link.title}
                         />{" "}
                         <a href=":javascript;">{link.title}</a>

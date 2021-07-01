@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: `http://localhost:5000`,
+  baseURL: `https://react-cart-node.herokuapp.com`,
 });
 
 instance.defaults.headers.post["Content-Type"] = "application/json";
