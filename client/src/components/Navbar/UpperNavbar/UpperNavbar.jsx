@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Container } from "react-bootstrap";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import classes from "./UpperNavbar.module.scss";
 
@@ -11,7 +10,7 @@ export class UpperNavbar extends Component {
   render() {
     return (
       <nav className={classes.upper__navbar}>
-        <Container>
+        <div className="container">
           <div className={classes.inner}>
             <MenuIcon />
             <img
@@ -22,7 +21,7 @@ export class UpperNavbar extends Component {
             <Offer />
             <Info />
           </div>
-        </Container>
+        </div>
       </nav>
     );
   }

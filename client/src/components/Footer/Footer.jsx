@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import Subscribe from "../UI/Subscribe/Subscribe";
 import Copyright from "./Copyright";
 import "./Footer.scss";
@@ -25,9 +24,9 @@ class Footer extends Component {
 
     return (
       <footer className="footer">
-        <Container>
-          <Row>
-            <Col md={6}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
               <div>
                 <img
                   className="mb-4 img-fluid"
@@ -55,14 +54,14 @@ class Footer extends Component {
                   dignissim qui blandit
                 </p>
               </div>
-            </Col>
-            <Col md={6}>
+            </div>
+            <div className="col-md-6">
               <div className="subscribe">
                 <h3>Subscribe to our newsletter</h3>
                 <Subscribe />
               </div>
-              <Row>
-                <Col>
+              <div className="row">
+                <div className="col">
                   <ul>
                     {footerLinks.map(link => (
                       <li key={link.title}>
@@ -70,8 +69,8 @@ class Footer extends Component {
                       </li>
                     ))}
                   </ul>
-                </Col>
-                <Col>
+                </div>
+                <div className="col">
                   <ul>
                     {socialMedia.map((link, index) => (
                       <li key={index}>
@@ -85,13 +84,13 @@ class Footer extends Component {
                       </li>
                     ))}
                   </ul>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
+                </div>
+              </div>
+            </div>
+          </div>
           <hr className="mt-2 mb-3" style={{ border: "0.2px solid #999" }} />
           <Copyright />
-        </Container>
+        </div>
       </footer>
     );
   }

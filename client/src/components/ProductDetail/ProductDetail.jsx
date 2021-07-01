@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import Spinner from "../UI/Spinner/Spinner";
 import Rating from "../UI/ProductDetailsRating/Rating";
 import Price from "../UI/ProductDetailsPrice/ProductDetailsPrice";
@@ -37,12 +36,9 @@ export class ProductDetail extends Component {
     } = this.props.product;
 
     return (
-      <Container className={classes.product__details}>
-        <Row>
-          <Col
-            xs={12}
-            className="d-block d-sm-block d-md-none d-lg-none d-xl-none"
-          >
+      <div className={`${classes.product__details} container`}>
+        <div className="row">
+          <div className="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none">
             <div>
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
@@ -53,15 +49,15 @@ export class ProductDetail extends Component {
                 <span className={classes.rates}>{rates} Rates</span>
               </div>
             </div>
-          </Col>
-          <Col md={12} lg={6} className={classes.preview}>
+          </div>
+          <div className={`${classes.preview} 'col-md-12 col-lg-6'`}>
             <div className={classes.main__image}>
               {this.state.loading ? (
                 <Spinner />
               ) : (
                 <img
                   className="img-fluid"
-                  alt=""
+                  alt="product"
                   src={
                     this.state.imageUrl ? this.state.imageUrl : imageUrl.large
                   }
@@ -72,8 +68,8 @@ export class ProductDetail extends Component {
               </span>
             </div>
             <PreviewImages onPreviewImage={this.previewImageHandler} />
-          </Col>
-          <Col md={12} lg={6}>
+          </div>
+          <div className="col-md-12 col-lg-6">
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
@@ -110,9 +106,9 @@ export class ProductDetail extends Component {
                 product={this.props.product}
               />
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     );
   }
 }

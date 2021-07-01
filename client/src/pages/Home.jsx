@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 import Product from "../components/Product/Product";
 import Spinner from "../components/UI/Spinner/Spinner";
 
@@ -13,7 +12,7 @@ class Home extends Component {
     }
 
     return (
-      <Container>
+      <div className="container">
         <h2 className="mb-5">Products</h2>
         <section>
           {products.length === 0 ? (
@@ -21,25 +20,21 @@ class Home extends Component {
               <h3>There is no products yet</h3>
             </div>
           ) : (
-            <Row>
+            <div className="row">
               {products.map(product => (
-                <Col
+                <div
                   key={product.id}
-                  className="mb-4"
-                  xs={6}
-                  sm={6}
-                  md={4}
-                  lg={3}
+                  className="mb-4 col-6 col-sm-6 col-md-4 col-lg-3"
                 >
                   <Link to={`/product/${product.id}`}>
                     <Product product={product} />
                   </Link>
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           )}
         </section>
-      </Container>
+      </div>
     );
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import classes from "./MiddleNavbar.module.scss";
 
@@ -11,7 +10,7 @@ export class MiddleNavbar extends Component {
   render() {
     return (
       <nav className={classes.middle__navbar}>
-        <Container>
+        <div className="container">
           <div className={classes.inner}>
             <MenuIcon isVisible marginRight="16px" />
             <Search />
@@ -22,7 +21,7 @@ export class MiddleNavbar extends Component {
               cartItems={this.props.cartItems}
             />
           </div>
-        </Container>
+        </div>
       </nav>
     );
   }
