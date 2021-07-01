@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import classes from "./BreadCrumb.module.scss";
 
 class BreadCrumb extends Component {
@@ -15,12 +15,15 @@ class BreadCrumb extends Component {
       <nav className={classes.breadcrumb}>
         <div className="container">
           <ul className={classes.breadcrumb__list}>
-            {breadcrumbLinks.map((link) => (
-              <li key={link.title} className={classes.breadcrumb__item}>
-                <a className={classes.breadcrumb__link} href=":javascript;">
-                  {link.title}
-                </a>
-              </li>
+            {breadcrumbLinks.map(link => (
+              <Fragment key={link.title}>
+                <li className={classes.breadcrumb__item}>
+                  <a className={classes.breadcrumb__link} href=":javascript;">
+                    {link.title}
+                  </a>
+                </li>
+                <span className={classes.breadcrumb__slash}>/</span>
+              </Fragment>
             ))}
           </ul>
         </div>

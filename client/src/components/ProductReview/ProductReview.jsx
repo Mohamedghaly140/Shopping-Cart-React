@@ -6,6 +6,14 @@ import Reviews from "../Reviews/Reviews";
 
 import classes from "./ProductReview.module.scss";
 
+function DummeyComponent({ title }) {
+  return (
+    <div className="w-100 h-100 p-5 my-5 d-flex align-items-center justify-content-center">
+      <p className="fw-bolder fs-5">{title}</p>
+    </div>
+  );
+}
+
 class ProductReview extends Component {
   state = {
     tab: "reviews",
@@ -30,17 +38,11 @@ class ProductReview extends Component {
                 <Reviews />
               </Fragment>
             ) : tab === "specifications" ? (
-              <div className="w-100 h-100 p-5 my-5 d-flex align-items-center justify-content-center">
-                <p className="font-weight-bolder">Specifications</p>
-              </div>
+              <DummeyComponent title="Specifications" />
             ) : tab === "overview" ? (
-              <div className="w-100 h-100 p-5 my-5 d-flex align-items-center justify-content-center">
-                <p className="font-weight-bolder">Overview</p>
-              </div>
+              <DummeyComponent title="Overview" />
             ) : (
-              <div className="w-100 h-100 p-5 my-5 d-flex align-items-center justify-content-center">
-                <p className="font-weight-bolder">Share</p>
-              </div>
+              <DummeyComponent title="Share" />
             )}
           </div>
         </div>
