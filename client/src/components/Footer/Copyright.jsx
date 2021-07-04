@@ -15,9 +15,13 @@ class Copyright extends Component {
             src="/images/matercard.png"
           />
         </div>
-        <p>
-          <span className="d-inline-block">Powered By</span>{" "}
-          <img className="img-fluid" src="/images/nas_nav.svg" alt="NasNav" />
+        <p className="d-flex align-items-center justify-content-center mb-0">
+          <span className={classes.powered__by}>Powered By</span>{" "}
+          <img
+            className={`${classes.nasnav__icon} img-fluid`}
+            src="/images/nas_nav.svg"
+            alt="NasNav"
+          />
         </p>
       </div>
     );

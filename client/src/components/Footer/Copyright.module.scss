@@ -18,15 +18,48 @@
   }
 }
 
+.powered__by {
+  width: 98px;
+  font-weight: bold;
+  margin-right: 4px;
+
+  @media (max-width: 320.98px) {
+    width: 90px;
+    font-size: 12px;
+    letter-spacing: -0.28px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    font-size: 14px;
+  }
+}
+
+.nasnav__icon {
+  width: 100px;
+  height: 19px;
+
+  @media (max-width: 320.98px) {
+    width: 70px;
+    height: 13px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    width: 85px;
+    height: 18px;
+  }
+}
+
 .payments__methods {
   @media (max-width: 320.98px) {
-    margin-block: 10px;
+    margin-top: 10px;
+    margin-bottom: 16px;
     padding-bottom: 1.6rem;
     border-bottom: 0.5px solid #ccc;
   }
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
-    margin-block: 10px;
+    margin-top: 10px;
+    margin-bottom: 16px;
     padding-bottom: 1.6rem;
     border-bottom: 0.5px solid #ccc;
   }
