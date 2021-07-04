@@ -9,7 +9,7 @@ class SizeItem extends Component {
       <div
         style={{ backgroundColor: this.props.selected ? "#ECECEC" : "#fff" }}
         className={classes.size__item}
-        onClick={() => onSelectSize(value)}
+        onClick={onSelectSize.bind(null, value)}
       >
         <label>
           {size}

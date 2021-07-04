@@ -20,6 +20,7 @@
 
 .powered__by {
   width: 98px;
+  font-size: 14px;
   font-weight: bold;
   margin-right: 4px;
 
@@ -47,9 +48,18 @@
     width: 85px;
     height: 18px;
   }
+
+  @media (min-width: 1400px) {
+  }
 }
 
 .payments__methods {
+  img {
+    &:nth-of-type(2) {
+      margin-inline: 10px;
+    }
+  }
+
   @media (max-width: 320.98px) {
     margin-top: 10px;
     margin-bottom: 16px;

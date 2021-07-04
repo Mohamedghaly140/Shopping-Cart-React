@@ -35,11 +35,28 @@ class App extends Component {
   };
 
   addToCartHandler = product => {
-    this.setState(prevState => {
-      return {
-        cart: [...prevState.cart, product],
-      };
-    });
+    const exsitingProduct = this.state.cart.find(p => p.id === product.id);
+    const exsitingProductIndex = this.state.cart.findIndex(
+      p => p.id === product.id
+    );
+
+    let qty;
+    let copiedProduct = { ...exsitingProduct };
+
+    if (exsitingProduct) {
+      qty = this.state.cart[exsitingProductIndex].qty;
+      const cartItems = [...this.state.cart];
+      cartItems.filter(p => p.id !== exsitingProduct.id);
+      copiedProduct.qty = qty;
+
+      this.setState({ cart: [...cartItems, copiedProduct] });
+    } else {
+      this.setState(prevState => {
+        return {
+          cart: [...prevState.cart, product],
+        };
+      });
+    }
   };
 
   render() {

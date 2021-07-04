@@ -19,13 +19,12 @@ export class BottomNavbar extends Component {
           <ul className={classes.links__list}>
             {links.map((link, index) => (
               <li key={index} className={classes.list__item}>
-                <a
-                  href=":javascript;"
+                <button
                   className={classes.nav__link}
                   style={{ color: link.active && "#f11133" }}
                 >
                   {link.title}
-                </a>
+                </button>
               </li>
             ))}
           </ul>

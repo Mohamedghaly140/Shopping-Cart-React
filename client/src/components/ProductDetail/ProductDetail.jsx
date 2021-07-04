@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Spinner from "../UI/Spinner/Spinner";
 import Rating from "../UI/ProductDetailsRating/Rating";
 import Price from "../UI/ProductDetailsPrice/ProductDetailsPrice";
@@ -60,6 +60,7 @@ export class ProductDetail extends Component {
                 <img
                   className="img-fluid"
                   alt="product"
+                  ref={this.imageRef}
                   src={
                     this.state.imageUrl ? this.state.imageUrl : imageUrl.large
                   }

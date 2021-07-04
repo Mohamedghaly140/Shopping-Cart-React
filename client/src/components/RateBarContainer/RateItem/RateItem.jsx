@@ -13,7 +13,7 @@ class RateItem extends Component {
         <div className={classes.star}>
           <Star /> <span>{starValue}</span>
         </div>
-        <div className={classes.bar}>
+        <div className={`${classes.bar} flex-fill`}>
           <RateBar rate={barPercent} />
         </div>
         <div className={classes.rates}>
