@@ -7,7 +7,7 @@ import categoriesData from "../../services/all-categories.json";
 class Categories extends Component {
   render() {
     return (
-      <div className={classes.categories__container}>
+      <section className={classes.categories__container}>
         {categoriesData.map(category => (
           <div
             key={category.id}
@@ -27,7 +27,7 @@ class Categories extends Component {
             ))}
           </div>
         ))}
-      </div>
+      </section>
     );
   }
 }

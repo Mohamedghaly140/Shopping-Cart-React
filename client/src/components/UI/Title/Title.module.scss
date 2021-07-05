@@ -4,13 +4,15 @@
   color: #542e90;
   font-weight: bold;
   font-size: 28px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
   @media (max-width: 320.98px) {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     font-size: 16px;
+    margin-bottom: 10px;
   }
 }

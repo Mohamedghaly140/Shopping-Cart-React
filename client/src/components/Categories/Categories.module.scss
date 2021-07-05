@@ -34,13 +34,16 @@
 .category__container {
   display: grid;
   grid-row-gap: 32px;
+  margin-top: 10px;
 
   @media (max-width: 320.98px) {
     grid-row-gap: 16px;
+    margin-top: 0;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     grid-row-gap: 16px;
+    margin-top: 0;
   }
 }
 

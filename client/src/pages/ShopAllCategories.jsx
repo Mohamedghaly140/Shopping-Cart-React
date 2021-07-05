@@ -10,9 +10,7 @@ class ShopAllCategories extends Component {
       <div className="container">
         <Title>Shop All Categories</Title>
         <SubTitle>Find what you are looking for by category.</SubTitle>
-        <section>
-          <Categories />
-        </section>
+        <Categories />
       </div>
     );
   }
