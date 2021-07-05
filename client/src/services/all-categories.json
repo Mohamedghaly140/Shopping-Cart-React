@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "hidden": false,
     "items": [
       {
         "id": 1,
@@ -54,6 +55,7 @@
   },
   {
     "id": 2,
+    "hidden": false,
     "items": [
       {
         "id": 1,
@@ -107,6 +109,7 @@
   },
   {
     "id": 3,
+    "hidden": true,
     "items": [
       {
         "id": 1,

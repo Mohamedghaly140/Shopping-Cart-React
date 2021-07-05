@@ -8,7 +8,12 @@ class Categories extends Component {
     return (
       <div className="row">
         {categoriesData.map(category => (
-          <div key={category.id} className="col-6 col-md-4 col-lg-4">
+          <div
+            key={category.id}
+            className={`col-6 col-md-4 col-lg-4 ${
+              category.hidden && "d-none d-md-block"
+            }`}
+          >
             {category.items.map(item => (
               <CategoryItem
                 key={item.id}
