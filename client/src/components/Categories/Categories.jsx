@@ -11,7 +11,7 @@ class Categories extends Component {
           <div
             key={category.id}
             className={`col-6 col-md-4 col-lg-4 ${
-              category.hidden && "d-none d-md-block"
+              category.hidden && "d-sm-none"
             }`}
           >
             {category.items.map(item => (
@@ -20,8 +20,8 @@ class Categories extends Component {
                 lg={item.lg}
                 sm={item.sm}
                 title={item.title}
+                imageUrl={item.imageUrl}
                 description={item.description}
-                backgroundImage={item.imageUrl}
               />
             ))}
           </div>
