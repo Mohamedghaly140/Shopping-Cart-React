@@ -3,6 +3,8 @@ import classes from "./FrequentlyBought.module.scss";
 import Product from "../Product/Product";
 import Plus from "../Icons/Plus";
 import Spinner from "../UI/Spinner/Spinner";
+import Title from "../UI/Title/Title";
+import SubTitle from "../UI/SubTitle/SubTitle";
 
 export class FrequentlyBought extends Component {
   render() {
@@ -15,10 +17,8 @@ export class FrequentlyBought extends Component {
     return (
       <section className="py-md-5 py-lg-5">
         <div className="container">
-          <h2 className={classes.title}>Frequently Bought Together</h2>
-          <p className={classes.sub__title}>
-            Users who buy this item usually buy.
-          </p>
+          <Title>Frequently Bought Together</Title>
+          <SubTitle>Users who buy this item usually buy.</SubTitle>
           <div className="row mx-0">
             <div
               className={`${classes.products} row col-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 px-3 px-lg-0 px-xl-0 px-xxl-0 px-md-0`}

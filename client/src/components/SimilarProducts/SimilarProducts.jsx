@@ -4,6 +4,8 @@ import Product from "../Product/Product";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import ArrowRight from "../Icons/ArrowRight";
 import ArrowLeft from "../Icons/ArrowLeft";
+import Title from "../UI/Title/Title";
+import SubTitle from "../UI/SubTitle/SubTitle";
 
 import classes from "./SimilarProducts.module.scss";
 
@@ -36,8 +38,8 @@ class SimilarProducts extends Component {
 
     return (
       <div className="container pt-4">
-        <h2 className={classes.title}>SimilarProducts</h2>
-        <p className={classes.sub__title}>You may like these products also</p>
+        <Title>SimilarProducts</Title>
+        <SubTitle>You may like these products also</SubTitle>
         <section className={classes.scroll}>
           <div className={classes.left__arrow} onClick={this.slideLeftHandler}>
             <span>

@@ -1,0 +1,13 @@
+.sub__title {
+  margin-bottom: 16px;
+  color: #575756;
+  font-size: 22px;
+
+  @media (max-width: 320.98px) {
+    font-size: 10px;
+  }
+
+  @media (min-width: 321.98px) and (max-width: 575.98px) {
+    font-size: 12px;
+  }
+}
