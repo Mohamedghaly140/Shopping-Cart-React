@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Title from "../components/UI/Title/Title";
 import SubTitle from "../components/UI/SubTitle/SubTitle";
+import Categories from "../components/Categories/Categories";
 
 class ShopAllCategories extends Component {
   render() {
     return (
-      <section className="py-4">
-        <div className="container">ShopAllCategories</div>
-      </section>
+      <div className="container">
+        <Title>Shop All Categories</Title>
+        <SubTitle>Find what you are looking for by category.</SubTitle>
+        <section>
+          <Categories />
+        </section>
+      </div>
     );
   }
 }

@@ -1,0 +1,161 @@
+[
+  {
+    "id": 1,
+    "items": [
+      {
+        "id": 1,
+        "title": "Electronics",
+        "description": "Find latest electronic devices.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 2,
+        "title": "Cosmetics",
+        "description": "Beautiful. Colorful. You.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 3,
+        "title": "Electronics",
+        "description": "Find latest electronic devices.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 4,
+        "title": "Cosmetics",
+        "description": "Beautiful. Colorful. You.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 5,
+        "title": "Electronics",
+        "description": "Find latest electronic devices.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 6,
+        "title": "Cosmetics",
+        "description": "Beautiful. Colorful. You.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "items": [
+      {
+        "id": 1,
+        "title": "Books",
+        "description": "Live another life in books.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 2,
+        "title": "Fashion",
+        "description": "Keep up with the latest fashion trends.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 3,
+        "title": "Books",
+        "description": "Live another life in books.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 4,
+        "title": "Fashion",
+        "description": "Keep up with the latest fashion trends.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 5,
+        "title": "Books",
+        "description": "Live another life in books.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 6,
+        "title": "Fashion",
+        "description": "Keep up with the latest fashion trends.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "items": [
+      {
+        "id": 1,
+        "title": "Foods",
+        "description": "Set your table. Bon appetit.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 2,
+        "title": "Baby’s",
+        "description": "Anything for your newborn.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 3,
+        "title": "Foods",
+        "description": "Find latest electronic devices.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 4,
+        "title": "Baby’s",
+        "description": "Anything for your newborn.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      },
+      {
+        "id": 5,
+        "title": "Foods",
+        "description": "Find latest electronic devices.",
+        "imageUrl": "",
+        "lg": true,
+        "sm": false
+      },
+      {
+        "id": 6,
+        "title": "Baby’s",
+        "description": "Anything for your newborn.",
+        "imageUrl": "",
+        "lg": false,
+        "sm": true
+      }
+    ]
+  }
+]
