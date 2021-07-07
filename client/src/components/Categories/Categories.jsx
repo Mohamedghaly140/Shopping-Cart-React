@@ -1,92 +1,103 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import { debounce } from "throttle-debounce";
 import CategoryItem from "../UI/CategoryItem/CategoryItem";
 import classes from "./Categories.module.scss";
 
 import categoriesData from "../../services/all-categories.json";
 
 class Categories extends Component {
+  state = {
+    small: false,
+  };
+
+  componentDidMount() {
+    if (window.innerWidth < 992) {
+      this.setState({ small: true });
+    }
+
+    window.addEventListener("resize", debounce(250, this.windowResizeHandler));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(
+      "resize",
+      debounce(250, this.windowResizeHandler)
+    );
+  }
+
+  windowResizeHandler = () => {
+    if (window.innerWidth < 992) {
+      this.setState({ small: true });
+    } else {
+      this.setState({ small: false });
+    }
+  };
+
   render() {
+    const { small } = this.state;
+
+    const rows = new Array(Math.ceil(categoriesData.length) / 6);
+
+    for (let i = 0; i < rows.length; i++) {
+      rows[i] = { items: categoriesData.slice(i * 6, i * 6 + 6) };
+    }
+
+    const categoriesListLarge = rows.map((item, index) => (
+      <Fragment key={index}>
+        <div className={classes.category__item}>
+          {item.items.slice(0, 2).map((category, i) => (
+            <CategoryItem
+              key={category.id}
+              lg={i % 2 === 0}
+              title={category.title}
+              imageUrl={category.imageUrl}
+              description={category.description}
+            />
+          ))}
+        </div>
+        <div className={classes.category__item}>
+          {item.items.slice(2, 4).map((category, i) => (
+            <CategoryItem
+              key={category.id}
+              lg={i % 2}
+              title={category.title}
+              imageUrl={category.imageUrl}
+              description={category.description}
+            />
+          ))}
+        </div>
+        <div className={classes.category__item}>
+          {item.items.slice(4, 6).map((category, i) => (
+            <CategoryItem
+              key={category.id}
+              lg={i % 2 === 0}
+              title={category.title}
+              imageUrl={category.imageUrl}
+              description={category.description}
+            />
+          ))}
+        </div>
+      </Fragment>
+    ));
+
+    const categoriesListSmall = categoriesData.map((category, i) => {
+      return (
+        <CategoryItem
+          key={category.id}
+          lg={i % 2 === 0}
+          title={category.title}
+          imageUrl={category.imageUrl}
+          description={category.description}
+        />
+      );
+    });
+
     return (
       <section className={classes.categories__container}>
-        {categoriesData.map(category => (
-          <div
-            key={category.id}
-            className={`${category.hidden ? classes.category__hidden : ""} ${
-              classes.category__container
-            }`}
-          >
-            {category.items.map(item => (
-              <CategoryItem
-                key={item.id}
-                lg={item.lg}
-                sm={item.sm}
-                title={item.title}
-                imageUrl={item.imageUrl}
-                description={item.description}
-              />
-            ))}
-          </div>
-        ))}
+        {small ? categoriesListSmall : categoriesListLarge}
       </section>
     );
   }
 }
 
 export default Categories;
-
-/* 
-{
-    "id": 4,
-    "hidden": true,
-    "items": [
-      {
-        "id": 1,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 2,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 3,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 4,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 5,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 6,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      }
-    ]
-  }
-*/

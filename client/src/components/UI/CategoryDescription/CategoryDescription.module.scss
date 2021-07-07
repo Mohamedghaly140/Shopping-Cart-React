@@ -5,6 +5,8 @@
   font-size: 14px;
   font-weight: normal;
   margin-bottom: 0;
+  max-width: 100%;
+  word-wrap: break-word;
 
   @media (max-width: 320.98px) {
     display: none;
@@ -23,8 +25,10 @@
   }
 
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 264px;
   }
 
   @media (min-width: 1200px) {
+    width: 264px;
   }
 }

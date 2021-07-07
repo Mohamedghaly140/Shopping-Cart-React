@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import classes from "./UpperNavbar.module.scss";
 
@@ -13,11 +14,13 @@ export class UpperNavbar extends Component {
         <div className="container">
           <div className={classes.inner}>
             <MenuIcon />
-            <img
-              className="img-fluid"
-              src="/images/brand_logo_black.svg"
-              alt="brand_logo_black"
-            />
+            <Link to="/">
+              <img
+                className="img-fluid"
+                src="/images/brand_logo_black.svg"
+                alt="brand_logo_black"
+              />
+            </Link>
             <Offer />
             <Info />
           </div>

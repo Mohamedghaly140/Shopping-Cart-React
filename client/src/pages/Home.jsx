@@ -13,7 +13,16 @@ class Home extends Component {
 
     return (
       <div className="container">
-        <h2 className="mb-5">Products</h2>
+        <div className="d-flex align-items-center justify-content-between mb-2 mb-md-5">
+          <h2>Products</h2>
+          <Link
+            to="/shop-all-categories"
+            className="fw-bold"
+            style={{ color: "#542e90" }}
+          >
+            Shop All
+          </Link>
+        </div>
         <section>
           {products.length === 0 ? (
             <div className="m-auto">

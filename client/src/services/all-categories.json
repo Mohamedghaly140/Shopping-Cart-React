@@ -1,218 +1,146 @@
 [
   {
     "id": 1,
-    "hidden": false,
-    "items": [
-      {
-        "id": 1,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 2,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 3,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 4,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 5,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 6,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      }
-    ]
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
   },
   {
     "id": 2,
-    "hidden": false,
-    "items": [
-      {
-        "id": 1,
-        "title": "Books",
-        "description": "Live another life in books.",
-        "imageUrl": "/images/categories/books@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 2,
-        "title": "Fashion",
-        "description": "Keep up with the latest fashion trends.",
-        "imageUrl": "/images/categories/fashion@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 3,
-        "title": "Books",
-        "description": "Live another life in books.",
-        "imageUrl": "/images/categories/books@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 4,
-        "title": "Fashion",
-        "description": "Keep up with the latest fashion trends.",
-        "imageUrl": "/images/categories/fashion@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 5,
-        "title": "Books",
-        "description": "Live another life in books.",
-        "imageUrl": "/images/categories/books@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 6,
-        "title": "Fashion",
-        "description": "Keep up with the latest fashion trends.",
-        "imageUrl": "/images/categories/fashion@2x.png",
-        "lg": true,
-        "sm": false
-      }
-    ]
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
   },
   {
     "id": 3,
-    "hidden": false,
-    "items": [
-      {
-        "id": 1,
-        "title": "Foods",
-        "description": "Set your table. Bon appetit.",
-        "imageUrl": "/images/categories/foods@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 2,
-        "title": "Baby’s",
-        "description": "Anything for your newborn.",
-        "imageUrl": "/images/categories/babys@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 3,
-        "title": "Foods",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/foods@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 4,
-        "title": "Baby’s",
-        "description": "Anything for your newborn.",
-        "imageUrl": "/images/categories/babys@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 5,
-        "title": "Foods",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/foods@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 6,
-        "title": "Baby’s",
-        "description": "Anything for your newborn.",
-        "imageUrl": "/images/categories/babys@2x.png",
-        "lg": false,
-        "sm": true
-      }
-    ]
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
   },
   {
     "id": 4,
-    "hidden": true,
-    "items": [
-      {
-        "id": 1,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 2,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 3,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 4,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      },
-      {
-        "id": 5,
-        "title": "Cosmetics",
-        "description": "Beautiful. Colorful. You.",
-        "imageUrl": "/images/categories/cosmetics@2x.png",
-        "lg": false,
-        "sm": true
-      },
-      {
-        "id": 6,
-        "title": "Electronics",
-        "description": "Find latest electronic devices.",
-        "imageUrl": "/images/categories/electronics@2x.png",
-        "lg": true,
-        "sm": false
-      }
-    ]
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
+  },
+  {
+    "id": 5,
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
+  },
+  {
+    "id": 6,
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
+  },
+  {
+    "id": 7,
+    "title": "Books",
+    "description": "Live another life in books.",
+    "imageUrl": "/images/categories/books@2x.png"
+  },
+  {
+    "id": 8,
+    "title": "Fashion",
+    "description": "Keep up with the latest fashion trends.",
+    "imageUrl": "/images/categories/fashion@2x.png"
+  },
+  {
+    "id": 9,
+    "title": "Books",
+    "description": "Live another life in books.",
+    "imageUrl": "/images/categories/books@2x.png"
+  },
+  {
+    "id": 10,
+    "title": "Fashion",
+    "description": "Keep up with the latest fashion trends.",
+    "imageUrl": "/images/categories/fashion@2x.png"
+  },
+  {
+    "id": 11,
+    "title": "Books",
+    "description": "Live another life in books.",
+    "imageUrl": "/images/categories/books@2x.png"
+  },
+  {
+    "id": 12,
+    "title": "Fashion",
+    "description": "Keep up with the latest fashion trends.",
+    "imageUrl": "/images/categories/fashion@2x.png"
+  },
+  {
+    "id": 13,
+    "title": "Foods",
+    "description": "Set your table. Bon appetit.",
+    "imageUrl": "/images/categories/foods@2x.png"
+  },
+  {
+    "id": 14,
+    "title": "Baby’s",
+    "description": "Anything for your newborn.",
+    "imageUrl": "/images/categories/babys@2x.png"
+  },
+  {
+    "id": 15,
+    "title": "Foods",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/foods@2x.png"
+  },
+  {
+    "id": 16,
+    "title": "Baby’s",
+    "description": "Anything for your newborn.",
+    "imageUrl": "/images/categories/babys@2x.png"
+  },
+  {
+    "id": 17,
+    "title": "Foods",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/foods@2x.png"
+  },
+  {
+    "id": 18,
+    "title": "Baby’s",
+    "description": "Anything for your newborn.",
+    "imageUrl": "/images/categories/babys@2x.png"
+  },
+  {
+    "id": 19,
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
+  },
+  {
+    "id": 20,
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
+  },
+  {
+    "id": 21,
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
+  },
+  {
+    "id": 22,
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
+  },
+  {
+    "id": 23,
+    "title": "Cosmetics",
+    "description": "Beautiful. Colorful. You.",
+    "imageUrl": "/images/categories/cosmetics@2x.png"
+  },
+  {
+    "id": 24,
+    "title": "Electronics",
+    "description": "Find latest electronic devices.",
+    "imageUrl": "/images/categories/electronics@2x.png"
   }
 ]
