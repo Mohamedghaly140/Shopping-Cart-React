@@ -3,12 +3,12 @@ import classes from "./CartItem.module.scss";
 
 export class CartItem extends Component {
   render() {
-    const { description, qty, imageUrl, price } = this.props.product;
+    const { description, qty, imageUrl, price, title } = this.props.product;
 
     return (
       <div className={classes.CartItem}>
         <div className={classes.imageContainer}>
-          <img className="img-fluid" alt="" src={imageUrl.small} />
+          <img className="img-fluid" alt={title} src={imageUrl.small} />
         </div>
         <div>
           <p className={classes.description}>{description}</p>

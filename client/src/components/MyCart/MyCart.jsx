@@ -1,7 +1,7 @@
 import { Component, Fragment } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import CartItem from "../CartItem/CartItem";
-import "./MyCart.scss";
+import classes from "./MyCart.module.scss";
 
 export class MyCart extends Component {
   render() {
@@ -10,7 +10,11 @@ export class MyCart extends Component {
     return (
       <Fragment>
         <Backdrop toggleCart={toggleCart} openCart={openCart} />
-        <div className={`my__cart ${openCart ? "open" : "close"}`}>
+        <div
+          className={`${classes.my__cart} ${
+            openCart ? classes.open : classes.close
+          }`}
+        >
           <div className="d-flex align-items-center justify-content-end mb-2">
             <div onClick={toggleCart}>
               <img
@@ -20,8 +24,8 @@ export class MyCart extends Component {
               />
             </div>
           </div>
-          <h2 className="title text-center mb-3">My Cart</h2>
-          <p className="summary">Cart Summary</p>
+          <h2 className={`${classes.title} text-center mb-3`}>My Cart</h2>
+          <p className={classes.summary}>Cart Summary</p>
           <div className="d-flex align-items-center justify-content-center flex-column">
             {cart.length === 0 ? (
               <p className="my-4">You have no items yet..</p>
@@ -29,7 +33,7 @@ export class MyCart extends Component {
               cart.map(item => <CartItem key={item.id} product={item} />)
             )}
           </div>
-          <p className="total">
+          <p className={classes.total}>
             Total:{" "}
             {cart
               .reduce(
@@ -41,8 +45,8 @@ export class MyCart extends Component {
             L.E
           </p>
           <div className="d-flex align-items-center justify-content-between">
-            <button className="review">Review Cart</button>
-            <button className="checkout">Complete Checkout</button>
+            <button className={classes.review}>Review Cart</button>
+            <button className={classes.checkout}>Complete Checkout</button>
           </div>
         </div>
       </Fragment>
