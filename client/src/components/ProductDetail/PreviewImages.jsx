@@ -10,6 +10,7 @@ class PreviewImages extends Component {
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
       left: -120,
+      top: -120,
       behavior: "smooth",
     });
   };
@@ -17,6 +18,7 @@ class PreviewImages extends Component {
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
       left: +120,
+      top: +120,
       behavior: "smooth",
     });
   };

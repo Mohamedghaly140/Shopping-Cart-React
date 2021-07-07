@@ -168,15 +168,20 @@
   justify-content: center;
   flex-direction: row;
   margin-top: 11px;
-  margin-right: 35px;
 
   @media (max-width: 320.98px) {
+    margin-right: 0;
   }
 
   @media (min-width: 321.98px) and (max-width: 575.98px) {
+    margin-right: 0;
   }
 
   @media (min-width: 768px) and (max-width: 991.98px) {
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 450px;
   }
 
   @media (min-width: 991.98px) and (max-width: 1200.98px) {
@@ -193,7 +198,8 @@
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
-    height: 0px;
+    height: 0;
+    width: 0;
   }
 
   &::-webkit-scrollbar-track {
@@ -224,9 +230,13 @@
 
   @media (min-width: 768px) and (max-width: 991.98px) {
     margin: 0;
-    overflow: unset;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: space-between;
+
+    &::-webkit-scrollbar {
+      height: 0px;
+    }
   }
 
   @media (min-width: 991.98px) and (max-width: 1200.98px) {
