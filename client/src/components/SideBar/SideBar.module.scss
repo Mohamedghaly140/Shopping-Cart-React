@@ -7,7 +7,7 @@
   padding: 32px;
   position: fixed;
   overflow: auto;
-  top: 99px;
+  top: 0;
   bottom: 0;
   left: 0;
   z-index: 99;
@@ -42,11 +42,13 @@
   }
 
   @media (max-width: 320.98px) {
+    top: 99px;
     width: 100%;
     padding: 20px 15px;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
+    top: 99px;
     width: 100%;
     padding: 20px 15px;
   }
