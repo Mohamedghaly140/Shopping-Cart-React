@@ -9,11 +9,13 @@ import Info from "./Info/Info";
 
 export class UpperNavbar extends Component {
   render() {
+    const { onToggleSidebar } = this.props;
+
     return (
       <nav className={classes.upper__navbar}>
         <div className="container">
           <div className={classes.inner}>
-            <MenuIcon />
+            <MenuIcon onToggleSidebar={onToggleSidebar} />
             <Link to="/">
               <img
                 className="img-fluid"

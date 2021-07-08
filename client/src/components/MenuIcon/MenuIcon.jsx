@@ -3,7 +3,7 @@ import classes from "./MenuIcon.module.scss";
 
 export class MenuIcon extends Component {
   render() {
-    const { isVisible, marginRight } = this.props;
+    const { isVisible, marginRight, onToggleSidebar } = this.props;
 
     return (
       <span
@@ -11,6 +11,7 @@ export class MenuIcon extends Component {
           isVisible ? classes.show__menu : classes.hide__menu
         }`}
         style={{ marginRight }}
+        onClick={onToggleSidebar}
       >
         <img
           className="img-fluid"

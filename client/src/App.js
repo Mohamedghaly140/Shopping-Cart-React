@@ -4,10 +4,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
+import SideBar from "./components/SideBar/SideBar";
 
 class App extends Component {
   state = {
     openCart: false,
+    openSideBar: false,
     cart: [],
     products: [],
     loading: false,
@@ -30,6 +32,14 @@ class App extends Component {
     this.setState(prevState => {
       return {
         openCart: !prevState.openCart,
+      };
+    });
+  };
+
+  toggleSidebarHandler = () => {
+    this.setState(prevState => {
+      return {
+        openSideBar: !prevState.openSideBar,
       };
     });
   };
@@ -60,24 +70,34 @@ class App extends Component {
   };
 
   render() {
-    const { openCart, cart, loading, products } = this.state;
+    const { openCart, cart, loading, products, openSideBar } = this.state;
 
     return (
       <Fragment>
-        <Navbar toggleCart={this.toggleCartHandler} cartItems={cart} />
+        <Navbar
+          cartItems={cart}
+          toggleCart={this.toggleCartHandler}
+          onToggleSidebar={this.toggleSidebarHandler}
+        />
         <main className="py-4 py-md-5">
           <AppRouter
             addToCart={this.addToCartHandler}
             loading={loading}
             products={products}
           />
+        </main>
+        <Footer />
+        <Fragment>
           <MyCart
             cart={cart}
             openCart={openCart}
             toggleCart={this.toggleCartHandler}
           />
-        </main>
-        <Footer />
+          <SideBar
+            openSideBar={openSideBar}
+            onToggleSidebar={this.toggleSidebarHandler}
+          />
+        </Fragment>
       </Fragment>
     );
   }

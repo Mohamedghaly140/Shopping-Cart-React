@@ -8,12 +8,15 @@ import BreadCrumb from "./BreadCrumb/BreadCrumb";
 
 export class Navbar extends Component {
   render() {
+    const { onToggleSidebar, cartItems, toggleCart } = this.props;
+
     return (
       <header>
-        <UpperNavbar />
+        <UpperNavbar onToggleSidebar={onToggleSidebar} />
         <MiddleNavbar
-          toggleCart={this.props.toggleCart}
-          cartItems={this.props.cartItems}
+          cartItems={cartItems}
+          toggleCart={toggleCart}
+          onToggleSidebar={onToggleSidebar}
         />
         <BottomNavbar />
         <BreadCrumb />

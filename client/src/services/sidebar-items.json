@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "New Arrivals",
+    "items": [
+      { "id": 1, "title": "Fashion" },
+      { "id": 2, "title": "Electronics" },
+      { "id": 3, "title": "Eyewear" },
+      { "id": 4, "title": "Watches" },
+      { "id": 5, "title": "Books" },
+      { "id": 6, "title": "Accessories" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Best Sellers",
+    "items": [
+      { "id": 1, "title": "Fashion" },
+      { "id": 2, "title": "Electronics" },
+      { "id": 3, "title": "Eyewear" },
+      { "id": 4, "title": "Watches" },
+      { "id": 5, "title": "Books" },
+      { "id": 6, "title": "Accessories" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Fashion",
+    "items": [
+      { "id": 1, "title": "Armani" },
+      { "id": 2, "title": "fendi" },
+      { "id": 3, "title": "house of versace" },
+      { "id": 4, "title": "ralph lauren" },
+      { "id": 5, "title": "chanel" },
+      { "id": 6, "title": "prada" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Electronics",
+    "items": [
+      { "id": 1, "title": "Apple" },
+      { "id": 2, "title": "Dell" },
+      { "id": 3, "title": "HP" },
+      { "id": 4, "title": "Nikon" },
+      { "id": 5, "title": "LG" },
+      { "id": 6, "title": " Canon" },
+      { "id": 7, "title": " Sony" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Eyewear",
+    "items": [
+      { "id": 1, "title": "Ray-Ban" },
+      { "id": 2, "title": "Gucci" },
+      { "id": 3, "title": "Tom Ford" },
+      { "id": 4, "title": "Prada" },
+      { "id": 5, "title": "Persol" },
+      { "id": 6, "title": "Burberry" }
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "Watches",
+    "items": [
+      { "id": 1, "title": "Rolex" },
+      { "id": 2, "title": "Patek Philippe" },
+      { "id": 3, "title": "Omega" },
+      { "id": 4, "title": "Blancpain" },
+      { "id": 5, "title": "Gucci" },
+      { "id": 6, "title": "Armin Strom" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Books",
+    "items": [
+      { "id": 1, "title": "Action and Adventure" },
+      { "id": 2, "title": "Classics" },
+      { "id": 3, "title": "Comic Book or Graphic Novel" },
+      { "id": 4, "title": "Detective and Mystery" },
+      { "id": 5, "title": "Fantasy" },
+      { "id": 6, "title": "Historical Fiction" },
+      { "id": 7, "title": "Horror" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Accessories",
+    "items": [
+      { "id": 1, "title": "Sunglasses" },
+      { "id": 2, "title": "Tie" },
+      { "id": 3, "title": "Boots" },
+      { "id": 4, "title": "Watches" },
+      { "id": 5, "title": "Socks" },
+      { "id": 6, "title": "Gloves" }
+    ]
+  }
+]

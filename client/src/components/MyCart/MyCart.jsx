@@ -9,20 +9,20 @@ export class MyCart extends Component {
 
     return (
       <Fragment>
-        <Backdrop toggleCart={toggleCart} openCart={openCart} />
+        <Backdrop onToggle={toggleCart} open={openCart} />
         <div
           className={`${classes.my__cart} ${
             openCart ? classes.open : classes.close
           }`}
         >
           <div className="d-flex align-items-center justify-content-end mb-2">
-            <div onClick={toggleCart}>
+            <button onClick={toggleCart}>
               <img
                 className="close img-fluid"
                 src="/images/close.svg"
                 alt="close"
               />
-            </div>
+            </button>
           </div>
           <h2 className={`${classes.title} text-center mb-3`}>My Cart</h2>
           <p className={classes.summary}>Cart Summary</p>

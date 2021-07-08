@@ -4,14 +4,12 @@ import classes from "./Backdrop.module.scss";
 
 class BackDrop extends Component {
   render() {
-    const { openCart, toggleCart } = this.props;
+    const { open, onToggle } = this.props;
 
     return (
       <div
-        onClick={toggleCart}
-        className={`${classes.backdrop} ${
-          openCart ? classes.open : classes.close
-        }`}
+        onClick={onToggle}
+        className={`${classes.backdrop} ${open ? classes.open : classes.close}`}
       >
         {this.props.children}
       </div>
@@ -21,12 +19,12 @@ class BackDrop extends Component {
 
 class Backdrop extends Component {
   render() {
-    const { openCart, toggleCart } = this.props;
+    const { open, onToggle } = this.props;
 
     return (
       <Fragment>
         {ReactDOM.createPortal(
-          <BackDrop openCart={openCart} toggleCart={toggleCart} />,
+          <BackDrop open={open} onToggle={onToggle} />,
           document.getElementById("backdrop")
         )}
       </Fragment>
