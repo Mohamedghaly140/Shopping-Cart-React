@@ -4,10 +4,10 @@ import classes from "./infoItem.module.scss";
 
 class InfoItem extends Component {
   render() {
-    const { icon, link } = this.props;
+    const { icon, link, onSearch } = this.props;
 
     return (
-      <div className={classes.info__item}>
+      <div className={classes.info__item} onClick={onSearch}>
         <span className="icon me-2">
           <img className="img-fluid" src={icon} alt="icon" />
         </span>

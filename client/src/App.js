@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
 import SideBar from "./components/SideBar/SideBar";
+import SearchContainer from "./components/SearchContainer/SearchContainer";
 
 class App extends Component {
   state = {
@@ -13,6 +14,7 @@ class App extends Component {
     cart: [],
     products: [],
     loading: false,
+    search: false,
   };
 
   componentDidMount() {
@@ -44,6 +46,14 @@ class App extends Component {
     });
   };
 
+  toggleSearchHandler = () => {
+    this.setState(prevState => {
+      return {
+        search: !prevState.search,
+      };
+    });
+  };
+
   addToCartHandler = product => {
     const exsitingProduct = this.state.cart.find(p => p.id === product.id);
     const exsitingProductIndex = this.state.cart.findIndex(
@@ -70,12 +80,14 @@ class App extends Component {
   };
 
   render() {
-    const { openCart, cart, loading, products, openSideBar } = this.state;
+    const { openCart, cart, loading, products, openSideBar, search } =
+      this.state;
 
     return (
       <Fragment>
         <Navbar
           cartItems={cart}
+          onSearch={this.toggleSearchHandler}
           toggleCart={this.toggleCartHandler}
           onToggleSidebar={this.toggleSidebarHandler}
         />
@@ -96,6 +108,10 @@ class App extends Component {
           <SideBar
             openSideBar={openSideBar}
             onToggleSidebar={this.toggleSidebarHandler}
+          />
+          <SearchContainer
+            search={search}
+            onToggleSearch={this.toggleSearchHandler}
           />
         </Fragment>
       </Fragment>

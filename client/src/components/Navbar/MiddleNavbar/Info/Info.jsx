@@ -15,6 +15,7 @@ class Info extends Component {
 
   render() {
     const { infoLinks } = this.state;
+    const { onSearch } = this.props;
 
     return (
       <div className={classes.info}>
@@ -22,6 +23,7 @@ class Info extends Component {
           className={classes.search__icon}
           icon="/images/search.svg"
           link="Search"
+          onSearch={onSearch}
         />
         <Cart
           icon="/images/shopping_bag.svg"
@@ -29,7 +31,7 @@ class Info extends Component {
           cartItems={this.props.cartItems}
           toggleCart={this.props.toggleCart}
         />
-        {infoLinks.slice(0, 1).map((item) => (
+        {infoLinks.slice(0, 1).map(item => (
           <InfoItem key={item.id} icon={item.icon} link={item.link} />
         ))}
       </div>

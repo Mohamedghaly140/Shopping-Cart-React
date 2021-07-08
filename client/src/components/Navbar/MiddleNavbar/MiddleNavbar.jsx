@@ -8,7 +8,7 @@ import Search from "../../UI/Search/Search";
 
 export class MiddleNavbar extends Component {
   render() {
-    const { onToggleSidebar } = this.props;
+    const { onToggleSidebar, onSearch } = this.props;
 
     return (
       <nav className={classes.middle__navbar}>
@@ -25,6 +25,7 @@ export class MiddleNavbar extends Component {
             <Info
               toggleCart={this.props.toggleCart}
               cartItems={this.props.cartItems}
+              onSearch={onSearch}
             />
           </div>
         </div>
