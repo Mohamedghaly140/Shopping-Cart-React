@@ -7,14 +7,14 @@ import classes from "./CategoryItem.module.scss";
 
 class CategoryItem extends Component {
   render() {
-    const { lg, imageUrl, title, description } = this.props;
+    const { lg, imageUrlLg, imageUrlSm, title, description } = this.props;
 
     return (
       <div
         className={`${classes.categoryItem} ${
           lg ? classes.categoryItem__lg : classes.categoryItem__sm
         }`}
-        style={{ backgroundImage: `url(${imageUrl})` }}
+        style={{ backgroundImage: `url(${lg ? imageUrlLg : imageUrlSm})` }}
       >
         <CategoryTitle>{title}</CategoryTitle>
         <CategoryDescription>{description}</CategoryDescription>

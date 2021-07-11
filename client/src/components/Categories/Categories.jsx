@@ -54,7 +54,8 @@ class Categories extends Component {
             key={category.id}
             lg={this.clacLgItem(index, i)}
             title={category.title}
-            imageUrl={category.imageUrl}
+            imageUrlLg={category.imageUrlLg}
+            imageUrlSm={category.imageUrlSm}
             description={category.description}
           />
         ))}
