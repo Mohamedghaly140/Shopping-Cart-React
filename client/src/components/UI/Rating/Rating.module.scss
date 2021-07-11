@@ -9,6 +9,18 @@
   @media (min-width: 1200px) {
     height: 25px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    height: 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 28px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    height: 28px;
+  }
 }
 
 .rating__item {
@@ -26,7 +38,22 @@
     height: 8px;
   }
 
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-left: 2.25px;
+    width: 24px;
+    height: 18px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    // margin-bottom: 10px;
+    margin-left: 2.25px;
+    width: 20px;
+    height: 14px;
+  }
+
   @media (min-width: 992px) and (max-width: 1199.98px) {
-    margin-bottom: 10px;
+    margin-left: 2.25px;
+    width: 20px;
+    height: 14px;
   }
 }

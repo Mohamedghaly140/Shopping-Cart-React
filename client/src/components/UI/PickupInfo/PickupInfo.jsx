@@ -1,7 +1,7 @@
-import { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import classes from "./PickupInfo.module.scss";
 
-export default class PickupInfo extends Component {
+class PickupInfo extends Component {
   render() {
     const { pickup_place, pickup_info } = this.props;
 
@@ -37,3 +37,5 @@ export default class PickupInfo extends Component {
     );
   }
 }
+
+export default PickupInfo;
