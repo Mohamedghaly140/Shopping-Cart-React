@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import Product from "../components/Product/Product";
 import Spinner from "../components/UI/Spinner/Spinner";

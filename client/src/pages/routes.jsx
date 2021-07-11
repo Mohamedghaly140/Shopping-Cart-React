@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Spinner from "../components/UI/Spinner/Spinner";
 
 import Home from "./Home";
+const SearchResult = lazy(() => import("./SearchResult"));
 const ProductDetails = lazy(() => import("./ProductDetails"));
 const ShopAllCategories = lazy(() => import("./ShopAllCategories"));
 
@@ -22,6 +23,9 @@ class AppRouter extends Component {
               addToCart={addToCart}
               loadingProducts={loading}
             />
+          </Route>
+          <Route path="/result">
+            <SearchResult products={products} loadingProducts={loading} />
           </Route>
           <Route path="/shop-all-categories">
             <ShopAllCategories />
