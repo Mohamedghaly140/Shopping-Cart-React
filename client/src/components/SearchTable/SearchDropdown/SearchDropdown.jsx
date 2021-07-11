@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import ArrowUp from "../../Icons/ArrowUp";
 import ArrowDown from "../../Icons/ArrowDown";
 import DropdownItem from "./DropdownItem/DropdownItem";
+import PriceRange from "./PriceRange/PriceRange";
 
 import classes from "./SearchDropdown.module.scss";
 
@@ -37,39 +38,7 @@ class SearchDropdown extends Component {
           </button>
         </div>
         {title === "Price" ? (
-          <Fragment>
-            {open && (
-              <Fragment>
-                <div className={classes.price}>
-                  <div className={classes.price__container}>
-                    <label htmlFor="from">From</label>
-                    <input
-                      className={classes.price__input}
-                      type="number"
-                      id="from"
-                    />
-                  </div>
-                  <hr className={classes.line} />
-                  <div className={classes.price__container}>
-                    <label htmlFor="from">To</label>
-                    <input
-                      className={classes.price__input}
-                      type="number"
-                      id="to"
-                    />
-                  </div>
-                </div>
-                <div className={classes.price__range}>
-                  <input
-                    className={classes.range__input}
-                    type="range"
-                    min="-10"
-                    max="10"
-                  />
-                </div>
-              </Fragment>
-            )}
-          </Fragment>
+          <PriceRange open={open} />
         ) : (
           <Fragment>
             {open && (
@@ -81,12 +50,7 @@ class SearchDropdown extends Component {
                   id={title}
                   placeholder={`Insert ${title}`}
                 />
-                <ul
-                  className={classes.items_list}
-                  // style={{
-                  //   height: open ? "100%" : 0,
-                  // }}
-                >
+                <ul className={classes.items_list}>
                   {items.map(item => (
                     <DropdownItem key={item.id} title={item.title} />
                   ))}

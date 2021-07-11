@@ -9,6 +9,10 @@
   @media (max-width: 575.98px) {
     display: none;
   }
+
+  @media (min-width: 575px) and (max-width: 768.98px) {
+    display: none;
+  }
 }
 
 .links__list {

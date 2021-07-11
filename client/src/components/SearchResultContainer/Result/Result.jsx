@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Product from "../../Product/Product";
 
 import classes from "./Result.module.scss";
@@ -10,7 +11,9 @@ class Result extends Component {
     return (
       <div className={classes.result}>
         {products.map(product => (
-          <Product key={product.id} product={product} />
+          <Link key={product.id} to={`/product/${product.id}`}>
+            <Product product={product} />
+          </Link>
         ))}
       </div>
     );

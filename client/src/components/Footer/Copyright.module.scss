@@ -15,6 +15,19 @@
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     flex-direction: column;
+
+    p {
+      height: 20px;
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    flex-direction: column;
   }
 }
 
@@ -49,7 +62,12 @@
     height: 18px;
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    flex-direction: column;
   }
 }
 
@@ -72,5 +90,15 @@
     margin-bottom: 16px;
     padding-bottom: 1.6rem;
     border-bottom: 0.5px solid #ccc;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin-top: 10px;
+    margin-bottom: 16px;
   }
 }
