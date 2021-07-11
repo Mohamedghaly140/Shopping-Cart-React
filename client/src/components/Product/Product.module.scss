@@ -52,6 +52,10 @@
     width: 200px;
     height: 370px;
   }
+
+  @media (min-width: 1200px) and (max-width: 1320.98px) {
+    width: 100%;
+  }
 }
 
 .image__container {

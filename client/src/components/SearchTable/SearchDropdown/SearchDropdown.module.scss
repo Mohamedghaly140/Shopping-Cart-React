@@ -1,0 +1,180 @@
+.searchDropdown {
+  margin-bottom: 10px;
+
+  @media (max-width: 575.98px) {
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (max-width: 575.98px) {
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.title {
+  color: #1d1d1b;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background: #ececec 0% 0% no-repeat padding-box;
+}
+
+.items_list {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding: 0;
+  list-style: none;
+  transition: all 0.4s ease-in;
+  overflow-y: auto;
+  height: 194px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 3px;
+    border: 3px solid #ececec;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 3px;
+    border: 3px solid #575756;
+  }
+}
+
+.search__input {
+  height: 32px;
+  width: 100%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  opacity: 1;
+  color: #b1b1b1;
+  margin-block: 15px;
+  font-size: 16px;
+  padding: 15px 10px;
+  outline: none;
+}
+
+.clear {
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #542e90;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.price {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  label {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #575756;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.price__input {
+  width: 100px;
+  height: 32px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  opacity: 1;
+  outline: none;
+  padding: 10px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.line {
+  border-top: 1px solid rgb(60, 60, 59);
+  width: 15px;
+  position: relative;
+  top: 10px;
+}
+
+.price__range {
+  margin-top: 16px;
+}
+
+.range__input {
+  width: 100%;
+  // -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent; /* Otherwise white in Chrome */
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #575756 0% 0% no-repeat padding-box;
+  }
+
+  &:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: #c6c6c6;
+    color: transparent;
+  }
+}

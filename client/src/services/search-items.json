@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Gender",
+    "open": true,
+    "items": [
+      { "id": 1, "title": "Men" },
+      { "id": 2, "title": "Women" },
+      { "id": 3, "title": "Unisex" },
+      { "id": 4, "title": "Kids" },
+      { "id": 5, "title": "Boys" },
+      { "id": 6, "title": "Girls" },
+      { "id": 7, "title": "Men" },
+      { "id": 8, "title": "Women" },
+      { "id": 9, "title": "Unisex" },
+      { "id": 10, "title": "Kids" },
+      { "id": 11, "title": "Boys" },
+      { "id": 12, "title": "Girls" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Size",
+    "open": true,
+    "items": [
+      { "id": 1, "title": "X Small" },
+      { "id": 2, "title": "Small" },
+      { "id": 3, "title": "Medium" },
+      { "id": 4, "title": "Large" },
+      { "id": 5, "title": "X Large" },
+      { "id": 6, "title": "XX Large" },
+      { "id": 7, "title": "XXX Large" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Brand",
+    "open": false,
+    "items": [
+      { "id": 1, "title": "Armani" },
+      { "id": 2, "title": "fendi" },
+      { "id": 3, "title": "house of versace" },
+      { "id": 4, "title": "ralph lauren" },
+      { "id": 5, "title": "chanel" },
+      { "id": 6, "title": "prada" }
+    ]
+  }
+]

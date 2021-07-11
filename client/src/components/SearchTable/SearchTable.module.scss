@@ -1,0 +1,41 @@
+.searchTable {
+  padding-right: 9.25px;
+  border-right: 0.5px solid #dadada;
+
+  @media (max-width: 575.98px) {
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.action {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply {
+  border: none;
+  outline: none;
+  margin: auto;
+  width: 120px;
+  height: 32px;
+  background: #fff200 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}

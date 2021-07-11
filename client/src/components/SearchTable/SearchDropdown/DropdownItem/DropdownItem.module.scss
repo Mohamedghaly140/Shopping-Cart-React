@@ -1,0 +1,25 @@
+.dropdownItem {
+  margin-bottom: 10px;
+}
+
+.item {
+  user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #575756;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+
+  @media (max-width: 320.98px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    font-size: 12px;
+  }
+}
+
+.checkbox {
+  margin-right: 16px;
+}
