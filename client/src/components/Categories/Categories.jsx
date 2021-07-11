@@ -15,23 +15,20 @@ class Categories extends Component {
       this.setState({ small: true });
     }
 
-    window.addEventListener("resize", debounce(250, this.windowResizeHandler));
+    window.addEventListener("resize", this.windowResizeHandler);
   }
 
   componentWillUnmount() {
-    window.removeEventListener(
-      "resize",
-      debounce(250, this.windowResizeHandler)
-    );
+    window.removeEventListener("resize", this.windowResizeHandler);
   }
 
-  windowResizeHandler = () => {
+  windowResizeHandler = debounce(250, () => {
     if (window.innerWidth < 992) {
       this.setState({ small: true });
     } else {
       this.setState({ small: false });
     }
-  };
+  });
 
   clacLgItem(outer, inner) {
     const { small } = this.state;
