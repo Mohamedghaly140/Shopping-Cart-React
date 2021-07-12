@@ -18,12 +18,8 @@ class Reviews extends Component {
 
     return (
       <div className={classes.reviews}>
-        {reviewsData.slice(0, viewAll ? 2 : Infinity).map((item, index) => (
-          <ReviewItem
-            key={index}
-            description={item.description}
-            user={item.user}
-          />
+        {reviewsData.slice(0, viewAll ? 2 : Infinity).map(item => (
+          <ReviewItem key={item.id} review={item} />
         ))}
         {viewAll && (
           <div className={classes.btn__container}>
