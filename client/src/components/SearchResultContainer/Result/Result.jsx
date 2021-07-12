@@ -11,7 +11,11 @@ class Result extends Component {
     return (
       <div className={classes.result}>
         {products.map(product => (
-          <Link key={product.id} to={`/product/${product.id}`}>
+          <Link
+            key={product.id}
+            to={`/product/${product.id}`}
+            className={classes.product__link}
+          >
             <Product product={product} />
           </Link>
         ))}
