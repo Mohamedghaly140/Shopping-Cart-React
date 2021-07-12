@@ -12,9 +12,11 @@ export class CartItem extends Component {
         </div>
         <div>
           <p className={classes.description}>{description}</p>
-          <p className={classes.quantity}>Quantity: {qty}</p>
-          <div className="d-flex align-items-center justify-content-between flex-row">
-            <p className={classes.price}>Price: {price}</p>
+          <div className={classes.info__container}>
+            <div>
+              <p className={classes.quantity}>Quantity: {qty}</p>
+              <p className={classes.price}>Price: {price}</p>
+            </div>
             <button className={classes.remove}>Remove</button>
           </div>
         </div>

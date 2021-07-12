@@ -25,12 +25,6 @@
     cursor: pointer;
   }
 
-  button {
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-
   @media (max-width: 320.98px) {
     top: 98px;
     width: 100%;
@@ -58,6 +52,12 @@
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     font-size: 16px;
   }
+}
+
+.close {
+  border: none;
+  outline: none;
+  background: transparent;
 }
 
 .summary {
