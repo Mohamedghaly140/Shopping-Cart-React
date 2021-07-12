@@ -5,7 +5,7 @@
       "small": "https://react-cart-node.herokuapp.com/public/images/product2.png",
       "large": "https://react-cart-node.herokuapp.com/public/images/product2@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/sport.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": true,
@@ -21,7 +21,7 @@
       "small": "https://react-cart-node.herokuapp.com/public/images/product3.png",
       "large": "https://react-cart-node.herokuapp.com/public/images/product3@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/courir.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "price": 9.999,
     "discount": false,
@@ -41,11 +41,11 @@
       "small": "https://react-cart-node.herokuapp.com/public/images/product4.png",
       "large": "https://react-cart-node.herokuapp.com/public/images/product4@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/levis.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 9.889,
     "discount": true,
-    "discount_price": 9.999,
+    "discount_price": 7.779,
     "discount_percent": 70,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
@@ -57,12 +57,12 @@
       "small": "https://react-cart-node.herokuapp.com/public/images/product5.png",
       "large": "https://react-cart-node.herokuapp.com/public/images/product5@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/vans.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 8.999,
     "discount": true,
-    "discount_price": 9.999,
-    "discount_percent": 30,
+    "discount_price": 5.999,
+    "discount_percent": 60,
     "rate": 4.2,
     "pickup_info": {
       "from": "Egypt",
@@ -74,15 +74,15 @@
   {
     "id": 5,
     "imageUrl": {
-      "small": "https://react-cart-node.herokuapp.com/public/images/product4.png",
-      "large": "https://react-cart-node.herokuapp.com/public/images/product4@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product6.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product6@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/geox.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 3.999,
     "discount": true,
-    "discount_price": 9.999,
-    "discount_percent": 30,
+    "discount_price": 199,
+    "discount_percent": 15,
     "rate": 2.2,
     "pickup_place": "Genena Mall",
     "rates": 22
@@ -90,15 +90,15 @@
   {
     "id": 6,
     "imageUrl": {
-      "small": "https://react-cart-node.herokuapp.com/public/images/product5.png",
-      "large": "https://react-cart-node.herokuapp.com/public/images/product5@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product7.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product7@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/rockport.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 7.799,
     "discount": true,
-    "discount_price": 9.999,
-    "discount_percent": 30,
+    "discount_price": 999,
+    "discount_percent": 10,
     "rate": 5,
     "pickup_info": {
       "from": "Egypt",
@@ -110,14 +110,14 @@
   {
     "id": 7,
     "imageUrl": {
-      "small": "https://react-cart-node.herokuapp.com/public/images/product3.png",
-      "large": "https://react-cart-node.herokuapp.com/public/images/product3@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product8.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product8@2x.png"
     },
-    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://react-cart-node.herokuapp.com/public/images/timberland.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 8.899,
     "discount": false,
-    "discount_price": 9.999,
+    "discount_price": 4.999,
     "discount_percent": 0,
     "rate": 4.2,
     "pickup_info": {
@@ -130,15 +130,15 @@
   {
     "id": 8,
     "imageUrl": {
-      "small": "https://react-cart-node.herokuapp.com/public/images/product2.png",
-      "large": "https://react-cart-node.herokuapp.com/public/images/product2@2x.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/product9.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/product9@2x.png"
     },
     "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "price": 9.999,
+    "price": 6.989,
     "discount": true,
-    "discount_price": 9.999,
-    "discount_percent": 50,
+    "discount_price": 1.999,
+    "discount_percent": 20,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
     "rates": 12
@@ -146,8 +146,8 @@
   {
     "id": 9,
     "imageUrl": {
-      "small": "http://localhost:5000/public/images/20x1000.png",
-      "large": "http://localhost:5000/public/images/1000x20.png"
+      "small": "https://react-cart-node.herokuapp.com/public/images/20x1000.png",
+      "large": "https://react-cart-node.herokuapp.com/public/images/1000x20.png"
     },
     "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
