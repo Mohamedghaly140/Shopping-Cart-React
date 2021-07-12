@@ -22,12 +22,12 @@ class App extends Component {
     try {
       (async () => {
         const { data } = await httpClient.get("/api/products");
-        this.setState({ products: data.products });
+        this.setState({ products: data.products, loading: false });
       })();
     } catch (err) {
       console.log(err.response.data.message);
+      this.setState({ loading: false });
     }
-    this.setState({ loading: false });
   }
 
   toggleCartHandler = () => {

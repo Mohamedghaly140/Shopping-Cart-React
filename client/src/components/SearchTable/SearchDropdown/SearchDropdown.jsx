@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { debounce } from "throttle-debounce";
 import ArrowUp from "../../Icons/ArrowUp";
 import ArrowDown from "../../Icons/ArrowDown";
 import DropdownItem from "./DropdownItem/DropdownItem";
@@ -9,7 +10,27 @@ import classes from "./SearchDropdown.module.scss";
 class SearchDropdown extends Component {
   state = {
     open: this.props.open,
+    filter: [],
+    items: [],
+    text: "",
   };
+
+  componentDidMount() {
+    this.setState({ items: this.props.items });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { text, items } = this.state;
+
+    if (text !== prevState.text) {
+      this.setState({
+        filter: items.filter(item => {
+          const regex = new RegExp(`${text}`, "gi");
+          return item.title.match(regex);
+        }),
+      });
+    }
+  }
 
   toggleDropdownHandler = () => {
     this.setState(prevState => {
@@ -19,8 +40,12 @@ class SearchDropdown extends Component {
     });
   };
 
+  searchInputHander = debounce(300, event => {
+    this.setState({ text: event.target.value });
+  });
+
   render() {
-    const { open } = this.state;
+    const { open, text, filter } = this.state;
     const { items, title } = this.props;
 
     return (
@@ -49,11 +74,22 @@ class SearchDropdown extends Component {
                   name={title}
                   id={title}
                   placeholder={`Insert ${title}`}
+                  onChange={this.searchInputHander}
                 />
                 <ul className={classes.items_list}>
-                  {items.map(item => (
-                    <DropdownItem key={item.id} title={item.title} />
-                  ))}
+                  {text !== "" ? (
+                    !filter.length ? (
+                      <li>No Items found</li>
+                    ) : (
+                      filter.map(item => (
+                        <DropdownItem key={item.id} title={item.title} />
+                      ))
+                    )
+                  ) : (
+                    items.map(item => (
+                      <DropdownItem key={item.id} title={item.title} />
+                    ))
+                  )}
                 </ul>
                 <button className={classes.clear}>Clear</button>
               </Fragment>

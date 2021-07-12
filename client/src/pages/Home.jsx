@@ -16,6 +16,13 @@ class Home extends Component {
         <div className="d-flex align-items-center justify-content-between mb-2 mb-md-5">
           <h2>Products</h2>
           <Link
+            to={`/result?search=${encodeURIComponent("Black T-Shirt tshit")}`}
+            className="fw-bold"
+            style={{ color: "#542e90" }}
+          >
+            Search For Black T-Shirt tshit
+          </Link>
+          <Link
             to="/shop-all-categories"
             className="fw-bold"
             style={{ color: "#542e90" }}

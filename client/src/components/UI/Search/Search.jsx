@@ -6,9 +6,9 @@ class Search extends Component {
     searchTerm: "",
   };
 
-  searchChangeHandler(event) {
+  searchChangeHandler = event => {
     this.setState({ searchTerm: event.target.value });
-  }
+  };
 
   render() {
     return (
@@ -19,7 +19,7 @@ class Search extends Component {
           type="text"
           placeholder="Search"
           value={this.state.searchTerm}
-          onChange={this.searchChangeHandler.bind(this)}
+          onChange={this.searchChangeHandler}
         />
       </div>
     );

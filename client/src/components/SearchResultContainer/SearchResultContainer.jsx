@@ -19,8 +19,15 @@ class SearchResultContainer extends Component {
             <SubTitle>1000 items found.</SubTitle>
           </div>
 
-          <select className={classes.sortBy} name="sort" id="sort">
-            <option disabled>Sort By</option>
+          <select
+            defaultValue="default"
+            className={classes.sortBy}
+            name="sort"
+            id="sort"
+          >
+            <option value="default" disabled>
+              Sort By
+            </option>
             <option value="price">Price</option>
           </select>
 
