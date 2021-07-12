@@ -20,7 +20,8 @@ class SearchResultContainer extends Component {
           </div>
 
           <select className={classes.sortBy} name="sort" id="sort">
-            <option value="">Sort By</option>
+            <option disabled>Sort By</option>
+            <option value="price">Price</option>
           </select>
 
           <button className={classes.filterBy} onClick={toggleFilterHandler}>

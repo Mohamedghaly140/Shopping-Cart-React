@@ -142,5 +142,21 @@
     "rate": 3.2,
     "pickup_place": "Genena Mall",
     "rates": 12
+  },
+  {
+    "id": 9,
+    "imageUrl": {
+      "small": "http://localhost:5000/public/images/20x1000.png",
+      "large": "http://localhost:5000/public/images/1000x20.png"
+    },
+    "brand": "https://react-cart-node.herokuapp.com/public/images/adidas.svg",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "price": 9.999,
+    "discount": true,
+    "discount_price": 9.999,
+    "discount_percent": 50,
+    "rate": 3.2,
+    "pickup_place": "Genena Mall",
+    "rates": 12
   }
 ]

@@ -1,5 +1,7 @@
 .main__image {
   position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 
   img {
     &:first-child {
@@ -22,6 +24,9 @@
   }
 
   @media (max-width: 320.98px) {
+    width: 100%;
+    height: 288px;
+
     img {
       &:first-child {
         border-radius: 15px;
@@ -39,6 +44,9 @@
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 100%;
+    height: 328px;
+
     img {
       &:first-child {
         border-radius: 15px;
@@ -53,6 +61,31 @@
       padding: 8px;
       border-radius: 15px;
     }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 100%;
+    height: 500px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    width: 568px;
+    height: 568px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 437px;
+    height: 552px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 500px;
+    height: 568px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 568px;
+    height: 568px;
   }
 }
 

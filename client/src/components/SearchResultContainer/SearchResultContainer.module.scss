@@ -73,6 +73,16 @@
   padding-inline: 23px;
   background: url("../../images/dropdown__arrow.svg") no-repeat 85% 50% #f5f5f5;
 
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+  option {
+    background-color: #f5f5f5;
+    border-radius: 24px;
+  }
+
   @media (max-width: 320.98px) {
     width: 136px;
     height: 32px;
