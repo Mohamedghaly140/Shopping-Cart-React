@@ -25,7 +25,7 @@ class AppRouter extends Component {
             />
           </Route>
           <Route path="/result">
-            <SearchResult products={products} loadingProducts={loading} />
+            <SearchResult products={products} loading={loading} />
           </Route>
           <Route path="/shop-all-categories">
             <ShopAllCategories />

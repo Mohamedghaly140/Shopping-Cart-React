@@ -26,8 +26,8 @@ class Info extends Component {
           onClick={onSearch}
         />
         <Cart
-          icon="/images/shopping_bag.svg"
           link="Cart"
+          icon="/images/shopping_bag.svg"
           cartItems={this.props.cartItems}
           toggleCart={this.props.toggleCart}
         />

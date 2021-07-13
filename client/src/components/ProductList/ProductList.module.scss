@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 377.98px) and (max-width: 575.98px) {
+    justify-content: space-evenly;
+  }
 }
 
 .product__link {

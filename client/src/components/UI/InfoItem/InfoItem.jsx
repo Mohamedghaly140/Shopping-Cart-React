@@ -11,7 +11,7 @@ class InfoItem extends Component {
         className={`${classes.info__item} ${className}`}
         onClick={onClick}
       >
-        <span className="icon me-2">
+        <span className="icon me-0 me-sm-2">
           <img className="img-fluid" src={icon} alt="icon" />
         </span>
         <span className={classes.link}>{link}</span>

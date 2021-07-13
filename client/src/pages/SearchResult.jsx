@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
+import Spinner from "../components/UI/Spinner/Spinner";
 import SearchTable from "../components/SearchTable/SearchTable";
 import SearchResultContainer from "../components/SearchResultContainer/SearchResultContainer";
 
@@ -21,10 +22,13 @@ class SearchResult extends Component {
 
   render() {
     const { filter } = this.state;
+    const { location, loading } = this.props;
 
-    const searchValue = decodeURIComponent(
-      this.props.location.search.split("=")[1]
-    );
+    const searchValue = decodeURIComponent(location.search.split("=")[1]);
+
+    if (loading) {
+      return <Spinner />;
+    }
 
     return (
       <div className="container">

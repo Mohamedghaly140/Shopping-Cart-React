@@ -7,8 +7,8 @@ class Cart extends Component {
     const { icon, link, cartItems, toggleCart } = this.props;
 
     return (
-      <div className={classes.cart} onClick={toggleCart}>
-        <span className="icon me-2 position-relative">
+      <button className={classes.cart} onClick={toggleCart}>
+        <span className="icon me-0 me-sm-2 position-relative">
           <img className="img-fluid" src={icon} alt="cart" />
           <span className={classes.cart__items}>
             {cartItems.reduce(
@@ -18,7 +18,7 @@ class Cart extends Component {
           </span>
         </span>
         <span className={classes.link}>{link}</span>
-      </div>
+      </button>
     );
   }
 }

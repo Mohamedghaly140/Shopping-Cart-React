@@ -14,7 +14,7 @@ const ProductList = props => {
           <h3>There is no products yet</h3>
         </div>
       ) : (
-        <div className="d-flex align-items-center justify-content-between flex-wrap">
+        <div className={classes.productList}>
           {products.map(product => (
             <Link
               key={product.id}
