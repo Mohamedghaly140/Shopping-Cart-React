@@ -8,8 +8,8 @@ import Cart from "../../../UI/Cart/Cart";
 class Info extends Component {
   state = {
     infoLinks: [
-      { id: 1, icon: "/images/favourite.svg", link: "Wishlist" },
-      { id: 2, icon: "/images/user.svg", link: "Login" },
+      { id: 1, icon: "/images/favourite.svg", link: "Wishlist", class: false },
+      { id: 2, icon: "/images/user.svg", link: "Login", class: true },
     ],
   };
 
@@ -23,7 +23,7 @@ class Info extends Component {
           className={classes.search__icon}
           icon="/images/search.svg"
           link="Search"
-          onSearch={onSearch}
+          onClick={onSearch}
         />
         <Cart
           icon="/images/shopping_bag.svg"
@@ -31,8 +31,13 @@ class Info extends Component {
           cartItems={this.props.cartItems}
           toggleCart={this.props.toggleCart}
         />
-        {infoLinks.slice(0, 1).map(item => (
-          <InfoItem key={item.id} icon={item.icon} link={item.link} />
+        {infoLinks.map(item => (
+          <InfoItem
+            key={item.id}
+            icon={item.icon}
+            link={item.link}
+            className={item.class && classes.user__icon}
+          />
         ))}
       </div>
     );

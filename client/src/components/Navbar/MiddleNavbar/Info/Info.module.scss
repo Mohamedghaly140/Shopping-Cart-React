@@ -11,3 +11,11 @@
     display: block;
   }
 }
+
+.user__icon {
+  display: block;
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+}

@@ -4,6 +4,9 @@
   justify-content: space-between;
   margin-right: 10px;
   cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
 
   &:last-child {
     margin-right: 0;

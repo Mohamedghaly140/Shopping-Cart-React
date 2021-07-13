@@ -45,9 +45,9 @@ export class MiddleNavbar extends Component {
             <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
             <div className={classes.spacer} />
             <Info
-              toggleCart={this.props.toggleCart}
-              cartItems={this.props.cartItems}
               onSearch={onSearch}
+              cartItems={this.props.cartItems}
+              toggleCart={this.props.toggleCart}
             />
           </div>
         </div>

@@ -22,6 +22,10 @@
   @media (min-width: 768px) and (max-width: 991.98px) {
     display: none;
   }
+
+  @media (min-width: 1300px) {
+    width: 350px;
+  }
 }
 
 .active {
