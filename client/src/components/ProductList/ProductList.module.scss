@@ -1,0 +1,18 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__link {
+  margin-bottom: 32px;
+
+  @media (max-width: 320.98px) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    margin-bottom: 16px;
+  }
+}

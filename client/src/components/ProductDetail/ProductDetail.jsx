@@ -51,7 +51,7 @@ export class ProductDetail extends Component {
             </div>
           </div>
           <div
-            className={`${classes.preview} 'col-md-6 col-lg-6 col-xl-5 col-xxl-5'`}
+            className={`${classes.preview} 'col-md-6 col-lg-6 col-xl-6 col-xxl-6'`}
           >
             <div className={classes.main__image}>
               {this.state.loading ? (
@@ -73,7 +73,7 @@ export class ProductDetail extends Component {
             </div>
             <PreviewImages onPreviewImage={this.previewImageHandler} />
           </div>
-          <div className="col-md-12 col-lg-6 col-xl-7 col-xxl-7 ps-xl-5 ps-xxl-5">
+          <div className="col-md-12 col-lg-6 col-xl-6 col-xxl-6">
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
