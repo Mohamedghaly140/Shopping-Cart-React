@@ -11,8 +11,12 @@ class Search extends Component {
   };
 
   render() {
+    const { navbar } = this.props;
+
     return (
-      <div className={classes.search__container}>
+      <div
+        className={`${classes.search__container} ${navbar && classes.active}`}
+      >
         <img alt="search" src="/images/search.svg" className="me-2 img-fluid" />
         <input
           className={classes.search}

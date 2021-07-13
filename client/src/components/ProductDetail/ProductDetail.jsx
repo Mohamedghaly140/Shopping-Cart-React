@@ -60,6 +60,7 @@ export class ProductDetail extends Component {
                 <img
                   className="img-fluid"
                   alt="product"
+                  style={{ flexGrow: "1", maxHeight: "100%" }}
                   ref={this.imageRef}
                   src={
                     this.state.imageUrl ? this.state.imageUrl : imageUrl.large

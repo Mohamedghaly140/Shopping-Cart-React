@@ -65,13 +65,11 @@
 }
 
 .image__container {
+  width: 100%;
+  overflow: hidden;
   position: relative;
   border-radius: 20px;
-  overflow: hidden;
   background: transparent 50% 50% no-repeat padding-box;
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
 
   @media (max-width: 320.98px) {
     border-radius: 10px;

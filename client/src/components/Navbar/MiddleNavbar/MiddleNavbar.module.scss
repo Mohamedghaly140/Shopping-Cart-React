@@ -5,6 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s ease-in-out;
+  position: fixed;
+  top: 48px;
+  width: 100%;
+  z-index: 88;
 
   @media (max-width: 575.98px) {
     height: 48px;
@@ -18,6 +23,14 @@
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) and (max-width: 991.98px) {
     height: 58px;
+  }
+}
+
+.active {
+  @media (min-width: 991.98px) {
+    height: 54px;
+    width: 100%;
+    top: 48px;
   }
 }
 
