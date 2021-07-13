@@ -30,6 +30,7 @@
 
 .sort__by__value-container {
   background: transparent !important;
+  cursor: pointer !important;
   border: none !important;
   outline: none !important;
   width: 100% !important;
@@ -51,6 +52,7 @@
   overflow: hidden !important;
   display: block !important;
   padding: 0 !important;
+  width: 180px !important;
 }
 
 .sort__by__menu-list {

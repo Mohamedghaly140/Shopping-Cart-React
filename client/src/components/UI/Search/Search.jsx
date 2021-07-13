@@ -1,33 +1,44 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import classes from "./Search.module.scss";
 
 class Search extends Component {
-  state = {
-    searchTerm: "",
-  };
+  constructor(props) {
+    super(props);
+    this.searchInput = React.createRef();
+  }
 
-  searchChangeHandler = event => {
-    this.setState({ searchTerm: event.target.value });
+  submitSearchHandler = event => {
+    event.preventDefault();
+    this.props.history.push(
+      `/result?search=${encodeURIComponent(this.searchInput.current.value)}`
+    );
   };
 
   render() {
     const { navbar } = this.props;
 
     return (
-      <div
+      <form
+        onSubmit={this.submitSearchHandler}
         className={`${classes.search__container} ${navbar && classes.active}`}
       >
-        <img alt="search" src="/images/search.svg" className="me-2 img-fluid" />
+        <button type="submit" className={classes.search__icon}>
+          <img
+            alt="search"
+            src="/images/search.svg"
+            className="me-2 img-fluid"
+          />
+        </button>
         <input
-          className={classes.search}
           type="text"
-          placeholder="Search"
-          value={this.state.searchTerm}
-          onChange={this.searchChangeHandler}
+          ref={this.searchInput}
+          placeholder="Search..."
+          className={classes.search}
         />
-      </div>
+      </form>
     );
   }
 }
 
-export default Search;
+export default withRouter(Search);
