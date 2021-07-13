@@ -1,11 +1,13 @@
-.rc-slider-handle {
-  width: 16px;
-  height: 16px;
-  background: #575756 0% 0% no-repeat padding-box;
-  border-radius: 8px;
-}
+.main {
+  @media (max-width: 320.98px) {
+    top: 90px;
+    position: relative;
+    padding-bottom: 160px !important;
+  }
 
-.rc-slider-handle:active {
-  border-color: transparent;
-  box-shadow: none;
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    top: 95px;
+    position: relative;
+    padding-bottom: 160px !important;
+  }
 }

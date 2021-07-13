@@ -23,8 +23,11 @@ export class Product extends Component {
 
     return (
       <div className={`${classes.product} product`}>
-        <div className={classes.image__container}>
-          <img className="img-fluid" alt="product" src={imageUrl.small} />
+        <div
+          className={classes.image__container}
+          style={{ backgroundImage: `url(${imageUrl.small})` }}
+        >
+          {/* <img className="img-fluid" alt="product" src={imageUrl.small} /> */}
           <div className={classes.floating__icon} />
         </div>
         <div className={classes.product__content}>

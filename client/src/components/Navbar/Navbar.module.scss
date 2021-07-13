@@ -1,0 +1,13 @@
+.navbar {
+  @media (max-width: 320.98px) {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+  }
+}

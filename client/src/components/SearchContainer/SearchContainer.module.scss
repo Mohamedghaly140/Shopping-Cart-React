@@ -11,12 +11,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 89;
   transition: all 0.4s ease-in;
   transform: translate(0, 0);
 
   &.open {
-    top: 98px;
+    top: 96px;
     transform: translatey(0);
   }
 

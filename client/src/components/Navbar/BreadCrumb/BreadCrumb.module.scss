@@ -9,6 +9,15 @@
   @media (max-width: 575.98px) {
     padding-top: 14px;
     padding-bottom: 16px;
+    display: none;
+  }
+
+  @media (max-width: 320.98px) {
+    position: sticky;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    position: sticky;
   }
 }
 

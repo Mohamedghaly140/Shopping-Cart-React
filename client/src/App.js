@@ -6,6 +6,7 @@ import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
 import SideBar from "./components/SideBar/SideBar";
 import SearchContainer from "./components/SearchContainer/SearchContainer";
+import "./App.scss";
 
 class App extends Component {
   state = {
@@ -91,7 +92,7 @@ class App extends Component {
           toggleCart={this.toggleCartHandler}
           onToggleSidebar={this.toggleSidebarHandler}
         />
-        <main className="py-4 py-md-5">
+        <main className="main py-4 py-md-5">
           <AppRouter
             addToCart={this.addToCartHandler}
             loading={loading}

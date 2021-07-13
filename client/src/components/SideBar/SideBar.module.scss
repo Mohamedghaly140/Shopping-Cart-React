@@ -10,7 +10,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  z-index: 89;
   transition: all 0.4s ease-in;
   transform: translate(0, 0);
 
@@ -42,13 +42,13 @@
   }
 
   @media (max-width: 320.98px) {
-    top: 99px;
+    top: 96px;
     width: 100%;
     padding: 20px 15px;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
-    top: 99px;
+    top: 96px;
     width: 100%;
     padding: 20px 15px;
   }

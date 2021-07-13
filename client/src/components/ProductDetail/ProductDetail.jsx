@@ -61,7 +61,6 @@ export class ProductDetail extends Component {
                   className="img-fluid"
                   alt="product"
                   ref={this.imageRef}
-                  style={{ height: "100%" }}
                   src={
                     this.state.imageUrl ? this.state.imageUrl : imageUrl.large
                   }
@@ -81,7 +80,7 @@ export class ProductDetail extends Component {
               <div className={classes.rate__container}>
                 <Rating rating={rate} />{" "}
                 <span className={classes.rating}>{rate} of 5</span>
-                <span className={classes.rates}>{rates} Rates</span>
+                <span className={classes.rates}>{rates} Rates</span>3
               </div>
             </div>
             <div className="mb-3">

@@ -6,12 +6,14 @@ import MiddleNavbar from "./MiddleNavbar/MiddleNavbar";
 import BottomNavbar from "./BottomNavbar/BottomNavbar";
 import BreadCrumb from "./BreadCrumb/BreadCrumb";
 
+import classes from "./Navbar.module.scss";
+
 export class Navbar extends Component {
   render() {
     const { onToggleSidebar, onSearch, cartItems, toggleCart } = this.props;
 
     return (
-      <header>
+      <header className={classes.navbar}>
         <UpperNavbar onToggleSidebar={onToggleSidebar} />
         <MiddleNavbar
           onSearch={onSearch}

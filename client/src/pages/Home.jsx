@@ -20,7 +20,7 @@ class Home extends Component {
             className="fw-bold"
             style={{ color: "#542e90" }}
           >
-            Search For Black T-Shirt tshit
+            Search For Black T-Shirt
           </Link>
           <Link
             to="/shop-all-categories"
