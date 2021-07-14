@@ -46,18 +46,19 @@ class PriceRange extends Component {
         {open && (
           <Fragment>
             <div className={classes.price}>
-              <div className={classes.price__container}>
+              <form className={classes.price__container}>
                 <label htmlFor="from">From</label>
                 <input
                   className={classes.price__input}
                   type="number"
                   id="from"
+                  ref={this.fromValue}
                   value={from}
                   onChange={this.priceFromChangeHandler}
                 />
-              </div>
+              </form>
               <hr className={classes.line} />
-              <div className={classes.price__container}>
+              <form className={classes.price__container}>
                 <label htmlFor="from">To</label>
                 <input
                   className={classes.price__input}
@@ -66,12 +67,13 @@ class PriceRange extends Component {
                   value={to}
                   onChange={this.priceToChangeHandler}
                 />
-              </div>
+              </form>
             </div>
             <div className={classes.price__range}>
               <Range
                 min={priceRange[0]}
                 max={priceRange[1]}
+                value={[from, to]}
                 defaultValue={[from, to]}
                 onChange={this.rangeChangeHandler}
                 trackStyle={trackStyle}

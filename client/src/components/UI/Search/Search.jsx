@@ -10,9 +10,10 @@ class Search extends Component {
 
   submitSearchHandler = event => {
     event.preventDefault();
-    this.props.history.push(
-      `/result?search=${encodeURIComponent(this.searchInput.current.value)}`
-    );
+    this.props.history.push({
+      pathname: "/result",
+      search: `search=${encodeURIComponent(this.searchInput.current.value)}`,
+    });
   };
 
   render() {
