@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
 import SideBar from "./components/SideBar/SideBar";
+import MyAccount from "./components/MyAccount/MyAccount";
+import MobileNav from "./components/MobileNav/MobileNav";
 import SearchContainer from "./components/SearchContainer/SearchContainer";
 import "./App.scss";
 
@@ -12,6 +14,7 @@ class App extends Component {
   state = {
     openCart: false,
     openSideBar: false,
+    openAccount: false,
     cart: [],
     products: [],
     loading: false,
@@ -55,6 +58,14 @@ class App extends Component {
     });
   };
 
+  toggleAccountHandler = () => {
+    this.setState(prevState => {
+      return {
+        openAccount: !prevState.openAccount,
+      };
+    });
+  };
+
   addToCartHandler = product => {
     const exsitingProduct = this.state.cart.find(p => p.id === product.id);
     const exsitingProductIndex = this.state.cart.findIndex(
@@ -81,8 +92,15 @@ class App extends Component {
   };
 
   render() {
-    const { openCart, cart, loading, products, openSideBar, search } =
-      this.state;
+    const {
+      openCart,
+      cart,
+      loading,
+      products,
+      openSideBar,
+      search,
+      openAccount,
+    } = this.state;
 
     return (
       <Fragment>
@@ -91,6 +109,7 @@ class App extends Component {
           onSearch={this.toggleSearchHandler}
           toggleCart={this.toggleCartHandler}
           onToggleSidebar={this.toggleSidebarHandler}
+          onToggleAccount={this.toggleAccountHandler}
         />
         <main className="main py-4 py-md-5">
           <AppRouter
@@ -113,6 +132,14 @@ class App extends Component {
           <SearchContainer
             search={search}
             onToggleSearch={this.toggleSearchHandler}
+          />
+          <MyAccount
+            open={openAccount}
+            onToggleAccount={this.toggleAccountHandler}
+          />
+          <MobileNav
+            openAccount={openAccount}
+            onToggleAccount={this.toggleAccountHandler}
           />
         </Fragment>
       </Fragment>

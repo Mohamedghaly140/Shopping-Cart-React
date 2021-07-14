@@ -1,0 +1,11 @@
+.login__form {
+  margin-bottom: 0;
+
+  @media (max-width: 320.98px) {
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    padding-bottom: 6px;
+  }
+}

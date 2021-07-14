@@ -81,7 +81,7 @@ export class ProductDetail extends Component {
               <div className={classes.rate__container}>
                 <Rating rating={rate} />{" "}
                 <span className={classes.rating}>{rate} of 5</span>
-                <span className={classes.rates}>{rates} Rates</span>3
+                <span className={classes.rates}>{rates} Rates</span>
               </div>
             </div>
             <div className="mb-3">

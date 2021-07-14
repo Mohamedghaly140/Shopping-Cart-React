@@ -19,24 +19,52 @@
     padding: 4px 3.5px 2.3px 3.5px;
   }
 
-  @media (min-width: 320.98px) and (max-width: 365.98px) {
+  @media (min-width: 320.98px) and (max-width: 340.98px) {
     width: 138px;
     height: 260px;
     border-radius: 10px;
     padding: 4px 3.5px 2.3px 3.5px;
   }
 
-  @media (min-width: 365.98px) and (max-width: 410.98px) {
+  @media (min-width: 340.98px) and (max-width: 390.98px) {
     width: 166px;
     height: 280px;
     border-radius: 12px;
     padding: 4px 3.5px 2.3px 3.5px;
   }
 
-  @media (min-width: 410.98px) and (max-width: 575.98px) {
-    width: 186px;
+  @media (min-width: 390.98px) and (max-width: 409.98px) {
+    width: 178px;
+    height: 285px;
+    border-radius: 10px;
+    padding: 4px 3.8px 2.3px 3.8px;
+  }
+
+  @media (min-width: 409.98px) and (max-width: 420.98px) {
+    width: 184px;
     height: 340px;
-    border-radius: 15px;
+    border-radius: 10px;
+    padding: 4px 3.8px 2.3px 3.8px;
+  }
+
+  @media (min-width: 420.98px) and (max-width: 450.98px) {
+    width: 192px;
+    height: 360px;
+    border-radius: 10px;
+    padding: 4px 3.8px 2.3px 3.8px;
+  }
+
+  @media (min-width: 450.98px) and (max-width: 480.98px) {
+    width: 210px;
+    height: 354px;
+    border-radius: 10px;
+    padding: 4px 3.8px 2.3px 3.8px;
+  }
+
+  @media (min-width: 480.98px) and (max-width: 575.98px) {
+    width: 220px;
+    height: 360px;
+    border-radius: 17px;
     padding: 4px 3.8px 2.3px 3.8px;
   }
 
@@ -84,22 +112,40 @@
     height: 129px;
   }
 
-  @media (min-width: 320.98px) and (max-width: 365.98px) {
+  @media (min-width: 320.98px) and (max-width: 340.98px) {
     border-radius: 10px;
     width: 100%;
     height: 139px;
   }
 
-  @media (min-width: 365.98px) and (max-width: 410.98px) {
+  @media (min-width: 340.98px) and (max-width: 390.98px) {
     border-radius: 10px;
     width: 100%;
     height: 149px;
   }
 
-  @media (min-width: 410.98px) and (max-width: 575.98px) {
-    border-radius: 15px;
+  @media (min-width: 390.98px) and (max-width: 420.98px) {
+    border-radius: 10px;
     width: 100%;
     height: 169px;
+  }
+
+  @media (min-width: 420.98px) and (max-width: 480.98px) {
+    border-radius: 10px;
+    width: 100%;
+    height: 186px;
+  }
+
+  @media (min-width: 450.98px) and (max-width: 480.98px) {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+  }
+
+  @media (min-width: 480.98px) and (max-width: 575.98px) {
+    border-radius: 15px;
+    width: 100%;
+    height: 210px;
   }
 
   @media (min-width: 576px) and (max-width: 767.98px) {

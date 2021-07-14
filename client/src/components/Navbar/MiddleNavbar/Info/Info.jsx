@@ -9,7 +9,13 @@ class Info extends Component {
   state = {
     infoLinks: [
       { id: 1, icon: "/images/favourite.svg", link: "Wishlist", class: false },
-      { id: 2, icon: "/images/user.svg", link: "Login", class: true },
+      {
+        id: 2,
+        icon: "/images/user.svg",
+        link: "Login",
+        class: true,
+        onClick: this.props.toggleAccount,
+      },
     ],
   };
 
@@ -36,6 +42,7 @@ class Info extends Component {
             key={item.id}
             icon={item.icon}
             link={item.link}
+            onClick={item.onClick}
             className={item.class && classes.user__icon}
           />
         ))}

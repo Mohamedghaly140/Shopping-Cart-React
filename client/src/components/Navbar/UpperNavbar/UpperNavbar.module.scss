@@ -8,6 +8,10 @@
   position: fixed;
   z-index: 88;
   width: 100%;
+
+  @media (min-width: 576px) {
+    z-index: 5 !important;
+  }
 }
 
 .inner {

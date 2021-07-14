@@ -10,7 +10,13 @@ import classes from "./Navbar.module.scss";
 
 export class Navbar extends Component {
   render() {
-    const { onToggleSidebar, onSearch, cartItems, toggleCart } = this.props;
+    const {
+      onToggleSidebar,
+      onSearch,
+      cartItems,
+      toggleCart,
+      onToggleAccount,
+    } = this.props;
 
     return (
       <header className={classes.navbar}>
@@ -18,8 +24,9 @@ export class Navbar extends Component {
         <MiddleNavbar
           onSearch={onSearch}
           cartItems={cartItems}
-          toggleCart={toggleCart}
+          onToggleCart={toggleCart}
           onToggleSidebar={onToggleSidebar}
+          onToggleAccount={onToggleAccount}
         />
         <BottomNavbar />
         <BreadCrumb />

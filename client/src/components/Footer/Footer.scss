@@ -1,6 +1,7 @@
 .footer {
   background: #3c3c3b 0% 0% no-repeat padding-box;
-  padding-block: 45px 30px;
+  padding-top: 50px;
+  padding-bottom: 25px;
   color: #fff;
 
   h3 {
@@ -31,6 +32,10 @@
 
 @media (max-width: 320.98px) {
   .footer {
+    padding-top: 32px;
+    padding-bottom: 18px;
+    margin-bottom: 48px;
+
     .subscribe {
       border-top: 0.5px solid #ccc;
       border-bottom: 0.5px solid #ccc;
@@ -72,10 +77,14 @@
 
 @media (min-width: 320.98px) and (max-width: 575.98px) {
   .footer {
+    padding-top: 32px;
+    margin-bottom: 48px;
+    padding-bottom: 18px;
+
     .subscribe {
+      padding-block: 2rem;
       border-top: 0.5px solid #ccc;
       border-bottom: 0.5px solid #ccc;
-      padding-block: 2rem;
     }
 
     p {

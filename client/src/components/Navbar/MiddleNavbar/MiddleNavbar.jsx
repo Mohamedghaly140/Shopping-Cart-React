@@ -30,7 +30,13 @@ export class MiddleNavbar extends Component {
 
   render() {
     const { navbar } = this.state;
-    const { onToggleSidebar, onSearch } = this.props;
+    const {
+      onSearch,
+      cartItems,
+      onToggleCart,
+      onToggleSidebar,
+      onToggleAccount,
+    } = this.props;
 
     return (
       <nav className={`${classes.middle__navbar} ${navbar && classes.active}`}>
@@ -46,8 +52,9 @@ export class MiddleNavbar extends Component {
             <div className={classes.spacer} />
             <Info
               onSearch={onSearch}
-              cartItems={this.props.cartItems}
-              toggleCart={this.props.toggleCart}
+              cartItems={cartItems}
+              toggleCart={onToggleCart}
+              toggleAccount={onToggleAccount}
             />
           </div>
         </div>
