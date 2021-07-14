@@ -9,7 +9,7 @@ class PickupInfo extends Component {
       <Fragment>
         {pickup_place && (
           <div className="d-flex align-items-center justify-content-center pickup__info">
-            <span className={classes.pickup}>Pickup From: </span>
+            <span className={`${classes.pickup} me-1`}>Pickup From: </span>
             <span className={classes.pickup__value}>{pickup_place}</span>
           </div>
         )}

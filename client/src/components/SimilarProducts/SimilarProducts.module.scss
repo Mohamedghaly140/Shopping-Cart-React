@@ -1,10 +1,12 @@
 .scroll {
   position: relative;
-
+  overflow: hidden;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
-  overflow: hidden;
+  @media (max-width: 575.98px) {
+    border-radius: 0;
+  }
 }
 
 .row__container {
