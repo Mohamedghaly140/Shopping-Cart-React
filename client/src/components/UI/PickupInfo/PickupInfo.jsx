@@ -8,13 +8,19 @@ class PickupInfo extends Component {
     return (
       <Fragment>
         {pickup_place && (
-          <div className="d-flex align-items-center justify-content-center pickup__info">
+          <div
+            className={classes.pickup__info}
+            style={{ justifyContent: "center" }}
+          >
             <span className={`${classes.pickup} me-1`}>Pickup From: </span>
             <span className={classes.pickup__value}>{pickup_place}</span>
           </div>
         )}
         {pickup_info && (
-          <div className="d-flex align-items-center justify-content-between px-2 pickup__info">
+          <div
+            className={classes.pickup__info}
+            style={{ justifyContent: "space-between", paddingInline: "0.5rem" }}
+          >
             <div>
               <span className={classes.pickup}>From: </span>
               <span className={classes.pickup__value}>{pickup_info.from}</span>

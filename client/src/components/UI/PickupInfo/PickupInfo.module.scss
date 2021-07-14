@@ -1,3 +1,13 @@
+.pickup__info {
+  height: 12px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 1200px) {
+    margin-top: 12px;
+  }
+}
+
 .pickup {
   color: #1d1d1b;
   font-size: 10px;

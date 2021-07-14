@@ -16,12 +16,3 @@ a {
     text-decoration: none;
   }
 }
-
-.pickup__info {
-  height: 12px;
-
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
-    margin-top: 12px;
-  }
-}
