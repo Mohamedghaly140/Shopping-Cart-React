@@ -48,17 +48,6 @@ class SearchResultContainer extends Component {
               isSearchable={false}
             />
           </div>
-          {/* <select
-            defaultValue="default"
-            className={classes.sortBy}
-            name="sort"
-            id="sort"
-          >
-            <option value="default" disabled>
-              Sort By
-            </option>
-            <option value="price">Price</option>
-          </select> */}
 
           <button className={classes.filterBy} onClick={toggleFilterHandler}>
             <span>Filter By</span> <ArrowRight />

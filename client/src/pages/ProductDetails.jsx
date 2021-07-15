@@ -20,6 +20,7 @@ class ProductDetails extends Component {
         const { data } = await httpClient.get(
           `/api/products/${this.props.match.params.id}`
         );
+
         this.setState({ product: data.product, loading: false });
       })();
     } catch (err) {

@@ -29,6 +29,7 @@ export class ProductDetail extends Component {
       rates,
       price,
       rate,
+      type,
       brand,
       discount,
       discount_price,
@@ -42,7 +43,7 @@ export class ProductDetail extends Component {
             <div>
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
-              <p className={classes.product__type}>Men</p>
+              <p className={classes.product__type}>{type}</p>
               <div className={classes.rate__container}>
                 <Rating rating={rate} />{" "}
                 <span className={classes.rating}>{rate} of 5</span>
@@ -77,7 +78,7 @@ export class ProductDetail extends Component {
             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
               <img className="mb-3 img-fluid" src={brand} alt="brand" />
               <p className={classes.description}>{description}</p>
-              <p className={classes.product__type}>Men</p>
+              <p className={classes.product__type}>{type}</p>
               <div className={classes.rate__container}>
                 <Rating rating={rate} />{" "}
                 <span className={classes.rating}>{rate} of 5</span>

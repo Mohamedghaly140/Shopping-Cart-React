@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import classes from "./Search.module.scss";
+import SearchIcon from "../../Icons/SearchIcon";
 
 class Search extends Component {
   constructor(props) {
@@ -25,11 +26,7 @@ class Search extends Component {
         className={`${classes.search__container} ${navbar && classes.active}`}
       >
         <button type="submit" className={classes.search__icon}>
-          <img
-            alt="search"
-            src="/images/search.svg"
-            className="me-2 img-fluid"
-          />
+          <SearchIcon width="24px" height="24px" color="#000" />
         </button>
         <input
           type="text"
