@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import Spinner from "../components/UI/Spinner/Spinner";
 import ProductList from "../components/ProductList/ProductList";
 import Banner from "../components/Banner/Banner";
+import ShopByCategory from "../components/ShopByCategory/ShopByCategory";
 
 class Home extends Component {
 	render() {
@@ -16,8 +17,8 @@ class Home extends Component {
 			<Fragment>
 				<Banner />
 				<div className="container">
+					<ShopByCategory />
 					<div className="d-flex align-items-center justify-content-between flex-wrap mb-2 mb-md-5">
-						<h2>Products</h2>
 						<Link
 							to={`/result?search=${encodeURIComponent("Black T-Shirt")}`}
 							className="fw-bold"
@@ -34,7 +35,7 @@ class Home extends Component {
 						</Link>
 					</div>
 
-					<section>
+					<section className="mt-5">
 						<ProductList products={products} />
 					</section>
 				</div>

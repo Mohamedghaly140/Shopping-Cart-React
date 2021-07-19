@@ -1,0 +1,30 @@
+.category__container {
+	display: grid;
+	grid-gap: 32px;
+	grid-template-columns: repeat(3, auto);
+	grid-auto-rows: minmax(175px, auto);
+
+	@media (max-width: 320.98px) {
+		grid-row-gap: 16px;
+		margin-top: 0;
+	}
+
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		grid-row-gap: 16px;
+		margin-top: 0;
+	}
+}
+
+.category__item {
+	display: grid;
+	max-width: 100%;
+	grid-row-gap: 32px;
+
+	@media (max-width: 320.98px) {
+		grid-row-gap: 16px;
+	}
+
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		grid-row-gap: 16px;
+	}
+}

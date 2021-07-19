@@ -1,64 +1,64 @@
 .categoryItem {
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 20px;
-  // margin-bottom: 32px;
-  background-size: cover;
-  background-position: center center;
-  // background-color: rgba(99, 99, 99, 0.6);
+	// width: 368px;
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center center;
+	// background-color: rgba(99, 99, 99, 0.6);
 
-  @media (max-width: 320.98px) {
-    border-radius: 15px;
-  }
+	@media (max-width: 320.98px) {
+		border-radius: 15px;
+	}
 
-  @media (min-width: 320.98px) and (max-width: 575.98px) {
-    border-radius: 15px;
-  }
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		border-radius: 15px;
+	}
 }
 
 .categoryItem__lg {
-  height: 400px;
-  padding: 40px 32px;
+	height: 400px;
+	padding: 40px 32px;
 
-  @media (max-width: 320.98px) {
-    height: 153px;
-    padding: 18px 14px;
-    grid-row-end: span 2;
-  }
+	@media (max-width: 320.98px) {
+		height: 153px;
+		padding: 18px 14px;
+		grid-row-end: span 2;
+	}
 
-  @media (min-width: 320.98px) and (max-width: 575.98px) {
-    height: 163px;
-    padding: 18px 14px;
-    grid-row-end: span 2;
-  }
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		height: 163px;
+		padding: 18px 14px;
+		grid-row-end: span 2;
+	}
 
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    height: 340px;
-    padding: 22px 18px;
-    grid-row-end: span 2;
-  }
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		height: 340px;
+		padding: 22px 18px;
+		grid-row-end: span 2;
+	}
 
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    grid-row-end: span 2;
-  }
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		grid-row-end: span 2;
+	}
 }
 
 .categoryItem__sm {
-  height: 175px;
-  padding: 26px 32px;
+	height: 175px;
+	padding: 26px 32px;
 
-  @media (max-width: 320.98px) {
-    height: 64px;
-    padding: 14px;
-  }
+	@media (max-width: 320.98px) {
+		height: 64px;
+		padding: 14px;
+	}
 
-  @media (min-width: 320.98px) and (max-width: 575.98px) {
-    height: 74px;
-    padding: 14px;
-  }
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		height: 74px;
+		padding: 14px;
+	}
 
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    height: 150px;
-    padding: 14px;
-  }
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		height: 150px;
+		padding: 14px;
+	}
 }
