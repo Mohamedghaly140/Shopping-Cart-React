@@ -4,7 +4,10 @@ import classes from "./SliderRightButton.module.scss";
 
 const SliderRightButton = props => {
 	return (
-		<button className={classes.right__arrow} onClick={props.onSlideRight}>
+		<button
+			className={`${classes.right__arrow} ${props.className}`}
+			onClick={props.onSlideRight}
+		>
 			<span>
 				<ArrowRight />
 			</span>

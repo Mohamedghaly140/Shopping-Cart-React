@@ -1,16 +1,13 @@
 import React, { Component } from "react";
+import classes from "./BestOffers.module.scss";
 import Section from "../UI/Section/Section";
 
-import categoriesData from "../../services/all-categories.json";
-
-import CategoriesList from "../CategoriesList/CategoriesList";
-
+import OffersList from "../OffersList/OffersList";
+import offersData from "../../services/offers.json";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
-import classes from "./ShopByCategory.module.scss";
-
-class ShopByCategory extends Component {
+class BestOffers extends Component {
 	constructor(props) {
 		super(props);
 		this.sliderRef = React.createRef();
@@ -33,11 +30,11 @@ class ShopByCategory extends Component {
 	render() {
 		return (
 			<Section
-				className={classes.shopBy__category}
-				title="Shop by category"
-				subTitle="Find what you are looking for by category."
+				className={classes.bestOffers}
+				title="Best Offers"
+				subTitle="Check out the latest discounts."
 			>
-				<div className={classes.categories__list__container}>
+				<div className={classes.OffersList__container}>
 					<SliderLeftButton
 						className={classes.slide__button}
 						onSlideLeft={this.slideLeftHandler}
@@ -50,18 +47,14 @@ class ShopByCategory extends Component {
 					/>
 					<div
 						ref={this.sliderRef}
-						className={classes.categories__list}
+						className={classes.offersList}
 						style={{
 							gridTemplateColumns: `repeat(${Math.ceil(
-								categoriesData.length / 2
+								offersData.length
 							)}, auto)`,
 						}}
 					>
-						<CategoriesList
-							length={10}
-							categories={categoriesData}
-							className={classes.category__item}
-						/>
+						<OffersList offers={offersData} />
 					</div>
 				</div>
 			</Section>
@@ -69,4 +62,4 @@ class ShopByCategory extends Component {
 	}
 }
 
-export default ShopByCategory;
+export default BestOffers;
