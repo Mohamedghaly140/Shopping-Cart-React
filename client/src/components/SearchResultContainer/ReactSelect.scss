@@ -1,60 +1,61 @@
 .sort__by-container {
-  width: 100% !important;
-  height: 100% !important;
-  background: transparent !important;
+	width: 100% !important;
+	height: 100% !important;
+	background: transparent !important;
 
-  @media (max-width: 575px) {
-    height: 32px !important;
-  }
+	@media (max-width: 575px) {
+		height: 32px !important;
+	}
 }
 
 .sort__by__control {
-  width: 100% !important;
-  height: 100% !important;
-  border: none !important;
-  outline: none !important;
-  background: transparent !important;
+	width: 100% !important;
+	height: 100% !important;
+	border: none !important;
+	outline: none !important;
+	background: transparent !important;
 
-  @media (max-width: 575px) {
-    height: 32px !important;
-  }
+	@media (max-width: 575px) {
+		height: 32px !important;
+	}
 }
 
 .sort__by__control--is-focused {
-  box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 .sort__by__placeholder {
-  color: #542e90 !important;
+	color: #542e90 !important;
 }
 
 .sort__by__value-container {
-  background: transparent !important;
-  cursor: pointer !important;
-  border: none !important;
-  outline: none !important;
-  width: 100% !important;
-  height: 100% !important;
+	background: transparent !important;
+	cursor: pointer !important;
+	border: none !important;
+	outline: none !important;
+	width: 100% !important;
+	height: 100% !important;
 
-  @media (max-width: 575px) {
-    height: 32px !important;
-    margin-bottom: 10px !important;
-  }
+	@media (max-width: 575px) {
+		height: 32px !important;
+		margin-bottom: 10px !important;
+	}
 }
 
 .sort__by__indicators {
-  display: none !important;
+	display: none !important;
 }
 
 .sort__by__menu {
-  background: #f5f5f5;
-  border-radius: 20px !important;
-  overflow: hidden !important;
-  display: block !important;
-  padding: 0 !important;
-  width: 180px !important;
+	background: #f5f5f5;
+	border-radius: 20px !important;
+	overflow: hidden !important;
+	display: block !important;
+	padding: 0 !important;
+	width: 180px !important;
+	left: -18% !important;
 }
 
 .sort__by__menu-list {
-  background: #f5f5f5;
+	background: #f5f5f5;
 }

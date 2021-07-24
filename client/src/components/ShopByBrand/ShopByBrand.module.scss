@@ -1,0 +1,50 @@
+.container {
+	opacity: 1;
+	height: 540px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
+	background: #ff0000 0% 0% no-repeat padding-box;
+}
+
+.brand {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	opacity: 1;
+	width: 395px;
+	height: 100%;
+	border-radius: 20px;
+	transform: matrix(0, 1, -1, 0, 0, 0);
+	background: #1d1d1b 0% 0% no-repeat padding-box;
+	padding-top: 107px;
+	padding-bottom: 114px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.brandButton {
+	opacity: 1;
+	width: 200px;
+	height: 54px;
+	color: #000;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 27px;
+	box-shadow: 0px 0px 3px #00000040;
+	background: #fff200 0% 0% no-repeat padding-box;
+
+	@media (max-width: 320.98px) {
+		display: none;
+	}
+
+	@media (min-width: 320.98px) and (max-width: 575.98px) {
+		display: none;
+	}
+}
