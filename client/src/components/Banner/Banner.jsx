@@ -5,13 +5,13 @@ import Caption from "./Caption/Caption";
 import classes from "./Banner.module.scss";
 
 class Banner extends Component {
-	render() {
-		return (
-			<div className={classes.banner}>
-				<Caption />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className={classes.banner}>
+        <Caption />
+      </div>
+    );
+  }
 }
 
 export default Banner;
