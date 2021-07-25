@@ -35,6 +35,7 @@
   outline: none !important;
   width: 100% !important;
   height: 100% !important;
+  color: #542e90 !important;
 
   @media (max-width: 575px) {
     height: 32px !important;
@@ -48,17 +49,21 @@
 
 .select__box__menu {
   background: #f5f5f5;
-  border-radius: 20px !important;
-  overflow: hidden !important;
-  display: block !important;
   padding: 0 !important;
-  width: 180px !important;
   left: -15% !important;
+  width: 180px !important;
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
 }
 
 .select__box__menu-list {
   background: #f5f5f5;
   padding: 0 !important;
+}
+
+.select__box__option {
+  cursor: pointer !important;
 }
 
 @media (max-width: 575.98px) {

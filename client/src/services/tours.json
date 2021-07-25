@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "adidas",
+    "imageUrl": "/images/brands/adidas.svg",
+    "storeImage": "/images/MaskGroup1@2x.png"
+  },
+  {
+    "id": 2,
+    "title": "Levi’s",
+    "imageUrl": "/images/brands/levis.svg",
+    "storeImage": "/images/MaskGroup2@2x.png"
+  },
+  {
+    "id": 3,
+    "title": "vans",
+    "imageUrl": "/images/brands/vans.svg",
+    "storeImage": "/images/MaskGroup1@2x.png"
+  },
+  {
+    "id": 4,
+    "title": "courir",
+    "imageUrl": "/images/brands/courir.svg",
+    "storeImage": "/images/MaskGroup2@2x.png"
+  },
+  {
+    "id": 5,
+    "title": "geox",
+    "imageUrl": "/images/brands/geox.svg",
+    "storeImage": "/images/MaskGroup1@2x.png"
+  }
+]

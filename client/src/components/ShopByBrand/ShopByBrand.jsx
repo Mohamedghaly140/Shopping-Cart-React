@@ -11,7 +11,16 @@ class ShopByBrand extends Component {
   constructor(props) {
     super(props);
     this.sliderRef = React.createRef();
+
+    this.state = {
+      selected: 4,
+      brand: {},
+    };
   }
+
+  selectBrandHandler = brand => {
+    this.setState({ selected: brand.id, brand });
+  };
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
@@ -28,6 +37,7 @@ class ShopByBrand extends Component {
   };
 
   render() {
+    const { selected, brand } = this.state;
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -48,7 +58,7 @@ class ShopByBrand extends Component {
               <img
                 className="img-fluid"
                 src="/images/levis.svg"
-                alt="brand logo"
+                alt={brand.title}
               />
             </div>
             <p className={classes.brand__description}>
@@ -77,7 +87,11 @@ class ShopByBrand extends Component {
               )}, auto)`,
             }}
           >
-            <BrandsList brands={brandsData} />
+            <BrandsList
+              brands={brandsData}
+              selected={selected}
+              onSelectBrand={this.selectBrandHandler}
+            />
           </div>
         </div>
       </Section>
