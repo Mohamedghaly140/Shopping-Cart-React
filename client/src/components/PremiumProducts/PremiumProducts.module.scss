@@ -1,0 +1,17 @@
+.premium__products {
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (max-width: 320.98px) {
+    border-bottom: 0;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    border-bottom: 0;
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

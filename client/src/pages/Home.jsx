@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
 import Spinner from "../components/UI/Spinner/Spinner";
-import ProductList from "../components/ProductList/ProductList";
 import Banner from "../components/Banner/Banner";
 import BestOffers from "../components/BestOffers/BestOffers";
 import ShopByCategory from "../components/ShopByCategory/ShopByCategory";
 import ShopByBrand from "../components/ShopByBrand/ShopByBrand";
 import VirtualTour from "../components/VirtualTour/VirtualTour";
+import PremiumProducts from "../components/PremiumProducts/PremiumProducts";
+import GiftsOnBudget from "../components/GiftsOnBudget/GiftsOnBudget";
 
 class Home extends Component {
   render() {
@@ -24,10 +25,8 @@ class Home extends Component {
           <BestOffers />
           <ShopByBrand />
           <VirtualTour />
-
-          <section className="mt-5">
-            <ProductList products={products} />
-          </section>
+          <PremiumProducts products={products} />
+          <GiftsOnBudget />
         </div>
       </Fragment>
     );

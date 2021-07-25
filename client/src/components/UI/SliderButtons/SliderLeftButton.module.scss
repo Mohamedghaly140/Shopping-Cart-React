@@ -1,38 +1,38 @@
 .left__arrow {
-	width: 55px;
-	background: 0% 0% no-repeat padding-box;
-	background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 20px 0px 0px 20px;
-	color: #fff;
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	z-index: 2;
-	outline: none;
-	border: none;
+  width: 55px;
+  background: 0% 0% no-repeat padding-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px 0px 0px 20px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 6;
+  outline: none;
+  border: none;
 
-	span {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		position: relative;
-		z-index: 8;
-		height: 100%;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 8;
+    height: 100%;
 
-		svg {
-			width: 21px;
-			height: 32px;
-			fill: #fff;
-		}
-	}
+    svg {
+      width: 21px;
+      height: 32px;
+      fill: #fff;
+    }
+  }
 
-	@media (max-width: 320.98px) {
-		display: none;
-	}
+  @media (max-width: 320.98px) {
+    display: none;
+  }
 
-	@media (max-width: 575.98px) {
-		display: none;
-	}
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }

@@ -5,7 +5,7 @@ import Product from "../Product/Product";
 import classes from "./ProductList.module.scss";
 
 const ProductList = props => {
-  const { products } = props;
+  const { products, length = Infinity } = props;
 
   return (
     <Fragment>
@@ -15,7 +15,7 @@ const ProductList = props => {
         </div>
       ) : (
         <div className={classes.productList}>
-          {products.map(product => (
+          {products.slice(0, length).map(product => (
             <Link
               key={product.id}
               to={`/product/${product.id}`}
