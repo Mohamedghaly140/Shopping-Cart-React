@@ -10,6 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 575.98px) {
+    align-items: flex-start;
+  }
 }
 
 .actions {
@@ -85,6 +89,7 @@
     width: 100px;
     height: 32px;
     font-size: 11px;
+    margin-top: 8px;
     border-radius: 16px;
     padding-inline: 4px;
   }
@@ -93,6 +98,7 @@
     width: 100px;
     height: 32px;
     font-size: 11px;
+    margin-top: 8px;
     padding-inline: 5px;
     border-radius: 16px;
   }

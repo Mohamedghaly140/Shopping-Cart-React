@@ -29,8 +29,8 @@ class ShopByBrand extends Component {
 
   render() {
     const options = [
-      { value: "price", label: "Price" },
       { value: "Rate", label: "Rate" },
+      { value: "price", label: "Price" },
     ];
 
     return (
