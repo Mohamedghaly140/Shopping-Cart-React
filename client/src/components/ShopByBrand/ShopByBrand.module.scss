@@ -1,50 +1,221 @@
 .container {
-	opacity: 1;
-	height: 540px;
-	overflow: hidden;
-	position: relative;
-	border-radius: 20px;
-	background: #ff0000 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 540px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  background: #ff0000 0% 0% no-repeat padding-box;
+
+  @media (max-width: 320.98px) {
+    height: 330px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    height: 330px;
+    margin-bottom: 16px;
+  }
 }
 
 .brand {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	opacity: 1;
-	width: 395px;
-	height: 100%;
-	border-radius: 20px;
-	transform: matrix(0, 1, -1, 0, 0, 0);
-	background: #1d1d1b 0% 0% no-repeat padding-box;
-	padding-top: 107px;
-	padding-bottom: 114px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  width: 395px;
+  height: 100%;
+  padding-top: 107px;
+  padding-bottom: 114px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px 0 0 20px;
+  background: #1d1d1b 0% 0% no-repeat padding-box;
+
+  @media (max-width: 320.98px) {
+    width: 288px;
+    height: 130px;
+    padding-top: 12px;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 100%;
+    height: 130px;
+    top: initial;
+    padding-top: 12px;
+    padding-bottom: 9px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.brand__name {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  @media (max-width: 320.98px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    font-size: 12px;
+  }
+}
+
+.brand__icon {
+  width: 128px;
+  height: 63px;
+  margin: auto;
+
+  @media (max-width: 320.98px) {
+    width: 64px;
+    height: 31px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 64px;
+    height: 31px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 27px;
+    margin-bottom: 44px;
+  }
+}
+
+.brand__description {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+
+  @media (max-width: 320.98px) {
+    font-size: 9px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    font-size: 9px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 15px;
+  }
 }
 
 .brandButton {
-	opacity: 1;
-	width: 200px;
-	height: 54px;
-	color: #000;
-	outline: none;
-	border: none;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	border-radius: 27px;
-	box-shadow: 0px 0px 3px #00000040;
-	background: #fff200 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 200px;
+  height: 54px;
+  color: #000;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 27px;
+  box-shadow: 0px 0px 3px #00000040;
+  background: #fff200 0% 0% no-repeat padding-box;
 
-	@media (max-width: 320.98px) {
-		display: none;
-	}
+  @media (max-width: 320.98px) {
+    display: none;
+  }
 
-	@media (min-width: 320.98px) and (max-width: 575.98px) {
-		display: none;
-	}
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    display: none;
+  }
+}
+
+.slide__button {
+  height: 140px;
+  margin-top: 5px;
+
+  @media (max-width: 320.98px) {
+    height: 64px;
+    display: block;
+    background: transparent;
+
+    svg {
+      fill: #000 !important;
+    }
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    height: 64px;
+    display: block;
+    background: transparent;
+
+    svg {
+      fill: #000 !important;
+    }
+  }
+}
+
+.brands__list__container {
+  position: relative;
+
+  @media (max-width: 320.98px) {
+    grid-gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    grid-gap: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.brands__list {
+  overflow-x: auto;
+  display: grid;
+  grid-gap: 32px;
+  padding-bottom: 32px;
+  border-radius: 20px;
+  padding-top: 5px;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 3px;
+    border: 3px solid #d9d9d9;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 5px;
+    border: 5px solid #542e90;
+  }
+
+  @media (max-width: 320.98px) {
+    width: 225px;
+    margin: auto;
+    grid-gap: 14px;
+    border-radius: 0;
+    padding-bottom: 16px;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 235px;
+    margin: auto;
+    grid-gap: 14px;
+    border-radius: 0;
+    padding-bottom: 16px;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
 }

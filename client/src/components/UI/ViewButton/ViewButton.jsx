@@ -1,15 +1,12 @@
 import React from "react";
-import classes from "./BrandButton.module.scss";
+import classes from "./ViewButton.module.scss";
 
-const BrandButton = ({ children, className, ...restProps }) => {
-	return (
-		<button
-			{...restProps}
-			className={`${classes.brandButton} ${props.className}`}
-		>
-			{props.children}
-		</button>
-	);
+const ViewButton = ({ children, className, ...restProps }) => {
+  return (
+    <button {...restProps} className={`${classes.ViewButton} ${className}`}>
+      {children}
+    </button>
+  );
 };
 
-export default BrandButton;
+export default ViewButton;
