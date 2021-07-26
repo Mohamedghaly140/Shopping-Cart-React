@@ -1,0 +1,9 @@
+[
+  { "id": 1, "title": "Below 1,000", "imageUrl": "" },
+  { "id": 2, "title": "Below 750", "imageUrl": "" },
+  { "id": 3, "title": "Below 250", "imageUrl": "" },
+  { "id": 4, "title": "Below 450", "imageUrl": "" },
+  { "id": 5, "title": "Below 100", "imageUrl": "" },
+  { "id": 6, "title": "Below 300", "imageUrl": "" },
+  { "id": 7, "title": "Below 200", "imageUrl": "" }
+]

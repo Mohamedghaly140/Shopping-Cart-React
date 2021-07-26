@@ -40,28 +40,24 @@ class VirtualTour extends Component {
         title="Take A Virtual Tour"
         subTitle="Marketing pleasure through 360 technology"
       >
-        <div className={classes.tours__list__container}>
-          <SliderLeftButton
-            className={classes.slide__button}
-            onSlideLeft={this.slideLeftHandler}
-            color="#fff"
-          />
-          <SliderRightButton
-            className={classes.slide__button}
-            onSlideRight={this.slideRightHandler}
-            color="#fff"
-          />
-          <div
-            ref={this.sliderRef}
-            className={classes.tours__list}
-            style={{
-              gridTemplateColumns: `repeat(${Math.ceil(
-                toursData.length
-              )}, auto)`,
-            }}
-          >
-            <ToursList tours={toursData} />
-          </div>
+        <SliderLeftButton
+          className={classes.slide__button}
+          onSlideLeft={this.slideLeftHandler}
+          color="#fff"
+        />
+        <SliderRightButton
+          className={classes.slide__button}
+          onSlideRight={this.slideRightHandler}
+          color="#fff"
+        />
+        <div
+          ref={this.sliderRef}
+          className={classes.tours__list}
+          style={{
+            gridTemplateColumns: `repeat(${Math.ceil(toursData.length)}, auto)`,
+          }}
+        >
+          <ToursList tours={toursData} />
         </div>
       </Section>
     );
