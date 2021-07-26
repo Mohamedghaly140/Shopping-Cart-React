@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import BrandsList from "../BrandsList/BrandsList";
 
-import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
+import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
+import ShopByBrandContainer from "../UI/ShopByBrandContainer/ShopByBrandContainer";
+
 import brandsData from "../../services/brands.json";
+
 import classes from "./ShopByBrand.module.scss";
 
 class ShopByBrand extends Component {
@@ -37,7 +40,7 @@ class ShopByBrand extends Component {
   };
 
   render() {
-    const { selected, brand } = this.state;
+    const { selected } = this.state;
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -51,22 +54,13 @@ class ShopByBrand extends Component {
         buttonTitle="View All"
         subTitle="Explore products by your favourite brands."
       >
-        <div className={classes.container}>
-          <div className={classes.brand}>
-            <h3 className={classes.brand__name}>Levi’s</h3>
-            <div className={classes.brand__icon}>
-              <img
-                className="img-fluid"
-                src="/images/levis.svg"
-                alt={brand.title}
-              />
-            </div>
-            <p className={classes.brand__description}>
-              Famous Levi’s products coming straight from the UK.
-            </p>
-            <button className={classes.brandButton}>Shop Now</button>
-          </div>
-        </div>
+        <ShopByBrandContainer
+          title={"Levi’s"}
+          description={"Famous Levi’s products coming straight from the UK."}
+          buttonTitle={"Shop Now"}
+          brandIcon={"/images/levis.svg"}
+          imageUrl={"/images/levis-jean.jpg"}
+        />
         <div className={classes.brands__list__container}>
           <SliderLeftButton
             className={classes.slide__button}
