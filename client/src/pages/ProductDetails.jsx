@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
 import httpClient from "../services/httpClient";
 import Spinner from "../components/UI/Spinner/Spinner";
@@ -44,7 +44,7 @@ class ProductDetails extends Component {
     const { addToCart, loadingProducts, products } = this.props;
 
     return (
-      <div>
+      <Fragment>
         {loading && !product ? (
           <Spinner />
         ) : (
@@ -57,7 +57,7 @@ class ProductDetails extends Component {
           <FrequentlyBought product={product} addToCart={addToCart} />
         )}
         <SimilarProducts loading={loadingProducts} products={products} />
-      </div>
+      </Fragment>
     );
   }
 }
