@@ -3,8 +3,14 @@ import GiftItem from "../UI/GiftItem/GiftItem";
 // import classes from "./style.css";
 
 const GiftsList = ({ gifts, length = Infinity }) => {
-  const firstItem = gifts.shift();
-  console.log(firstItem);
+  // const [gift, setGift] = useState();
+
+  // useEffect(() => {
+  //   setGift(gifts.shift());
+  //   // eslint-disable-next-line
+  // }, []);
+
+  // console.log(gift);
 
   // const rows = new Array(Math.ceil(gifts.slice(0, length).length / 2));
 

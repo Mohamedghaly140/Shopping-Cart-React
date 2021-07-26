@@ -8,6 +8,7 @@ import ShopByBrand from "../components/ShopByBrand/ShopByBrand";
 import VirtualTour from "../components/VirtualTour/VirtualTour";
 import PremiumProducts from "../components/PremiumProducts/PremiumProducts";
 import GiftsOnBudget from "../components/GiftsOnBudget/GiftsOnBudget";
+import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 
 class Home extends Component {
   render() {
@@ -27,6 +28,7 @@ class Home extends Component {
           <VirtualTour />
           <PremiumProducts products={products} />
           <GiftsOnBudget />
+          <VideoPlayer />
         </div>
       </Fragment>
     );
