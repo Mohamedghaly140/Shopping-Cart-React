@@ -39,32 +39,30 @@ class ShopByCategory extends Component {
         route="/shop-all-categories"
         subTitle="Find what you are looking for by category."
       >
-        <div className={classes.categories__list__container}>
-          <SliderLeftButton
-            className={classes.slide__button}
-            onSlideLeft={this.slideLeftHandler}
-            color="#fff"
+        <SliderLeftButton
+          className={classes.slide__button}
+          onSlideLeft={this.slideLeftHandler}
+          color="#fff"
+        />
+        <SliderRightButton
+          className={classes.slide__button}
+          onSlideRight={this.slideRightHandler}
+          color="#fff"
+        />
+        <div
+          ref={this.sliderRef}
+          className={classes.categories__list}
+          style={{
+            gridTemplateColumns: `repeat(${Math.ceil(
+              categoriesData.length / 2
+            )}, auto)`,
+          }}
+        >
+          <CategoriesList
+            length={10}
+            categories={categoriesData}
+            className={classes.category__item}
           />
-          <SliderRightButton
-            className={classes.slide__button}
-            onSlideRight={this.slideRightHandler}
-            color="#fff"
-          />
-          <div
-            ref={this.sliderRef}
-            className={classes.categories__list}
-            style={{
-              gridTemplateColumns: `repeat(${Math.ceil(
-                categoriesData.length / 2
-              )}, auto)`,
-            }}
-          >
-            <CategoriesList
-              length={10}
-              categories={categoriesData}
-              className={classes.category__item}
-            />
-          </div>
         </div>
       </Section>
     );

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Title from "../Title/Title";
 import SubTitle from "../SubTitle/SubTitle";
@@ -41,7 +41,8 @@ const Section = props => {
           )}
         </div>
       </div>
-      <Fragment>{props.children}</Fragment>
+      {props.renderBeforeList && props.renderBeforeList()}
+      <div className={classes.list__container}>{props.children}</div>
       {props.buttonTitle && (
         <div
           className={`${

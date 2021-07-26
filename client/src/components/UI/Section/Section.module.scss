@@ -16,6 +16,20 @@
   }
 }
 
+.list__container {
+  position: relative;
+
+  @media (max-width: 320.98px) {
+    grid-gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    grid-gap: 16px;
+    margin-bottom: 8px;
+  }
+}
+
 .actions {
   display: flex;
   flex-direction: row;

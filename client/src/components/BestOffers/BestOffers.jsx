@@ -42,28 +42,26 @@ class BestOffers extends Component {
         title="Best Offers"
         subTitle="Check out the latest discounts."
       >
-        <div className={classes.OffersList__container}>
-          <SliderLeftButton
-            className={classes.slide__button}
-            onSlideLeft={this.slideLeftHandler}
-            color="#fff"
-          />
-          <SliderRightButton
-            className={classes.slide__button}
-            onSlideRight={this.slideRightHandler}
-            color="#fff"
-          />
-          <div
-            ref={this.sliderRef}
-            className={classes.offersList}
-            style={{
-              gridTemplateColumns: `repeat(${Math.ceil(
-                offersData.length
-              )}, auto)`,
-            }}
-          >
-            <OffersList offers={offersData} />
-          </div>
+        <SliderLeftButton
+          className={classes.slide__button}
+          onSlideLeft={this.slideLeftHandler}
+          color="#fff"
+        />
+        <SliderRightButton
+          className={classes.slide__button}
+          onSlideRight={this.slideRightHandler}
+          color="#fff"
+        />
+        <div
+          ref={this.sliderRef}
+          className={classes.offersList}
+          style={{
+            gridTemplateColumns: `repeat(${Math.ceil(
+              offersData.length
+            )}, auto)`,
+          }}
+        >
+          <OffersList offers={offersData} />
         </div>
       </Section>
     );

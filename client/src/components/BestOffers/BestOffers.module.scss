@@ -1,59 +1,45 @@
-.OffersList__container {
-	position: relative;
-
-	@media (max-width: 320.98px) {
-		padding-top: 0;
-		margin-bottom: 8px;
-	}
-
-	@media (min-width: 320.98px) and (max-width: 575.98px) {
-		padding-top: 0;
-		margin-bottom: 8px;
-	}
-}
-
 .slide__button {
-	height: 450px !important;
+  height: 450px !important;
 }
 
 .offersList {
-	display: grid;
-	overflow-x: auto;
-	border-radius: 20px;
-	padding-bottom: 32px;
-	grid-column-gap: 32px;
+  display: grid;
+  overflow-x: auto;
+  border-radius: 20px;
+  padding-bottom: 32px;
+  grid-column-gap: 32px;
 
-	&::-webkit-scrollbar {
-		height: 5px;
-	}
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
 
-	&::-webkit-scrollbar-track {
-		height: 3px;
-		border: 3px solid #d9d9d9;
-	}
+  &::-webkit-scrollbar-track {
+    height: 3px;
+    border: 3px solid #d9d9d9;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		height: 5px;
-		border: 5px solid #542e90;
-	}
+  &::-webkit-scrollbar-thumb {
+    height: 5px;
+    border: 5px solid #542e90;
+  }
 
-	@media (max-width: 320.98px) {
-		border-radius: 0;
-		padding-bottom: 16px;
-		grid-column-gap: 16px;
+  @media (max-width: 320.98px) {
+    border-radius: 0;
+    padding-bottom: 16px;
+    grid-column-gap: 16px;
 
-		&::-webkit-scrollbar {
-			height: 0;
-		}
-	}
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
 
-	@media (min-width: 320.98px) and (max-width: 575.98px) {
-		border-radius: 0;
-		padding-bottom: 16px;
-		grid-column-gap: 16px;
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    border-radius: 0;
+    padding-bottom: 16px;
+    grid-column-gap: 16px;
 
-		&::-webkit-scrollbar {
-			height: 0;
-		}
-	}
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
 }
