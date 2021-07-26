@@ -15,4 +15,9 @@
     font-size: 16px;
     margin-bottom: 10px;
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
 }
