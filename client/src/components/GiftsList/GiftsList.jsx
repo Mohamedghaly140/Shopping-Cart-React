@@ -44,7 +44,7 @@ class GiftsList extends Component {
     }
 
     const giftsList = rows.map((item, i) => (
-      <div key={i} style={divStyle}>
+      <div key={i} className={classes.gift__column}>
         {item.items.map(item => (
           <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
         ))}
@@ -71,8 +71,3 @@ class GiftsList extends Component {
 }
 
 export default GiftsList;
-
-const divStyle = {
-  display: "grid",
-  gridRowGap: "32px",
-};
