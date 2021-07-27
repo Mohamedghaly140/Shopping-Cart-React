@@ -12,7 +12,7 @@ export default class Price extends Component {
           <div className={classes.price}>{price} L.E</div>
           {discount && (
             <div className={classes.discount__price}>
-              <span>{discount_price} L.E</span>
+              <span>{discount_price} L.E &nbsp;</span>
               <div className={classes.discount__percent}>
                 {discount_percent}% Off
               </div>
