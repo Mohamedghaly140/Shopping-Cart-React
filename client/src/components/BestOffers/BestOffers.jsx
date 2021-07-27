@@ -14,14 +14,14 @@ class BestOffers extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -285,
+      left: -600,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +285,
+      left: +600,
       behavior: "smooth",
     });
   };

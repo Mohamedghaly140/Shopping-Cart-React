@@ -25,14 +25,14 @@ class ShopByBrand extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -140,
+      left: -200,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +140,
+      left: +200,
       behavior: "smooth",
     });
   };

@@ -16,14 +16,14 @@ class ShopByCategory extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -285,
+      left: -400,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +285,
+      left: +400,
       behavior: "smooth",
     });
   };
