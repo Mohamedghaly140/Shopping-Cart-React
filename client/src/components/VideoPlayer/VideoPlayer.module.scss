@@ -13,11 +13,25 @@
     border-radius: 15px;
   }
 
-  @media (min-width: 320.98px) and (max-width: 575.98px) {
+  @media (min-width: 320.98px) and (max-width: 374.98px) {
     width: 295px;
     height: 168px;
     margin: 22px auto;
     border-radius: 15px;
+  }
+
+  @media (min-width: 374.98px) and (max-width: 575.98px) {
+    width: 338px;
+    height: 191px;
+    margin: 22px auto;
+    border-radius: 15px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 100%;
+    height: 100%;
+    margin: 22px auto;
+    border-radius: 20px;
   }
 }
 
