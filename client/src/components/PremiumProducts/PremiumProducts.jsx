@@ -32,7 +32,9 @@ class PremiumProducts extends Component {
         onClickHandler={this.showMoreHandler}
         showMore={length !== Infinity}
       >
-        <ProductList products={products} length={length} />
+        <div className={classes.productList}>
+          <ProductList products={products} length={length} className />
+        </div>
       </Section>
     );
   }

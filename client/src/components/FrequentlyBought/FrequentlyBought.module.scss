@@ -1,48 +1,65 @@
+.section {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 27px;
+
+  @media (max-width: 320.98px) {
+    grid-column-gap: 0;
+    grid-template-columns: auto;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    grid-column-gap: 0;
+    grid-template-columns: auto;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    grid-column-gap: 0;
+    grid-template-columns: auto;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    grid-column-gap: 0;
+    grid-template-columns: auto;
+  }
+
+  // @media (min-width: 992px) and (max-width: 1199.98px) {
+  //   grid-column-gap: 0;
+  //   grid-template-columns: auto;
+  //  }
+}
+
 .icon {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-inline: 6px;
-
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    flex-shrink: 1;
-  }
-
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    flex-shrink: 1;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    flex-shrink: 1;
-  }
-
-  @media (min-width: 1200px) and (max-width: 1300.98px) {
-    flex-shrink: 1;
-  }
-
-  @media (min-width: 1200.98px) and (max-width: 1400.98px) {
-    flex-shrink: 1;
-  }
-
-  @media (min-width: 320.98px) and (max-width: 575.98px) {
-    margin: 0;
-  }
-
-  @media (min-width: 1400px) {
-    margin: 0;
-  }
-}
-
-.products {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding-block: 10px;
+  margin-inline: 8px;
 
   svg {
     width: 24px;
     height: 24px;
   }
+
+  @media (max-width: 320.98px) {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.products {
+  display: grid;
+  padding-block: 10px;
+  grid-template-columns: repeat(5, auto);
 
   p {
     margin: 0;
@@ -51,7 +68,7 @@
   @media (max-width: 320.98px) {
     max-width: 100%;
     overflow-x: auto;
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(5, auto);
 
     svg {
       width: 16px;
@@ -59,7 +76,7 @@
     }
 
     &::-webkit-scrollbar {
-      height: 6px;
+      height: 3px;
     }
 
     &::-webkit-scrollbar-track {
@@ -68,15 +85,15 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 6px solid #542e90;
+      height: 3px;
+      border: 3px solid #542e90;
     }
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     max-width: 100%;
     overflow-x: auto;
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(5, auto);
 
     svg {
       width: 16px;
@@ -84,7 +101,7 @@
     }
 
     &::-webkit-scrollbar {
-      height: 6px;
+      height: 3px;
     }
 
     &::-webkit-scrollbar-track {
@@ -93,16 +110,15 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 6px solid #542e90;
+      height: 3px;
+      border: 3px solid #542e90;
     }
   }
 
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
-    display: flex;
+  @media (min-width: 576px) and (max-width: 767.98px) {
     max-width: 100%;
     overflow-x: auto;
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(5, auto);
 
     svg {
       width: 16px;
@@ -110,7 +126,7 @@
     }
 
     &::-webkit-scrollbar {
-      height: 6px;
+      height: 3px;
     }
 
     &::-webkit-scrollbar-track {
@@ -119,61 +135,15 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 6px solid #542e90;
+      height: 3px;
+      border: 3px solid #542e90;
     }
   }
 
-  @media (min-width: 1200.98px) and (max-width: 1400.98px) {
-    display: flex;
-    max-width: 70%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    &::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      height: 3px;
-      border: 3px solid #d9d9d9;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 6px solid #542e90;
-    }
+  @media (min-width: 768px) and (max-width: 991.98px) {
   }
 
-  @media (min-width: 991.98px) and (max-width: 1200.98px) {
-    display: flex;
-    max-width: 70%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    &::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      height: 3px;
-      border: 3px solid #d9d9d9;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 6px solid #542e90;
-    }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -194,10 +164,6 @@
   @media (min-width: 575.98px) and (max-width: 991.98px) {
     margin-top: 12px;
   }
-
-  @media (min-width: 992px) and (max-width: 1400px) {
-    margin-left: 27px;
-  }
 }
 
 .buy__all {
@@ -212,14 +178,6 @@
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     font-size: 12px;
-  }
-
-  @media (min-width: 768px) {
-    text-align: center;
-  }
-
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
-    text-align: left;
   }
 }
 
@@ -238,18 +196,8 @@
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
+    padding-left: 0;
     margin-top: 10px;
-    padding-left: 0;
-  }
-
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
-    padding-left: 0;
-    text-align: left;
-  }
-
-  @media (min-width: 1200px) {
-    padding-left: 0;
-    text-align: left;
   }
 }
 
@@ -268,9 +216,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-  }
-
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
   }
 }
 
@@ -295,14 +240,6 @@
     width: 150px;
     margin-right: 6px;
   }
-
-  @media (min-width: 768px) {
-    text-align: center;
-  }
-
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
-    text-align: left;
-  }
 }
 
 .discount__price {
@@ -323,14 +260,6 @@
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     margin-bottom: 0;
   }
-
-  @media (min-width: 768px) {
-    justify-content: center;
-  }
-
-  @media (min-width: 575.98px) and (max-width: 991.98px) {
-    justify-content: flex-start;
-  }
 }
 
 .discount {
@@ -338,6 +267,7 @@
   font-size: 21px;
   font-weight: bold;
   text-decoration: line-through;
+  text-decoration-thickness: from-font;
 
   @media (max-width: 320.98px) {
     font-size: 12px;
