@@ -26,7 +26,12 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // import routes files
+const toursRoutes = require("./routes/toursRoutes");
+const giftsRoutes = require("./routes/giftsRoutes");
+const brandsRoutes = require("./routes/brandsRoutes");
+const offersRoutes = require("./routes/offersRoutes");
 const productsRoutes = require("./routes/productRoutes");
+const categoriesRoutes = require("./routes/categoriesRoutes");
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -38,7 +43,12 @@ app.use((req, res, next) => {
 });
 
 // excute routes
+app.use("/api/gifts", giftsRoutes);
+app.use("/api/tours", toursRoutes);
+app.use("/api/brands", brandsRoutes);
+app.use("/api/offers", offersRoutes);
 app.use("/api/products", productsRoutes);
+app.use("/api/categories", categoriesRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError("Could not found this route", 404);

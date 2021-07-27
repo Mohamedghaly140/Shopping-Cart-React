@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import ToursList from "../ToursList/ToursList";
-import toursData from "../../services/tours.json";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 
@@ -28,6 +27,8 @@ class VirtualTour extends Component {
   };
 
   render() {
+    const { tours } = this.props;
+
     const options = [
       { value: "vans", label: "Vans" },
       { value: "adidas", label: "Adidas" },
@@ -54,10 +55,10 @@ class VirtualTour extends Component {
           ref={this.sliderRef}
           className={classes.tours__list}
           style={{
-            gridTemplateColumns: `repeat(${Math.ceil(toursData.length)}, auto)`,
+            gridTemplateColumns: `repeat(${Math.ceil(tours.length)}, auto)`,
           }}
         >
-          <ToursList tours={toursData} />
+          <ToursList tours={tours} />
         </div>
       </Section>
     );

@@ -6,8 +6,6 @@ import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 import ShopByBrandContainer from "../UI/ShopByBrandContainer/ShopByBrandContainer";
 
-import brandsData from "../../services/brands.json";
-
 import classes from "./ShopByBrand.module.scss";
 
 class ShopByBrand extends Component {
@@ -41,6 +39,8 @@ class ShopByBrand extends Component {
 
   render() {
     const { selected } = this.state;
+    const { brands } = this.props;
+
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -77,13 +77,11 @@ class ShopByBrand extends Component {
           ref={this.sliderRef}
           className={classes.brands__list}
           style={{
-            gridTemplateColumns: `repeat(${Math.ceil(
-              brandsData.length
-            )}, auto)`,
+            gridTemplateColumns: `repeat(${Math.ceil(brands.length)}, auto)`,
           }}
         >
           <BrandsList
-            brands={brandsData}
+            brands={brands}
             selected={selected}
             onSelectBrand={this.selectBrandHandler}
           />

@@ -12,7 +12,8 @@ import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 
 class Home extends Component {
   render() {
-    const { loading, products } = this.props;
+    const { loading, products, gifts, brands, offers, tours, categories } =
+      this.props;
 
     if (loading) {
       return <Spinner />;
@@ -22,12 +23,12 @@ class Home extends Component {
       <Fragment>
         <Banner />
         <div className="container">
-          <ShopByCategory />
-          <BestOffers />
-          <ShopByBrand />
-          <VirtualTour />
+          <ShopByCategory categories={categories} />
+          <BestOffers offers={offers} />
+          <ShopByBrand brands={brands} />
+          <VirtualTour tours={tours} />
           <PremiumProducts products={products} />
-          <GiftsOnBudget />
+          <GiftsOnBudget gifts={gifts} />
           <VideoPlayer />
         </div>
       </Fragment>

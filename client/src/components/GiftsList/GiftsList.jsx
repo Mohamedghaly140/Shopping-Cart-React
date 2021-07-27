@@ -53,11 +53,15 @@ class GiftsList extends Component {
 
     const listForLg = (
       <Fragment>
-        <GiftItem
-          title={firstItem.title}
-          imageUrl={firstItem.imageUrl}
-          className={classes.gift__item}
-        />
+        {!firstItem ? (
+          "loading"
+        ) : (
+          <GiftItem
+            title={firstItem.title}
+            imageUrl={firstItem.imageUrl}
+            className={classes.gift__item}
+          />
+        )}
         {giftsList}
       </Fragment>
     );

@@ -9,12 +9,29 @@ const ShopAllCategories = lazy(() => import("./ShopAllCategories"));
 
 class AppRouter extends Component {
   render() {
-    const { addToCart, loading, products } = this.props;
+    const {
+      addToCart,
+      loading,
+      products,
+      gifts,
+      brands,
+      offers,
+      tours,
+      categories,
+    } = this.props;
 
     return (
       <Switch>
         <Route exact path="/">
-          <Home loading={loading} products={products} />
+          <Home
+            loading={loading}
+            gifts={gifts}
+            tours={tours}
+            brands={brands}
+            offers={offers}
+            products={products}
+            categories={categories}
+          />
         </Route>
         <Suspense fallback={<Spinner />}>
           <Route path="/product/:id">
@@ -28,7 +45,7 @@ class AppRouter extends Component {
             <SearchResult products={products} loading={loading} />
           </Route>
           <Route path="/shop-all-categories">
-            <ShopAllCategories />
+            <ShopAllCategories loading={loading} categories={categories} />
           </Route>
         </Suspense>
         <Redirect to="/" />

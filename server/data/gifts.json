@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Below 1,000",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift1@2x.png"
+  },
+  {
+    "id": 2,
+    "title": "Below 750",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift2.png"
+  },
+  {
+    "id": 3,
+    "title": "Below 250",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift3.png"
+  },
+  {
+    "id": 4,
+    "title": "Below 450",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift1.png"
+  },
+  {
+    "id": 5,
+    "title": "Below 100",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift2.png"
+  },
+  {
+    "id": 6,
+    "title": "Below 300",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift3.png"
+  },
+  {
+    "id": 7,
+    "title": "Below 200",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/gift1.png"
+  }
+]

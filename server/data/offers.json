@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "2021 New Year Discounts",
+    "description": "Up to 50% sale on selected items during February.",
+    "brand": "https://yeshtery.herokuapp.com/public/images/adidas.svg",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+  },
+  {
+    "id": 2,
+    "title": "2021 New Year Discounts",
+    "description": "Up to 50% sale on selected items during February.",
+    "brand": "https://yeshtery.herokuapp.com/public/images/vans.svg",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+  },
+  {
+    "id": 3,
+    "title": "2021 New Year Discounts",
+    "description": "Up to 50% sale on selected items during February.",
+    "brand": "https://yeshtery.herokuapp.com/public/images/sport.svg",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+  },
+  {
+    "id": 4,
+    "title": "2021 New Year Discounts",
+    "description": "Up to 50% sale on selected items during February.",
+    "brand": "https://yeshtery.herokuapp.com/public/images/rockport.svg",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+  }
+]

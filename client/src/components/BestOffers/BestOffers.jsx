@@ -3,7 +3,6 @@ import classes from "./BestOffers.module.scss";
 import Section from "../UI/Section/Section";
 
 import OffersList from "../OffersList/OffersList";
-import offersData from "../../services/offers.json";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
@@ -28,6 +27,8 @@ class BestOffers extends Component {
   };
 
   render() {
+    const { offers } = this.props;
+
     const options = [
       { value: "price", label: "Price" },
       { value: "Rate", label: "Rate" },
@@ -56,12 +57,10 @@ class BestOffers extends Component {
           ref={this.sliderRef}
           className={classes.offersList}
           style={{
-            gridTemplateColumns: `repeat(${Math.ceil(
-              offersData.length
-            )}, auto)`,
+            gridTemplateColumns: `repeat(${Math.ceil(offers.length)}, auto)`,
           }}
         >
-          <OffersList offers={offersData} />
+          <OffersList offers={offers} />
         </div>
       </Section>
     );

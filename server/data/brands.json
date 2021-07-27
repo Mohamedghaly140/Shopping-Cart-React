@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "adidas",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/adidas.svg"
+  },
+  {
+    "id": 2,
+    "title": "courir",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/courir.svg"
+  },
+  {
+    "id": 3,
+    "title": "geox",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/geox.svg"
+  },
+  {
+    "id": 4,
+    "title": "levis",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/levis.svg"
+  },
+  {
+    "id": 5,
+    "title": "rockport",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/rockport.svg"
+  },
+  {
+    "id": 6,
+    "title": "sport",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/sport.svg"
+  },
+  {
+    "id": 7,
+    "title": "timberland",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/timberland.svg"
+  },
+  {
+    "id": 8,
+    "title": "vans",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/vans.svg"
+  }
+]

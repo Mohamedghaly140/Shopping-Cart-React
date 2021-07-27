@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 
-import categoriesData from "../../services/all-categories.json";
-
 import CategoriesList from "../CategoriesList/CategoriesList";
 
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
@@ -31,6 +29,8 @@ class ShopByCategory extends Component {
   };
 
   render() {
+    const { categories } = this.props;
+
     return (
       <Section
         className={classes.shopBy__category}
@@ -54,13 +54,13 @@ class ShopByCategory extends Component {
           className={classes.categories__list}
           style={{
             gridTemplateColumns: `repeat(${Math.ceil(
-              categoriesData.length / 2
+              categories.length / 2
             )}, auto)`,
           }}
         >
           <CategoriesList
             length={10}
-            categories={categoriesData}
+            categories={categories}
             className={classes.category__item}
           />
         </div>

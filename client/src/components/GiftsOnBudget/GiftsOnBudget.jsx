@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import GiftsList from "../GiftsList/GiftsList";
 
-import giftsData from "../../services/gifts.json";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
@@ -29,6 +28,8 @@ class GiftsOnBudget extends Component {
   };
 
   render() {
+    const { gifts } = this.props;
+
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -56,10 +57,10 @@ class GiftsOnBudget extends Component {
           ref={this.sliderRef}
           className={classes.gifts__list}
           style={{
-            gridTemplateColumns: `repeat(${Math.ceil(giftsData.length)}, auto)`,
+            gridTemplateColumns: `repeat(${Math.ceil(gifts.length)}, auto)`,
           }}
         >
-          <GiftsList gifts={giftsData} />
+          <GiftsList gifts={gifts} />
         </div>
       </Section>
     );
