@@ -1,4 +1,4 @@
-import React, { useRef, useImperativeHandle, useEffect } from "react";
+import React, { useRef, useImperativeHandle } from "react";
 
 const Video = React.forwardRef(({ videoUrl }, ref) => {
   const videoRef = useRef();
@@ -7,15 +7,17 @@ const Video = React.forwardRef(({ videoUrl }, ref) => {
     videoRef.current.play();
   };
 
+  const pauseHandler = () => {
+    videoRef.current.pause();
+  };
+
   useImperativeHandle(ref, () => {
     return {
       play: playHandler,
+      pause: pauseHandler,
+      paused: videoRef.current.paused,
     };
   });
-
-  useEffect(() => {
-    console.dir(videoRef.current);
-  }, []);
 
   return (
     <video width="100%" height="100%" ref={videoRef}>

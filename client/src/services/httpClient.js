@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: `https://react-cart-node.herokuapp.com`,
+  baseURL: `https://yeshtery.herokuapp.com`,
   // baseURL: `http://localhost:5000`,
 });
 
