@@ -1,52 +1,78 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import { debounce } from "throttle-debounce";
 import GiftItem from "../UI/GiftItem/GiftItem";
-// import classes from "./style.css";
+import classes from "./GiftsList.module.scss";
 
-const GiftsList = ({ gifts, length = Infinity }) => {
-  // const [gift, setGift] = useState();
+class GiftsList extends Component {
+  state = {
+    small: false,
+  };
 
-  // useEffect(() => {
-  //   setGift(gifts.shift());
-  //   // eslint-disable-next-line
-  // }, []);
+  componentDidMount() {
+    if (window.innerWidth < 992) {
+      this.setState({ small: true });
+    }
 
-  // console.log(gift);
+    window.addEventListener("resize", this.windowResizeHandler);
+  }
 
-  // const rows = new Array(Math.ceil(gifts.slice(0, length).length / 2));
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.windowResizeHandler);
+  }
 
-  // for (let i = 0; i < rows.length; i++) {
-  //   rows[i] = { items: gifts.slice(i * 2, i * 2 + 2) };
-  // }
+  windowResizeHandler = debounce(250, () => {
+    if (window.innerWidth < 575) {
+      this.setState({ small: true });
+    } else {
+      this.setState({ small: false });
+    }
+  });
 
-  // const giftsList = rows.map((item, i) => (
-  //   <Fragment key={i}>
-  //     <div style={divStyle}>
-  //       {item.items.map(item => (
-  //         <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
-  //       ))}
-  //     </div>
-  //   </Fragment>
-  // ));
+  render() {
+    const { gifts, length } = this.props;
+    const { small } = this.state;
 
-  // return (
-  //   <Fragment>
-  //     <GiftItem
-  //       className={classes.gift__item}
-  //       title={firstItem.title}
-  //       imageUrl={firstItem.imageUrl}
-  //     />
-  //     {giftsList}
-  //   </Fragment>
-  // );
+    const copiedGifts = [...gifts];
+    const firstItem = copiedGifts[0];
 
-  return gifts.map(item => (
-    <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
-  ));
+    const rows = new Array(Math.ceil(copiedGifts.slice(0, length).length / 2));
+
+    for (let i = 0; i < rows.length; i++) {
+      rows[i] = {
+        items: copiedGifts.slice(1, Infinity).slice(i * 2, i * 2 + 2),
+      };
+    }
+
+    const giftsList = rows.map((item, i) => (
+      <div key={i} style={divStyle}>
+        {item.items.map(item => (
+          <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
+        ))}
+      </div>
+    ));
+
+    const listForLg = (
+      <Fragment>
+        <GiftItem
+          title={firstItem.title}
+          imageUrl={firstItem.imageUrl}
+          className={classes.gift__item}
+        />
+        {giftsList}
+      </Fragment>
+    );
+
+    const listForSm = gifts.map(item => (
+      <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
+    ));
+
+    return small ? listForSm : listForLg;
+  }
+}
+
+export default GiftsList;
+
+const divStyle = {
+  display: "grid",
+  gridRowGap: "32px",
 };
-
-export default React.memo(GiftsList);
-
-// const divStyle = {
-//   display: "grid",
-//   gridRowGap: "32px",
-// };

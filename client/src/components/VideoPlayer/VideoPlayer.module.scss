@@ -1,20 +1,22 @@
 .videoPlayer__container {
   height: 660px;
-  margin-top: 22px;
+  margin-top: 24px;
   overflow: hidden;
   position: relative;
   border-radius: 20px;
   margin-bottom: 48px;
 
   @media (max-width: 320.98px) {
-    width: 100%;
+    width: 295px;
     height: 168px;
+    margin: 22px auto;
     border-radius: 15px;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
-    width: 100%;
+    width: 295px;
     height: 168px;
+    margin: 22px auto;
     border-radius: 15px;
   }
 }

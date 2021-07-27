@@ -1,0 +1,31 @@
+.gift__item {
+  width: 568px;
+  height: 468px;
+
+  h5 {
+    top: 70px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 320.98px) {
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+
+    h5 {
+      top: 18px;
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+
+    h5 {
+      top: 18px;
+      font-size: 18px;
+    }
+  }
+}

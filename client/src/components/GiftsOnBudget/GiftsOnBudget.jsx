@@ -66,4 +66,4 @@ class GiftsOnBudget extends Component {
   }
 }
 
-export default React.memo(GiftsOnBudget);
+export default GiftsOnBudget;
