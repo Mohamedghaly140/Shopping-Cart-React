@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { UiContext } from "../../../context/ui-context";
-
+import CSSTransition from "react-transition-group/CSSTransition";
 import classes from "./Caption.module.scss";
 
 class Caption extends Component {
@@ -39,14 +39,20 @@ class Caption extends Component {
   };
 
   render() {
-    console.log(window.scrollY);
     return (
       <div className={classes.banner__caption}>
         <div className={classes.caption__container}>
           <h1 className={classes.title}>Find products and shops near you</h1>
           <p className={classes.slogan}>Enjoy a fairly new experience.</p>
         </div>
-        {window.scrollY < 430 && (
+
+        <CSSTransition
+          in={window.scrollY < 430}
+          timeout={1000}
+          mountOnEnter
+          unmountOnExit
+          classNames="fade-slide"
+        >
           <form
             onSubmit={this.submitSearchHandler}
             className={classes.search__container}
@@ -59,7 +65,7 @@ class Caption extends Component {
             />
             <button className={classes.search__button}>Search</button>
           </form>
-        )}
+        </CSSTransition>
       </div>
     );
   }

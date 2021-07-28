@@ -43,6 +43,8 @@ export class MiddleNavbar extends Component {
       onToggleAccount,
     } = this.props;
 
+    console.log(this.context.scrolled);
+
     return (
       <nav
         className={`${classes.middle__navbar} ${navbar && classes.active} ${
@@ -67,7 +69,8 @@ export class MiddleNavbar extends Component {
               </div>
             )}
 
-            {this.context.scrolled && <Search navbar={navbar} />}
+            {isHomePage && this.context.scrolled && <Search navbar={navbar} />}
+            {!isHomePage && <Search navbar={navbar} />}
 
             {!isHomePage && (
               <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
