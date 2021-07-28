@@ -10,84 +10,90 @@ import Info from "./Info/Info";
 import Search from "../../UI/Search/Search";
 
 export class MiddleNavbar extends Component {
-  static contextType = UiContext;
+	static contextType = UiContext;
 
-  state = {
-    navbar: false,
-  };
+	state = {
+		navbar: false,
+	};
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarHeight);
-  }
+	componentDidMount() {
+		window.addEventListener("scroll", this.changeNavbarHeight);
+	}
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeNavbarHeight);
-  }
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.changeNavbarHeight);
+	}
 
-  changeNavbarHeight = debounce(50, () => {
-    if (window.scrollY >= 80) {
-      this.setState({ navbar: true });
-    } else {
-      this.setState({ navbar: false });
-    }
-  });
+	changeNavbarHeight = debounce(50, () => {
+		if (window.scrollY >= 80) {
+			this.setState({ navbar: true });
+		} else {
+			this.setState({ navbar: false });
+		}
+	});
 
-  render() {
-    const { navbar } = this.state;
-    const {
-      onSearch,
-      cartItems,
-      isHomePage,
-      onToggleCart,
-      onToggleSidebar,
-      onToggleAccount,
-    } = this.props;
+	render() {
+		const { navbar } = this.state;
+		const {
+			onSearch,
+			cartItems,
+			isHomePage,
+			onToggleCart,
+			onToggleSidebar,
+			onToggleAccount,
+		} = this.props;
 
-    console.log(this.context.scrolled);
+		console.log(this.context.scrolled);
 
-    return (
-      <nav
-        className={`${classes.middle__navbar} ${navbar && classes.active} ${
-          isHomePage && classes.active__home
-        }`}
-      >
-        <div className="container">
-          <div className={classes.inner}>
-            {isHomePage && (
-              <div>
-                <MenuIcon
-                  className={classes.menuIcon}
-                  onToggleSidebar={onToggleSidebar}
-                />
-                <Link to="/" className={classes.brand__home}>
-                  <img
-                    className="img-fluid"
-                    src="/images/yeshteryLg.svg"
-                    alt="brand_logo_black"
-                  />
-                </Link>
-              </div>
-            )}
+		return (
+			<nav
+				className={`${classes.middle__navbar} ${navbar && classes.active} ${
+					isHomePage && classes.active__home
+				}`}
+			>
+				<div className="container">
+					<div className={classes.inner}>
+						{!isHomePage && (
+							<MenuIcon
+								className={classes.menuIcon__other}
+								onToggleSidebar={onToggleSidebar}
+							/>
+						)}
+						{isHomePage && (
+							<div>
+								<MenuIcon
+									className={classes.menuIcon}
+									onToggleSidebar={onToggleSidebar}
+								/>
+								<Link to="/" className={classes.brand__home}>
+									<img
+										className="img-fluid"
+										src="/images/yeshteryLg.svg"
+										alt="brand_logo_black"
+									/>
+								</Link>
+							</div>
+						)}
 
-            {isHomePage && this.context.scrolled && <Search navbar={navbar} />}
-            {!isHomePage && <Search navbar={navbar} />}
+						{isHomePage && this.context.scrolled && <Search navbar={navbar} />}
+						{!isHomePage && <Search navbar={navbar} />}
 
-            {!isHomePage && (
-              <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
-            )}
-            <div className={classes.spacer} />
-            <Info
-              onSearch={onSearch}
-              cartItems={cartItems}
-              isHomePage={isHomePage}
-              toggleCart={onToggleCart}
-              toggleAccount={onToggleAccount}
-            />
-          </div>
-        </div>
-      </nav>
-    );
-  }
+						{!isHomePage && (
+							<img className="img-fluid" src="/images/adidas.svg" alt="brand" />
+						)}
+						<div className={classes.spacer} />
+						<Info
+							onSearch={onSearch}
+							cartItems={cartItems}
+							isHomePage={isHomePage}
+							toggleCart={onToggleCart}
+							toggleAccount={onToggleAccount}
+						/>
+					</div>
+				</div>
+			</nav>
+		);
+	}
 }
 
 export default MiddleNavbar;

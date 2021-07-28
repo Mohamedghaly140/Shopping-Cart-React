@@ -1,39 +1,61 @@
 .upper__navbar {
-  width: 100%;
-  height: 48px;
-  z-index: 88;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0.73px 2px #00000080;
-  background: #fff100 0% 0% no-repeat padding-box;
+	width: 100%;
+	height: 48px;
+	z-index: 88;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0.73px 2px #00000080;
+	background: #fff100 0% 0% no-repeat padding-box;
 
-  @media (min-width: 576px) {
-    z-index: 5 !important;
-  }
+	@media (min-width: 576px) {
+		z-index: 5 !important;
+	}
 }
 
 .inner {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  @media (max-width: 575.98px) {
-    justify-content: center;
-  }
+	@media (max-width: 575.98px) {
+		justify-content: center;
+	}
 
-  .menu {
-    cursor: pointer;
-    margin-right: 30px;
+	.menu {
+		cursor: pointer;
+		margin-right: 30px;
 
-    @media (max-width: 575.98px) {
-      display: none;
-    }
-  }
+		@media (max-width: 575.98px) {
+			display: none;
+		}
+	}
 }
 
 .upper__navbar__home {
-  color: #fff !important;
-  box-shadow: 0px 0.73px 2px #00000080;
-  background: #3c3c3b 0% 0% no-repeat padding-box;
+	color: #fff !important;
+	box-shadow: 0px 0.73px 2px #00000080;
+	background: #3c3c3b 0% 0% no-repeat padding-box;
+}
+
+.menuIcon {
+	@media (max-width: 575.98px) {
+		display: none;
+	}
+
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		margin-right: 28px;
+	}
+
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		margin-right: 28px;
+	}
+
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		margin-right: 32px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-right: 32px;
+	}
 }
