@@ -34,7 +34,7 @@ class ProductDetails extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (+prevProps.match.params.id !== +this.props.match.params.id) {
+    if (+this.props.match.params.id !== +prevProps.match.params.id) {
       this.fetchAndSetProduct();
     }
   }

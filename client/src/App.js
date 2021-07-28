@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
 import SideBar from "./components/SideBar/SideBar";
+import UiContextProvider from "./context/ui-context";
 import MyAccount from "./components/MyAccount/MyAccount";
 import MobileNav from "./components/MobileNav/MobileNav";
 import SearchContainer from "./components/SearchContainer/SearchContainer";
@@ -145,7 +146,7 @@ class App extends Component {
     } = this.state;
 
     return (
-      <Fragment>
+      <UiContextProvider>
         <Navbar
           cartItems={cart}
           onSearch={this.toggleSearchHandler}
@@ -189,7 +190,7 @@ class App extends Component {
             onToggleAccount={this.toggleAccountHandler}
           />
         </Fragment>
-      </Fragment>
+      </UiContextProvider>
     );
   }
 }

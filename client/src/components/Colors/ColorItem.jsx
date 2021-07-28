@@ -7,9 +7,8 @@ class ColorItem extends Component {
 
     return (
       <button
-        style={{ border: selected ? "1px solid #542E90" : "none" }}
-        className={classes.color__item}
         onClick={onSelectColor.bind(null, value)}
+        className={`${classes.color__item} ${selected && classes.active}`}
       >
         <img className="img-fluid" alt="color" src={image} />
       </button>

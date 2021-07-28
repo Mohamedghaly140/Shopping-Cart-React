@@ -32,13 +32,18 @@
 }
 
 .discount__price {
-  letter-spacing: 0px;
-  color: #a7a9ac;
-  font-size: 14px;
-  text-decoration: line-through;
-  text-align: left;
   display: flex;
+  font-size: 14px;
+  text-align: left;
+  color: #a7a9ac;
   margin-left: 11px;
+  letter-spacing: 0px;
+
+  span {
+    &:first-child {
+      text-decoration: line-through;
+    }
+  }
 
   @media (max-width: 320.98px) {
     margin-left: 11px;

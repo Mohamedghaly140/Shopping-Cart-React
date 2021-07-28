@@ -15,7 +15,11 @@ const StoreItem = ({ title, storeImageUrl, imageUrl, options }) => {
       </div>
       <div className={classes.actions}>
         <div className={classes.select__container}>
-          <SelectBox options={options} placeholder="Choose Branch" />
+          <SelectBox
+            options={options}
+            placeholder="Choose Branch"
+            menuPlacement="top"
+          />
         </div>
         <button className={classes.start__shopping}>Start Shopping</button>
       </div>

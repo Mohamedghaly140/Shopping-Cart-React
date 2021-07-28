@@ -37,7 +37,7 @@ class SimilarProducts extends Component {
 
     return (
       <div className="container pt-4 pt-md-0">
-        <Title>SimilarProducts</Title>
+        <Title>Similar Products</Title>
         <SubTitle>You may like these products also</SubTitle>
         <section className={classes.scroll}>
           <SliderLeftButton

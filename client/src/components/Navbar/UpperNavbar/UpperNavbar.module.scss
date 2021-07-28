@@ -1,13 +1,13 @@
 .upper__navbar {
-  background: #fff100 0% 0% no-repeat padding-box;
-  box-shadow: 0px 0.73px 2px #00000080;
+  width: 100%;
   height: 48px;
+  z-index: 88;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  z-index: 88;
-  width: 100%;
+  box-shadow: 0px 0.73px 2px #00000080;
+  background: #fff100 0% 0% no-repeat padding-box;
 
   @media (min-width: 576px) {
     z-index: 5 !important;
@@ -30,4 +30,10 @@
       display: none;
     }
   }
+}
+
+.upper__navbar__home {
+  color: #fff !important;
+  box-shadow: 0px 0.73px 2px #00000080;
+  background: #3c3c3b 0% 0% no-repeat padding-box;
 }

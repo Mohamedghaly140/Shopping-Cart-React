@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import { debounce } from "throttle-debounce";
+import { UiContext } from "../../../context/ui-context";
 import classes from "./MiddleNavbar.module.scss";
 
 // Import Components
@@ -8,6 +10,8 @@ import Info from "./Info/Info";
 import Search from "../../UI/Search/Search";
 
 export class MiddleNavbar extends Component {
+  static contextType = UiContext;
+
   state = {
     navbar: false,
   };
@@ -33,26 +37,46 @@ export class MiddleNavbar extends Component {
     const {
       onSearch,
       cartItems,
+      isHomePage,
       onToggleCart,
       onToggleSidebar,
       onToggleAccount,
     } = this.props;
 
     return (
-      <nav className={`${classes.middle__navbar} ${navbar && classes.active}`}>
+      <nav
+        className={`${classes.middle__navbar} ${navbar && classes.active} ${
+          isHomePage && classes.active__home
+        }`}
+      >
         <div className="container">
           <div className={classes.inner}>
-            <MenuIcon
-              isVisible
-              marginRight="16px"
-              onToggleSidebar={onToggleSidebar}
-            />
-            <Search navbar={navbar} />
-            <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
+            {isHomePage && (
+              <div>
+                <MenuIcon
+                  className={classes.menuIcon}
+                  onToggleSidebar={onToggleSidebar}
+                />
+                <Link to="/" className={classes.brand__home}>
+                  <img
+                    className="img-fluid"
+                    src="/images/yeshteryLg.svg"
+                    alt="brand_logo_black"
+                  />
+                </Link>
+              </div>
+            )}
+
+            {this.context.scrolled && <Search navbar={navbar} />}
+
+            {!isHomePage && (
+              <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
+            )}
             <div className={classes.spacer} />
             <Info
               onSearch={onSearch}
               cartItems={cartItems}
+              isHomePage={isHomePage}
               toggleCart={onToggleCart}
               toggleAccount={onToggleAccount}
             />

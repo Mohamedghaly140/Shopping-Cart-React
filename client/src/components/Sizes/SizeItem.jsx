@@ -11,9 +11,8 @@ class SizeItem extends Component {
 
     return (
       <div
-        style={{ backgroundColor: selected ? "#ECECEC" : "#fff" }}
-        className={classes.size__item}
         onClick={this.onSelectSizeHandler.bind(this, value)}
+        className={`${classes.size__item} ${selected && classes.active}`}
       >
         <label>
           {size}

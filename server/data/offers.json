@@ -3,28 +3,28 @@
     "id": 1,
     "title": "2021 New Year Discounts",
     "description": "Up to 50% sale on selected items during February.",
-    "brand": "https://yeshtery.herokuapp.com/public/images/adidas.svg",
+    "brand": "https://yeshtery.herokuapp.com/public/images/adidas@white.svg",
     "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
   },
   {
     "id": 2,
-    "title": "2021 New Year Discounts",
+    "title": "Men’s Fashion Discounts",
     "description": "Up to 50% sale on selected items during February.",
-    "brand": "https://yeshtery.herokuapp.com/public/images/vans.svg",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+    "brand": "https://yeshtery.herokuapp.com/public/images/adidas@white.svg",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer2@2x.png"
   },
   {
     "id": 3,
-    "title": "2021 New Year Discounts",
-    "description": "Up to 50% sale on selected items during February.",
+    "title": "Valentine’s Day Discounts",
+    "description": "Up to 60% sale on selected items during July.",
     "brand": "https://yeshtery.herokuapp.com/public/images/sport.svg",
     "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
   },
   {
     "id": 4,
     "title": "2021 New Year Discounts",
-    "description": "Up to 50% sale on selected items during February.",
+    "description": "Up to 30% sale on selected items during February.",
     "brand": "https://yeshtery.herokuapp.com/public/images/rockport.svg",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer1@2x.png"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/offer2@2x.png"
   }
 ]

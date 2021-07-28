@@ -1,18 +1,23 @@
 .exploreButton {
   width: 140px;
   height: 48px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 0px 2px #00000040;
-  border-radius: 24px;
-  padding-inline: 38px;
-  text-align: center;
-  color: #542e90;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: capitalize;
-  margin-top: 14px;
   outline: none;
   border: none;
+  font-size: 16px;
+  margin-top: 14px;
+  color: #542e90;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 24px;
+  padding-inline: 38px;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 0px 2px #00000040;
+  background: #ffffff 0% 0% no-repeat padding-box;
+
+  &:hover {
+    box-shadow: 0px 2px 4px #999;
+  }
 
   @media (max-width: 320.98px) {
     width: 54px;

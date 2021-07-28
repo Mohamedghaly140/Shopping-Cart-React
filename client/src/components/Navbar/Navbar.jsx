@@ -10,31 +10,35 @@ import BreadCrumb from "./BreadCrumb/BreadCrumb";
 import classes from "./Navbar.module.scss";
 
 export class Navbar extends Component {
-	render() {
-		const {
-			onToggleSidebar,
-			onSearch,
-			cartItems,
-			toggleCart,
-			onToggleAccount,
-			location,
-		} = this.props;
+  render() {
+    const {
+      onToggleSidebar,
+      onSearch,
+      cartItems,
+      toggleCart,
+      onToggleAccount,
+      location,
+    } = this.props;
 
-		return (
-			<header className={classes.navbar}>
-				<UpperNavbar onToggleSidebar={onToggleSidebar} />
-				<MiddleNavbar
-					onSearch={onSearch}
-					cartItems={cartItems}
-					onToggleCart={toggleCart}
-					onToggleSidebar={onToggleSidebar}
-					onToggleAccount={onToggleAccount}
-				/>
-				<BottomNavbar />
-				{location.pathname.includes("/product/") && <BreadCrumb />}
-			</header>
-		);
-	}
+    return (
+      <header className={classes.navbar}>
+        <UpperNavbar
+          onToggleSidebar={onToggleSidebar}
+          isHomePage={location.pathname === "/"}
+        />
+        <MiddleNavbar
+          onSearch={onSearch}
+          cartItems={cartItems}
+          onToggleCart={toggleCart}
+          onToggleSidebar={onToggleSidebar}
+          onToggleAccount={onToggleAccount}
+          isHomePage={location.pathname === "/"}
+        />
+        <BottomNavbar />
+        {location.pathname.includes("/product/") && <BreadCrumb />}
+      </header>
+    );
+  }
 }
 
 export default withRouter(Navbar);

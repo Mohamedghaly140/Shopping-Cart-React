@@ -29,14 +29,30 @@
   letter-spacing: 0px;
   transform: translateX(-50%);
 
+  span {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+  }
+
   @media (max-width: 320.98px) {
     top: 18px;
     font-size: 18px;
+
+    span {
+      font-size: 12px;
+    }
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     top: 18px;
     font-size: 18px;
+
+    span {
+      font-size: 12px;
+    }
   }
 }
 

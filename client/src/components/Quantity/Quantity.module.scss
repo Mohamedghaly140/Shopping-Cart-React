@@ -49,16 +49,21 @@
 }
 
 .btn {
-  background: #fff200 0% 0% no-repeat padding-box;
   border: none;
   width: 37px;
   height: 37px;
   border-radius: 50%;
   outline: none;
   display: flex;
+  padding: 12px;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  transition: all 0.4s ease-in-out;
+  background: #fff200 0% 0% no-repeat padding-box;
+
+  &:hover {
+    box-shadow: 0px 0px 5px #00000026;
+  }
 
   svg {
     width: 100%;
@@ -82,19 +87,25 @@
   margin-top: 18px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .add_to_cart {
-  background: #542e90 0% 0% no-repeat padding-box;
-  border-radius: 27px;
   width: 252px;
   height: 54px;
   color: #fff;
-  text-align: center;
-  text-transform: capitalize;
   border: none;
   outline: none;
+  text-align: center;
+  border-radius: 27px;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+  background: #542e90 0% 0% no-repeat padding-box;
+
+  &:hover {
+    background: #44158f;
+    box-shadow: 0px 0px 5px #00000026;
+  }
 
   &:disabled {
     opacity: 0.6;
@@ -102,7 +113,6 @@
   }
 
   @media (max-width: 320.98px) {
-    background: #542e90 0% 0% no-repeat padding-box;
     border-radius: 16px;
     font-size: 9px;
     width: 136px;
@@ -111,7 +121,6 @@
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
-    background: #542e90 0% 0% no-repeat padding-box;
     border-radius: 18px;
     font-size: 12px;
     width: 144px;
@@ -121,32 +130,38 @@
 }
 
 .pick__up {
-  background: #fff200 0% 0% no-repeat padding-box;
-  border-radius: 27px;
   width: 252px;
   height: 54px;
   color: #000;
-  text-align: center;
-  text-transform: capitalize;
   border: none;
   outline: none;
-  margin-left: 1rem;
+  margin-left: 32px;
+  text-align: center;
+  border-radius: 27px;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+  background: #fff200 0% 0% no-repeat padding-box;
+
+  &:hover {
+    background: #eade00;
+    box-shadow: 0px 0px 5px #00000026;
+  }
 
   @media (max-width: 320.98px) {
-    background: #fff200 0% 0% no-repeat padding-box;
-    border-radius: 16px;
-    font-size: 9px;
     width: 136px;
     height: 32px;
+    font-size: 9px;
     font-weight: bold;
+    margin-left: 16px;
+    border-radius: 16px;
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
-    background: #fff200 0% 0% no-repeat padding-box;
-    border-radius: 18px;
-    font-size: 12px;
     width: 144px;
     height: 40px;
+    font-size: 12px;
     font-weight: bold;
+    margin-left: 16px;
+    border-radius: 18px;
   }
 }

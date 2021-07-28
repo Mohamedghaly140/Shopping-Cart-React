@@ -64,12 +64,17 @@
 }
 
 .discount__price {
-  letter-spacing: 0px;
+  display: flex;
   color: #a7a9ac;
   font-size: 14px;
-  text-decoration: line-through;
   text-align: left;
-  display: flex;
+  letter-spacing: 0px;
+
+  span {
+    &:first-child {
+      text-decoration: line-through;
+    }
+  }
 
   @media (max-width: 320.98px) {
     font-size: 7.3px;
@@ -103,7 +108,6 @@
 .discount__percent {
   width: 52px;
   height: 18px;
-  text-align: center;
   letter-spacing: 0px;
   color: #000000;
   font-weight: bold;
@@ -113,15 +117,14 @@
   margin-left: 8px;
   border-radius: 6px;
   line-height: 17px;
-  background: #fff200 0% 0% no-repeat padding-box;
   text-decoration: none;
+  background: #fff200 0% 0% no-repeat padding-box;
 
   @media (max-width: 320.98px) {
     width: 33px;
     height: 10px;
     font-weight: bold;
     line-height: 10px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 6px;
     font-size: 6.28px;
     margin-left: 3.1px;
@@ -132,7 +135,6 @@
     height: 10px;
     font-weight: bold;
     line-height: 10px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 6px;
     font-size: 6.28px;
     margin-left: 3.1px;
@@ -143,7 +145,6 @@
     height: 12px;
     font-weight: bold;
     line-height: 12px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 6px;
     font-size: 7.28px;
     margin-left: 6.1px;
@@ -154,7 +155,6 @@
     height: 14px;
     font-weight: bold;
     line-height: 14px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 8px;
     font-size: 8.28px;
     margin-left: 8.1px;
@@ -165,7 +165,6 @@
     height: 18px;
     font-weight: bold;
     line-height: 18px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 7px;
     font-size: 10px;
     margin-left: 8.1px;
@@ -176,7 +175,6 @@
     height: 12px;
     font-weight: bold;
     line-height: 10px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 6px;
     font-size: 7.28px;
     margin-left: 4.1px;
@@ -187,7 +185,6 @@
     height: 12px;
     font-weight: bold;
     line-height: 10px;
-    background: #fff200 0% 0% no-repeat padding-box;
     border-radius: 6px;
     font-size: 7.28px;
     margin-left: 4.1px;

@@ -51,13 +51,11 @@
 }
 
 .description {
-  color: #1d1d1b;
+  width: 100%;
   font-size: 14px;
+  color: #1d1d1b;
   font-weight: bold;
   margin-bottom: 6px;
-  width: 100%;
-  text-align: justify;
-  text-justify: distribute;
 
   @media (max-width: 320.98px) {
     font-size: 10px;

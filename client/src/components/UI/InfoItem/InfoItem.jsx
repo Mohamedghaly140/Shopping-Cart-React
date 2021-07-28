@@ -4,15 +4,17 @@ import classes from "./infoItem.module.scss";
 
 class InfoItem extends Component {
   render() {
-    const { icon, link, onClick, className } = this.props;
+    const { Icon, link, onClick, className, isHomePage } = this.props;
 
     return (
       <button
-        className={`${classes.info__item} ${className}`}
+        className={`${classes.info__item} ${className} ${
+          isHomePage && classes.active
+        }`}
         onClick={onClick}
       >
         <span className="icon me-0 me-sm-2">
-          <img className="img-fluid" src={icon} alt="icon" />
+          {Icon && <Icon fill={isHomePage ? "#fff" : "#000"} />}
         </span>
         <span className={classes.link}>{link}</span>
       </button>
@@ -21,7 +23,6 @@ class InfoItem extends Component {
 }
 
 InfoItem.propTypes = {
-  icon: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };
 

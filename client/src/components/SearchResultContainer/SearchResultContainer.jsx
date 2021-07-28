@@ -53,7 +53,9 @@ class SearchResultContainer extends Component {
             <span>Filter By</span> <ArrowRight />
           </button>
         </div>
-        <ProductList products={products} />
+        <div className={classes.productList}>
+          <ProductList products={products} className />
+        </div>
       </div>
     );
   }
