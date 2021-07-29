@@ -151,3 +151,30 @@
     display: none;
   }
 }
+
+.brand {
+  @media (max-width: 575.98px) {
+    width: 56px;
+    height: 37px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 70px;
+    height: 40px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    width: 70px;
+    height: 40px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 70px;
+    height: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 70px;
+    height: 40px;
+  }
+}

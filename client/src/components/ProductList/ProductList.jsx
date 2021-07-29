@@ -15,8 +15,11 @@ const ProductList = props => {
     products.slice(0, length).map(product => (
       <Link
         key={product.id}
-        to={`/product/${product.id}`}
         className={`${className && classes.product__link}`}
+        to={{
+          pathname: `/product/${product.id}`,
+          state: { brand: product.brand },
+        }}
       >
         <Product product={product} />
       </Link>

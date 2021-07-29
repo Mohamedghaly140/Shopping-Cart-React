@@ -13,7 +13,6 @@ class Caption extends Component {
   }
 
   componentDidMount() {
-    console.dir(this.searchInputRef.current);
     window.addEventListener("scroll", this.changeSearchBarPosition);
   }
 

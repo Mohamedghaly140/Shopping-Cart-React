@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import { debounce } from "throttle-debounce";
 import { UiContext } from "../../../context/ui-context";
 import CSSTransition from "react-transition-group/CSSTransition";
-import classes from "./MiddleNavbar.module.scss";
-
-// Import Components
 import Info from "./Info/Info";
 import Search from "../../UI/Search/Search";
+import classes from "./MiddleNavbar.module.scss";
 
 export class MiddleNavbar extends Component {
   static contextType = UiContext;
@@ -43,8 +41,6 @@ export class MiddleNavbar extends Component {
       onToggleSidebar,
       onToggleAccount,
     } = this.props;
-
-    console.log(this.context.scrolled);
 
     return (
       <nav
@@ -81,22 +77,31 @@ export class MiddleNavbar extends Component {
               </div>
             )}
 
-            <CSSTransition
-              in={isHomePage && this.context.scrolled}
-              timeout={800}
-              mountOnEnter
-              unmountOnExit
-              classNames="fade-in"
-            >
-              <Search navbar={navbar} />
-            </CSSTransition>
+            {isHomePage && (
+              <CSSTransition
+                in={isHomePage && this.context.scrolled}
+                timeout={800}
+                mountOnEnter
+                unmountOnExit
+                classNames="fade-in"
+              >
+                <Search navbar={navbar} />
+              </CSSTransition>
+            )}
 
             {!isHomePage && <Search navbar={navbar} />}
 
             {!isHomePage && (
-              <img className="img-fluid" src="/images/adidas.svg" alt="brand" />
+              <img
+                className={`${classes.brand} img-fluid`}
+                // src="/images/adidas.svg"
+                src={this.props.location.state.brand}
+                alt="brand"
+              />
             )}
+
             <div className={classes.spacer} />
+
             <Info
               onSearch={onSearch}
               cartItems={cartItems}
@@ -111,4 +116,4 @@ export class MiddleNavbar extends Component {
   }
 }
 
-export default MiddleNavbar;
+export default withRouter(MiddleNavbar);
