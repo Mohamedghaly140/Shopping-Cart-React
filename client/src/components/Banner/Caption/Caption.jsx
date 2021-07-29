@@ -48,7 +48,7 @@ class Caption extends Component {
 
         <CSSTransition
           in={window.scrollY < 430}
-          timeout={1000}
+          timeout={400}
           mountOnEnter
           unmountOnExit
           classNames="fade-slide"
