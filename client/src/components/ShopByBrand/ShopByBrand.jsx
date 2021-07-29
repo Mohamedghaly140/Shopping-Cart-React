@@ -1,26 +1,21 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
-import BrandsList from "../BrandsList/BrandsList";
 
+import Carousel from "nuka-carousel";
+import ShopByBrandContainer from "../UI/ShopByBrandContainer/ShopByBrandContainer";
+import BrandItem from "../UI/BrandItem/BrandItem";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
-import ShopByBrandContainer from "../UI/ShopByBrandContainer/ShopByBrandContainer";
 
 import classes from "./ShopByBrand.module.scss";
 
 class ShopByBrand extends Component {
-  constructor(props) {
-    super(props);
-    this.sliderRef = React.createRef();
+  state = {
+    index: 5,
+  };
 
-    this.state = {
-      selected: 4,
-      brand: {},
-    };
-  }
-
-  selectBrandHandler = brand => {
-    this.setState({ selected: brand.id, brand });
+  selectBrandHandler = index => {
+    this.setState({ index });
   };
 
   slideLeftHandler = () => {
@@ -38,7 +33,7 @@ class ShopByBrand extends Component {
   };
 
   render() {
-    const { selected } = this.state;
+    const { index } = this.state;
     const { brands } = this.props;
 
     const options = [
@@ -63,29 +58,56 @@ class ShopByBrand extends Component {
           />
         )}
       >
-        <SliderLeftButton
-          className={classes.slide__button}
-          onSlideLeft={this.slideLeftHandler}
-          color="#fff"
-        />
-        <SliderRightButton
-          className={classes.slide__button}
-          onSlideRight={this.slideRightHandler}
-          color="#fff"
-        />
-        <div
-          ref={this.sliderRef}
-          className={classes.brands__list}
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(brands.length)}, auto)`,
-          }}
+        <Carousel
+          // afterSlide={slideIndex => this.setState({ index: slideIndex })}
+          wrapAround
+          slidesToShow={7}
+          cellSpacing={28}
+          slidesToScroll="auto"
+          className={classes.brand__carousel}
+          slideIndex={index}
+          // withoutControls={!showThumbArrows}
+          // defaultControlsConfig={nukaSarouselSetting(styles)}
+          // slidesToShow={slidesToShow}
+          // cellAlign={slidesToShow > brands.length ? "center" : "center"}
+          // beforeSlide={this.beforeSlide}
+          // slideIndex={activeSlideId}
+          // initialSlideHeight={180}
+          renderCenterLeftControls={null}
+          renderCenterRightControls={null}
+          renderBottomCenterControls={null}
+          renderTopLeftControls={
+            // showThumbArrows &&
+            ({ previousSlide }) => (
+              <SliderLeftButton
+                className={classes.slide__button}
+                onSlideLeft={previousSlide}
+              />
+            )
+          }
+          renderTopRightControls={
+            // showThumbArrows &&
+            ({ nextSlide }) => (
+              <SliderRightButton
+                className={classes.slide__button}
+                onSlideRight={nextSlide}
+              />
+            )
+          }
         >
-          <BrandsList
-            brands={brands}
-            selected={selected}
-            onSelectBrand={this.selectBrandHandler}
-          />
-        </div>
+          {brands.map((item, i) => (
+            <BrandItem
+              index={i}
+              id={item.id}
+              brand={item}
+              key={item.id}
+              title={item.title}
+              selected={index === i}
+              imageUrl={item.imageUrl}
+              onSelectBrand={this.selectBrandHandler}
+            />
+          ))}
+        </Carousel>
       </Section>
     );
   }

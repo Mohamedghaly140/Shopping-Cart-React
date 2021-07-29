@@ -5,66 +5,75 @@ import CategoryItem from "../UI/CategoryItem/CategoryItem";
 import classes from "./CategoriesList.module.scss";
 
 class Categories extends Component {
-	state = {
-		small: false,
-	};
+  state = {
+    small: false,
+  };
 
-	componentDidMount() {
-		if (window.innerWidth < 992) {
-			this.setState({ small: true });
-		}
+  componentDidMount() {
+    if (window.innerWidth < 992) {
+      this.setState({ small: true });
+    }
 
-		window.addEventListener("resize", this.windowResizeHandler);
-	}
+    window.addEventListener("resize", this.windowResizeHandler);
+  }
 
-	componentWillUnmount() {
-		window.removeEventListener("resize", this.windowResizeHandler);
-	}
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.windowResizeHandler);
+  }
 
-	windowResizeHandler = debounce(250, () => {
-		if (window.innerWidth < 992) {
-			this.setState({ small: true });
-		} else {
-			this.setState({ small: false });
-		}
-	});
+  windowResizeHandler = debounce(250, () => {
+    if (window.innerWidth < 992) {
+      this.setState({ small: true });
+    } else {
+      this.setState({ small: false });
+    }
+  });
 
-	clacLgItem(outer, inner) {
-		const { small } = this.state;
+  clacLgItem(outer, inner) {
+    const { small } = this.state;
 
-		if (small) {
-			return outer % 2 === inner % 2;
-		} else {
-			return (outer % 3) % 2 === inner % 2;
-		}
-	}
+    if (small) {
+      return outer % 2 === inner % 2;
+    } else {
+      return (outer % 3) % 2 === inner % 2;
+    }
+  }
 
-	render() {
-		const { className, categories, length = Infinity } = this.props;
-		const rows = new Array(Math.ceil(categories.slice(0, length).length) / 2);
+  render() {
+    const { className, categories, length = Infinity } = this.props;
 
-		for (let i = 0; i < rows.length; i++) {
-			rows[i] = { items: categories.slice(i * 2, i * 2 + 2) };
-		}
+    const rows = new Array(Math.ceil(categories.slice(0, length).length / 2));
 
-		const categoriesList = rows.map((item, index) => (
-			<div key={index} className={classes.category__item}>
-				{item.items.map((category, i) => (
-					<CategoryItem
-						key={category.id}
-						className={className}
-						lg={this.clacLgItem(index, i)}
-						title={category.title}
-						imageUrlLg={category.imageUrlLg}
-						imageUrlSm={category.imageUrlSm}
-						description={category.description}
-					/>
-				))}
-			</div>
-		));
+    for (let i = 0; i < rows.length; i++) {
+      rows[i] = { items: categories.slice(i * 2, i * 2 + 2) };
+    }
 
-		return categoriesList;
-	}
+    const categoriesList = rows.map((item, index) => (
+      <div key={index} className={classes.category__item}>
+        {item.items.map((category, i) => (
+          <CategoryItem
+            key={category.id}
+            className={className}
+            lg={this.clacLgItem(index, i)}
+            title={category.title}
+            imageUrlLg={category.imageUrlLg}
+            imageUrlSm={category.imageUrlSm}
+            description={category.description}
+          />
+        ))}
+      </div>
+    ));
+
+    return categoriesList;
+  }
 }
 
 export default Categories;
+
+// {
+//     "id": 17,
+//     "title": "Foods",
+//     "description": "Find latest electronic devices.",
+//     "imageUrlLg": "https://yeshtery.herokuapp.com/public/images/categories/foods@2x.png",
+//     "imageUrlSm": "https://yeshtery.herokuapp.com/public/images/categories/foods.png"
+//   },

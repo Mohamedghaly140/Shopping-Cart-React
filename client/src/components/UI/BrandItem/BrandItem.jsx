@@ -1,15 +1,15 @@
 import React from "react";
 import classes from "./BrandItem.module.scss";
 
-const BrandItem = ({ id, imageUrl, title, selected, onSelectBrand, brand }) => {
-  const onSelectBrandHandler = brand => {
-    onSelectBrand(brand);
+const BrandItem = ({ index, imageUrl, title, selected, onSelectBrand }) => {
+  const onSelectBrandHandler = index => {
+    onSelectBrand(index);
   };
 
   return (
     <button
       className={`${classes.brandItem} ${selected ? classes.selected : ""}`}
-      onClick={() => onSelectBrandHandler(brand)}
+      onClick={() => onSelectBrandHandler(index)}
     >
       <img className="img-fluid" src={imageUrl} alt={title} />
     </button>
