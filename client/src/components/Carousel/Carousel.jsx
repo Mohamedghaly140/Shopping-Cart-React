@@ -36,12 +36,12 @@ class Carousel extends Component {
     return (
       <OwlCarousel
         className="owl-theme"
-        loop={false}
+        loop={true}
         margin={0}
         nav={true}
         dots={false}
         center={true}
-        autoplay={false}
+        autoplay={true}
         navText={[
           `<svg
                 xmlns="http://www.w3.org/2000/svg"
