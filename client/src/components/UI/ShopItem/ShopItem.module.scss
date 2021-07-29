@@ -1,0 +1,78 @@
+.shopItem {
+  width: 368px;
+  height: 500px;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  border-radius: 20px;
+  background: #ff0000 0% 0% no-repeat padding-box;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 320.98px) {
+    width: 180px;
+    height: 240px;
+    border-radius: 15px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    width: 180px;
+    height: 240px;
+    border-radius: 15px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 330px;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  border-radius: 0px 0px 20px 20px;
+  background: transparent linear-gradient(0deg, #000000 20%, #00000000 100%) 0%
+    0% no-repeat padding-box;
+
+  @media (max-width: 320.98px) {
+    height: 162px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    height: 162px;
+    border-radius: 0px 0px 15px 15px;
+  }
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+  z-index: 2;
+  display: flex;
+  padding-bottom: 44px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border-radius: 20px 0px 0px 20px;
+
+  @media (max-width: 320.98px) {
+    padding-bottom: 19px;
+    border-radius: 15px 0px 0px 15px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    padding-bottom: 19px;
+    border-radius: 15px 0px 0px 15px;
+  }
+}

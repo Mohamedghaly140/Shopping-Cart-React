@@ -15,7 +15,7 @@ class PremiumProducts extends Component {
 
   render() {
     const { length } = this.state;
-    const { products } = this.props;
+    const { products, noLine } = this.props;
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -31,6 +31,7 @@ class PremiumProducts extends Component {
         subTitle="Premium products recommended just for you."
         onClickHandler={this.showMoreHandler}
         showMore={length !== Infinity}
+        style={{ border: noLine && "none" }}
       >
         <div className={classes.productList}>
           <ProductList products={products} length={length} className />

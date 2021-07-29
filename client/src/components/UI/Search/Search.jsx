@@ -20,23 +20,25 @@ class Search extends Component {
   };
 
   render() {
-    const { navbar } = this.props;
+    const { navbar, scrolled = true } = this.props;
 
     return (
-      <form
-        onSubmit={this.submitSearchHandler}
-        className={`${classes.search__container} ${navbar && classes.active}`}
-      >
-        <button type="submit" className={classes.search__icon}>
-          <SearchIcon width="24px" height="24px" color="#000" />
-        </button>
-        <input
-          type="text"
-          ref={this.searchInput}
-          placeholder="Search..."
-          className={classes.search}
-        />
-      </form>
+      scrolled && (
+        <form
+          onSubmit={this.submitSearchHandler}
+          className={`${classes.search__container} ${navbar && classes.active}`}
+        >
+          <button type="submit" className={classes.search__icon}>
+            <SearchIcon width="24px" height="24px" color="#000" />
+          </button>
+          <input
+            type="text"
+            ref={this.searchInput}
+            placeholder="Search..."
+            className={classes.search}
+          />
+        </form>
+      )
     );
   }
 }

@@ -1,0 +1,63 @@
+.owl-carousel.owl-loaded {
+  position: relative;
+}
+
+// .owl-carousel .item {
+//   @media (max-width: 575.98px) {
+//     height: 275px;
+//   }
+
+//   height: 560px;
+// }
+
+.owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  padding-inline: 32px;
+  transform: translateY(-50%);
+
+  @media (max-width: 575.98px) {
+    padding-inline: 0;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  margin: 0;
+  width: 75px;
+  height: 75px;
+  font-size: 30px;
+  outline: none;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+
+  svg {
+    fill: #fff;
+    transform: scale(2.5);
+  }
+
+  @media (max-width: 575.98px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-next span,
+.owl-carousel .owl-nav button.owl-prev span {
+  font-size: 40px;
+  display: block;
+  height: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background: transparent;
+}

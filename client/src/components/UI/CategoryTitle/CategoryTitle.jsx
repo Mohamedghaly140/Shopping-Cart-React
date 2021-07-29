@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import classes from "./CategoryTitle.module.scss";
 
-class CategoryTitle extends Component {
-  render() {
-    return <h3 className={classes.categoryTitle}>{this.props.children}</h3>;
-  }
-}
+const CategoryTitle = props => {
+  return (
+    <h3 style={{ color: props.color }} className={classes.categoryTitle}>
+      {props.children}
+    </h3>
+  );
+};
 
 export default CategoryTitle;

@@ -10,7 +10,10 @@ const Section = props => {
   const title = props.showMore ? "Show More" : props.buttonTitle;
 
   return (
-    <section className={`${classes.section} ${props.className}`}>
+    <section
+      style={{ ...props.style }}
+      className={`${classes.section} ${props.className}`}
+    >
       <div className={classes.sectionHeader}>
         <div>
           <Title>{props.title}</Title>

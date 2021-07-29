@@ -35,6 +35,7 @@ export class MiddleNavbar extends Component {
     const { navbar } = this.state;
     const {
       onSearch,
+      location,
       cartItems,
       isHomePage,
       onToggleCart,
@@ -85,7 +86,7 @@ export class MiddleNavbar extends Component {
                 unmountOnExit
                 classNames="fade-in"
               >
-                <Search navbar={navbar} />
+                <Search navbar={navbar} scrolled={this.context.scrolled} />
               </CSSTransition>
             )}
 
@@ -95,7 +96,11 @@ export class MiddleNavbar extends Component {
               <img
                 className={`${classes.brand} img-fluid`}
                 // src="/images/adidas.svg"
-                src={this.props.location.state.brand}
+                src={
+                  location.pathname.includes("/product/")
+                    ? location.state.brand
+                    : "/images/adidas.svg"
+                }
                 alt="brand"
               />
             )}

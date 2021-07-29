@@ -4,6 +4,7 @@ import Spinner from "../components/UI/Spinner/Spinner";
 
 import Home from "./Home";
 const SearchResult = lazy(() => import("./SearchResult"));
+const Organization = lazy(() => import("./Organization"));
 const ProductDetails = lazy(() => import("./ProductDetails"));
 const ShopAllCategories = lazy(() => import("./ShopAllCategories"));
 
@@ -34,6 +35,13 @@ class AppRouter extends Component {
           />
         </Route>
         <Suspense fallback={<Spinner />}>
+          <Route path="/organization">
+            <Organization
+              offers={offers}
+              loading={loading}
+              products={products}
+            />
+          </Route>
           <Route path="/product/:id">
             <ProductDetails
               products={products}
