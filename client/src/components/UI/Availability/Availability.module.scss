@@ -1,0 +1,44 @@
+.availability {
+  display: flex;
+  margin-top: 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 575.98px) {
+    margin-top: -4px;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+
+  @media (max-width: 575.98px) {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @media (max-width: 320.98px) {
+    svg {
+      width: 10px !important;
+      height: 10px !important;
+    }
+  }
+}
+
+.title {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  @media (max-width: 320.98px) {
+    font-size: 7px !important;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 12px;
+  }
+}

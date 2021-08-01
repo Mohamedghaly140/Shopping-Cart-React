@@ -1,58 +1,53 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import ArrowUp from "../Icons/ArrowUp";
 import ArrowDown from "../Icons/ArrowDown";
 import DropdownItem from "./DropdownItem/DropdownItem";
 
 import classes from "./Dropdown.module.scss";
 
-class Dropdown extends Component {
-  state = {
-    open: false,
+const Dropdown = props => {
+  const { items, title, index, currentIndex, onOpen, onClose } = props;
+
+  const open = index === currentIndex;
+
+  const toggleDropdownHander = index => {
+    if (index === currentIndex) {
+      onClose();
+      return;
+    }
+    onOpen(index);
   };
 
-  toggleDropdownHandler = () => {
-    this.setState(prevState => {
-      return {
-        open: !prevState.open,
-      };
-    });
-  };
-
-  render() {
-    const { open } = this.state;
-    const { items, title } = this.props;
-
-    return (
-      <div className={classes.dropdown}>
-        <div
-          className={classes.header}
-          style={{ borderBottom: open && "0.5px solid #d9d9d9" }}
+  return (
+    <div className={classes.dropdown}>
+      <div
+        className={classes.header}
+        style={{ borderBottom: open && "0.5px solid #d9d9d9" }}
+      >
+        <span className={classes.title}>{title}</span>
+        <button
+          className={classes.button}
+          onClick={() => toggleDropdownHander(index)}
         >
-          <span className={classes.title}>{title}</span>
-          <button
-            className={classes.button}
-            onClick={this.toggleDropdownHandler}
-          >
-            {open ? <ArrowUp /> : <ArrowDown />}
-          </button>
-        </div>
-        <Fragment>
-          {open && (
-            <ul
-              className={classes.items_list}
-              style={{
-                height: open ? "100%" : 0,
-              }}
-            >
-              {items.map(item => (
-                <DropdownItem key={item.id} title={item.title} />
-              ))}
-            </ul>
-          )}
-        </Fragment>
+          {open ? <ArrowUp /> : <ArrowDown />}
+        </button>
       </div>
-    );
-  }
-}
+      <Fragment>
+        {open && (
+          <ul
+            className={classes.items_list}
+            style={{
+              height: open ? "100%" : 0,
+            }}
+          >
+            {items.map(item => (
+              <DropdownItem key={item.id} title={item.title} />
+            ))}
+          </ul>
+        )}
+      </Fragment>
+    </div>
+  );
+};
 
 export default Dropdown;

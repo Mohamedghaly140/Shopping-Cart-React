@@ -14,7 +14,8 @@
     "discount_percent": 50,
     "rate": 4.2,
     "pickup_place": "Genena Mall",
-    "rates": 12
+    "rates": 12,
+    "availability": 0
   },
   {
     "id": 2,
@@ -35,7 +36,8 @@
       "countery": "Egypt",
       "delivery_in": 10
     },
-    "rates": 5
+    "rates": 5,
+    "availability": 1
   },
   {
     "id": 3,
@@ -52,7 +54,8 @@
     "discount_percent": 70,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
-    "rates": 9
+    "rates": 9,
+    "availability": 0
   },
   {
     "id": 4,
@@ -73,7 +76,8 @@
       "countery": "Egypt",
       "delivery_in": 2
     },
-    "rates": 19
+    "rates": 19,
+    "availability": 0
   },
   {
     "id": 5,
@@ -90,7 +94,8 @@
     "discount_percent": 15,
     "rate": 2.2,
     "pickup_place": "Genena Mall",
-    "rates": 22
+    "rates": 22,
+    "availability": 2
   },
   {
     "id": 6,
@@ -111,7 +116,8 @@
       "countery": "Egypt",
       "delivery_in": 2
     },
-    "rates": 19
+    "rates": 19,
+    "availability": 1
   },
   {
     "id": 7,
@@ -132,7 +138,8 @@
       "countery": "Egypt",
       "delivery_in": 10
     },
-    "rates": 5
+    "rates": 5,
+    "availability": 0
   },
   {
     "id": 8,
@@ -149,7 +156,8 @@
     "discount_percent": 20,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
-    "rates": 12
+    "rates": 12,
+    "availability": 0
   },
   {
     "id": 9,
@@ -166,7 +174,8 @@
     "discount_percent": 50,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
-    "rates": 12
+    "rates": 12,
+    "availability": 2
   },
   {
     "id": 10,
@@ -183,7 +192,8 @@
     "discount_percent": 70,
     "rate": 3.2,
     "pickup_place": "Genena Mall",
-    "rates": 9
+    "rates": 9,
+    "availability": 0
   },
   {
     "id": 11,
@@ -204,7 +214,8 @@
       "countery": "Egypt",
       "delivery_in": 2
     },
-    "rates": 19
+    "rates": 19,
+    "availability": 0
   },
   {
     "id": 12,
@@ -221,6 +232,7 @@
     "discount_percent": 22,
     "rate": 4.3,
     "pickup_place": "Genena Mall",
-    "rates": 12
+    "rates": 12,
+    "availability": 1
   }
 ]

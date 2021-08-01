@@ -4,8 +4,6 @@ import ShopCategoryList from "../ShopCategoryList/ShopCategoryList";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
-import shopData from "../../services/shop.json";
-
 import classes from "./ShopCategory.module.scss";
 
 class ShopCategory extends Component {
@@ -29,6 +27,8 @@ class ShopCategory extends Component {
   };
 
   render() {
+    const { shops } = this.props;
+
     return (
       <Section
         title="Shop By Category"
@@ -48,10 +48,10 @@ class ShopCategory extends Component {
           className={classes.row__container}
           ref={this.sliderRef}
           style={{
-            gridTemplateColumns: `repeat(${shopData.slice(0, 6).length},auto)`,
+            gridTemplateColumns: `repeat(${shops.slice(0, 6).length},auto)`,
           }}
         >
-          <ShopCategoryList shops={shopData} />
+          <ShopCategoryList shops={shops} />
         </div>
       </Section>
     );

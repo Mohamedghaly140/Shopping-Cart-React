@@ -7,6 +7,8 @@ import ShopCategory from "../components/ShopCategory/ShopCategory";
 import PremiumProducts from "../components/PremiumProducts/PremiumProducts";
 import Spinner from "../components/UI/Spinner/Spinner";
 
+import shopData from "../services/shop.json";
+
 class Organization extends Component {
   render() {
     const { loading, products, offers } = this.props;
@@ -24,7 +26,7 @@ class Organization extends Component {
             title="Best Sellers"
             subTitle="Check out our best sellers."
           />
-          <ShopCategory />
+          <ShopCategory shops={shopData} />
           <BestSellers
             products={products}
             title="On Sale"

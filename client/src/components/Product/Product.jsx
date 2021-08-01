@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classes from "./Product.module.scss";
 
 // Import Components
+// import Availability from "../UI/Availability/Availability";
 import PickupInfo from "../UI/PickupInfo/PickupInfo";
 import Rating from "../UI/Rating/Rating";
 import Price from "../UI/Price/Price";
@@ -11,15 +12,23 @@ export class Product extends Component {
     const {
       description,
       discount,
-      discount_percent,
-      discount_price,
       imageUrl,
-      pickup_place,
       price,
       rate,
-      pickup_info,
       brand,
+      pickup_info,
+      pickup_place,
+      // availability,
+      discount_price,
+      discount_percent,
     } = this.props.product;
+
+    // const type =
+    //   availability === 0
+    //     ? "in-stock"
+    //     : availability === 1
+    //     ? "out-stock"
+    //     : "Unknown";
 
     return (
       <div className={`${classes.product} product`}>
@@ -41,6 +50,7 @@ export class Product extends Component {
             <span className={classes.rate}>{rate} of 5</span>
           </div>
         </div>
+        {/* <Availability type={type} /> */}
         <PickupInfo pickup_place={pickup_place} pickup_info={pickup_info} />
       </div>
     );

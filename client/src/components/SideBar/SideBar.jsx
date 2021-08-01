@@ -6,7 +6,20 @@ import Dropdown from "../Dropdown/Dropdown";
 import sidebarItems from "../../services/sidebar-items.json";
 
 class SideBar extends Component {
+  state = {
+    index: null,
+  };
+
+  openDropdownHandler = index => {
+    this.setState({ index });
+  };
+
+  resetIndexHandler = () => {
+    this.setState({ index: null });
+  };
+
   render() {
+    const { index } = this.state;
     const { openSideBar, onToggleSidebar } = this.props;
 
     return (
@@ -30,8 +43,16 @@ class SideBar extends Component {
           </div>
           {this.props.children}
           <Fragment>
-            {sidebarItems.map(item => (
-              <Dropdown key={item.id} title={item.title} items={item.items} />
+            {sidebarItems.map((item, i) => (
+              <Dropdown
+                index={i}
+                key={item.id}
+                title={item.title}
+                items={item.items}
+                currentIndex={index}
+                onClose={this.resetIndexHandler}
+                onOpen={this.openDropdownHandler}
+              />
             ))}
           </Fragment>
         </aside>
