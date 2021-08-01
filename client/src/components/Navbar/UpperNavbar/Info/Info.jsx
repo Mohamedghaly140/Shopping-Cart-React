@@ -18,7 +18,7 @@ class Info extends Component {
 
   render() {
     const { infoLinks } = this.state;
-    const { isHomePage } = this.props;
+    const { isMainNav } = this.props;
 
     return (
       <div className={classes.info}>
@@ -27,7 +27,7 @@ class Info extends Component {
             key={item.id}
             Icon={item.icon}
             link={item.link}
-            isHomePage={isHomePage}
+            isMainNav={isMainNav}
           />
         ))}
       </div>

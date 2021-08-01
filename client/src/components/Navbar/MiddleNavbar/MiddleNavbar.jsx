@@ -37,6 +37,7 @@ export class MiddleNavbar extends Component {
       onSearch,
       location,
       cartItems,
+      isMainNav,
       isHomePage,
       onToggleCart,
       onToggleSidebar,
@@ -46,18 +47,18 @@ export class MiddleNavbar extends Component {
     return (
       <nav
         className={`${classes.middle__navbar} ${navbar && classes.active} ${
-          isHomePage && classes.active__home
+          isMainNav && classes.active__home
         }`}
       >
         <div className="container">
           <div className={classes.inner}>
-            {!isHomePage && (
+            {!isMainNav && (
               <MenuIcon
                 className={classes.menuIcon__other}
                 onToggleSidebar={onToggleSidebar}
               />
             )}
-            {isHomePage && (
+            {isMainNav && (
               <div>
                 <MenuIcon
                   className={classes.menuIcon}
@@ -78,9 +79,9 @@ export class MiddleNavbar extends Component {
               </div>
             )}
 
-            {isHomePage && (
+            {isMainNav && isHomePage && (
               <CSSTransition
-                in={isHomePage && this.context.scrolled}
+                in={isMainNav && this.context.scrolled}
                 timeout={800}
                 mountOnEnter
                 unmountOnExit
@@ -90,9 +91,10 @@ export class MiddleNavbar extends Component {
               </CSSTransition>
             )}
 
-            {!isHomePage && <Search navbar={navbar} />}
+            {!isMainNav && <Search navbar={navbar} />}
+            {isMainNav && !isHomePage && <Search navbar={navbar} />}
 
-            {!isHomePage && (
+            {!isMainNav && (
               <img
                 className={`${classes.brand} img-fluid`}
                 // src="/images/adidas.svg"
@@ -110,7 +112,7 @@ export class MiddleNavbar extends Component {
             <Info
               onSearch={onSearch}
               cartItems={cartItems}
-              isHomePage={isHomePage}
+              isMainNav={isMainNav}
               toggleCart={onToggleCart}
               toggleAccount={onToggleAccount}
             />

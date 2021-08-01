@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classes from "./Cart.module.scss";
 
 const Cart = props => {
-  const { icon, link, cartItems, toggleCart, isHomePage } = props;
+  const { icon, link, cartItems, toggleCart, isMainNav } = props;
 
   return (
     <button className={classes.cart} onClick={toggleCart}>
@@ -11,7 +11,7 @@ const Cart = props => {
         <img className="img-fluid" src={icon} alt="cart" />
         <span
           className={classes.cart__items}
-          style={{ background: isHomePage && "#fff" }}
+          style={{ background: isMainNav && "#fff" }}
         >
           {cartItems.reduce(
             (prevValue, curValue) => prevValue + curValue.qty,

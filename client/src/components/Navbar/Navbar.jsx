@@ -17,14 +17,19 @@ export class Navbar extends Component {
       cartItems,
       toggleCart,
       onToggleAccount,
-      location,
+      location: { pathname },
     } = this.props;
+
+    const showSubNav =
+      pathname.includes("/product") || pathname.includes("/organization");
+
+    const isHomePage = pathname === "/";
 
     return (
       <header className={classes.navbar}>
         <UpperNavbar
           onToggleSidebar={onToggleSidebar}
-          isHomePage={location.pathname === "/"}
+          isMainNav={!showSubNav}
         />
         <MiddleNavbar
           onSearch={onSearch}
@@ -32,10 +37,11 @@ export class Navbar extends Component {
           onToggleCart={toggleCart}
           onToggleSidebar={onToggleSidebar}
           onToggleAccount={onToggleAccount}
-          isHomePage={location.pathname === "/"}
+          isMainNav={!showSubNav}
+          isHomePage={isHomePage}
         />
         <BottomNavbar />
-        {location.pathname.includes("/product/") && <BreadCrumb />}
+        {pathname.includes("/product/") && <BreadCrumb />}
       </header>
     );
   }

@@ -24,7 +24,7 @@ class Info extends Component {
 
   render() {
     const { infoLinks } = this.state;
-    const { onSearch, isHomePage } = this.props;
+    const { onSearch, isMainNav } = this.props;
 
     return (
       <div className={classes.info}>
@@ -36,7 +36,7 @@ class Info extends Component {
         />
         <Cart
           link="Cart"
-          isHomePage={isHomePage}
+          isMainNav={isMainNav}
           icon="/images/shopping_bag.svg"
           cartItems={this.props.cartItems}
           toggleCart={this.props.toggleCart}
