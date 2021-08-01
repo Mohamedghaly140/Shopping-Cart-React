@@ -3,9 +3,13 @@
   margin-top: 5px;
 
   @media (max-width: 320.98px) {
-    height: 64px;
+    padding: 0;
+    width: 30px;
+    height: 76px;
+    margin-top: 0;
     display: block;
-    background: transparent;
+    border-radius: 0;
+    background: #fff;
 
     svg {
       fill: #000 !important;
@@ -13,9 +17,13 @@
   }
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
-    height: 64px;
+    padding: 0;
+    width: 52px;
+    height: 76px;
+    margin-top: 0;
     display: block;
-    background: transparent;
+    border-radius: 0;
+    background: #fff;
 
     svg {
       fill: #000 !important;
@@ -68,8 +76,4 @@
       height: 0;
     }
   }
-}
-
-.brand__carousel {
-  // background-color: tomato;
 }

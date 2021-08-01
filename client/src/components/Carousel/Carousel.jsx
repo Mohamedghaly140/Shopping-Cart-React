@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { debounce } from "throttle-debounce";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -7,31 +6,25 @@ import "./Carousel.scss";
 
 class Carousel extends Component {
   state = {
-    small: false,
+    viewportWidth: window.innerWidth,
   };
 
   componentDidMount() {
-    if (window.innerWidth < 575) {
-      this.setState({ small: true });
-    }
-
-    window.addEventListener("resize", this.windowResizeHandler);
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.windowResizeHandler);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
-  windowResizeHandler = debounce(250, () => {
-    if (window.innerWidth < 575) {
-      this.setState({ small: true });
-    } else {
-      this.setState({ small: false });
-    }
-  });
+  updateWindowDimensions = () => {
+    this.setState({ viewportWidth: window.innerWidth });
+  };
 
   render() {
-    const { small } = this.state;
+    const { viewportWidth } = this.state;
+
+    const isMobile = Boolean(viewportWidth <= 576);
 
     return (
       <OwlCarousel
@@ -84,14 +77,14 @@ class Carousel extends Component {
         <div className="item">
           <img
             className="img-fluid"
-            src={small ? "/images/slide2@2x.png" : "/images/slide1@2x.png"}
+            src={isMobile ? "/images/slide2@2x.png" : "/images/slide1@2x.png"}
             alt="slide"
           />
         </div>
         <div className="item">
           <img
             className="img-fluid"
-            src={small ? "/images/slide2@2x.png" : "/images/slide1@2x.png"}
+            src={isMobile ? "/images/slide2@2x.png" : "/images/slide1@2x.png"}
             alt="slide"
           />
         </div>

@@ -113,6 +113,10 @@
   height: 63px;
   margin: auto;
 
+  img {
+    width: 100%;
+  }
+
   @media (max-width: 320.98px) {
     width: 64px;
     height: 31px;

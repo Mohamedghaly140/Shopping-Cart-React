@@ -57,9 +57,27 @@ a {
   }
 }
 
-.slider-frame {
-  // padding-top: 10px !important;
-  // padding-bottom: 10px !important;
+.banner_carousel {
+  margin-bottom: 32px;
+  border-radius: 20px;
 
+  @media (max-width: 320.98px) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+    margin-bottom: 16px;
+  }
+}
+
+.banner_carousel .slider-frame {
+  border-radius: 20px;
+}
+
+.brands_carousel .slider-frame {
   padding-block: 5px !important;
+}
+
+.slider-slide {
+  outline: none;
 }

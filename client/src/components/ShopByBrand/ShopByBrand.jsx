@@ -11,35 +11,50 @@ import classes from "./ShopByBrand.module.scss";
 
 class ShopByBrand extends Component {
   state = {
-    index: 5,
+    index: 3,
+    slides: [],
+    viewportWidth: window.innerWidth,
+  };
+
+  componentDidMount() {
+    const slides = this.props.brands.map(item => {
+      return {
+        id: item.id,
+        title: item.data.title,
+        brand: item.data.brand,
+        imageUrl: item.data.imageUrl,
+        description: item.data.description,
+      };
+    });
+
+    this.setState({ slides });
+
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ viewportWidth: window.innerWidth });
   };
 
   selectBrandHandler = index => {
     this.setState({ index });
   };
 
-  slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -200,
-      behavior: "smooth",
-    });
-  };
-
-  slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +200,
-      behavior: "smooth",
-    });
-  };
-
   render() {
-    const { index } = this.state;
+    const { index, slides, viewportWidth } = this.state;
     const { brands } = this.props;
 
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
     ];
+
+    const isMobile = Boolean(viewportWidth <= 576);
+    const isMobileSm = Boolean(viewportWidth <= 320);
 
     return (
       <Section
@@ -49,23 +64,35 @@ class ShopByBrand extends Component {
         buttonTitle="View All"
         subTitle="Explore products by your favourite brands."
         renderBeforeList={() => (
-          <ShopByBrandContainer
-            title={"Levi’s"}
-            description={"Famous Levi’s products coming straight from the UK."}
-            buttonTitle={"Shop Now"}
-            brandIcon={"/images/levis.svg"}
-            imageUrl={"/images/levis-jean.jpg"}
-          />
+          <Carousel
+            wrapAround={true}
+            autoplay={false}
+            cellAlign="center"
+            slideIndex={index}
+            slidesToScroll={1}
+            cellSpacing={isMobile ? 16 : 32}
+            className="banner_carousel"
+            renderCenterLeftControls={null}
+            renderCenterRightControls={null}
+            renderBottomCenterControls={null}
+            renderTopLeftControls={null}
+            renderTopRightControls={null}
+            afterSlide={slideIndex => this.setState({ index: slideIndex })}
+          >
+            {slides.map(item => (
+              <ShopByBrandContainer
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                buttonTitle={"Shop Now"}
+                brandIcon={item.brand}
+                imageUrl={item.imageUrl}
+              />
+            ))}
+          </Carousel>
         )}
       >
         <Carousel
-          // afterSlide={slideIndex => this.setState({ index: slideIndex })}
-          wrapAround
-          slidesToShow={7}
-          cellSpacing={28}
-          slidesToScroll="auto"
-          className={classes.brand__carousel}
-          slideIndex={index}
           // withoutControls={!showThumbArrows}
           // defaultControlsConfig={nukaSarouselSetting(styles)}
           // slidesToShow={slidesToShow}
@@ -73,9 +100,18 @@ class ShopByBrand extends Component {
           // beforeSlide={this.beforeSlide}
           // slideIndex={activeSlideId}
           // initialSlideHeight={180}
+          wrapAround={true}
+          autoplay={true}
+          cellSpacing={28}
+          cellAlign="center"
+          slideIndex={index}
+          slidesToScroll={1}
+          className="brands_carousel"
           renderCenterLeftControls={null}
           renderCenterRightControls={null}
           renderBottomCenterControls={null}
+          slidesToShow={isMobile ? (isMobileSm ? 4 : 5) : 7}
+          afterSlide={slideIndex => this.setState({ index: slideIndex })}
           renderTopLeftControls={
             // showThumbArrows &&
             ({ previousSlide }) => (

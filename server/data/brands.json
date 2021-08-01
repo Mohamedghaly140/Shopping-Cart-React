@@ -2,41 +2,122 @@
   {
     "id": 1,
     "title": "adidas",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/adidas.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Adidas.png",
+    "data": {
+      "title": "adidas",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Adidas.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/adidas_banner.jpg",
+      "description": "New adidas products coming straight from the UK."
+    }
   },
   {
     "id": 2,
     "title": "courir",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/courir.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Courir.png",
+    "data": {
+      "title": "courir",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Courir.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/courir.jpg",
+      "description": "Famous courir products coming straight from the USA."
+    }
   },
   {
     "id": 3,
     "title": "geox",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/geox.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/geox.svg",
+    "data": {
+      "title": "geox",
+      "brand": "https://yeshtery.herokuapp.com/public/images/geox.svg",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/geox.jpg",
+      "description": "Famous geox products coming straight from the UK."
+    }
   },
   {
     "id": 4,
     "title": "levis",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/levis.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Levi_s.png",
+    "data": {
+      "title": "Levi’s",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Levi_s.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/levis__banner.jpg",
+      "description": "Famous Levi’s products coming straight from the UK."
+    }
   },
   {
     "id": 5,
     "title": "rockport",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/rockport.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Rockport.png",
+    "data": {
+      "title": "rockport",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Rockport.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/rockport.jpg",
+      "description": "new rockport products coming soon."
+    }
   },
   {
     "id": 6,
     "title": "sport",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/sport.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Sprox.png",
+    "data": {
+      "title": "sport",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Sprox.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/sprox.jpg",
+      "description": "Sprox products coming straight from the UK."
+    }
   },
   {
     "id": 7,
     "title": "timberland",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/timberland.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Timberland.png",
+    "data": {
+      "title": "timberland",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Timberland.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/timberland.jpg",
+      "description": "Famous timberland products coming straight from the USA."
+    }
   },
   {
     "id": 8,
     "title": "vans",
-    "imageUrl": "https://yeshtery.herokuapp.com/public/images/vans.svg"
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Vans.png",
+    "data": {
+      "title": "vans",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Vans.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/vans.jpg",
+      "description": "Famous vans products coming straight from the USA."
+    }
+  },
+  {
+    "id": 9,
+    "title": "neoflam",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Neoflam.png",
+    "data": {
+      "title": "neoflam",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Neoflam.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/neoflam.jpg",
+      "description": "Famous Neoflam products coming straight from the USA."
+    }
+  },
+  {
+    "id": 10,
+    "title": "Ocean",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Ocean.png",
+    "data": {
+      "title": "Ocean",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Ocean.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/ocean.jpg",
+      "description": "Famous Ocean products coming straight from the USA."
+    }
+  },
+  {
+    "id": 11,
+    "title": "Merrell",
+    "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Merrell.png",
+    "data": {
+      "title": "merrell",
+      "brand": "https://yeshtery.herokuapp.com/public/images/logos/Merrell.png",
+      "imageUrl": "https://yeshtery.herokuapp.com/public/images/merrell.jpg",
+      "description": "Famous Merrell products coming straight from the UK."
+    }
   }
 ]
