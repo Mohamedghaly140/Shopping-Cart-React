@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import classes from "./DetailItem.module.scss";
 
-const DetailItem = ({ title, line, children }) => {
+const DetailItem = ({ title, line, children, noMargin }) => {
   return (
     <Fragment>
-      <div className="my-3">
+      <div className={classes.detailItem} style={{ margin: noMargin && 0 }}>
         {title && <h4 className={classes.title}>{title}</h4>}
         {children}
       </div>

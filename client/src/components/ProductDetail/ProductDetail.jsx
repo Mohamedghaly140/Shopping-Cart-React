@@ -39,19 +39,17 @@ class ProductDetail extends Component {
     } = this.props.product;
 
     return (
-      <div className="container pt-3 pt-md-5">
-        <div className="row">
+      <div className={`${classes.productDetail} container`}>
+        <div className={classes.row}>
           <ProductDetailsItem
-            className="col-md-6 d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none"
+            className="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none"
             brandImage={brand}
             description={description}
             type={type}
             rate={rate}
             rates={rates}
           />
-          <div
-            className={`${classes.preview} 'col-md-6 col-lg-6 col-xl-6 col-xxl-6'`}
-          >
+          <div className={classes.preview}>
             <div className={classes.main__image}>
               {this.state.loading ? (
                 <Spinner />
@@ -72,7 +70,7 @@ class ProductDetail extends Component {
             </div>
             <PreviewImages onPreviewImage={this.previewImageHandler} />
           </div>
-          <div className="col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="">
             <ProductDetailsItem
               className="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block"
               brandImage={brand}
@@ -81,7 +79,7 @@ class ProductDetail extends Component {
               rate={rate}
               rates={rates}
             />
-            <DetailItem line>
+            <DetailItem line noMargin>
               <Price
                 price={price}
                 discount={discount}

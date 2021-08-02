@@ -127,6 +127,10 @@
     height: 40px;
     font-weight: bold;
   }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 210px;
+  }
 }
 
 .pick__up {
@@ -163,5 +167,9 @@
     font-weight: bold;
     margin-left: 16px;
     border-radius: 18px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 210px;
   }
 }

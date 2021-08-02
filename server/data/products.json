@@ -45,7 +45,7 @@
       "small": "https://yeshtery.herokuapp.com/public/images/product4.png",
       "large": "https://yeshtery.herokuapp.com/public/images/product4@2x.png"
     },
-    "brand": "https://yeshtery.herokuapp.com/public/images/levis.svg",
+    "brand": "https://yeshtery.herokuapp.com/public/images/logos/Levi_s.png",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "type": "Men",
     "price": 9.889,

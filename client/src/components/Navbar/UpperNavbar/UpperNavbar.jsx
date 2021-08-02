@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "../../MenuIcon/MenuIcon";
 import Offer from "./Offer/Offer";
@@ -6,7 +6,7 @@ import Info from "./Info/Info";
 
 import classes from "./UpperNavbar.module.scss";
 
-export class UpperNavbar extends Component {
+class UpperNavbar extends Component {
   render() {
     const { onToggleSidebar, isMainNav } = this.props;
 
@@ -19,20 +19,21 @@ export class UpperNavbar extends Component {
         <div className="container">
           <div className={classes.inner}>
             {!isMainNav && (
-              <MenuIcon
-                className={classes.menuIcon}
-                onToggleSidebar={onToggleSidebar}
-              />
-            )}
-            {!isMainNav && (
-              <Link to="/">
-                <img
-                  className="img-fluid"
-                  src="/images/brand_logo_black.svg"
-                  alt="brand_logo_black"
+              <div>
+                <MenuIcon
+                  className={classes.menuIcon}
+                  onToggleSidebar={onToggleSidebar}
                 />
-              </Link>
+                <Link to="/">
+                  <img
+                    className="img-fluid"
+                    src="/images/brand_logo_black.svg"
+                    alt="brand_logo_black"
+                  />
+                </Link>
+              </div>
             )}
+
             <Offer isMainNav={isMainNav} />
             <Info isMainNav={isMainNav} />
           </div>

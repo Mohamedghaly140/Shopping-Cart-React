@@ -14,14 +14,14 @@ class BestSellers extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -300,
+      left: -310,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +300,
+      left: +310,
       behavior: "smooth",
     });
   };
@@ -58,7 +58,7 @@ class BestSellers extends Component {
             gridTemplateColumns: `repeat(${products.slice(0, 6).length},auto)`,
           }}
         >
-          <ProductList products={products} length={6} />
+          <ProductList products={products} counts={6} />
         </div>
       </Section>
     );

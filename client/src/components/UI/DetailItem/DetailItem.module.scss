@@ -1,3 +1,15 @@
+.detailItem {
+  margin-block: 20px;
+
+  @media (max-width: 575.98px) {
+    margin-block: 10px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    margin-block: 10px;
+  }
+}
+
 .title {
   color: #1d1d1b;
   font-size: 18px;

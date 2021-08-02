@@ -16,6 +16,10 @@
     height: 200px;
     border-radius: 15px;
   }
+
+  @media (min-width: 1200px) {
+    width: 280px;
+  }
 }
 
 .title {

@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import classes from "./DropdownItem.module.scss";
 
-class DropdownItem extends Component {
-  render() {
-    const { title } = this.props;
-
-    return (
-      <li className={classes.dropdownItem}>
-        <button className={classes.link}>{title}</button>
-      </li>
-    );
-  }
-}
+const DropdownItem = ({ children, onClick }) => {
+  return (
+    <li className={classes.dropdownItem}>
+      <button onClick={onClick} className={classes.link}>
+        {children}
+      </button>
+    </li>
+  );
+};
 
 export default DropdownItem;

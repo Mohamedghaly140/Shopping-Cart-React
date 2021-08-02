@@ -6,8 +6,12 @@ const ProductDetailsItem = props => {
   const { className, brandImage, description, type, rate, rates } = props;
 
   return (
-    <div className={className}>
-      <img className="img-fluid" src={brandImage} alt="brand" />
+    <div className={`${classes.productDetailsItem} ${className}`}>
+      <img
+        className={`${classes.brandImage} img-fluid`}
+        src={brandImage}
+        alt="brand"
+      />
       <p className={classes.description}>{description}</p>
       <p className={classes.product__type}>{type}</p>
       <div className={classes.rate__container}>

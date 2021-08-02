@@ -55,6 +55,8 @@ class ShopByBrand extends Component {
 
     const isMobile = Boolean(viewportWidth <= 576);
     const isMobileSm = Boolean(viewportWidth <= 320);
+    const isIPad = Boolean(viewportWidth >= 768 && viewportWidth <= 991.98);
+    const isIPadPro = Boolean(viewportWidth >= 992 && viewportWidth <= 1199.98);
 
     return (
       <Section
@@ -93,16 +95,9 @@ class ShopByBrand extends Component {
         )}
       >
         <Carousel
-          // withoutControls={!showThumbArrows}
-          // defaultControlsConfig={nukaSarouselSetting(styles)}
-          // slidesToShow={slidesToShow}
-          // cellAlign={slidesToShow > brands.length ? "center" : "center"}
-          // beforeSlide={this.beforeSlide}
-          // slideIndex={activeSlideId}
-          // initialSlideHeight={180}
           wrapAround={true}
           autoplay={true}
-          cellSpacing={28}
+          cellSpacing={isMobile ? 16 : isIPadPro ? 32 : isIPad ? 32 : 40}
           cellAlign="center"
           slideIndex={index}
           slidesToScroll={1}
@@ -110,26 +105,22 @@ class ShopByBrand extends Component {
           renderCenterLeftControls={null}
           renderCenterRightControls={null}
           renderBottomCenterControls={null}
-          slidesToShow={isMobile ? (isMobileSm ? 4 : 5) : 7}
+          slidesToShow={
+            isMobile ? (isMobileSm ? 4 : 5) : isIPadPro ? 6 : isIPad ? 4 : 7
+          }
           afterSlide={slideIndex => this.setState({ index: slideIndex })}
-          renderTopLeftControls={
-            // showThumbArrows &&
-            ({ previousSlide }) => (
-              <SliderLeftButton
-                className={classes.slide__button}
-                onSlideLeft={previousSlide}
-              />
-            )
-          }
-          renderTopRightControls={
-            // showThumbArrows &&
-            ({ nextSlide }) => (
-              <SliderRightButton
-                className={classes.slide__button}
-                onSlideRight={nextSlide}
-              />
-            )
-          }
+          renderTopLeftControls={({ previousSlide }) => (
+            <SliderLeftButton
+              className={classes.slide__button}
+              onSlideLeft={previousSlide}
+            />
+          )}
+          renderTopRightControls={({ nextSlide }) => (
+            <SliderRightButton
+              className={classes.slide__button}
+              onSlideRight={nextSlide}
+            />
+          )}
         >
           {brands.map((item, i) => (
             <BrandItem

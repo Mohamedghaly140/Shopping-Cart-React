@@ -14,14 +14,14 @@ class VirtualTour extends Component {
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -400,
+      left: -410,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +400,
+      left: +410,
       behavior: "smooth",
     });
   };

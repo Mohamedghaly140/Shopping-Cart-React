@@ -10,7 +10,7 @@ class SizeItem extends Component {
     const { value, size, selected } = this.props;
 
     return (
-      <div
+      <button
         onClick={this.onSelectSizeHandler.bind(this, value)}
         className={`${classes.size__item} ${selected && classes.active}`}
       >
@@ -18,7 +18,7 @@ class SizeItem extends Component {
           {size}
           {/* <input className={classes.select__size} type="radio" value={value} /> */}
         </label>
-      </div>
+      </button>
     );
   }
 }

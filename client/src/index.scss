@@ -51,9 +51,14 @@ a {
     max-width: 92%;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1200px) and (max-width: 1700px) {
     margin: auto;
-    max-width: 1193px;
+    max-width: 1218px;
+  }
+
+  @media (min-width: 1700px) {
+    margin: auto;
+    max-width: 1480px;
   }
 }
 

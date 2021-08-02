@@ -4,27 +4,48 @@ import classes from "./ProductDetail.module.scss";
 class PreviewImages extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      viewportWidth: window.innerWidth,
+    };
+
     this.sliderRef = React.createRef();
   }
 
+  componentDidMount() {
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ viewportWidth: window.innerWidth });
+  };
+
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: -120,
-      top: -120,
+      left: -135,
+      top: -135,
       behavior: "smooth",
     });
   };
 
   slideRightHandler = () => {
     this.sliderRef.current.scrollBy({
-      left: +120,
-      top: +120,
+      left: +135,
+      top: +135,
       behavior: "smooth",
     });
   };
 
   render() {
+    const { viewportWidth } = this.state;
     const { onPreviewImage } = this.props;
+
+    const isMd = Boolean(viewportWidth >= 768 && viewportWidth <= 991.98);
+    console.log(isMd);
 
     const previewImages = [
       { id: 1, imageUrl: "/images/product1_thumb1.png" },
@@ -37,14 +58,26 @@ class PreviewImages extends Component {
 
     return (
       <div className={classes.slider__container}>
-        <img
+        <button
           onClick={this.slideLeftHandler}
-          className={`${classes.arrow_left} 'img-fluid'`}
-          src="/images/arrow_left@2x.svg"
-          alt="arrow_left"
-        />
-        <div className={classes.slider} ref={this.sliderRef}>
-          <div className={classes.images__container}>
+          className={classes.arrow_container}
+        >
+          <img
+            className={`${classes.arrow_left} 'img-fluid'`}
+            src="/images/arrow_left@2x.svg"
+            alt="arrow_left"
+          />
+        </button>
+        <>
+          <div
+            ref={this.sliderRef}
+            className={classes.images__container}
+            style={{
+              gridTemplateColumns:
+                !isMd && `repeat(${previewImages.length}, auto)`,
+              gridTemplateRows: isMd && `repeat(${previewImages.length}, auto)`,
+            }}
+          >
             {previewImages.map(item => (
               <div key={item.id} className={classes.image__container}>
                 <img
@@ -56,13 +89,17 @@ class PreviewImages extends Component {
               </div>
             ))}
           </div>
-        </div>
-        <img
+        </>
+        <button
           onClick={this.slideRightHandler}
-          className={`${classes.arrow_right} 'img-fluid'`}
-          src="/images/arrow_right@2x.svg"
-          alt="arrow_right"
-        />
+          className={classes.arrow_container}
+        >
+          <img
+            className={`${classes.arrow_right} 'img-fluid'`}
+            src="/images/arrow_right@2x.svg"
+            alt="arrow_right"
+          />
+        </button>
       </div>
     );
   }

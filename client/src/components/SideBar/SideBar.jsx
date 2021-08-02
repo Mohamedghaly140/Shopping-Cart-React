@@ -18,13 +18,18 @@ class SideBar extends Component {
     this.setState({ index: null });
   };
 
+  closeSidebarHandler = () => {
+    this.props.onToggleSidebar();
+    this.resetIndexHandler();
+  };
+
   render() {
     const { index } = this.state;
-    const { openSideBar, onToggleSidebar } = this.props;
+    const { openSideBar } = this.props;
 
     return (
       <Fragment>
-        <Backdrop onToggle={onToggleSidebar} open={openSideBar} />
+        <Backdrop onToggle={this.closeSidebarHandler} open={openSideBar} />
         <aside
           className={`${classes.sideBar} ${
             openSideBar ? classes.open : classes.close
@@ -37,7 +42,7 @@ class SideBar extends Component {
               alt="yeshtery"
             />
             <h3 className={classes.title}>Category</h3>
-            <button onClick={onToggleSidebar}>
+            <button onClick={this.closeSidebarHandler}>
               <img className="img-fluid" src="/images/close.svg" alt="close" />
             </button>
           </div>
@@ -52,6 +57,7 @@ class SideBar extends Component {
                 currentIndex={index}
                 onClose={this.resetIndexHandler}
                 onOpen={this.openDropdownHandler}
+                onCloseSidebar={this.closeSidebarHandler}
               />
             ))}
           </Fragment>

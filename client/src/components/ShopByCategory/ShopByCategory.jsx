@@ -59,7 +59,7 @@ class ShopByCategory extends Component {
           }}
         >
           <CategoriesList
-            length={10}
+            counts={10}
             categories={categories}
             className={classes.category__item}
           />

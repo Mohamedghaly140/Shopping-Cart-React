@@ -6,16 +6,17 @@ import classes from "./PremiumProducts.module.scss";
 
 class PremiumProducts extends Component {
   state = {
-    length: 8,
+    counts: 8,
   };
 
   showMoreHandler = () => {
-    this.setState({ length: Infinity });
+    this.setState({ counts: Infinity });
   };
 
   render() {
-    const { length } = this.state;
+    const { counts } = this.state;
     const { products, noLine } = this.props;
+
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
@@ -30,11 +31,11 @@ class PremiumProducts extends Component {
         title="Our Special Selection"
         subTitle="Premium products recommended just for you."
         onClickHandler={this.showMoreHandler}
-        showMore={length !== Infinity}
+        showMore={counts !== Infinity}
         style={{ border: noLine && "none" }}
       >
         <div className={classes.productList}>
-          <ProductList products={products} length={length} className />
+          <ProductList products={products} counts={counts} />
         </div>
       </Section>
     );

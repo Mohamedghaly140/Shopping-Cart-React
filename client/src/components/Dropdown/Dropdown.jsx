@@ -5,9 +5,15 @@ import DropdownItem from "./DropdownItem/DropdownItem";
 
 import classes from "./Dropdown.module.scss";
 
-const Dropdown = props => {
-  const { items, title, index, currentIndex, onOpen, onClose } = props;
-
+const Dropdown = ({
+  items,
+  title,
+  index,
+  onOpen,
+  onClose,
+  currentIndex,
+  onCloseSidebar,
+}) => {
   const open = index === currentIndex;
 
   const toggleDropdownHander = index => {
@@ -41,7 +47,9 @@ const Dropdown = props => {
             }}
           >
             {items.map(item => (
-              <DropdownItem key={item.id} title={item.title} />
+              <DropdownItem key={item.id} onClick={onCloseSidebar}>
+                {item.title}
+              </DropdownItem>
             ))}
           </ul>
         )}

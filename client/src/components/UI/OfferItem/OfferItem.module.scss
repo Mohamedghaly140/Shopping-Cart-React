@@ -25,6 +25,10 @@
     height: 200px;
     border-radius: 15px;
   }
+
+  @media (min-width: 1200px) {
+    width: 592px;
+  }
 }
 
 .overlay {
@@ -47,6 +51,9 @@
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     border-radius: 15px 0px 0px 15px;
+  }
+
+  @media (min-width: 1400px) {
   }
 }
 
@@ -82,6 +89,9 @@
     padding-bottom: 20px;
     border-radius: 15px 0px 0px 15px;
   }
+
+  @media (min-width: 1400px) {
+  }
 }
 
 .title {
@@ -99,6 +109,9 @@
 
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     font-size: 15px;
+  }
+
+  @media (min-width: 1400px) {
   }
 }
 
@@ -118,6 +131,9 @@
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     font-size: 10px;
   }
+
+  @media (min-width: 1400px) {
+  }
 }
 
 .brand__container {
@@ -132,5 +148,8 @@
   @media (min-width: 320.98px) and (max-width: 575.98px) {
     width: 45px;
     height: 22px;
+  }
+
+  @media (min-width: 1400px) {
   }
 }

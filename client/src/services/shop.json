@@ -1,8 +1,8 @@
 [
-  { "id": 1, "title": "Men", "imageUrl": "" },
+  { "id": 1, "title": "Men", "imageUrl": "/images/women@2x.png" },
   { "id": 2, "title": "Women", "imageUrl": "/images/women@2x.png" },
   { "id": 3, "title": "Unisex", "imageUrl": "/images/unisex@2x.png" },
-  { "id": 4, "title": "Men", "imageUrl": "" },
+  { "id": 4, "title": "Men", "imageUrl": "/images/women@2x.png" },
   { "id": 5, "title": "Unisex", "imageUrl": "/images/unisex@2x.png" },
-  { "id": 6, "title": "Men", "imageUrl": "" }
+  { "id": 6, "title": "Men", "imageUrl": "/images/women@2x.png" }
 ]

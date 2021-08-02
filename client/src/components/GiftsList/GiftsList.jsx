@@ -5,41 +5,35 @@ import classes from "./GiftsList.module.scss";
 
 class GiftsList extends Component {
   state = {
-    small: false,
+    viewportWidth: window.innerWidth,
   };
 
   componentDidMount() {
-    if (window.innerWidth < 992) {
-      this.setState({ small: true });
-    }
-
-    window.addEventListener("resize", this.windowResizeHandler);
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.windowResizeHandler);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
-  windowResizeHandler = debounce(250, () => {
-    if (window.innerWidth < 575) {
-      this.setState({ small: true });
-    } else {
-      this.setState({ small: false });
-    }
+  updateWindowDimensions = debounce(100, () => {
+    this.setState({ viewportWidth: window.innerWidth });
   });
 
   render() {
-    const { gifts, length } = this.props;
-    const { small } = this.state;
+    const { viewportWidth } = this.state;
 
-    const copiedGifts = [...gifts];
-    const firstItem = copiedGifts[0];
+    const isMobile = Boolean(viewportWidth <= 576);
 
-    const rows = new Array(Math.ceil(copiedGifts.slice(0, length).length / 2));
+    const { gifts, counts } = this.props;
+
+    const firstItem = gifts[0];
+
+    const rows = new Array(Math.ceil(gifts.slice(0, counts).length / 2));
 
     for (let i = 0; i < rows.length; i++) {
       rows[i] = {
-        items: copiedGifts.slice(1, Infinity).slice(i * 2, i * 2 + 2),
+        items: gifts.slice(1, Infinity).slice(i * 2, i * 2 + 2),
       };
     }
 
@@ -70,7 +64,7 @@ class GiftsList extends Component {
       <GiftItem key={item.id} title={item.title} imageUrl={item.imageUrl} />
     ));
 
-    return small ? listForSm : listForLg;
+    return isMobile ? listForSm : listForLg;
   }
 }
 

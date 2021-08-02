@@ -40,15 +40,15 @@ class Categories extends Component {
   }
 
   render() {
-    const { className, categories, length = Infinity } = this.props;
+    const { className, categories, counts = Infinity } = this.props;
 
-    const rows = new Array(Math.ceil(categories.slice(0, length).length / 2));
+    const rows = new Array(Math.ceil(categories.slice(0, counts).length / 2));
 
     for (let i = 0; i < rows.length; i++) {
       rows[i] = { items: categories.slice(i * 2, i * 2 + 2) };
     }
 
-    const categoriesList = rows.map((item, index) => (
+    return rows.map((item, index) => (
       <div key={index} className={classes.category__item}>
         {item.items.map((category, i) => (
           <CategoryItem
@@ -63,17 +63,7 @@ class Categories extends Component {
         ))}
       </div>
     ));
-
-    return categoriesList;
   }
 }
 
 export default Categories;
-
-// {
-//     "id": 17,
-//     "title": "Foods",
-//     "description": "Find latest electronic devices.",
-//     "imageUrlLg": "https://yeshtery.herokuapp.com/public/images/categories/foods@2x.png",
-//     "imageUrlSm": "https://yeshtery.herokuapp.com/public/images/categories/foods.png"
-//   },
