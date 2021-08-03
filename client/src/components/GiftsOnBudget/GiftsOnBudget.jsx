@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import GiftsList from "../GiftsList/GiftsList";
-
+import RowContainer from "../UI/RowContainer/RowContainer";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
@@ -14,17 +14,11 @@ class GiftsOnBudget extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -320,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideLeft(320);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +320,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideRight(320);
   };
 
   render() {
@@ -53,15 +47,9 @@ class GiftsOnBudget extends Component {
           onSlideRight={this.slideRightHandler}
           color="#fff"
         />
-        <div
-          ref={this.sliderRef}
-          className={classes.gifts__list}
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(gifts.length)}, auto)`,
-          }}
-        >
+        <RowContainer list={gifts} ref={this.sliderRef}>
           <GiftsList gifts={gifts} />
-        </div>
+        </RowContainer>
       </Section>
     );
   }

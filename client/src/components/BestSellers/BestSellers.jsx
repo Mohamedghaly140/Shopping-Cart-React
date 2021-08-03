@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import ProductList from "../ProductList/ProductList";
+import RowContainer from "../UI/RowContainer/RowContainer";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
@@ -13,17 +14,11 @@ class BestSellers extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -310,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideLeft(310);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +310,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideRight(310);
   };
 
   render() {
@@ -51,15 +46,9 @@ class BestSellers extends Component {
           onSlideRight={this.slideRightHandler}
           color="#fff"
         />
-        <div
-          className={classes.row__container}
-          ref={this.sliderRef}
-          style={{
-            gridTemplateColumns: `repeat(${products.slice(0, 6).length},auto)`,
-          }}
-        >
+        <RowContainer ref={this.sliderRef} list={products} counts={6}>
           <ProductList products={products} counts={6} />
-        </div>
+        </RowContainer>
       </Section>
     );
   }

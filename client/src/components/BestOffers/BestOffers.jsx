@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import classes from "./BestOffers.module.scss";
 import Section from "../UI/Section/Section";
-
 import OffersList from "../OffersList/OffersList";
+import RowContainer from "../UI/RowContainer/RowContainer";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
+
+import classes from "./BestOffers.module.scss";
 
 class BestOffers extends Component {
   constructor(props) {
@@ -13,17 +14,11 @@ class BestOffers extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -640,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideLeft(640);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +640,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideRight(640);
   };
 
   render() {
@@ -53,15 +48,9 @@ class BestOffers extends Component {
           onSlideRight={this.slideRightHandler}
           color="#fff"
         />
-        <div
-          ref={this.sliderRef}
-          className={classes.offersList}
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(offers.length)}, auto)`,
-          }}
-        >
+        <RowContainer ref={this.sliderRef} list={offers}>
           <OffersList offers={offers} />
-        </div>
+        </RowContainer>
       </Section>
     );
   }

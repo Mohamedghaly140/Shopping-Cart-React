@@ -51,6 +51,14 @@
   }
 }
 
+.icon {
+  margin-right: 8px;
+
+  @media (max-width: 575.98px) {
+    margin-right: 0;
+  }
+}
+
 .active {
   span.link {
     color: #fff;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
 import ToursList from "../ToursList/ToursList";
+import RowContainer from "../UI/RowContainer/RowContainer";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 
@@ -13,17 +14,11 @@ class VirtualTour extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -410,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideLeft(410);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +410,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideRight(410);
   };
 
   render() {
@@ -51,15 +46,9 @@ class VirtualTour extends Component {
           onSlideRight={this.slideRightHandler}
           color="#fff"
         />
-        <div
-          ref={this.sliderRef}
-          className={classes.tours__list}
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(tours.length)}, auto)`,
-          }}
-        >
+        <RowContainer ref={this.sliderRef} list={tours}>
           <ToursList tours={tours} />
-        </div>
+        </RowContainer>
       </Section>
     );
   }

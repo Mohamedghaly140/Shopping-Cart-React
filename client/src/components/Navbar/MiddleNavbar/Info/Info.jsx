@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 // Import Components
 import User from "../../../Icons/User";
 import Cart from "../../../UI/Cart/Cart";

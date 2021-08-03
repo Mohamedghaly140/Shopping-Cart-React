@@ -66,6 +66,13 @@ class ShopByBrand extends Component {
         buttonTitle="View All"
         subTitle="Explore products by your favourite brands."
         renderBeforeList={() => (
+          // <ShopByBrandContainer
+          //   title={slides[index].title}
+          //   description={slides[index].description}
+          //   buttonTitle={"Shop Now"}
+          //   brandIcon={slides[index].brand}
+          //   imageUrl={slides[index].imageUrl}
+          // />
           <Carousel
             wrapAround={true}
             autoplay={false}

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Section from "../UI/Section/Section";
-
+import RowContainer from "../UI/RowContainer/RowContainer";
 import CategoriesList from "../CategoriesList/CategoriesList";
-
 import SliderLeftButton from "../UI/SliderButtons/SliderLeftButton";
 import SliderRightButton from "../UI/SliderButtons/SliderRightButton";
 
@@ -15,17 +14,11 @@ class ShopByCategory extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: -400,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideLeft(410);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.scrollBy({
-      left: +400,
-      behavior: "smooth",
-    });
+    this.sliderRef.current.onSlideRight(410);
   };
 
   render() {
@@ -49,21 +42,13 @@ class ShopByCategory extends Component {
           onSlideRight={this.slideRightHandler}
           color="#fff"
         />
-        <div
-          ref={this.sliderRef}
-          className={classes.categories__list}
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(
-              categories.length / 2
-            )}, auto)`,
-          }}
-        >
+        <RowContainer ref={this.sliderRef} list={categories} columns={2}>
           <CategoriesList
             counts={10}
             categories={categories}
             className={classes.category__item}
           />
-        </div>
+        </RowContainer>
       </Section>
     );
   }
