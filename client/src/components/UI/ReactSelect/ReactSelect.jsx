@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Select from "react-select";
-import "./SelectBox.scss";
+import "./ReactSelect.scss";
 
-class SelectBox extends Component {
+class ReactSelect extends Component {
   state = {
     selectedOption: null,
   };
@@ -18,8 +18,8 @@ class SelectBox extends Component {
 
     return (
       <Select
-        className={`${className ? className : "select__box"}-container`}
-        classNamePrefix={`${className ? className : "select__box"}`}
+        className={`${className ? className : "react__select"}-container`}
+        classNamePrefix={`${className ? className : "react__select"}`}
         options={options}
         value={selectedOption}
         onChange={this.handleChange}
@@ -35,8 +35,8 @@ class SelectBox extends Component {
   }
 }
 
-SelectBox.defaultProps = {
+ReactSelect.defaultProps = {
   menuPlacement: "auto",
 };
 
-export default SelectBox;
+export default ReactSelect;

@@ -31,7 +31,7 @@ class SearchResult extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="container py-sm-3 py-md-3">
         <section className={classes.searchResult}>
           <SearchTable
             open={filter}

@@ -21,7 +21,7 @@ class Caption extends Component {
   }
 
   changeSearchBarPosition = () => {
-    if (window.scrollY >= 530) {
+    if (window.scrollY >= 431) {
       this.context.changeHandlerTrue();
     } else {
       this.context.changeHandlerFalse();

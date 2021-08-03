@@ -56,10 +56,10 @@
   },
   {
     "id": 6,
-    "title": "sport",
+    "title": "Sprox",
     "imageUrl": "https://yeshtery.herokuapp.com/public/images/logos/Sprox.png",
     "data": {
-      "title": "sport",
+      "title": "Sprox",
       "brand": "https://yeshtery.herokuapp.com/public/images/logos/Sprox.png",
       "imageUrl": "https://yeshtery.herokuapp.com/public/images/sprox.jpg",
       "description": "Sprox products coming straight from the UK."

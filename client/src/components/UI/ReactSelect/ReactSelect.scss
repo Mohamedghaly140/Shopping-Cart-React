@@ -1,0 +1,97 @@
+.react__select-container,
+.select__location-container,
+.select__products-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+
+  @media (max-width: 575px) {
+    height: 32px !important;
+  }
+}
+
+.react__select__control,
+.select__location__control,
+.select__products__control {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+
+  @media (max-width: 575px) {
+    height: 32px !important;
+  }
+}
+
+.react__select__control--is-focused,
+.select__location__control--is-focused,
+.select__products__control--is-focused {
+  box-shadow: none !important;
+}
+
+.react__select__placeholder,
+.select__location__placeholder,
+.select__products__placeholder {
+  color: #542e90 !important;
+}
+
+.react__select__value-container,
+.select__location__value-container,
+.select__products__value-container {
+  background: transparent !important;
+  cursor: pointer !important;
+  border: none !important;
+  outline: none !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  @media (max-width: 575px) {
+    height: 32px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.react__select__indicators,
+.select__location__indicators,
+.select__products__indicators {
+  display: none !important;
+}
+
+.react__select__menu {
+  background: #f5f5f5;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  display: block !important;
+  padding: 0 !important;
+  width: 180px !important;
+  left: -18% !important;
+
+  @media (max-width: 575px) {
+    left: -6% !important;
+    width: 140px !important;
+  }
+}
+
+.select__location__menu,
+.select__products__menu {
+  background: #f5f5f5;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  display: block !important;
+  padding: 0 !important;
+  width: 210px !important;
+  left: -14% !important;
+
+  @media (max-width: 575px) {
+    left: -6% !important;
+    width: 140px !important;
+  }
+}
+
+.react__select__menu-list,
+.select__location__menu-list,
+.select__products__menu-list {
+  background: #f5f5f5;
+  padding: 0 !important;
+}

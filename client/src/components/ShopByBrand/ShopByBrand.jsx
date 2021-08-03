@@ -65,46 +65,50 @@ class ShopByBrand extends Component {
         title="Shop by brand"
         buttonTitle="View All"
         subTitle="Explore products by your favourite brands."
-        renderBeforeList={() => (
-          // <ShopByBrandContainer
-          //   title={slides[index].title}
-          //   description={slides[index].description}
-          //   buttonTitle={"Shop Now"}
-          //   brandIcon={slides[index].brand}
-          //   imageUrl={slides[index].imageUrl}
-          // />
-          <Carousel
-            wrapAround={true}
-            autoplay={false}
-            cellAlign="center"
-            slideIndex={index}
-            slidesToScroll={1}
-            cellSpacing={isMobile ? 16 : 32}
-            className="banner_carousel"
-            renderCenterLeftControls={null}
-            renderCenterRightControls={null}
-            renderBottomCenterControls={null}
-            renderTopLeftControls={null}
-            renderTopRightControls={null}
-            afterSlide={slideIndex => this.setState({ index: slideIndex })}
-          >
-            {slides.map(item => (
+        renderBeforeList={
+          () =>
+            !slides.length ? (
+              "loading"
+            ) : (
               <ShopByBrandContainer
-                key={item.id}
-                title={item.title}
-                description={item.description}
+                title={slides[index].title}
+                description={slides[index].description}
                 buttonTitle={"Shop Now"}
-                brandIcon={item.brand}
-                imageUrl={item.imageUrl}
+                brandIcon={slides[index].brand}
+                imageUrl={slides[index].imageUrl}
               />
-            ))}
-          </Carousel>
-        )}
+            )
+          // <Carousel
+          //   wrapAround={true}
+          //   autoplay={false}
+          //   cellAlign="center"
+          //   slideIndex={index}
+          //   slidesToScroll={1}
+          //   cellSpacing={isMobile ? 16 : 32}
+          //   className="banner_carousel"
+          //   renderCenterLeftControls={null}
+          //   renderCenterRightControls={null}
+          //   renderBottomCenterControls={null}
+          //   renderTopLeftControls={null}
+          //   renderTopRightControls={null}
+          //   afterSlide={slideIndex => this.setState({ index: slideIndex })}
+          // >
+          //   {slides.map(item => (
+          //     <ShopByBrandContainer
+          //       key={item.id}
+          //       title={item.title}
+          //       description={item.description}
+          //       buttonTitle={"Shop Now"}
+          //       brandIcon={item.brand}
+          //       imageUrl={item.imageUrl}
+          //     />
+          //   ))}
+          // </Carousel>
+        }
       >
         <Carousel
-          wrapAround={true}
+          wrapAround
           autoplay={true}
-          cellSpacing={isMobile ? 16 : isIPadPro ? 32 : isIPad ? 32 : 40}
           cellAlign="center"
           slideIndex={index}
           slidesToScroll={1}
@@ -115,6 +119,7 @@ class ShopByBrand extends Component {
           slidesToShow={
             isMobile ? (isMobileSm ? 4 : 5) : isIPadPro ? 6 : isIPad ? 4 : 7
           }
+          cellSpacing={isMobile ? 16 : isIPadPro ? 32 : isIPad ? 32 : 40}
           afterSlide={slideIndex => this.setState({ index: slideIndex })}
           renderTopLeftControls={({ previousSlide }) => (
             <SliderLeftButton
