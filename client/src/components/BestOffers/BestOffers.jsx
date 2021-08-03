@@ -14,11 +14,11 @@ class BestOffers extends Component {
   }
 
   slideLeftHandler = () => {
-    this.sliderRef.current.onSlideLeft(640);
+    this.sliderRef.current.onSlideLeft(612);
   };
 
   slideRightHandler = () => {
-    this.sliderRef.current.onSlideRight(640);
+    this.sliderRef.current.onSlideRight(612);
   };
 
   render() {
