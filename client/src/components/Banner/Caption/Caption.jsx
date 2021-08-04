@@ -46,7 +46,7 @@ class Caption extends Component {
         </div>
 
         <CSSTransition
-          in={window.scrollY < 430}
+          in={window.scrollY < 410}
           timeout={400}
           mountOnEnter
           unmountOnExit
