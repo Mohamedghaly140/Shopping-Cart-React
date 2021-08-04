@@ -107,6 +107,9 @@
 
 .select__box__option,
 .store__dropdown__option {
+  padding-inline: 0;
+  padding-top: 13px;
+  padding-bottom: 15px;
   cursor: pointer !important;
-  padding: 0;
+  border: 0.5px solid #d9d9d9;
 }
