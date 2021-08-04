@@ -26,6 +26,7 @@ class SelectBox extends Component {
         defaultValue={options[0]}
         placeholder={placeholder}
         isSearchable={false}
+        maxMenuHeight={150}
         menuPlacement={menuPlacement}
         styles={{
           menu: provided => ({ ...provided, zIndex: 99999999 }),

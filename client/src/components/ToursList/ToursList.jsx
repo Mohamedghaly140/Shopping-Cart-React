@@ -2,9 +2,12 @@ import React from "react";
 import StoreItem from "../UI/StoreItem/StoreItem";
 
 const ToursList = ({ tours, length = Infinity }) => {
-  const options = [
-    { value: "vans", label: "Vans" },
-    { value: "adidas", label: "Adidas" },
+  const locationOptions = [
+    { value: "Al Rehab", label: "Al Rehab" },
+    { value: "Madinaty", label: "Madinaty" },
+    { value: "1st Settlement", label: "1st Settlement" },
+    { value: "Madenet Nasr", label: "Madenet Nasr" },
+    { value: "Heliopolis", label: "Heliopolis" },
   ];
 
   return tours
@@ -12,9 +15,9 @@ const ToursList = ({ tours, length = Infinity }) => {
     .map(item => (
       <StoreItem
         key={item.id}
-        options={options}
         title={item.title}
         imageUrl={item.imageUrl}
+        options={locationOptions}
         storeImageUrl={item.storeImage}
       />
     ));

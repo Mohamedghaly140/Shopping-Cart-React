@@ -26,6 +26,7 @@ class ReactSelect extends Component {
         defaultValue={options[0]}
         placeholder={placeholder}
         isSearchable={false}
+        maxMenuHeight={200}
         menuPlacement={menuPlacement}
         styles={{
           menu: provided => ({ ...provided, zIndex: 99999999 }),
