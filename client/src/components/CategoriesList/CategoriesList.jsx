@@ -1,38 +1,14 @@
 import React, { Component } from "react";
-import { debounce } from "throttle-debounce";
+import { withMediaQuery } from "../../hoc/withMediaQuery";
 import CategoryItem from "../UI/CategoryItem/CategoryItem";
 
 import classes from "./CategoriesList.module.scss";
 
 class Categories extends Component {
-  state = {
-    small: false,
-  };
-
-  componentDidMount() {
-    if (window.innerWidth < 992) {
-      this.setState({ small: true });
-    }
-
-    window.addEventListener("resize", this.windowResizeHandler);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.windowResizeHandler);
-  }
-
-  windowResizeHandler = debounce(250, () => {
-    if (window.innerWidth < 992) {
-      this.setState({ small: true });
-    } else {
-      this.setState({ small: false });
-    }
-  });
-
   clacLgItem(outer, inner) {
-    const { small } = this.state;
+    const { isMobile, isTablet } = this.props;
 
-    if (small) {
+    if (isMobile || isTablet) {
       return outer % 2 === inner % 2;
     } else {
       return (outer % 3) % 2 === inner % 2;
@@ -66,4 +42,4 @@ class Categories extends Component {
   }
 }
 
-export default Categories;
+export default withMediaQuery(Categories);

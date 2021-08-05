@@ -1,31 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { debounce } from "throttle-debounce";
+import { withMediaQuery } from "../../hoc/withMediaQuery";
 import GiftItem from "../UI/GiftItem/GiftItem";
 import classes from "./GiftsList.module.scss";
 
 class GiftsList extends Component {
-  state = {
-    viewportWidth: window.innerWidth,
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = debounce(100, () => {
-    this.setState({ viewportWidth: window.innerWidth });
-  });
-
   render() {
-    const { viewportWidth } = this.state;
-
-    const isMobile = Boolean(viewportWidth <= 576);
-
-    const { gifts, counts } = this.props;
+    const { gifts, counts, isMobile } = this.props;
 
     const firstItem = gifts[0];
 
@@ -68,4 +48,4 @@ class GiftsList extends Component {
   }
 }
 
-export default GiftsList;
+export default withMediaQuery(GiftsList);
