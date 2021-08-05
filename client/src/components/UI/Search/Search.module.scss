@@ -2,9 +2,10 @@
   width: 280px;
   height: 48px;
   display: flex;
+  padding: 10px 16px;
   flex-direction: row;
   border-radius: 24px;
-  padding: 10px 16px;
+  transition: all 0.3s ease-in-out;
   border: 0.5004362463951111px solid #d8d8d8;
   background: #ffffff 0% 0% no-repeat padding-box;
 
@@ -25,6 +26,11 @@
   @media (min-width: 1300px) {
     width: 350px;
   }
+}
+
+.search__container__focused {
+  flex-grow: 1;
+  margin-inline: 32px;
 }
 
 .active {

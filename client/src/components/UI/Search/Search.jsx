@@ -7,6 +7,11 @@ import classes from "./Search.module.scss";
 class Search extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      focused: false,
+    };
+
     this.searchInput = React.createRef();
   }
 
@@ -19,14 +24,25 @@ class Search extends Component {
     this.searchInput.current.value = "";
   };
 
+  inputFocusHandler = () => {
+    this.setState({ focused: true });
+  };
+
+  inputBlurHandler = () => {
+    this.setState({ focused: false });
+  };
+
   render() {
-    const { navbar, scrolled = true } = this.props;
+    const { focused } = this.state;
+    const { navbar, scrolled } = this.props;
 
     return (
       scrolled && (
         <form
           onSubmit={this.submitSearchHandler}
-          className={`${classes.search__container} ${navbar && classes.active}`}
+          className={`${classes.search__container} ${
+            navbar && classes.active
+          } ${focused && classes.search__container__focused}`}
         >
           <button type="submit" className={classes.search__icon}>
             <SearchIcon width="24px" height="24px" color="#000" />
@@ -36,11 +52,17 @@ class Search extends Component {
             ref={this.searchInput}
             placeholder="Search..."
             className={classes.search}
+            onBlur={this.inputBlurHandler}
+            onFocus={this.inputFocusHandler}
           />
         </form>
       )
     );
   }
 }
+
+Search.defaultProps = {
+  scrolled: true,
+};
 
 export default withRouter(Search);
