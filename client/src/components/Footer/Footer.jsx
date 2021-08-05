@@ -30,29 +30,10 @@ class Footer extends Component {
               <div>
                 <img
                   className="mb-4 img-fluid"
-                  src="/images/brand_logo_yellow.svg"
+                  src={this.props.logoDark}
                   alt="brand_logo_yellow"
                 />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat.
-                </p>
-                <p>
-                  Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                  ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                  consequat. Duis autem vel eum iriure dolor in hendrerit in
-                  vulputate velit esse molestie consequat, vel illum dolore eu
-                  feugiat nulla. Lorem ipsum dolor sit amet, consectetuer
-                  adipiscing elit, sed dia m nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna.
-                </p>
-                <p>
-                  Duis autem vel eum iriure dolor in hendrerit in vulputate
-                  velit esse molestie consequat, vel illum dolore eu feugiat
-                  nulla facilisis at vero eros et accumsan et iusto odio
-                  dignissim qui blandit
-                </p>
+                <p>{this.props.description}</p>
               </div>
             </div>
             <div className="col-md-6">

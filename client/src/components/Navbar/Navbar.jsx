@@ -12,11 +12,12 @@ import classes from "./Navbar.module.scss";
 export class Navbar extends Component {
   render() {
     const {
-      onToggleSidebar,
+      logo,
       onSearch,
       cartItems,
       toggleCart,
       onToggleAccount,
+      onToggleSidebar,
       location: { pathname },
     } = this.props;
 
@@ -32,6 +33,7 @@ export class Navbar extends Component {
           isMainNav={!showSubNav}
         />
         <MiddleNavbar
+          logo={logo}
           onSearch={onSearch}
           cartItems={cartItems}
           onToggleCart={toggleCart}

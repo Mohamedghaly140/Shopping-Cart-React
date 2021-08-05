@@ -6,6 +6,7 @@ import MyCart from "./components/MyCart/MyCart";
 import httpClient from "./services/httpClient";
 import SideBar from "./components/SideBar/SideBar";
 import UiContextProvider from "./context/ui-context";
+import organization from "./services/organization.json";
 import MyAccount from "./components/MyAccount/MyAccount";
 import MobileNav from "./components/MobileNav/MobileNav";
 import SearchContainer from "./components/SearchContainer/SearchContainer";
@@ -151,6 +152,7 @@ class App extends Component {
           cartItems={cart}
           onSearch={this.toggleSearchHandler}
           toggleCart={this.toggleCartHandler}
+          logo={organization.organizationLogo.logo}
           onToggleSidebar={this.toggleSidebarHandler}
           onToggleAccount={this.toggleAccountHandler}
         />
@@ -166,7 +168,10 @@ class App extends Component {
             categories={categories}
           />
         </main>
-        <Footer />
+        <Footer
+          description={organization.organizationDescription}
+          logoDark={organization.organizationLogo.logoDark}
+        />
         <Fragment>
           <MyCart
             cart={cart}

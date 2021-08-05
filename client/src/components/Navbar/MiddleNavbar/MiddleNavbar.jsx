@@ -34,6 +34,7 @@ export class MiddleNavbar extends Component {
   render() {
     const { navbar } = this.state;
     const {
+      logo,
       onSearch,
       location,
       cartItems,
@@ -71,8 +72,8 @@ export class MiddleNavbar extends Component {
                   }`}
                 >
                   <img
+                    src={logo}
                     className="img-fluid"
-                    src="/images/yeshteryLg.svg"
                     alt="brand_logo_black"
                   />
                 </Link>
