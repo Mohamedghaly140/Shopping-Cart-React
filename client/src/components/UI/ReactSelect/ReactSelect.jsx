@@ -9,17 +9,17 @@ class ReactSelect extends Component {
 
   handleChange = selectedOption => {
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption.value);
+    // console.log(`Option selected:`, selectedOption.value);
   };
 
   render() {
     const { selectedOption } = this.state;
-    const { options, placeholder, className, menuPlacement } = this.props;
+    const { options, placeholder, prefix, menuPlacement } = this.props;
 
     return (
       <Select
-        className={`${className ? className : "react__select"}-container`}
-        classNamePrefix={`${className ? className : "react__select"}`}
+        className={`${prefix}-container`}
+        classNamePrefix={prefix}
         options={options}
         value={selectedOption}
         onChange={this.handleChange}
@@ -37,6 +37,7 @@ class ReactSelect extends Component {
 }
 
 ReactSelect.defaultProps = {
+  prefix: "react__select",
   menuPlacement: "auto",
 };
 

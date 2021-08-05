@@ -15,7 +15,7 @@ class SearchContainer extends Component {
 
   onSearchSubmit = () => {
     // fetch(`/api/products?search=${this.state.text}`)
-    console.log(this.state.text);
+    // console.log(this.state.text);
   };
 
   render() {

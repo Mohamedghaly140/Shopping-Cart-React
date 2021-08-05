@@ -35,14 +35,14 @@ class SearchResultContainer extends Component {
           <div className={classes.list}>
             <div className={classes.location}>
               <ReactSelect
-                className="select__location"
+                prefix="select__location"
                 options={locationOptions}
                 placeholder="Any Location"
               />
             </div>
             <div className={classes.products__list}>
               <ReactSelect
-                className="select__products"
+                prefix="select__products"
                 options={productsOptions}
                 placeholder="Products"
               />

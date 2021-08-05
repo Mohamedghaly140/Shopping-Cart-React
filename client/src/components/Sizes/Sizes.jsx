@@ -8,7 +8,7 @@ export class Sizes extends Component {
 
   selectSizeHandler = value => {
     this.setState({ selected: value });
-    console.log(value);
+    // console.log(value);
   };
 
   render() {

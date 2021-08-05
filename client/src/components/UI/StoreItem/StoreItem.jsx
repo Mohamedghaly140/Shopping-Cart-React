@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withMediaQuery } from "../../../hoc/withMediaQuery";
-import SelectBox from "../SelectBox/SelectBox";
+import ReactSelect from "../ReactSelect/ReactSelect";
 
 import classes from "./StoreItem.module.scss";
 
@@ -23,9 +23,9 @@ class StoreItem extends Component {
         </div>
         <div className={classes.actions}>
           <div className={classes.select__container}>
-            <SelectBox
+            <ReactSelect
               options={options}
-              className="store__dropdown"
+              prefix="store__dropdown"
               placeholder="Choose Branch"
               menuPlacement={isMobile ? "auto" : "top"}
             />
