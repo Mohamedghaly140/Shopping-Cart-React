@@ -10,10 +10,18 @@ import GiftsOnBudget from "../components/GiftsOnBudget/GiftsOnBudget";
 import ShopByCategory from "../components/ShopByCategory/ShopByCategory";
 import PremiumProducts from "../components/PremiumProducts/PremiumProducts";
 
+import bannerLg from "../images/banner@2x.png";
+import bannerSm from "../images/banner.png";
+
 class Home extends Component {
   render() {
     const { loading, products, gifts, brands, offers, tours, categories } =
       this.props;
+
+    const banner = {
+      large: bannerLg,
+      small: bannerSm,
+    };
 
     if (loading) {
       return <Spinner />;
@@ -21,7 +29,7 @@ class Home extends Component {
 
     return (
       <Fragment>
-        <Banner />
+        <Banner bannerUrl={banner} />
         <div className="container">
           <ShopByCategory categories={categories} />
           <BestOffers offers={offers} />
