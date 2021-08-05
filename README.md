@@ -28,7 +28,7 @@
 
 ## Live
 
-[Preview Live](https://mohamedghaly140.github.io/Shopping-Cart-React)
+[Preview Live](https://yeshtery.vercel.app/)
 
 ### Note
 
