@@ -55,7 +55,7 @@ class ProductDetail extends Component {
                 <Spinner />
               ) : (
                 <img
-                  className="img-fluid"
+                  className={`${classes.product__image} img-fluid`}
                   alt="product"
                   style={{ flexGrow: "1", maxHeight: "100%" }}
                   ref={this.imageRef}

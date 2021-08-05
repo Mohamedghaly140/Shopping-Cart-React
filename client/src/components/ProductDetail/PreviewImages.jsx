@@ -5,24 +5,8 @@ class PreviewImages extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      viewportWidth: window.innerWidth,
-    };
-
     this.sliderRef = React.createRef();
   }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = () => {
-    this.setState({ viewportWidth: window.innerWidth });
-  };
 
   slideLeftHandler = () => {
     this.sliderRef.current.scrollBy({
@@ -41,11 +25,7 @@ class PreviewImages extends Component {
   };
 
   render() {
-    const { viewportWidth } = this.state;
     const { onPreviewImage } = this.props;
-
-    const isMd = Boolean(viewportWidth >= 768 && viewportWidth <= 991.98);
-    console.log(isMd);
 
     const previewImages = [
       { id: 1, imageUrl: "/images/product1_thumb1.png" },
@@ -73,9 +53,8 @@ class PreviewImages extends Component {
             ref={this.sliderRef}
             className={classes.images__container}
             style={{
-              gridTemplateColumns:
-                !isMd && `repeat(${previewImages.length}, auto)`,
-              gridTemplateRows: isMd && `repeat(${previewImages.length}, auto)`,
+              gridTemplateColumns: `repeat(${previewImages.length}, auto)`,
+              gridTemplateRows: `repeat(${previewImages.length}, auto)`,
             }}
           >
             {previewImages.map(item => (

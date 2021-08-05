@@ -20,6 +20,10 @@
   color: #000000;
   font-size: 16px;
   font-weight: bold;
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 14px;
+  }
 }
 
 .review {
