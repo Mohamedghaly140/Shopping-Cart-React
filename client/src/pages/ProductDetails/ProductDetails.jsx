@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
-import httpClient from "../services/httpClient";
-import Spinner from "../components/UI/Spinner/Spinner";
-import ProductDetail from "../components/ProductDetail/ProductDetail";
-import SimilarProducts from "../components/SimilarProducts/SimilarProducts";
-import ProductReview from "../components/ProductReview/ProductReview";
-import FrequentlyBought from "../components/FrequentlyBought/FrequentlyBought";
+import httpClient from "../../services/httpClient";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import ProductDetail from "../../components/ProductDetail/ProductDetail";
+import SimilarProducts from "../../components/SimilarProducts/SimilarProducts";
+import ProductReview from "../../components/ProductReview/ProductReview";
+import FrequentlyBought from "../../components/FrequentlyBought/FrequentlyBought";
 
 class ProductDetails extends Component {
   state = {

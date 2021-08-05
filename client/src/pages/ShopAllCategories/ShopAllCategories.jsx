@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import Title from "../components/UI/Title/Title";
-import Spinner from "../components/UI/Spinner/Spinner";
-import SubTitle from "../components/UI/SubTitle/SubTitle";
-import Categories from "../components/Categories/Categories";
+import Title from "../../components/UI/Title/Title";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import SubTitle from "../../components/UI/SubTitle/SubTitle";
+import Categories from "../../components/Categories/Categories";
 
 class ShopAllCategories extends Component {
   render() {

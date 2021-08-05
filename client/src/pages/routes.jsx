@@ -2,11 +2,13 @@ import React, { Component, Suspense, lazy } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Spinner from "../components/UI/Spinner/Spinner";
 
-import Home from "./Home";
-const SearchResult = lazy(() => import("./SearchResult"));
-const Organization = lazy(() => import("./Organization"));
-const ProductDetails = lazy(() => import("./ProductDetails"));
-const ShopAllCategories = lazy(() => import("./ShopAllCategories"));
+import Home from "./Home/Home";
+const SearchResult = lazy(() => import("./SearchResult/SearchResult"));
+const Organization = lazy(() => import("./Organization/Organization"));
+const ProductDetails = lazy(() => import("./ProductDetails/ProductDetails"));
+const ShopAllCategories = lazy(() =>
+  import("./ShopAllCategories/ShopAllCategories")
+);
 
 class AppRouter extends Component {
   render() {

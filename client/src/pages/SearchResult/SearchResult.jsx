@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
-import Spinner from "../components/UI/Spinner/Spinner";
-import SearchTable from "../components/SearchTable/SearchTable";
-import SearchResultContainer from "../components/SearchResultContainer/SearchResultContainer";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import SearchTable from "../../components/SearchTable/SearchTable";
+import SearchResultContainer from "../../components/SearchResultContainer/SearchResultContainer";
 
 import classes from "./SearchResult.module.scss";
 
