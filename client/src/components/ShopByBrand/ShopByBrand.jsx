@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withMediaQuery } from "../../hoc/withMediaQuery";
 import Section from "../UI/Section/Section";
 
 import Carousel from "nuka-carousel";
@@ -13,7 +14,6 @@ class ShopByBrand extends Component {
   state = {
     index: 3,
     slides: [],
-    viewportWidth: window.innerWidth,
   };
 
   componentDidMount() {
@@ -28,35 +28,20 @@ class ShopByBrand extends Component {
     });
 
     this.setState({ slides });
-
-    window.addEventListener("resize", this.updateWindowDimensions);
   }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = () => {
-    this.setState({ viewportWidth: window.innerWidth });
-  };
 
   selectBrandHandler = index => {
     this.setState({ index });
   };
 
   render() {
-    const { index, slides, viewportWidth } = this.state;
-    const { brands } = this.props;
+    const { index, slides } = this.state;
+    const { brands, isMobile, isMobileSm, isTablet, isTabletLg } = this.props;
 
     const options = [
       { value: "Rate", label: "Rate" },
       { value: "price", label: "Price" },
     ];
-
-    const isMobile = Boolean(viewportWidth <= 576);
-    const isMobileSm = Boolean(viewportWidth <= 320);
-    const isIPad = Boolean(viewportWidth >= 768 && viewportWidth <= 991.98);
-    const isIPadPro = Boolean(viewportWidth >= 992 && viewportWidth <= 1199.98);
 
     return (
       <Section
@@ -117,9 +102,9 @@ class ShopByBrand extends Component {
           renderCenterRightControls={null}
           renderBottomCenterControls={null}
           slidesToShow={
-            isMobile ? (isMobileSm ? 4 : 5) : isIPadPro ? 6 : isIPad ? 4 : 7
+            isMobile ? (isMobileSm ? 4 : 5) : isTabletLg ? 6 : isTablet ? 4 : 7
           }
-          cellSpacing={isMobile ? 16 : isIPadPro ? 32 : isIPad ? 32 : 40}
+          cellSpacing={isMobile ? 16 : isTabletLg ? 32 : isTablet ? 32 : 40}
           afterSlide={slideIndex => this.setState({ index: slideIndex })}
           renderTopLeftControls={({ previousSlide }) => (
             <SliderLeftButton
@@ -152,4 +137,4 @@ class ShopByBrand extends Component {
   }
 }
 
-export default ShopByBrand;
+export default withMediaQuery(ShopByBrand);

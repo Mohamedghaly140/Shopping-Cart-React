@@ -1,30 +1,12 @@
 import React, { Component } from "react";
+import { withMediaQuery } from "../../../hoc/withMediaQuery";
 import SelectBox from "../SelectBox/SelectBox";
 
 import classes from "./StoreItem.module.scss";
 
 class StoreItem extends Component {
-  state = {
-    viewportWidth: window.innerWidth,
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = () => {
-    this.setState({ viewportWidth: window.innerWidth });
-  };
-
   render() {
-    const { viewportWidth } = this.state;
-    const { title, storeImageUrl, imageUrl, options } = this.props;
-
-    const isMobile = Boolean(viewportWidth <= 576);
+    const { title, storeImageUrl, imageUrl, options, isMobile } = this.props;
 
     return (
       <div className={classes.storeItem}>
@@ -55,4 +37,4 @@ class StoreItem extends Component {
   }
 }
 
-export default StoreItem;
+export default withMediaQuery(StoreItem);

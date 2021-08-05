@@ -2,13 +2,41 @@
   position: relative;
 }
 
-// .owl-carousel .item {
-//   @media (max-width: 575.98px) {
-//     height: 275px;
-//   }
+.owl-carousel .item {
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
 
-//   height: 560px;
-// }
+  @media (max-width: 575.98px) {
+    height: 275px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    height: 500px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 540px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    height: 580px;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    height: 580px;
+  }
+
+  @media (min-width: 1400px) and (max-width: 1700px) {
+    height: 600px;
+  }
+
+  @media (min-width: 1700px) {
+    height: 800px;
+  }
+}
 
 .owl-theme .owl-nav {
   position: absolute;

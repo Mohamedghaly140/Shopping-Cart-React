@@ -1,30 +1,13 @@
 import React, { Component } from "react";
+import { withMediaQuery } from "../../hoc/withMediaQuery";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Carousel.scss";
 
 class Carousel extends Component {
-  state = {
-    viewportWidth: window.innerWidth,
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = () => {
-    this.setState({ viewportWidth: window.innerWidth });
-  };
-
   render() {
-    const { viewportWidth } = this.state;
-
-    const isMobile = Boolean(viewportWidth <= 576);
+    const { isMobile } = this.props;
 
     return (
       <OwlCarousel
@@ -93,4 +76,4 @@ class Carousel extends Component {
   }
 }
 
-export default Carousel;
+export default withMediaQuery(Carousel);
