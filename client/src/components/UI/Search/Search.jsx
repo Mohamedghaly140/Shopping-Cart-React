@@ -34,7 +34,8 @@ class Search extends Component {
 
   render() {
     const { focused } = this.state;
-    const { navbar, scrolled } = this.props;
+    const { navbar, scrolled, location } = this.props;
+    const isHome = location.pathname === "/";
 
     return (
       scrolled && (
@@ -42,7 +43,7 @@ class Search extends Component {
           onSubmit={this.submitSearchHandler}
           className={`${classes.search__container} ${
             navbar && classes.active
-          } ${focused && classes.search__container__focused}`}
+          } ${focused && isHome && classes.search__container__focused}`}
         >
           <button type="submit" className={classes.search__icon}>
             <SearchIcon width="24px" height="24px" color="#000" />
