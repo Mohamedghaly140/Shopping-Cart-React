@@ -62,7 +62,9 @@ class Caption extends Component {
               className={classes.search__input}
               placeholder="What are you looking for?"
             />
-            <button className={classes.search__button}>Search</button>
+            <button type="submit" className={classes.search__button}>
+              Search
+            </button>
           </form>
         </CSSTransition>
       </div>
