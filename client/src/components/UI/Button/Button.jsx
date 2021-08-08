@@ -2,12 +2,15 @@ import React from "react";
 import classes from "./Button.module.scss";
 
 const Button = props => {
-  const { title, renderIcon, bgColor, titleColor, ...restProps } = props;
+  const { className, title, renderIcon, bgColor, titleColor, ...restProps } =
+    props;
 
   return (
     <button
       {...restProps}
-      className={`${classes.button} ${renderIcon ? classes.iconPadding : ""}`}
+      className={`${classes.button} ${renderIcon ? classes.iconPadding : ""} ${
+        className && className
+      }`}
       style={{
         backgroundColor: bgColor,
         justifyContent: renderIcon ? "space-between" : "center",

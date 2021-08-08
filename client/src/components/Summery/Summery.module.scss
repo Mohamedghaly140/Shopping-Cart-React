@@ -1,0 +1,114 @@
+.summery__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (max-width: 575.98px) {
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.summery {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ececec;
+  padding: 20px 32px 28px 32px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+
+  span {
+    display: block;
+  }
+
+  @media (max-width: 575.98px) {
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.subTotal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d1d1b;
+}
+
+.price {
+  font-size: 30px;
+  color: #542e90;
+  font-weight: bold;
+}
+
+.price__currency {
+  font-size: 14px;
+  font-weight: 600;
+  color: #542e90;
+  text-transform: uppercase;
+  display: inline-block !important;
+}
+
+.addCoupon {
+  width: 100%;
+  font-size: 16px;
+  color: #3c3c3b;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 24px;
+  padding-block: 14px;
+  transition: all 0.3s ease-in-out;
+  border: 0.9428090453147888px solid #ececec;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+}
+
+.addCoupon:hover {
+  background: #ececec;
+  border: 1px solid #f5f5f5;
+}
+
+.checkout {
+  width: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding-block: 17px;
+  border-radius: 27px;
+  transition: all 0.3s ease-in-out;
+  background: #542e90 0% 0% no-repeat padding-box;
+}
+
+.checkout:hover {
+  background: #3c2167;
+}

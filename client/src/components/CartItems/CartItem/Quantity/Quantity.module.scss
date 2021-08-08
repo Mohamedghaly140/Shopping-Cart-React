@@ -1,0 +1,69 @@
+.quantity {
+  width: 96px;
+  height: 24px;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  padding-inline: 3px;
+  border: 0.5px solid #d9d9d9;
+  justify-content: space-between;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+
+  span {
+    width: 24px;
+    display: block;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+
+    @media (max-width: 320.98px) {
+      font-size: 8px;
+    }
+
+    @media (min-width: 320.98px) and (max-width: 575.98px) {
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 320.98px) {
+  }
+
+  @media (min-width: 320.98px) and (max-width: 575.98px) {
+  }
+}
+
+.btn {
+  width: 19px;
+  height: 19px;
+  padding: 6px;
+  border: none;
+  outline: none;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  background: #fff200 0% 0% no-repeat padding-box;
+
+  &:hover {
+    box-shadow: 0px 0px 5px #00000026;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  //   @media (max-width: 320.98px) {
+  //     width: 24px;
+  //     height: 24px;
+  //     padding: 6px;
+  //   }
+
+  //   @media (min-width: 320.98px) and (max-width: 575.98px) {
+  //     padding: 8px;
+  //     width: 28px;
+  //     height: 28px;
+  //   }
+}

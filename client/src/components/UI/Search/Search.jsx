@@ -35,7 +35,8 @@ class Search extends Component {
   render() {
     const { focused } = this.state;
     const { navbar, scrolled, location } = this.props;
-    const isHome = location.pathname === "/";
+    const { pathname } = location;
+    const isHome = pathname === "/" || pathname === "/cart";
 
     return (
       scrolled && (

@@ -110,7 +110,7 @@
   }
 }
 
-// =================== For Home & Store Item ===================
+// =================== For Home & Store Item =================== //
 
 .select__box-container,
 .store__dropdown-container {
@@ -226,4 +226,96 @@
   padding-bottom: 15px;
   cursor: pointer !important;
   border: 0.5px solid #d9d9d9;
+}
+
+// =================== For Cart Item =================== //
+.cartItem__select-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+
+  @media (max-width: 575px) {
+    // height: 32px !important;
+  }
+}
+
+.cartItem__select__control {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  min-height: auto !important;
+  background: transparent !important;
+
+  @media (max-width: 575px) {
+    // height: 32px !important;
+  }
+}
+
+.cartItem__select__control--is-focused {
+  box-shadow: none !important;
+}
+
+.cartItem__select__placeholder {
+  color: #000 !important;
+}
+
+.cartItem__select__value-container {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+  background: transparent !important;
+
+  @media (max-width: 575px) {
+    height: 32px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.cartItem__select__indicators {
+  width: 100% !important;
+  height: 100% !important;
+  display: none !important;
+}
+
+.cartItem__select__menu {
+  background: #f5f5f5;
+  padding: 0 !important;
+  left: 1% !important;
+  width: 90px !important;
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+
+  @media (max-width: 575px) {
+    left: -0% !important;
+    width: 90px !important;
+  }
+}
+
+.cartItem__select__option {
+  padding-block: 8px;
+  text-transform: capitalize;
+  cursor: pointer !important;
+}
+
+.cartItem__select__menu-list {
+  background: #f5f5f5;
+  padding: 0 !important;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 4px;
+    border: 4px solid #d9d9d9;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    border: 4px solid #542e90;
+  }
 }

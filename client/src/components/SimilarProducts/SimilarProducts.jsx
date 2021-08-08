@@ -23,7 +23,7 @@ class SimilarProducts extends Component {
   };
 
   render() {
-    const { loading, products } = this.props;
+    const { loading, products, title, subTitle } = this.props;
     const counts = 6;
 
     if (loading) {
@@ -31,11 +31,7 @@ class SimilarProducts extends Component {
     }
 
     return (
-      <Section
-        className="container mt-0"
-        title="Similar Products"
-        subTitle="You may like these products also."
-      >
+      <Section title={title} subTitle={subTitle} className="container mt-0">
         <SliderLeftButton
           className={classes.slide__button}
           onSlideLeft={this.slideLeftHandler}
@@ -53,5 +49,10 @@ class SimilarProducts extends Component {
     );
   }
 }
+
+SimilarProducts.defaultProps = {
+  title: "Similar Products",
+  subTitle: "You may like these products also.",
+};
 
 export default SimilarProducts;

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "description": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
+    "price": 9.999,
+    "imageUrl": {
+      "small": "/images/product2.png",
+      "large": "/images/product2@2x.png"
+    },
+    "brand": "/images/levis.svg",
+    "qty": 2,
+    "size": "Medium",
+    "color": "White"
+  },
+  {
+    "id": 2,
+    "description": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
+    "imageUrl": {
+      "small": "/images/product.png",
+      "large": "/images/product@2x.png"
+    },
+    "price": 9.999,
+    "brand": "/images/adidas.svg",
+    "qty": 1,
+    "size": "X Large",
+    "color": "Black"
+  }
+]
