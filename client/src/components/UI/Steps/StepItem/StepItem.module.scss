@@ -1,0 +1,36 @@
+.stepItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item {
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  color: #868686;
+  position: relative;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #868686;
+  background: #fff 0% 0% no-repeat padding-box;
+}
+
+.title {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #868686;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+.body {
+  color: #868686;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}

@@ -1,10 +1,14 @@
 import React from "react";
 import classes from "./Button.module.scss";
 
-const Button = props => {
-  const { className, title, renderIcon, bgColor, titleColor, ...restProps } =
-    props;
-
+const Button = ({
+  className,
+  title,
+  renderIcon,
+  bgColor,
+  titleColor,
+  ...restProps
+}) => {
   return (
     <button
       {...restProps}

@@ -4,6 +4,7 @@ import Spinner from "../components/UI/Spinner/Spinner";
 
 import Home from "./Home/Home";
 const Cart = lazy(() => import("./Cart/Cart"));
+const Checkout = lazy(() => import("./Checkout/Checkout"));
 const SearchResult = lazy(() => import("./SearchResult/SearchResult"));
 const Organization = lazy(() => import("./Organization/Organization"));
 const ProductDetails = lazy(() => import("./ProductDetails/ProductDetails"));
@@ -54,6 +55,9 @@ class AppRouter extends Component {
           </Route>
           <Route path="/cart">
             <Cart products={products} loading={loading} />
+          </Route>
+          <Route path="/checkout">
+            <Checkout products={products} loading={loading} />
           </Route>
           <Route path="/result">
             <SearchResult products={products} loading={loading} />

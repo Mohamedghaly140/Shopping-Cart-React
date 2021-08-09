@@ -1,0 +1,10 @@
+.checkout {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.checkout__container {
+  display: grid;
+  margin-top: 12px;
+  grid-template-columns: repeat(2, auto);
+}

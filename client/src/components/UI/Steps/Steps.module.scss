@@ -1,0 +1,23 @@
+.steps {
+  width: 100%;
+  display: flex;
+  max-width: 460px;
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.progress {
+  top: 30%;
+  height: 0;
+  left: 11%;
+  z-index: 1;
+  right: 11%;
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+  border: 2px solid #542e90;
+  transition: width 0.3s ease-in-out;
+}
