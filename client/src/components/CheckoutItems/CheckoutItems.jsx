@@ -7,6 +7,7 @@ import classes from "./CheckoutItems.module.scss";
 
 const CheckoutItems = ({
   items,
+  onCheckout,
   paymentMethod,
   shippingMethod,
   shippingAddress,
@@ -47,12 +48,13 @@ const CheckoutItems = ({
         ))}
       </div>
       <Summery
-        subTotalMain={subTotalMain}
-        grandTotalMain={grandTotalMain}
         subTotal={subTotal}
         buttonTitle="Continue"
         shipping={shippingFees}
         grandTotal={grandTotal}
+        onCheckout={onCheckout}
+        subTotalMain={subTotalMain}
+        grandTotalMain={grandTotalMain}
       />
     </section>
   );

@@ -9,10 +9,10 @@ class Checkout extends Component {
   state = {
     shippingAddress: {
       selected: true,
-      checked: true,
+      checked: false,
     },
     shippingMethod: {
-      selected: true,
+      selected: false,
       checked: false,
     },
     paymentMethod: {
@@ -79,6 +79,34 @@ class Checkout extends Component {
     });
   };
 
+  checkoutProcessHandler = () => {
+    const { shippingAddress, shippingMethod, paymentMethod } = this.state;
+
+    if (shippingAddress.selected && !shippingAddress.checked) {
+      this.finishAddressHandler();
+      this.goToShippingMethodHandler();
+      return;
+    }
+
+    if (
+      shippingMethod.selected &&
+      !shippingMethod.checked &&
+      shippingAddress.checked
+    ) {
+      this.finishShippingMethodHandler();
+      this.goToPaymentMethodHandler();
+      return;
+    }
+
+    if (
+      paymentMethod.selected &&
+      !paymentMethod.checked &&
+      shippingMethod.checked
+    ) {
+      this.finishPaymentMethodHandler();
+    }
+  };
+
   render() {
     const { shippingAddress, shippingMethod, paymentMethod } = this.state;
 
@@ -102,12 +130,15 @@ class Checkout extends Component {
             shippingAddress={shippingAddress}
           />
           <div className={classes.checkout__container}>
-            <ShippingAddress />
+            {shippingAddress.selected && !shippingAddress.checked && (
+              <ShippingAddress />
+            )}
             <CheckoutItems
               items={cartDara}
               paymentMethod={paymentMethod}
               shippingMethod={shippingMethod}
               shippingAddress={shippingAddress}
+              onCheckout={this.checkoutProcessHandler}
             />
           </div>
         </div>

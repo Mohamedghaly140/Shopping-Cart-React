@@ -7,12 +7,12 @@ import classes from "./ShippingAddress.module.scss";
 
 const address = {
   title: "Home",
-  area: "Heliopolis",
   city: "Cairo",
-  phone: "01112868708",
   flatNum: "13",
   country: "Egypt",
   buildingNum: "13",
+  area: "Heliopolis",
+  phone: "01112868708",
   addressLine1: "13th Heliopolis Street",
 };
 

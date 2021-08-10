@@ -9,6 +9,7 @@ const Summery = ({
   subTotal,
   shipping,
   grandTotal,
+  onCheckout,
   buttonTitle,
   subTotalMain,
   grandTotalMain,
@@ -36,6 +37,7 @@ const Summery = ({
         {coupon && <Button className={classes.addCoupon} title="Add Coupon" />}
       </div>
       <Button
+        onClick={onCheckout}
         className={classes.checkout}
         title={buttonTitle || "Complete Checkout"}
       />
