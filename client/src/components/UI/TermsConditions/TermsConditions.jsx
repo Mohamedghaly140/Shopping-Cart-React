@@ -6,8 +6,7 @@ import classes from "./TermsConditions.module.scss";
 const TermsConditions = ({ terms }) => {
   return (
     <p className={classes.terms}>
-      {terms}
-      <Link className={classes.link}>terms and conditions</Link>
+      {terms} <Link className={classes.link}>terms and conditions</Link>
     </p>
   );
 };

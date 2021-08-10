@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import AddressForm from "../AddressForm/AddressForm";
 import Address from "../UI/Address/Address";
 import Title from "../UI/CheckoutSection/Title/Title";
+import Button from "../UI/CheckoutSection/Button/Button";
 import ReactSelect from "../UI/ReactSelect/ReactSelect";
+import TermsConditions from "../UI/TermsConditions/TermsConditions";
 import classes from "./ShippingAddress.module.scss";
 
 const address = {
@@ -35,6 +37,8 @@ class ShippingAddress extends Component {
         ) : (
           <Address address={address} />
         )}
+        <TermsConditions />
+        <Button>Back to Cart</Button>
       </div>
     );
   }

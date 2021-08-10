@@ -4,6 +4,8 @@
   text-align: left;
   color: #3c3c3b;
   letter-spacing: 0px;
+  margin-top: 30px;
+  margin-bottom: 16px;
 
   &::first-letter {
     text-transform: capitalize;
@@ -16,4 +18,10 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #492583;
+  text-decoration: none;
 }
