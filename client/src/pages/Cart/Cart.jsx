@@ -21,11 +21,11 @@ class Cart extends Component {
         <section className={classes.cart}>
           <div className={classes.header}>
             <Title>My Cart</Title>
-            <SubTitle>Items (2)</SubTitle>
+            <SubTitle>Items ({cartItems.length})</SubTitle>
           </div>
           <div className={classes.cart__grid}>
             <CartItems cartItems={cartItems} />
-            <Summery price={subTotal} />
+            <Summery coupon subTotal={subTotal} subTotalMain />
           </div>
           <SimilarProducts
             loading={loading}

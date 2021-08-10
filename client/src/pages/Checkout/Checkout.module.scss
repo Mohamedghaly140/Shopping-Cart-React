@@ -6,5 +6,6 @@
 .checkout__container {
   display: grid;
   margin-top: 12px;
+  grid-column-gap: 32px;
   grid-template-columns: repeat(2, auto);
 }

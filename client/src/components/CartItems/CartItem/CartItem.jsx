@@ -25,7 +25,7 @@ const CartItem = ({ cartItem }) => {
         <img src={cartItem.imageUrl.large} alt="product" />
       </div>
       <div className={classes.product__details}>
-        <p className={classes.description}>{cartItem.description}</p>
+        <p className={classes.description}>{cartItem.title}</p>
         <p className={classes.price}>
           {cartItem.price}
           <span className={classes.price__currency}>L.E</span>

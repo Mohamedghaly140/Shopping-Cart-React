@@ -1,0 +1,58 @@
+.summeryItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:first-child {
+    margin-bottom: 11px;
+  }
+}
+
+.main__label,
+.label {
+  color: #1d1d1b;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.main__label {
+  font-size: 18px;
+}
+
+.price,
+.currency {
+  color: #000;
+}
+
+.main__price,
+.main__currency {
+  color: #542e90;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.currency,
+.main__currency {
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block !important;
+}
+
+.currency {
+  font-size: 16px;
+}
+
+.main__price {
+  font-size: 30px;
+  font-weight: bold;
+}
+.main__currency {
+  font-size: 14px;
+}

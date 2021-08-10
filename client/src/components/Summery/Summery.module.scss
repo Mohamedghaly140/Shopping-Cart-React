@@ -23,13 +23,13 @@
 .summery {
   width: 100%;
   display: flex;
-  border-radius: 20px;
   margin-bottom: 32px;
+  border-radius: 20px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   border: 1px solid #ececec;
-  padding: 20px 32px 28px 32px;
+  padding: 20px 32px 19px 32px;
   background: #ffffff 0% 0% no-repeat padding-box;
 
   span {
@@ -60,30 +60,10 @@
   justify-content: space-between;
 }
 
-.label {
-  font-size: 18px;
-  font-weight: bold;
-  color: #1d1d1b;
-}
-
-.price {
-  font-size: 30px;
-  color: #542e90;
-  font-weight: bold;
-}
-
-.price__currency {
-  font-size: 14px;
-  font-weight: 600;
-  color: #542e90;
-  text-transform: uppercase;
-  display: inline-block !important;
-}
-
 .addCoupon {
   width: 100%;
-  font-size: 16px;
   color: #3c3c3b;
+  margin-top: 32px;
   font-weight: bold;
   text-align: center;
   border-radius: 24px;
@@ -100,11 +80,9 @@
 
 .checkout {
   width: 100%;
-  color: #ffffff;
-  font-weight: bold;
+  color: #fff;
   text-align: center;
   padding-block: 17px;
-  border-radius: 27px;
   transition: all 0.3s ease-in-out;
   background: #542e90 0% 0% no-repeat padding-box;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import classes from "./Checkout.module.scss";
+import cartDara from "../../services/cartData.json";
+import CheckoutItems from "../../components/CheckoutItems/CheckoutItems";
 import CheckoutHeader from "../../components/UI/CheckoutHeader/CheckoutHeader";
 import ShippingAddress from "../../components/ShippingAddress/ShippingAddress";
 
@@ -101,6 +103,12 @@ class Checkout extends Component {
           />
           <div className={classes.checkout__container}>
             <ShippingAddress />
+            <CheckoutItems
+              items={cartDara}
+              paymentMethod={paymentMethod}
+              shippingMethod={shippingMethod}
+              shippingAddress={shippingAddress}
+            />
           </div>
         </div>
       </section>
