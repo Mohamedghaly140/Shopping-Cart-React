@@ -1,0 +1,37 @@
+.address {
+  text-align: left;
+}
+
+.actions {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.delete,
+.edit {
+  width: 200px;
+  height: 48px;
+  border-radius: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete {
+  color: #fff;
+  background: #ce2828 0% 0% no-repeat padding-box;
+}
+
+.edit {
+  color: #000;
+  margin-left: 16px;
+  background: #fff200 0% 0% no-repeat padding-box;
+}
+
+.delete:hover {
+  background: #991d29;
+}
+
+.edit:hover {
+  background: #e0a800;
+}

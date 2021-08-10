@@ -1,13 +1,14 @@
 .button {
   display: flex;
-  align-items: center;
   width: 252px;
   height: 54px;
   border: none;
   outline: none;
   padding: 13px 20px;
   font-weight: bold;
+  align-items: center;
   border-radius: 27px;
+  text-transform: capitalize;
   background: 0% 0% no-repeat padding-box;
 
   @media (max-width: 320.98px) {
