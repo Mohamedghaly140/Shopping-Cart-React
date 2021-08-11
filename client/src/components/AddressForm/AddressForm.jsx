@@ -1,30 +1,11 @@
 import React, { Fragment, Component } from "react";
 import Button from "../UI/Button/Button";
+import FlexBox from "../UI/FlexBox/FlexBox";
 import FormGroup from "../UI/FormGroup/FormGroup";
 import Title from "../UI/CheckoutSection/Title/Title";
 import CheckoutSection from "../UI/CheckoutSection/CheckoutSection";
 
 import classes from "./AddressForm.module.scss";
-
-const counteryOptios = [
-  { value: "Egypt", label: "Egypt" },
-  { value: "USA", label: "USA" },
-  { value: "UAE", label: "UAE" },
-  { value: "KSA", label: "KSA" },
-];
-
-const cityOptios = [
-  { value: "Giza", label: "Giza" },
-  { value: "Cairo", label: "Cairo" },
-  { value: "Alexandria", label: "Alexandria" },
-  { value: "Shubra El Kheima", label: "Shubra El Kheima" },
-];
-
-const aresOptios = [
-  { value: "New Cairo", label: "New Cairo" },
-  { value: "Nasr City", label: "Nasr City" },
-  { value: "Heliopolis", label: "Heliopolis" },
-];
 
 class AddressForm extends Component {
   state = {
@@ -77,7 +58,7 @@ class AddressForm extends Component {
   };
 
   render() {
-    const { title } = this.props;
+    const { title, cityOptios, aresOptios, counteryOptios } = this.props;
     const {
       address: {
         area,
@@ -194,10 +175,15 @@ class AddressForm extends Component {
                 onChange={input.onChangeFunc}
               />
             ))}
-            <div className={classes.actions}>
+            <FlexBox
+              className={classes.actions}
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+            >
               <Button title="Cancel" className={classes.cancel} />
               <Button type="submit" title="Save" className={classes.save} />
-            </div>
+            </FlexBox>
           </form>
         </CheckoutSection>
       </Fragment>

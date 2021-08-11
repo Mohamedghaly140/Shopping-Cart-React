@@ -1,10 +1,16 @@
 import React, { Fragment } from "react";
 import "./RadioButton.scss";
 
-const RadioButton = ({ title }) => {
+const RadioButton = ({ title, value }) => {
   return (
     <Fragment>
-      <input className="radio__input" id={title} type="radio" name="method" />
+      <input
+        id={title}
+        type="radio"
+        name="method"
+        value={value}
+        className="radio__input"
+      />
       <div className="radio__button" />
     </Fragment>
   );

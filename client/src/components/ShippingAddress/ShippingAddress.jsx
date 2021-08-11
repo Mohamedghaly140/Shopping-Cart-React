@@ -1,16 +1,27 @@
 import React, { Component } from "react";
-import AddressForm from "../AddressForm/AddressForm";
+import { withRouter } from "react-router-dom";
 import Address from "../UI/Address/Address";
+import AddressForm from "../AddressForm/AddressForm";
 import Title from "../UI/CheckoutSection/Title/Title";
-import Button from "../UI/CheckoutSection/Button/Button";
 import ReactSelect from "../UI/ReactSelect/ReactSelect";
+import Button from "../UI/CheckoutSection/Button/Button";
 import TermsConditions from "../UI/TermsConditions/TermsConditions";
 import classes from "./ShippingAddress.module.scss";
 
+import counteryOptios from "../../services/counteryOptios.json";
+import cityOptios from "../../services/cityOptios.json";
+import aresOptios from "../../services/aresOptios.json";
+
+const addressOptios = [{ value: "Cairo", label: "New Cairo Banafsg 3" }];
+
 class ShippingAddress extends Component {
   state = {
-    formValid: false,
     address: null,
+    formValid: false,
+    cityOptios,
+    aresOptios,
+    addressOptios,
+    counteryOptios,
   };
 
   saveFormHandler = address => {
@@ -21,9 +32,19 @@ class ShippingAddress extends Component {
     this.setState({ formValid: false });
   };
 
+  backToCartHandler = () => {
+    this.props.history.push("/cart");
+  };
+
   render() {
-    const { formValid, address } = this.state;
-    const addressOptios = [{ value: "Cairo", label: "New Cairo Banafsg 3" }];
+    const {
+      formValid,
+      address,
+      cityOptios,
+      aresOptios,
+      addressOptios,
+      counteryOptios,
+    } = this.state;
 
     return (
       <div className={classes.shippingAddress}>
@@ -41,13 +62,16 @@ class ShippingAddress extends Component {
           <AddressForm
             title="Add A New Address"
             onSave={this.saveFormHandler}
+            aresOptios={aresOptios}
+            cityOptios={cityOptios}
+            counteryOptios={counteryOptios}
           />
         )}
         <TermsConditions />
-        <Button onClick={this.backHandler}>Back to Cart</Button>
+        <Button onClick={this.backToCartHandler}>Back to Cart</Button>
       </div>
     );
   }
 }
 
-export default ShippingAddress;
+export default withRouter(ShippingAddress);

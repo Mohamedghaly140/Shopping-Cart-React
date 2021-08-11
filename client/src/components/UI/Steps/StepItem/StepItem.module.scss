@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #868686;
+  transition: all 0.15s ease-in-out;
   background: #fff 0% 0% no-repeat padding-box;
 }
 
@@ -26,11 +27,13 @@
   color: #868686;
   text-align: center;
   letter-spacing: -0.3px;
+  transition: all 0.15s ease-in-out;
 }
 
 .body {
-  color: #868686;
   display: block;
   font-size: 16px;
+  color: #868686;
   font-weight: bold;
+  transition: all 0.15s ease-in-out;
 }

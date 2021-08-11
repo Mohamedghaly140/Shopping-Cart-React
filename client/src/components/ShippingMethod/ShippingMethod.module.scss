@@ -1,0 +1,24 @@
+.optionsList {
+  display: grid;
+  grid-row-gap: 32px;
+}
+
+.split {
+  margin-top: 13px;
+  margin-bottom: 15px;
+}
+
+.options {
+  font-size: 14px;
+  color: #3c3c3b;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 110px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.pickup {
+  width: 240px;
+  height: 48px;
+}

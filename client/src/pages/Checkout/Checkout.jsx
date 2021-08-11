@@ -24,6 +24,18 @@ class Checkout extends Component {
     },
   };
 
+  // componentDidMount() {
+  //   const checkoutState = JSON.parse(localStorage.getItem("checkoutState"));
+  //   if (checkoutState) {
+  //     this.setState(checkoutState);
+  //   }
+  // }
+
+  // Persist Checkout State
+  // componentDidUpdate() {
+  //   localStorage.setItem("checkoutState", JSON.stringify(this.state));
+  // }
+
   finishAddressHandler = () => {
     this.setState(prevState => {
       return {
@@ -82,6 +94,21 @@ class Checkout extends Component {
     });
   };
 
+  goBackToAddressHandler = () => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        shippingAddress: {
+          selected: true,
+          checked: false,
+        },
+        shippingMethod: {
+          selected: false,
+        },
+      };
+    });
+  };
+
   checkoutProcessHandler = () => {
     const { shippingAddress, shippingMethod, paymentMethod } = this.state;
 
@@ -122,6 +149,19 @@ class Checkout extends Component {
         ? "Shipping Method"
         : "Payment Method";
 
+    const showAddress = shippingAddress.selected && !shippingAddress.checked;
+
+    const showMethod =
+      shippingAddress.checked &&
+      shippingMethod.selected &&
+      !shippingMethod.checked;
+
+    const showPayment =
+      shippingAddress.checked &&
+      shippingMethod.checked &&
+      paymentMethod.selected &&
+      !paymentMethod.checked;
+
     return (
       <section className={classes.checkout}>
         <div className="container">
@@ -133,14 +173,14 @@ class Checkout extends Component {
             shippingAddress={shippingAddress}
           />
           <div className={classes.checkout__container}>
-            {shippingAddress.selected && !shippingAddress.checked && (
-              <ShippingAddress />
+            {showAddress && <ShippingAddress />}
+            {showMethod && (
+              <ShippingMethod
+                options={shippingMethodsData}
+                onGoBack={this.goBackToAddressHandler}
+              />
             )}
-            {shippingAddress.checked &&
-              shippingMethod.selected &&
-              !shippingMethod.checked && (
-                <ShippingMethod options={shippingMethodsData} />
-              )}
+            {showPayment && ""}
             <CheckoutItems
               items={cartDara}
               paymentMethod={paymentMethod}
