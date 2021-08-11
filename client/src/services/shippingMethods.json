@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "bosta",
+    "imageUrl": "/images/bosta.png",
+    "shippingFees": "25 LE",
+    "deliveryTime": "2 Days",
+    "arrivingDate": "27-7-2021"
+  },
+  {
+    "id": 2,
+    "title": "aramex",
+    "imageUrl": "/images/aramex.png",
+    "shippingFees": "30 LE",
+    "deliveryTime": "1 Days",
+    "arrivingDate": "25-7-2021"
+  }
+]

@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import classes from "./Checkout.module.scss";
 import cartDara from "../../services/cartData.json";
 import CheckoutItems from "../../components/CheckoutItems/CheckoutItems";
+import ShippingMethod from "../../components/ShippingMethod/ShippingMethod";
 import CheckoutHeader from "../../components/UI/CheckoutHeader/CheckoutHeader";
 import ShippingAddress from "../../components/ShippingAddress/ShippingAddress";
+
+import shippingMethodsData from "../../services/shippingMethods.json";
 
 class Checkout extends Component {
   state = {
@@ -133,6 +136,11 @@ class Checkout extends Component {
             {shippingAddress.selected && !shippingAddress.checked && (
               <ShippingAddress />
             )}
+            {shippingAddress.checked &&
+              shippingMethod.selected &&
+              !shippingMethod.checked && (
+                <ShippingMethod options={shippingMethodsData} />
+              )}
             <CheckoutItems
               items={cartDara}
               paymentMethod={paymentMethod}

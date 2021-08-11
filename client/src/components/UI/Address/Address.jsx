@@ -14,7 +14,7 @@ const Address = ({ address }) => {
         {`${address.addressLine1} - Building Number ${address.buildingNum} - Flat Number ${address.flatNum}`}
       </AddressDescription>
       <AddressDescription>{address.area}</AddressDescription>
-      <AddressDescription>{`${address.city} ${address.country}`}</AddressDescription>
+      <AddressDescription>{`${address.city}, ${address.country}`}</AddressDescription>
       <AddressDescription>{address.phone}</AddressDescription>
       <div className={classes.actions}>
         <Button className={classes.delete} title="delete" />

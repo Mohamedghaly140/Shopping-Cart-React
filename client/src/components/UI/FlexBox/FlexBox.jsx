@@ -13,11 +13,12 @@ const FlexBox = ({
     <div
       className={className}
       style={{
-        flexDirection: direction,
         alignItems,
-        justifyContent,
         justifyItems,
         alignContent,
+        justifyContent,
+        display: "flex",
+        flexDirection: direction,
       }}
     >
       {children}
