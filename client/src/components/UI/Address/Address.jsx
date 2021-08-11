@@ -11,7 +11,7 @@ const Address = ({ address }) => {
     <CheckoutSection className={classes.address}>
       <AddressTitle>{address.title} Address</AddressTitle>
       <AddressDescription>
-        {`${address.addressLine1} - ${address.buildingNum} - ${address.flatNum}`}
+        {`${address.addressLine1} - Building Number ${address.buildingNum} - Flat Number ${address.flatNum}`}
       </AddressDescription>
       <AddressDescription>{address.area}</AddressDescription>
       <AddressDescription>{`${address.city} ${address.country}`}</AddressDescription>
@@ -22,6 +22,19 @@ const Address = ({ address }) => {
       </div>
     </CheckoutSection>
   );
+};
+
+Address.defaultProps = {
+  address: {
+    title: "Home",
+    city: "Cairo",
+    flatNum: "13",
+    country: "Egypt",
+    buildingNum: "13",
+    area: "Heliopolis",
+    phone: "01112868708",
+    addressLine1: "13th Heliopolis Street",
+  },
 };
 
 export default Address;

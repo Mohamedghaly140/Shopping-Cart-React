@@ -7,19 +7,22 @@ import ReactSelect from "../UI/ReactSelect/ReactSelect";
 import TermsConditions from "../UI/TermsConditions/TermsConditions";
 import classes from "./ShippingAddress.module.scss";
 
-const address = {
-  title: "Home",
-  city: "Cairo",
-  flatNum: "13",
-  country: "Egypt",
-  buildingNum: "13",
-  area: "Heliopolis",
-  phone: "01112868708",
-  addressLine1: "13th Heliopolis Street",
-};
-
 class ShippingAddress extends Component {
+  state = {
+    formValid: false,
+    address: null,
+  };
+
+  saveFormHandler = address => {
+    this.setState({ formValid: true, address });
+  };
+
+  backHandler = () => {
+    this.setState({ formValid: false });
+  };
+
   render() {
+    const { formValid, address } = this.state;
     const addressOptios = [{ value: "Cairo", label: "New Cairo Banafsg 3" }];
 
     return (
@@ -32,13 +35,16 @@ class ShippingAddress extends Component {
             placeholder="Choose your address"
           />
         </div>
-        {false ? (
-          <AddressForm title="Add A New Address" />
-        ) : (
+        {formValid && address ? (
           <Address address={address} />
+        ) : (
+          <AddressForm
+            title="Add A New Address"
+            onSave={this.saveFormHandler}
+          />
         )}
         <TermsConditions />
-        <Button>Back to Cart</Button>
+        <Button onClick={this.backHandler}>Back to Cart</Button>
       </div>
     );
   }

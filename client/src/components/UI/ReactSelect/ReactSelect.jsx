@@ -9,15 +9,21 @@ class ReactSelect extends Component {
 
   handleChange = selectedOption => {
     this.setState({ selectedOption });
+
+    if (this.props.name) {
+      this.props.onChange(this.props.name, selectedOption);
+    }
+
     // console.log(`Option selected:`, selectedOption.value);
   };
 
   render() {
     const { selectedOption } = this.state;
-    const { options, placeholder, prefix, menuPlacement } = this.props;
+    const { options, placeholder, prefix, menuPlacement, name } = this.props;
 
     return (
       <Select
+        name={name}
         className={`${prefix}-container`}
         classNamePrefix={prefix}
         options={options}

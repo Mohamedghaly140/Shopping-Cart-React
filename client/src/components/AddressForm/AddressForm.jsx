@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import Button from "../UI/Button/Button";
 import FormGroup from "../UI/FormGroup/FormGroup";
 import Title from "../UI/CheckoutSection/Title/Title";
@@ -23,49 +23,187 @@ const cityOptios = [
 const aresOptios = [
   { value: "New Cairo", label: "New Cairo" },
   { value: "Nasr City", label: "Nasr City" },
+  { value: "Heliopolis", label: "Heliopolis" },
 ];
 
-const AddressForm = ({ title }) => {
-  return (
-    <Fragment>
-      <Title>{title}</Title>
-      <CheckoutSection className={classes.formContainer}>
-        <form>
-          <FormGroup name="firstName" label="First Name" />
-          <FormGroup name="lastname" label="last Name" />
-          <FormGroup name="phoneNuber" label="Phone number" type="tel" />
-          <FormGroup
-            name="country"
-            label="Country"
-            type="select"
-            options={counteryOptios}
-          />
-          <FormGroup
-            name="city"
-            label="City"
-            type="select"
-            options={cityOptios}
-          />
-          <FormGroup
-            name="area"
-            label="Area"
-            type="select"
-            options={aresOptios}
-          />
-          <FormGroup name="addressLine1" label="Address Line 1" />
-          <FormGroup name="addressLine2" label="Address Line 2" />
-          <FormGroup name="buildingNumber" label="Building Number" />
-          <FormGroup name="flatNumber" label="Flat Number" />
-          <FormGroup name="postalCode" label="Postal Code" />
-          <div className={classes.actions}>
-            <Button title="Cancel" className={classes.cancel} />
-            <Button type="submit" title="Save" className={classes.save} />
-          </div>
-        </form>
-      </CheckoutSection>
-    </Fragment>
-  );
-};
+class AddressForm extends Component {
+  state = {
+    formValid: false,
+    address: {
+      city: "",
+      area: "",
+      phone: "",
+      title: "",
+      country: "",
+      flatNum: "",
+      lastName: "",
+      firstName: "",
+      postalCode: "",
+      buildingNum: "",
+      addressLine1: "",
+    },
+  };
+
+  inputChangeHandler = event => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        address: {
+          ...prevState.address,
+          [event.target.name]: event.target.value,
+        },
+      };
+    });
+  };
+
+  selectChangeHandler = (name, selected) => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        address: {
+          ...prevState.address,
+          [name]: selected.value,
+        },
+      };
+    });
+  };
+
+  onSubmitAddress = event => {
+    event.preventDefault();
+
+    const { address } = this.state;
+
+    this.props.onSave(address);
+  };
+
+  render() {
+    const { title } = this.props;
+    const {
+      address: {
+        area,
+        city,
+        phone,
+        country,
+        flatNum,
+        lastName,
+        firstName,
+        postalCode,
+        buildingNum,
+        addressLine1,
+        addressLine2,
+      },
+    } = this.state;
+
+    const formInputs = [
+      {
+        label: "First Name",
+        name: "firstName",
+        value: firstName,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "last Name",
+        name: "lastName",
+        value: lastName,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "Phone number",
+        name: "phone",
+        value: phone,
+        onChangeFunc: this.inputChangeHandler,
+        type: "tel",
+      },
+      {
+        label: "Country",
+        name: "country",
+        value: country,
+        onChangeFunc: this.selectChangeHandler,
+        type: "select",
+        options: counteryOptios,
+      },
+      {
+        label: "City",
+        name: "city",
+        value: city,
+        onChangeFunc: this.selectChangeHandler,
+        type: "select",
+        options: cityOptios,
+      },
+      {
+        label: "Area",
+        name: "area",
+        value: area,
+        onChangeFunc: this.selectChangeHandler,
+        type: "select",
+        options: aresOptios,
+      },
+      {
+        label: "Address Line 1",
+        name: "addressLine1",
+        value: addressLine1,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "Address Line 2",
+        name: "addressLine2",
+        value: addressLine2,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "Building Number",
+        name: "buildingNum",
+        value: buildingNum,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "Flat Number",
+        name: "flatNum",
+        value: flatNum,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+      {
+        label: "Postal Code",
+        name: "postalCode",
+        value: postalCode,
+        onChangeFunc: this.inputChangeHandler,
+        type: "text",
+      },
+    ];
+
+    return (
+      <Fragment>
+        <Title>{title}</Title>
+        <CheckoutSection className={classes.formContainer}>
+          <form onSubmit={this.onSubmitAddress}>
+            {formInputs.map(input => (
+              <FormGroup
+                required
+                key={input.name}
+                name={input.name}
+                type={input.type}
+                label={input.label}
+                value={input.value}
+                options={input.options}
+                onChange={input.onChangeFunc}
+              />
+            ))}
+            <div className={classes.actions}>
+              <Button title="Cancel" className={classes.cancel} />
+              <Button type="submit" title="Save" className={classes.save} />
+            </div>
+          </form>
+        </CheckoutSection>
+      </Fragment>
+    );
+  }
+}
 
 AddressForm.defaultProps = {
   title: "Add A New Address",
