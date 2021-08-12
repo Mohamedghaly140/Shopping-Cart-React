@@ -58,7 +58,7 @@ class AddressForm extends Component {
   };
 
   render() {
-    const { title, cityOptios, aresOptios, counteryOptios } = this.props;
+    const { title, cityOptions, aresOptions, counteryOptions } = this.props;
     const {
       address: {
         area,
@@ -103,7 +103,7 @@ class AddressForm extends Component {
         value: country,
         onChangeFunc: this.selectChangeHandler,
         type: "select",
-        options: counteryOptios,
+        options: counteryOptions,
       },
       {
         label: "City",
@@ -111,7 +111,7 @@ class AddressForm extends Component {
         value: city,
         onChangeFunc: this.selectChangeHandler,
         type: "select",
-        options: cityOptios,
+        options: cityOptions,
       },
       {
         label: "Area",
@@ -119,7 +119,7 @@ class AddressForm extends Component {
         value: area,
         onChangeFunc: this.selectChangeHandler,
         type: "select",
-        options: aresOptios,
+        options: aresOptions,
       },
       {
         label: "Address Line 1",

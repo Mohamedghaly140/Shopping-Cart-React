@@ -6,11 +6,12 @@ import Title from "../UI/CheckoutSection/Title/Title";
 import ReactSelect from "../UI/ReactSelect/ReactSelect";
 import Button from "../UI/CheckoutSection/Button/Button";
 import TermsConditions from "../UI/TermsConditions/TermsConditions";
+
 import classes from "./ShippingAddress.module.scss";
 
-import counteryOptios from "../../services/counteryOptios.json";
-import cityOptios from "../../services/cityOptios.json";
-import aresOptios from "../../services/aresOptios.json";
+import cityOptions from "../../services/cityOptions.json";
+import aresOptions from "../../services/aresOptions.json";
+import counteryOptions from "../../services/counteryOptions.json";
 
 const addressOptios = [{ value: "Cairo", label: "New Cairo Banafsg 3" }];
 
@@ -18,10 +19,10 @@ class ShippingAddress extends Component {
   state = {
     address: null,
     formValid: false,
-    cityOptios,
-    aresOptios,
+    cityOptions,
+    aresOptions,
     addressOptios,
-    counteryOptios,
+    counteryOptions,
   };
 
   saveFormHandler = address => {
@@ -40,10 +41,10 @@ class ShippingAddress extends Component {
     const {
       formValid,
       address,
-      cityOptios,
-      aresOptios,
+      cityOptions,
+      aresOptions,
       addressOptios,
-      counteryOptios,
+      counteryOptions,
     } = this.state;
 
     return (
@@ -62,9 +63,9 @@ class ShippingAddress extends Component {
           <AddressForm
             title="Add A New Address"
             onSave={this.saveFormHandler}
-            aresOptios={aresOptios}
-            cityOptios={cityOptios}
-            counteryOptios={counteryOptios}
+            aresOptions={aresOptions}
+            cityOptions={cityOptions}
+            counteryOptions={counteryOptions}
           />
         )}
         <TermsConditions />
