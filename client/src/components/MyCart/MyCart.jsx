@@ -5,7 +5,7 @@ import classes from "./MyCart.module.scss";
 
 export class MyCart extends Component {
   render() {
-    const { openCart, toggleCart, cart } = this.props;
+    const { openCart, toggleCart, cartItems, onRemoveFromCart } = this.props;
 
     return (
       <Fragment>
@@ -27,15 +27,21 @@ export class MyCart extends Component {
           <h2 className={`${classes.title} text-center mb-3`}>My Cart</h2>
           <p className={classes.summary}>Cart Summary</p>
           <div className="d-flex align-items-center justify-content-center flex-column">
-            {cart.length === 0 ? (
+            {cartItems.length === 0 ? (
               <p className="my-4">You have no items yet..</p>
             ) : (
-              cart.map(item => <CartItem key={item.id} product={item} />)
+              cartItems.map(item => (
+                <CartItem
+                  key={item.id}
+                  product={item}
+                  onRemoveFromCart={onRemoveFromCart}
+                />
+              ))
             )}
           </div>
           <p className={classes.total}>
             Total:{" "}
-            {cart
+            {cartItems
               .reduce(
                 (prevValue, curValue) =>
                   prevValue + curValue.qty * curValue.price,

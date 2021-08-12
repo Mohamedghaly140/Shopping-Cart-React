@@ -41,20 +41,25 @@ class ProductDetails extends Component {
 
   render() {
     const { loading, product } = this.state;
-    const { addToCart, loadingProducts, products } = this.props;
+    const { onAddToCart, onRemoveFromCart, loadingProducts, products } =
+      this.props;
 
     return (
       <Fragment>
         {loading && !product ? (
           <Spinner />
         ) : (
-          <ProductDetail product={product} addToCart={addToCart} />
+          <ProductDetail
+            product={product}
+            onAddToCart={onAddToCart}
+            onRemoveFromCart={onRemoveFromCart}
+          />
         )}
         <ProductReview />
         {loading && !product ? (
           <Spinner />
         ) : (
-          <FrequentlyBought product={product} addToCart={addToCart} />
+          <FrequentlyBought product={product} addToCart={onAddToCart} />
         )}
         <SimilarProducts loading={loadingProducts} products={products} />
       </Fragment>

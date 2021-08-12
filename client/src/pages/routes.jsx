@@ -15,25 +15,26 @@ const ShopAllCategories = lazy(() =>
 class AppRouter extends Component {
   render() {
     const {
-      addToCart,
-      loading,
-      products,
+      tours,
       gifts,
       brands,
       offers,
-      tours,
+      loading,
+      products,
       categories,
+      onAddToCart,
+      onRemoveFromCart,
     } = this.props;
 
     return (
       <Switch>
         <Route exact path="/">
           <Home
-            loading={loading}
             gifts={gifts}
             tours={tours}
             brands={brands}
             offers={offers}
+            loading={loading}
             products={products}
             categories={categories}
           />
@@ -49,8 +50,9 @@ class AppRouter extends Component {
           <Route path="/product/:id">
             <ProductDetails
               products={products}
-              addToCart={addToCart}
+              onAddToCart={onAddToCart}
               loadingProducts={loading}
+              onRemoveFromCart={onRemoveFromCart}
             />
           </Route>
           <Route path="/cart">

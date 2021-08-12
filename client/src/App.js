@@ -17,7 +17,6 @@ class App extends Component {
     openCart: false,
     openSideBar: false,
     openAccount: false,
-    cart: [],
     search: false,
     loading: false,
     gifts: [],
@@ -26,6 +25,10 @@ class App extends Component {
     offers: [],
     products: [],
     categories: [],
+    cart: {
+      items: [],
+      total: 0,
+    },
   };
 
   componentDidMount() {
@@ -105,51 +108,128 @@ class App extends Component {
     });
   };
 
-  addToCartHandler = product => {
-    const exsitingProduct = this.state.cart.find(p => p.id === product.id);
-    const exsitingProductIndex = this.state.cart.findIndex(
-      p => p.id === product.id
-    );
+  addToCartHandler = (product, qty) => {
+    this.setState(prevState => {
+      const existingItem = prevState.cart.items.find(
+        item => item.id === product.id
+      );
 
-    let qty;
-    let copiedProduct = { ...exsitingProduct };
+      if (existingItem) {
+        return {
+          ...prevState,
+          cart: {
+            ...prevState.cart,
+            items: prevState.cart.items.map(item =>
+              item.id === product.id ? { ...item, qty } : item
+            ),
+          },
+        };
+      } else {
+        return {
+          ...prevState,
+          cart: {
+            ...prevState.cart,
+            items: [{ ...product, qty }],
+          },
+        };
+      }
+    });
+  };
 
-    if (exsitingProduct) {
-      qty = this.state.cart[exsitingProductIndex].qty;
-      const cartItems = [...this.state.cart];
-      cartItems.filter(p => p.id !== exsitingProduct.id);
-      copiedProduct.qty = qty;
+  removeFromCartHandler = id => {
+    let tempCart = [...this.state.cart.items];
+    let tempProduct = tempCart.find(p => p.id === id);
 
-      this.setState({ cart: [...cartItems, copiedProduct] });
-    } else {
+    if (tempProduct) {
       this.setState(prevState => {
         return {
-          cart: [...prevState.cart, product],
+          ...prevState,
+          cart: {
+            items: prevState.cart.items.filter(item => item.id !== id),
+          },
         };
       });
     }
   };
 
+  // updateQuantityHandler = id => {
+  //   let tempCart = [...this.state.cart.items];
+  //   let tempProduct = tempCart.find(p => p.id === id);
+
+  //   if (tempProduct) {
+  //     if (tempProduct.qty === 1) {
+  //       this.setState(prevState => {
+  //         return {
+  //           ...prevState,
+  //           cart: {
+  //             items: prevState.cart.items.filter(item => item.id !== id),
+  //           },
+  //         };
+  //       });
+  //     } else {
+  //       this.setState(prevState => {
+  //         return {
+  //           ...prevState,
+  //           cart: {
+  //             items: prevState.cart.items.map(item => {
+  //               if (item.id === id) {
+  //                 return { ...item, qty: item.qty - 1 };
+  //               }
+  //               return item;
+  //             }),
+  //           },
+  //         };
+  //       });
+  //     }
+  //   }
+
+  //   this.setState(prevState => {
+  //     const existingItem = prevState.cart.items.find(
+  //       item => item.id === product.id
+  //     );
+
+  //     if (existingItem) {
+  //       return {
+  //         ...prevState,
+  //         cart: {
+  //           ...prevState.cart,
+  //           items: prevState.cart.items.map(item =>
+  //             item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+  //           ),
+  //         },
+  //       };
+  //     } else {
+  //       return {
+  //         ...prevState,
+  //         cart: {
+  //           ...prevState.cart,
+  //           items: [{ ...product, qty: 1 }],
+  //         },
+  //       };
+  //     }
+  //   });
+  // };
+
   render() {
     const {
-      openCart,
       cart,
-      loading,
-      products,
-      openSideBar,
-      search,
-      openAccount,
+      tours,
       gifts,
+      search,
       brands,
       offers,
-      tours,
+      loading,
+      products,
+      openCart,
       categories,
+      openSideBar,
+      openAccount,
     } = this.state;
 
     return (
       <UiContextProvider>
         <Navbar
-          cartItems={cart}
+          cartItems={cart.items}
           onSearch={this.toggleSearchHandler}
           toggleCart={this.toggleCartHandler}
           logo={organization.organizationLogo.logo}
@@ -158,14 +238,16 @@ class App extends Component {
         />
         <main className="main">
           <AppRouter
-            addToCart={this.addToCartHandler}
-            loading={loading}
             gifts={gifts}
             tours={tours}
             brands={brands}
             offers={offers}
+            loading={loading}
             products={products}
+            cartItems={cart.items}
             categories={categories}
+            onAddToCart={this.addToCartHandler}
+            onRemoveFromCart={this.removeFromCartHandler}
           />
         </main>
         <Footer
@@ -174,9 +256,10 @@ class App extends Component {
         />
         <Fragment>
           <MyCart
-            cart={cart}
             openCart={openCart}
+            cartItems={cart.items}
             toggleCart={this.toggleCartHandler}
+            onRemoveFromCart={this.removeFromCartHandler}
           />
           <SideBar
             openSideBar={openSideBar}

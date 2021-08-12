@@ -1,7 +1,8 @@
-import { Component } from "react";
-import classes from "./Quantity.module.scss";
+import React, { Component } from "react";
 import Plus from "../Icons/Plus";
 import Minus from "../Icons/Minus";
+
+import classes from "./Quantity.module.scss";
 
 class Quantity extends Component {
   state = {
@@ -9,27 +10,24 @@ class Quantity extends Component {
   };
 
   addQtyHandler = () => {
-    this.setState((prevState) => {
-      return {
-        qty: prevState.qty + 1,
-      };
-    });
+    this.setState(prevState => ({ qty: prevState.qty + 1 }));
   };
 
   minusQtyHandler = () => {
-    if (this.state.qty <= 1) {
-      return;
-    }
-    this.setState((prevState) => {
-      return {
-        qty: prevState.qty - 1,
-      };
-    });
+    const { qty } = this.state;
+
+    if (qty <= 1) return;
+
+    this.setState(prevState => ({ qty: prevState.qty - 1 }));
+  };
+
+  addToCartHandler = (product, qty) => {
+    this.props.onAddToCart(product, qty);
   };
 
   render() {
     const { qty } = this.state;
-    const { addToCart, product } = this.props;
+    const { onAddToCart, product } = this.props;
 
     return (
       <div>
@@ -46,7 +44,7 @@ class Quantity extends Component {
           <button
             disabled={qty === 0}
             className={classes.add_to_cart}
-            onClick={() => addToCart({ ...product, qty })}
+            onClick={() => onAddToCart(product, qty)}
           >
             Add To Cart
           </button>
