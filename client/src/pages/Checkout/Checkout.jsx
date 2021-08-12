@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import classes from "./Checkout.module.scss";
 import cartDara from "../../services/cartData.json";
+import Spinner from "../../components/UI/Spinner/Spinner";
 import CheckoutItems from "../../components/CheckoutItems/CheckoutItems";
+import PaymentMethod from "../../components/PaymentMethod/PaymentMethod";
 import ShippingMethod from "../../components/ShippingMethod/ShippingMethod";
 import CheckoutHeader from "../../components/UI/CheckoutHeader/CheckoutHeader";
 import ShippingAddress from "../../components/ShippingAddress/ShippingAddress";
 
 import paymentMethodsData from "../../services/paymentMethods.json";
 import shippingMethodsData from "../../services/shippingMethods.json";
-import PaymentMethod from "../../components/PaymentMethod/PaymentMethod";
 
 class Checkout extends Component {
   state = {
@@ -24,19 +25,10 @@ class Checkout extends Component {
       selected: false,
       checked: false,
     },
+    loading: false,
+    paymentMethodsData,
+    shippingMethodsData,
   };
-
-  // componentDidMount() {
-  //   const checkoutState = JSON.parse(localStorage.getItem("checkoutState"));
-  //   if (checkoutState) {
-  //     this.setState(checkoutState);
-  //   }
-  // }
-
-  // Persist Checkout State
-  // componentDidUpdate() {
-  //   localStorage.setItem("checkoutState", JSON.stringify(this.state));
-  // }
 
   finishAddressHandler = () => {
     this.setState(prevState => {
@@ -155,11 +147,18 @@ class Checkout extends Component {
   };
 
   render() {
-    const { shippingAddress, shippingMethod, paymentMethod } = this.state;
+    const {
+      loading,
+      paymentMethod,
+      shippingMethod,
+      shippingAddress,
+      paymentMethodsData,
+      shippingMethodsData,
+    } = this.state;
 
     const subTitle =
       shippingAddress.selected && !shippingMethod.selected
-        ? "Information & shipping address"
+        ? "Information & Shipping Address"
         : shippingAddress.selected &&
           shippingMethod.selected &&
           !paymentMethod.selected
@@ -178,6 +177,10 @@ class Checkout extends Component {
       shippingMethod.checked &&
       paymentMethod.selected &&
       !paymentMethod.checked;
+
+    if (loading) {
+      return <Spinner />;
+    }
 
     return (
       <section className={classes.checkout}>
