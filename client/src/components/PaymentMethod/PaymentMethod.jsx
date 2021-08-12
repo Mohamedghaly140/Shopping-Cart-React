@@ -7,7 +7,7 @@ import PaymentMethodItem from "../UI/PaymentMethodItem/PaymentMethodItem";
 
 import classes from "./PaymentMethod.module.scss";
 
-const PaymentMethod = ({ options }) => {
+const PaymentMethod = ({ options, onGoBack }) => {
   return (
     <section>
       <Title>Payment Method</Title>
@@ -28,7 +28,7 @@ const PaymentMethod = ({ options }) => {
       >
         <Title>Notes</Title>
         <Note />
-        <ButtonBack>Go Back</ButtonBack>
+        <ButtonBack onClick={onGoBack}>Go Back</ButtonBack>
       </FlexBox>
     </section>
   );

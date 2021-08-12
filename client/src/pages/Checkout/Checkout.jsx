@@ -111,6 +111,21 @@ class Checkout extends Component {
     });
   };
 
+  goBackToShippingMethodHandler = () => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        shippingMethod: {
+          selected: true,
+          checked: false,
+        },
+        paymentMethod: {
+          selected: false,
+        },
+      };
+    });
+  };
+
   checkoutProcessHandler = () => {
     const { shippingAddress, shippingMethod, paymentMethod } = this.state;
 
@@ -182,7 +197,12 @@ class Checkout extends Component {
                 onGoBack={this.goBackToAddressHandler}
               />
             )}
-            {showPayment && <PaymentMethod options={paymentMethodsData} />}
+            {showPayment && (
+              <PaymentMethod
+                options={paymentMethodsData}
+                onGoBack={this.goBackToShippingMethodHandler}
+              />
+            )}
             <CheckoutItems
               items={cartDara}
               paymentMethod={paymentMethod}
