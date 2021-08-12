@@ -1,0 +1,33 @@
+%main_style {
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+%font {
+  text-align: left;
+  letter-spacing: 0px;
+}
+
+.note {
+  @extend %main_style;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.noteTitle {
+  @extend %font;
+  font-size: 16px;
+  color: #3c3c3b;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+.description {
+  @extend %font;
+  @extend %main_style;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d1d1b;
+}

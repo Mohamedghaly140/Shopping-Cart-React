@@ -1,0 +1,25 @@
+.paymentItem {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  padding: 30px 32px 31px 32px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.title {
+  font-size: 16px;
+  text-align: left;
+  color: #000000;
+  margin-left: 26px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.image {
+  max-width: 100%;
+
+  &:nth-child(even) {
+    margin-inline: 16px;
+  }
+}

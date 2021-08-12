@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Credit or Debit Cards",
+    "images": [
+      { "name": "meza", "imageUrl": "/images/payment/meza.png" },
+      { "name": "visa", "imageUrl": "/images/payment/visa.png" },
+      { "name": "mastercard", "imageUrl": "/images/payment/mastercard.png" }
+    ]
+  },
+  { "id": 2, "title": "Cash on Delivery (COD)", "images": null }
+]

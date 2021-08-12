@@ -6,7 +6,9 @@ import ShippingMethod from "../../components/ShippingMethod/ShippingMethod";
 import CheckoutHeader from "../../components/UI/CheckoutHeader/CheckoutHeader";
 import ShippingAddress from "../../components/ShippingAddress/ShippingAddress";
 
+import paymentMethodsData from "../../services/paymentMethods.json";
 import shippingMethodsData from "../../services/shippingMethods.json";
+import PaymentMethod from "../../components/PaymentMethod/PaymentMethod";
 
 class Checkout extends Component {
   state = {
@@ -180,7 +182,7 @@ class Checkout extends Component {
                 onGoBack={this.goBackToAddressHandler}
               />
             )}
-            {showPayment && ""}
+            {showPayment && <PaymentMethod options={paymentMethodsData} />}
             <CheckoutItems
               items={cartDara}
               paymentMethod={paymentMethod}
