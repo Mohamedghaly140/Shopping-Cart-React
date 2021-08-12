@@ -7,6 +7,7 @@ const FormGroup = ({
   type,
   label,
   value,
+  prefix,
   options,
   onChange,
   required,
@@ -22,9 +23,9 @@ const FormGroup = ({
           <ReactSelect
             name={name}
             value={value}
+            prefix={prefix}
             options={options}
             onChange={onChange}
-            prefix="select__address"
             placeholder={placeholder}
           />
         </div>
@@ -45,6 +46,7 @@ const FormGroup = ({
 
 FormGroup.defaultProps = {
   type: "text",
+  prefix: "select__address",
 };
 
 export default FormGroup;
