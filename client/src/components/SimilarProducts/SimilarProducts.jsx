@@ -31,7 +31,11 @@ class SimilarProducts extends Component {
     }
 
     return (
-      <Section title={title} subTitle={subTitle} className="container mt-0">
+      <Section
+        title={title}
+        subTitle={subTitle}
+        className={`${classes.similarProducts} container`}
+      >
         <SliderLeftButton
           className={classes.slide__button}
           onSlideLeft={this.slideLeftHandler}

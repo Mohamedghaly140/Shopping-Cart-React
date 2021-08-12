@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Minus from "../../../Icons/Minus";
 import Plus from "../../../Icons/Plus";
+import Minus from "../../../Icons/Minus";
 import classes from "./Quantity.module.scss";
+
+// Should be controlled from Checkout Page State
 
 class Quantity extends Component {
   state = {

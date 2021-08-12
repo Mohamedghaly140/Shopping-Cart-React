@@ -23,11 +23,18 @@
   margin-bottom: 17px;
 }
 
-.description {
+.noteInput {
   @extend %font;
   @extend %main_style;
+  resize: none;
+  outline: none;
+  width: 100%;
   padding: 16px;
   font-size: 14px;
   font-weight: 600;
   color: #1d1d1b;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
