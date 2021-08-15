@@ -21,9 +21,11 @@ class AppRouter extends Component {
       offers,
       loading,
       products,
+      cartItems,
       categories,
       onAddToCart,
       onRemoveFromCart,
+      onUpdateQuantity,
     } = this.props;
 
     return (
@@ -56,10 +58,22 @@ class AppRouter extends Component {
             />
           </Route>
           <Route path="/cart">
-            <Cart products={products} loading={loading} />
+            <Cart
+              loading={loading}
+              products={products}
+              cartItems={cartItems}
+              onUpdateQuantity={onUpdateQuantity}
+              onRemoveFromCart={onRemoveFromCart}
+            />
           </Route>
           <Route path="/checkout">
-            <Checkout products={products} loading={loading} />
+            <Checkout
+              loading={loading}
+              products={products}
+              cartItems={cartItems}
+              onUpdateQuantity={onUpdateQuantity}
+              onRemoveFromCart={onRemoveFromCart}
+            />
           </Route>
           <Route path="/result">
             <SearchResult products={products} loading={loading} />

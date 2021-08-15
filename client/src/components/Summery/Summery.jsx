@@ -20,7 +20,7 @@ const Summery = ({
         <SummeryItem
           main={subTotalMain}
           title="Sub total"
-          price={subTotal}
+          price={subTotal.toFixed(3)}
           currency="l.e"
         />
         {shipping && (
@@ -30,7 +30,7 @@ const Summery = ({
           <SummeryItem
             main={grandTotalMain}
             title="Grand Total"
-            price={grandTotal}
+            price={grandTotal.toFixed(3)}
             currency="l.e"
           />
         )}

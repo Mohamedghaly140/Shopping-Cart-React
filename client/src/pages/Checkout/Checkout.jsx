@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import classes from "./Checkout.module.scss";
-import cartDara from "../../services/cartData.json";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import CheckoutItems from "../../components/CheckoutItems/CheckoutItems";
 import PaymentMethod from "../../components/PaymentMethod/PaymentMethod";
@@ -207,11 +206,13 @@ class Checkout extends Component {
               />
             )}
             <CheckoutItems
-              items={cartDara}
+              items={this.props.cartItems}
               paymentMethod={paymentMethod}
               shippingMethod={shippingMethod}
               shippingAddress={shippingAddress}
               onCheckout={this.checkoutProcessHandler}
+              onUpdateQuantity={this.props.onUpdateQuantity}
+              onRemoveFromCart={this.props.onRemoveFromCart}
             />
           </div>
         </div>

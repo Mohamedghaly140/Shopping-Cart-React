@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
+    "description": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
     "price": 9.999,
     "imageUrl": {
       "small": "/images/product2.png",
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "title": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
+    "description": "Lorem ipsum dolor sit amet, consecte adipiscing elit.",
     "imageUrl": {
       "small": "/images/product.png",
       "large": "/images/product@2x.png"

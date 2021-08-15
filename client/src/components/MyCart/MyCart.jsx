@@ -1,10 +1,23 @@
 import React, { Component, Fragment } from "react";
-import Backdrop from "../Backdrop/Backdrop";
+import { withRouter } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import FlexBox from "../UI/FlexBox/FlexBox";
+import Backdrop from "../Backdrop/Backdrop";
+import EmptyFallback from "../UI/EmptyFallback/EmptyFallback";
+
 import classes from "./MyCart.module.scss";
 
-export class MyCart extends Component {
+class MyCart extends Component {
+  checkoutHandler = () => {
+    this.props.history.push("/checkout");
+    this.props.toggleCart();
+  };
+
+  reviewCartHandler = () => {
+    this.props.history.push("/cart");
+    this.props.toggleCart();
+  };
+
   render() {
     const { openCart, toggleCart, cartItems, onRemoveFromCart } = this.props;
 
@@ -45,7 +58,7 @@ export class MyCart extends Component {
             justifyContent="center"
           >
             {cartItems.length === 0 ? (
-              <p className="my-4">You have no items yet..</p>
+              <EmptyFallback>You have no items yet..</EmptyFallback>
             ) : (
               cartItems.map(item => (
                 <CartItem
@@ -62,8 +75,12 @@ export class MyCart extends Component {
             alignItems="center"
             justifyContent="space-between"
           >
-            <button className={classes.review}>Review Cart</button>
-            <button className={classes.checkout}>Complete Checkout</button>
+            <button className={classes.review} onClick={this.reviewCartHandler}>
+              Review Cart
+            </button>
+            <button className={classes.checkout} onClick={this.checkoutHandler}>
+              Complete Checkout
+            </button>
           </FlexBox>
         </div>
       </Fragment>
@@ -71,4 +88,4 @@ export class MyCart extends Component {
   }
 }
 
-export default MyCart;
+export default withRouter(MyCart);

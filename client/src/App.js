@@ -129,7 +129,7 @@ class App extends Component {
           ...prevState,
           cart: {
             ...prevState.cart,
-            items: [{ ...product, qty }],
+            items: [...prevState.cart.items, { ...product, qty }],
           },
         };
       }
@@ -152,63 +152,40 @@ class App extends Component {
     }
   };
 
-  // updateQuantityHandler = id => {
-  //   let tempCart = [...this.state.cart.items];
-  //   let tempProduct = tempCart.find(p => p.id === id);
+  updateQuantityHandler = (product, flag) => {
+    if (flag === "-") {
+      let tempCart = [...this.state.cart.items];
+      let tempProduct = tempCart.find(p => p.id === product.id);
 
-  //   if (tempProduct) {
-  //     if (tempProduct.qty === 1) {
-  //       this.setState(prevState => {
-  //         return {
-  //           ...prevState,
-  //           cart: {
-  //             items: prevState.cart.items.filter(item => item.id !== id),
-  //           },
-  //         };
-  //       });
-  //     } else {
-  //       this.setState(prevState => {
-  //         return {
-  //           ...prevState,
-  //           cart: {
-  //             items: prevState.cart.items.map(item => {
-  //               if (item.id === id) {
-  //                 return { ...item, qty: item.qty - 1 };
-  //               }
-  //               return item;
-  //             }),
-  //           },
-  //         };
-  //       });
-  //     }
-  //   }
-
-  //   this.setState(prevState => {
-  //     const existingItem = prevState.cart.items.find(
-  //       item => item.id === product.id
-  //     );
-
-  //     if (existingItem) {
-  //       return {
-  //         ...prevState,
-  //         cart: {
-  //           ...prevState.cart,
-  //           items: prevState.cart.items.map(item =>
-  //             item.id === product.id ? { ...item, qty: item.qty + 1 } : item
-  //           ),
-  //         },
-  //       };
-  //     } else {
-  //       return {
-  //         ...prevState,
-  //         cart: {
-  //           ...prevState.cart,
-  //           items: [{ ...product, qty: 1 }],
-  //         },
-  //       };
-  //     }
-  //   });
-  // };
+      if (tempProduct.qty !== 1) {
+        this.setState(prevState => {
+          return {
+            ...prevState,
+            cart: {
+              items: prevState.cart.items.map(item => {
+                if (item.id === product.id) {
+                  return { ...item, qty: item.qty - 1 };
+                }
+                return item;
+              }),
+            },
+          };
+        });
+      }
+    } else {
+      this.setState(prevState => {
+        return {
+          ...prevState,
+          cart: {
+            ...prevState.cart,
+            items: prevState.cart.items.map(item =>
+              item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+            ),
+          },
+        };
+      });
+    }
+  };
 
   render() {
     const {
@@ -248,6 +225,7 @@ class App extends Component {
             categories={categories}
             onAddToCart={this.addToCartHandler}
             onRemoveFromCart={this.removeFromCartHandler}
+            onUpdateQuantity={this.updateQuantityHandler}
           />
         </main>
         <Footer

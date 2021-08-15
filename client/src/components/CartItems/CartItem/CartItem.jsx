@@ -18,14 +18,16 @@ const colorsOptions = [
   { value: "White", label: "White" },
 ];
 
-const CartItem = ({ cartItem }) => {
+const CartItem = ({ cartItem, onUpdate, onRemove }) => {
   return (
     <div className={classes.cartItem}>
       <div className={classes.product__image}>
         <img src={cartItem.imageUrl.large} alt="product" />
       </div>
       <div className={classes.product__details}>
-        <p className={classes.description}>{cartItem.title}</p>
+        <p className={classes.description}>
+          {cartItem.title || cartItem.description}
+        </p>
         <p className={classes.price}>
           {cartItem.price}
           <span className={classes.price__currency}>L.E</span>
@@ -37,7 +39,11 @@ const CartItem = ({ cartItem }) => {
       <div className={classes.product__actions}>
         <div className={classes.action__item}>
           <label className={classes.label}>Quantity</label>
-          <Quantity qty={cartItem.qty} />
+          <Quantity
+            item={cartItem}
+            qty={cartItem.qty}
+            onUpdateQuantity={onUpdate}
+          />
         </div>
         <div className={classes.action__item}>
           <label className={classes.label}>Size</label>
@@ -61,7 +67,12 @@ const CartItem = ({ cartItem }) => {
         </div>
       </div>
       <div className={classes.action}>
-        <button className={classes.remove}>Remove</button>
+        <button
+          className={classes.remove}
+          onClick={() => onRemove(cartItem.id)}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );

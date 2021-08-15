@@ -2,18 +2,24 @@ import React from "react";
 import Quantity from "../../CartItems/CartItem/Quantity/Quantity";
 import classes from "./CheckoutItem.module.scss";
 
-const CheckoutItem = ({ title, imageUrl, price, qty }) => {
+const CheckoutItem = ({ item, onUpdateQuantity, onRemove }) => {
   return (
     <div className={classes.checkoutItem}>
       <div className={classes.image}>
-        <img src={imageUrl.small} alt={title} />
+        <img src={item.imageUrl.small} alt={item.title} />
       </div>
       <div className={classes.details}>
-        <h6 className={classes.title}>{title}</h6>
-        <p className={classes.price}>{price}</p>
+        <h6 className={classes.title}>{item.title || item.description}</h6>
+        <p className={classes.price}>{item.price}</p>
         <div className={classes.actions}>
-          <Quantity qty={qty} />
-          <button className={classes.remove}>Remove</button>
+          <Quantity
+            item={item}
+            qty={item.qty}
+            onUpdateQuantity={onUpdateQuantity}
+          />
+          <button className={classes.remove} onClick={() => onRemove(item.id)}>
+            Remove
+          </button>
         </div>
       </div>
     </div>
