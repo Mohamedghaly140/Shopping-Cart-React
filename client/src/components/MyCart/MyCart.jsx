@@ -23,7 +23,12 @@ export class MyCart extends Component {
             openCart ? classes.open : classes.close
           }`}
         >
-          <div className="d-flex align-items-center justify-content-end mb-2">
+          <FlexBox
+            direction="row"
+            alignItems="center"
+            justifyContent="flex-end"
+            className={classes.closeBtnContainer}
+          >
             <button className={classes.close} onClick={toggleCart}>
               <img
                 className="close img-fluid"
@@ -31,8 +36,8 @@ export class MyCart extends Component {
                 alt="close"
               />
             </button>
-          </div>
-          <h2 className={`${classes.title} text-center mb-3`}>My Cart</h2>
+          </FlexBox>
+          <h2 className={classes.title}>My Cart</h2>
           <p className={classes.summary}>Cart Summary</p>
           <FlexBox
             direction="column"
