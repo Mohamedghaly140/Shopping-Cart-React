@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
+import EmptyFallback from "../UI/EmptyFallback/EmptyFallback";
 
-const ProductList = ({ products, counts = Infinity }) => {
+const ProductList = ({ products, counts }) => {
   return products.counts === 0 ? (
-    <div className="m-auto">
-      <h3>There is no products yet</h3>
-    </div>
+    <EmptyFallback centerY>There is no products yet..</EmptyFallback>
   ) : (
     products.slice(0, counts).map(product => (
       <Link
@@ -20,6 +19,10 @@ const ProductList = ({ products, counts = Infinity }) => {
       </Link>
     ))
   );
+};
+
+ProductList.defaultProps = {
+  counts: Infinity,
 };
 
 export default ProductList;

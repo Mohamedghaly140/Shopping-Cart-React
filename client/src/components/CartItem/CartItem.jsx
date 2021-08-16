@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./CartItem.module.scss";
 
-const CartItem = ({ product, onRemoveFromCart }) => {
+const CartItem = ({ product, currency, onRemove }) => {
   return (
     <div className={classes.CartItem}>
       <div className={classes.imageContainer}>
@@ -11,16 +11,21 @@ const CartItem = ({ product, onRemoveFromCart }) => {
           src={product.imageUrl.small}
         />
       </div>
-      <div>
-        <p className={classes.description}>{product.description}</p>
+      <div className={classes.productDetails}>
+        <p className={classes.description}>
+          {product.title || product.description}
+        </p>
         <div className={classes.info__container}>
           <div>
             <p className={classes.quantity}>Quantity: {product.qty}</p>
-            <p className={classes.price}>Price: {product.price}</p>
+            <p className={classes.price}>
+              {product.price}{" "}
+              <span className={classes.currency}>{currency}</span>
+            </p>
           </div>
           <button
             className={classes.remove}
-            onClick={() => onRemoveFromCart(product.id)}
+            onClick={() => onRemove(product.id)}
           >
             Remove
           </button>
@@ -28,6 +33,10 @@ const CartItem = ({ product, onRemoveFromCart }) => {
       </div>
     </div>
   );
+};
+
+CartItem.defaultProps = {
+  currency: "L.E",
 };
 
 export default CartItem;

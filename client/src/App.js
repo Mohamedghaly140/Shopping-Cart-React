@@ -77,35 +77,27 @@ class App extends Component {
   }
 
   toggleCartHandler = () => {
-    this.setState(prevState => {
-      return {
-        openCart: !prevState.openCart,
-      };
-    });
+    this.setState(prevState => ({
+      openCart: !prevState.openCart,
+    }));
   };
 
   toggleSidebarHandler = () => {
-    this.setState(prevState => {
-      return {
-        openSideBar: !prevState.openSideBar,
-      };
-    });
+    this.setState(prevState => ({
+      openSideBar: !prevState.openSideBar,
+    }));
   };
 
   toggleSearchHandler = () => {
-    this.setState(prevState => {
-      return {
-        search: !prevState.search,
-      };
-    });
+    this.setState(prevState => ({
+      search: !prevState.search,
+    }));
   };
 
   toggleAccountHandler = () => {
-    this.setState(prevState => {
-      return {
-        openAccount: !prevState.openAccount,
-      };
-    });
+    this.setState(prevState => ({
+      openAccount: !prevState.openAccount,
+    }));
   };
 
   addToCartHandler = (product, qty) => {
@@ -134,6 +126,22 @@ class App extends Component {
         };
       }
     });
+
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        cart: {
+          ...prevState.cart,
+          total: +prevState.cart.items
+            .reduce(
+              (acc, curItem) =>
+                acc + Number(curItem.price) * Number(curItem.qty),
+              0
+            )
+            .toFixed(3),
+        },
+      };
+    });
   };
 
   removeFromCartHandler = id => {
@@ -150,6 +158,22 @@ class App extends Component {
         };
       });
     }
+
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        cart: {
+          ...prevState.cart,
+          total: +prevState.cart.items
+            .reduce(
+              (acc, curItem) =>
+                acc + Number(curItem.price) * Number(curItem.qty),
+              0
+            )
+            .toFixed(3),
+        },
+      };
+    });
   };
 
   updateQuantityHandler = (product, flag) => {
@@ -185,6 +209,22 @@ class App extends Component {
         };
       });
     }
+
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        cart: {
+          ...prevState.cart,
+          total: +prevState.cart.items
+            .reduce(
+              (acc, curItem) =>
+                acc + Number(curItem.price) * Number(curItem.qty),
+              0
+            )
+            .toFixed(3),
+        },
+      };
+    });
   };
 
   render() {
@@ -220,6 +260,7 @@ class App extends Component {
             brands={brands}
             offers={offers}
             loading={loading}
+            total={cart.total}
             products={products}
             cartItems={cart.items}
             categories={categories}
@@ -234,6 +275,7 @@ class App extends Component {
         />
         <Fragment>
           <MyCart
+            total={cart.total}
             openCart={openCart}
             cartItems={cart.items}
             toggleCart={this.toggleCartHandler}

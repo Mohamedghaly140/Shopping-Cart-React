@@ -7,6 +7,7 @@ import EmptyFallback from "../UI/EmptyFallback/EmptyFallback";
 import classes from "./CheckoutItems.module.scss";
 
 const CheckoutItems = ({
+  total,
   items,
   onCheckout,
   paymentMethod,
@@ -15,11 +16,6 @@ const CheckoutItems = ({
   onUpdateQuantity,
   onRemoveFromCart,
 }) => {
-  const subTotal = items.reduce(
-    (acc, curItem) => acc + Number(curItem.price) * Number(curItem.qty),
-    0
-  );
-
   const subTotalMain =
     shippingAddress.selected &&
     !shippingMethod.selected &&
@@ -31,7 +27,7 @@ const CheckoutItems = ({
     shippingAddress.selected && shippingMethod.selected && 25;
 
   const grandTotal =
-    shippingAddress.selected && shippingMethod.selected && subTotal + 25;
+    shippingAddress.selected && shippingMethod.selected && total + 25;
 
   return (
     <section className={classes.checkoutItems}>
@@ -54,7 +50,7 @@ const CheckoutItems = ({
         )}
       </div>
       <Summery
-        subTotal={subTotal}
+        subTotal={total}
         buttonTitle="Continue"
         shipping={shippingFees}
         grandTotal={grandTotal}

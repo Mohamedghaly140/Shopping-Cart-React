@@ -16,6 +16,7 @@ class AppRouter extends Component {
   render() {
     const {
       tours,
+      total,
       gifts,
       brands,
       offers,
@@ -59,6 +60,7 @@ class AppRouter extends Component {
           </Route>
           <Route path="/cart">
             <Cart
+              total={total}
               loading={loading}
               products={products}
               cartItems={cartItems}
@@ -68,6 +70,7 @@ class AppRouter extends Component {
           </Route>
           <Route path="/checkout">
             <Checkout
+              total={total}
               loading={loading}
               products={products}
               cartItems={cartItems}

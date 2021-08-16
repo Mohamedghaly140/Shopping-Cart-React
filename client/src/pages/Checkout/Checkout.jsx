@@ -30,91 +30,77 @@ class Checkout extends Component {
   };
 
   finishAddressHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        shippingAddress: {
-          selected: true,
-          checked: true,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      shippingAddress: {
+        selected: true,
+        checked: true,
+      },
+    }));
   };
 
   goToShippingMethodHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        shippingMethod: {
-          selected: true,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      shippingMethod: {
+        selected: true,
+      },
+    }));
   };
 
   finishShippingMethodHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        shippingMethod: {
-          selected: true,
-          checked: true,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      shippingMethod: {
+        selected: true,
+        checked: true,
+      },
+    }));
   };
 
   goToPaymentMethodHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        paymentMethod: {
-          selected: true,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      paymentMethod: {
+        selected: true,
+      },
+    }));
   };
 
   finishPaymentMethodHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        paymentMethod: {
-          selected: true,
-          checked: true,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      paymentMethod: {
+        selected: true,
+        checked: true,
+      },
+    }));
   };
 
   goBackToAddressHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        shippingAddress: {
-          selected: true,
-          checked: false,
-        },
-        shippingMethod: {
-          selected: false,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      shippingAddress: {
+        selected: true,
+        checked: false,
+      },
+      shippingMethod: {
+        selected: false,
+      },
+    }));
   };
 
   goBackToShippingMethodHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        shippingMethod: {
-          selected: true,
-          checked: false,
-        },
-        paymentMethod: {
-          selected: false,
-        },
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      shippingMethod: {
+        selected: true,
+        checked: false,
+      },
+      paymentMethod: {
+        selected: false,
+      },
+    }));
   };
 
   checkoutProcessHandler = () => {
@@ -206,6 +192,7 @@ class Checkout extends Component {
               />
             )}
             <CheckoutItems
+              total={this.props.total}
               items={this.props.cartItems}
               paymentMethod={paymentMethod}
               shippingMethod={shippingMethod}
