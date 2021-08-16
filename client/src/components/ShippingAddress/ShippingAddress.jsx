@@ -62,9 +62,9 @@ class ShippingAddress extends Component {
         ) : (
           <AddressForm
             title="Add A New Address"
-            onSave={this.saveFormHandler}
             aresOptions={aresOptions}
             cityOptions={cityOptions}
+            onSave={this.saveFormHandler}
             counteryOptions={counteryOptions}
           />
         )}

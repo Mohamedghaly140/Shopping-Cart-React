@@ -1,6 +1,6 @@
 .form__control {
-  margin-bottom: 28px;
   display: flex;
+  margin-bottom: 28px;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
@@ -24,9 +24,9 @@
 
 .form__label {
   opacity: 1;
-  color: #000000;
-  text-align: left;
   font-size: 18px;
+  text-align: left;
+  color: #000000;
   font-weight: bold;
   letter-spacing: 0px;
   margin-bottom: 12px;
@@ -54,11 +54,11 @@
 
 .form__input {
   opacity: 1;
-  width: 420px;
+  width: 100%;
   height: 48px;
-  color: #9c9c9b;
-  font-size: 15px;
   outline: none;
+  font-size: 15px;
+  color: #9c9c9b;
   font-weight: 500;
   letter-spacing: 0px;
   border-radius: 24px;
