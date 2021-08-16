@@ -27,8 +27,9 @@
 
 .cart__grid {
   display: grid;
+  margin-bottom: 41px;
   grid-column-gap: 32px;
-  grid-template-columns: 800px 1fr;
+  grid-template-columns: 800px auto;
 
   @media (max-width: 575.98px) {
   }
@@ -40,8 +41,10 @@
   }
 
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    grid-template-columns: 800px auto;
   }
 
   @media (min-width: 1200px) {
+    grid-template-columns: 800px auto;
   }
 }
