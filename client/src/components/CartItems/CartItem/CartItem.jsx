@@ -39,11 +39,7 @@ const CartItem = ({ cartItem, onUpdate, onRemove }) => {
       <div className={classes.product__actions}>
         <div className={classes.action__item}>
           <label className={classes.label}>Quantity</label>
-          <Quantity
-            item={cartItem}
-            qty={cartItem.qty}
-            onUpdateQuantity={onUpdate}
-          />
+          <Quantity id={cartItem.id} qty={cartItem.qty} onUpdate={onUpdate} />
         </div>
         <div className={classes.action__item}>
           <label className={classes.label}>Size</label>

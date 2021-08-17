@@ -12,11 +12,7 @@ const CheckoutItem = ({ item, onUpdateQuantity, onRemove }) => {
         <h6 className={classes.title}>{item.title || item.description}</h6>
         <p className={classes.price}>{item.price}</p>
         <div className={classes.actions}>
-          <Quantity
-            item={item}
-            qty={item.qty}
-            onUpdateQuantity={onUpdateQuantity}
-          />
+          <Quantity id={item.id} qty={item.qty} onUpdate={onUpdateQuantity} />
           <button className={classes.remove} onClick={() => onRemove(item.id)}>
             Remove
           </button>

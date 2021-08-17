@@ -97,7 +97,6 @@ class ProductDetail extends Component {
               <Quantity
                 product={this.props.product}
                 onAddToCart={this.props.onAddToCart}
-                onRemoveFromCart={this.props.onRemoveFromCart}
               />
             </DetailItem>
           </div>

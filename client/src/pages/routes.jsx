@@ -55,7 +55,6 @@ class AppRouter extends Component {
               products={products}
               onAddToCart={onAddToCart}
               loadingProducts={loading}
-              onRemoveFromCart={onRemoveFromCart}
             />
           </Route>
           <Route path="/cart">

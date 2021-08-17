@@ -1,4 +1,4 @@
-import { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import AppRouter from "./pages/routes";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -18,7 +18,7 @@ class App extends Component {
     openSideBar: false,
     openAccount: false,
     search: false,
-    loading: false,
+    loading: true,
     gifts: [],
     tours: [],
     brands: [],
@@ -32,41 +32,24 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.setState({ loading: true });
-
     try {
       (async () => {
-        const {
-          data: { products },
-        } = await httpClient.get("/api/products");
-
-        const {
-          data: { gifts },
-        } = await httpClient.get("/api/gifts");
-
-        const {
-          data: { tours },
-        } = await httpClient.get("/api/tours");
-
-        const {
-          data: { brands },
-        } = await httpClient.get("/api/brands");
-
-        const {
-          data: { offers },
-        } = await httpClient.get("/api/offers");
-
-        const {
-          data: { categories },
-        } = await httpClient.get("/api/categories");
+        const allData = await Promise.all([
+          httpClient.get("/api/products"),
+          httpClient.get("/api/gifts"),
+          httpClient.get("/api/tours"),
+          httpClient.get("/api/brands"),
+          httpClient.get("/api/offers"),
+          httpClient.get("/api/categories"),
+        ]);
 
         this.setState({
-          products,
-          gifts,
-          tours,
-          brands,
-          offers,
-          categories,
+          products: allData[0].data.products,
+          gifts: allData[1].data.gifts,
+          tours: allData[2].data.tours,
+          brands: allData[3].data.brands,
+          offers: allData[4].data.offers,
+          categories: allData[5].data.categories,
           loading: false,
         });
       })();
@@ -176,39 +159,18 @@ class App extends Component {
     });
   };
 
-  updateQuantityHandler = (product, flag) => {
-    if (flag === "-") {
-      let tempCart = [...this.state.cart.items];
-      let tempProduct = tempCart.find(p => p.id === product.id);
-
-      if (tempProduct.qty !== 1) {
-        this.setState(prevState => {
-          return {
-            ...prevState,
-            cart: {
-              items: prevState.cart.items.map(item => {
-                if (item.id === product.id) {
-                  return { ...item, qty: item.qty - 1 };
-                }
-                return item;
-              }),
-            },
-          };
-        });
-      }
-    } else {
-      this.setState(prevState => {
-        return {
-          ...prevState,
-          cart: {
-            ...prevState.cart,
-            items: prevState.cart.items.map(item =>
-              item.id === product.id ? { ...item, qty: item.qty + 1 } : item
-            ),
-          },
-        };
-      });
-    }
+  updateQuantityHandler = (itemId, newQty) => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        cart: {
+          ...prevState.cart,
+          items: prevState.cart.items.map(item =>
+            item.id === itemId ? { ...item, qty: newQty } : item
+          ),
+        },
+      };
+    });
 
     this.setState(prevState => {
       return {

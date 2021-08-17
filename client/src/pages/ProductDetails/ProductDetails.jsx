@@ -10,12 +10,11 @@ import FrequentlyBought from "../../components/FrequentlyBought/FrequentlyBought
 class ProductDetails extends Component {
   state = {
     product: null,
-    loading: false,
+    loading: true,
   };
 
   fetchAndSetProduct() {
     try {
-      this.setState({ loading: true });
       (async () => {
         const { data } = await httpClient.get(
           `/api/products/${this.props.match.params.id}`
@@ -41,19 +40,14 @@ class ProductDetails extends Component {
 
   render() {
     const { loading, product } = this.state;
-    const { onAddToCart, onRemoveFromCart, loadingProducts, products } =
-      this.props;
+    const { onAddToCart, loadingProducts, products } = this.props;
 
     return (
       <Fragment>
         {loading && !product ? (
           <Spinner />
         ) : (
-          <ProductDetail
-            product={product}
-            onAddToCart={onAddToCart}
-            onRemoveFromCart={onRemoveFromCart}
-          />
+          <ProductDetail product={product} onAddToCart={onAddToCart} />
         )}
         <ProductReview />
         {loading && !product ? (
