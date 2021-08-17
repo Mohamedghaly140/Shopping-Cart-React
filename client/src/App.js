@@ -83,6 +83,24 @@ class App extends Component {
     }));
   };
 
+  calcTotalPriceHandler = () => {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        cart: {
+          ...prevState.cart,
+          total: +prevState.cart.items
+            .reduce(
+              (acc, curItem) =>
+                acc + Number(curItem.price) * Number(curItem.qty),
+              0
+            )
+            .toFixed(3),
+        },
+      };
+    });
+  };
+
   addToCartHandler = (product, qty) => {
     this.setState(prevState => {
       const existingItem = prevState.cart.items.find(
@@ -110,21 +128,7 @@ class App extends Component {
       }
     });
 
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        cart: {
-          ...prevState.cart,
-          total: +prevState.cart.items
-            .reduce(
-              (acc, curItem) =>
-                acc + Number(curItem.price) * Number(curItem.qty),
-              0
-            )
-            .toFixed(3),
-        },
-      };
-    });
+    this.calcTotalPriceHandler();
   };
 
   removeFromCartHandler = id => {
@@ -142,21 +146,7 @@ class App extends Component {
       });
     }
 
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        cart: {
-          ...prevState.cart,
-          total: +prevState.cart.items
-            .reduce(
-              (acc, curItem) =>
-                acc + Number(curItem.price) * Number(curItem.qty),
-              0
-            )
-            .toFixed(3),
-        },
-      };
-    });
+    this.calcTotalPriceHandler();
   };
 
   updateQuantityHandler = (itemId, newQty) => {
@@ -172,21 +162,7 @@ class App extends Component {
       };
     });
 
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        cart: {
-          ...prevState.cart,
-          total: +prevState.cart.items
-            .reduce(
-              (acc, curItem) =>
-                acc + Number(curItem.price) * Number(curItem.qty),
-              0
-            )
-            .toFixed(3),
-        },
-      };
-    });
+    this.calcTotalPriceHandler();
   };
 
   render() {
