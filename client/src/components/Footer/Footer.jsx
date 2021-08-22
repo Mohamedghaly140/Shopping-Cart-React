@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Subscribe from "../UI/Subscribe/Subscribe";
 import Copyright from "./Copyright";
 import "./Footer.scss";

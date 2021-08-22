@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Phone from "../../../Icons/Phone";
 import Location from "../../../Icons/Location";
 import ShoppingCart from "../../../Icons/ShoppingCart";

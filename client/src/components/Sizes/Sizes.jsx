@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import SizeItem from "./SizeItem";
 
 export class Sizes extends Component {

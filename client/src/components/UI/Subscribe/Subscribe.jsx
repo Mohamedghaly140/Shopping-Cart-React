@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import classes from "./Subscribe.module.scss";
 
 class Subscribe extends Component {

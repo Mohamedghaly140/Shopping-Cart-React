@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import classes from "./Copyright.module.scss";
 
 class Copyright extends Component {

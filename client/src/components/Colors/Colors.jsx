@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import ColorItem from "./ColorItem";
 
 export class Colors extends Component {

@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import classes from "./ColorItem.module.scss";
 
 class ColorItem extends Component {
